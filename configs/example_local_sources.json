@@ -1,0 +1,33 @@
+{
+  "schema": "lens_effects.source_panel.v1",
+  "defaults": {
+    "source_type": "jsonl",
+    "field": "text",
+    "mode": "plain_text",
+    "chunk_chars": 768,
+    "max_documents": 50000,
+    "max_chunks": 2048,
+    "max_chunks_per_source_document": 2,
+    "sampling_mode": "reservoir",
+    "sample_seed": 20260505,
+    "sample_scan_documents": 50000,
+    "sample_reservoir_documents": 12000
+  },
+  "corpora": [
+    {
+      "label": "my_pretraining_like_corpus",
+      "display": "My pretraining-like corpus",
+      "role": "broad",
+      "stage_role": "pretraining",
+      "path": "/path/to/pretraining_like/*.jsonl"
+    },
+    {
+      "label": "my_post_training_corpus",
+      "display": "My post-training corpus",
+      "role": "targeted",
+      "stage_role": "post_training",
+      "path": "/path/to/post_training/*.jsonl",
+      "field": "response"
+    }
+  ]
+}

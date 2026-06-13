@@ -1,0 +1,52 @@
+{
+  "schema": "lens_effects.release_manifest.v3",
+  "release_status": "public_release_v0.1.0",
+  "created_for": "public reproducibility package",
+  "entry_points": {
+    "readme": "README.md",
+    "corpus_manifest": "data/corpus_manifest.json",
+    "chunk_length_summary": "data/chunk_length_summary.md",
+    "upstream_dataset_provenance": "data/upstream_dataset_provenance.md",
+    "tokenizer_dependency_note": "environment/tokenizer_dependency.md",
+    "release_integrity_manifest": "release_integrity_manifest.json",
+    "source_panel_recipe": "configs/paper_panel_sources_randomized_2048.json",
+    "local_source_template": "configs/example_local_sources.json",
+    "source_chunk_embedding_builder": "scripts/build_corpus_artifacts.py",
+    "release_artifact_verification": "scripts/verify_release_artifacts.py",
+    "matrix_recomputation": "scripts/run_corpus_matrix.py",
+    "mixture_panel_recomputation": "scripts/run_mixture_panel.py",
+    "continuous_embedding_sensitivity": "scripts/run_continuous_embedding_sensitivity.py",
+    "semantic_k_stability": "scripts/run_semantic_k_stability.py",
+    "stability_recomputation": "scripts/run_bootstrap_hardening.py",
+    "textual_grid_summary_rebuild": "tools/rebuild_textual_grid_summary.py",
+    "release_integrity_builder": "tools/build_release_integrity_manifest.py",
+    "scorecard_submission_packager": "scripts/package_scorecard_submission.py",
+    "scorecard_submission_docs": "scorecard/README.md",
+    "scorecard_submission_template": "scorecard/submission_template.json",
+    "figure_regeneration": "scripts/make_figures.py",
+    "manuscript": "paper/manuscript.md",
+    "appendix": "paper/appendix.md",
+    "scorecard_validator": "scripts/validate_scorecard_submission.py",
+    "scorecard_registry": "scorecard/registry/index.json",
+    "contributing": "CONTRIBUTING.md",
+    "github_actions_verify": ".github/workflows/verify-release.yml"
+  },
+  "paper_result_sources": [
+    "results/final_matrix/recomputed/family_summary.json",
+    "results/final_matrix/recomputed/standalone_summary.json",
+    "results/final_matrix/recomputed/directional_lexical_sensitivity.json",
+    "results/final_matrix/targeted_substructure_summary.json",
+    "results/final_matrix/mixtures/targeted_mixture_panel.json",
+    "results/final_matrix/sweeps/semantic_summary.json",
+    "results/final_matrix/sweeps/textual_grid_summary.json",
+    "results/final_matrix/continuous_embedding_sensitivity.json"
+  ],
+  "stability_sources": [
+    "stability/bootstrap_canonical_summary.json",
+    "stability/leave_one_out_summary.json",
+    "stability/same_corpus_split_baselines.json",
+    "stability/semantic_k_stability.json"
+  ],
+  "metric_convention": "compression, top1, and top5 family comparisons use standalone-derived absolute pairwise differences, not signed directional gaps",
+  "repository": "https://github.com/GWUDCAP/training-corpus-diagnostics"
+}

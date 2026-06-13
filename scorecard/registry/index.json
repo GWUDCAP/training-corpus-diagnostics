@@ -1,0 +1,6 @@
+{
+  "schema": "training_corpus_diagnostics.scorecard_registry.v1",
+  "metric_suite_version": "lens_effects.release.v0.1.0",
+  "description": "Public scorecard registry for externally submitted training-corpus diagnostics. Entries are diagnostic positions under the fixed metric suite, not quality rankings.",
+  "entries": []
+}

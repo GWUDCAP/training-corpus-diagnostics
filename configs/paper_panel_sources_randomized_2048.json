@@ -1,0 +1,167 @@
+{
+  "schema": "lens_effects.source_panel.v1",
+  "notes": [
+    "Randomized 2048-chunk paper-panel recipe.",
+    "Hugging Face streaming sources use seeded shuffle plus reservoir sampling.",
+    "Dolma uses shuffled manifest URLs with a per-shard row cap before retained sampling.",
+    "Source adapters record dataset row positions or shard references as available.",
+    "This recipe is intended for release-grade randomized retained-panel readings."
+  ],
+  "defaults": {
+    "source_type": "hf",
+    "split": "train",
+    "streaming": true,
+    "mode": "plain_text",
+    "chunk_chars": 768,
+    "max_documents": 50000,
+    "max_chunks": 2048,
+    "max_chunks_per_source_document": 2,
+    "sampling_mode": "reservoir",
+    "sample_seed": 20260505,
+    "sample_scan_documents": 50000,
+    "sample_reservoir_documents": 12000,
+    "hf_shuffle_buffer_size": 50000
+  },
+  "corpora": [
+    {
+      "label": "fineweb_sample_10BT",
+      "display": "FineWeb",
+      "role": "broad",
+      "stage_role": "pretraining",
+      "subrole": "web_scrape",
+      "dataset": "HuggingFaceFW/fineweb",
+      "config": "sample-10BT",
+      "field": "text"
+    },
+    {
+      "label": "falcon_refinedweb",
+      "display": "RefinedWeb",
+      "role": "broad",
+      "stage_role": "pretraining",
+      "subrole": "web_scrape",
+      "dataset": "tiiuae/falcon-refinedweb",
+      "field": "content"
+    },
+    {
+      "label": "dolma_v1_7",
+      "display": "Dolma",
+      "role": "broad",
+      "stage_role": "pretraining",
+      "subrole": "aggregate_mixture",
+      "source_type": "dolma_manifest",
+      "dataset": "allenai/dolma",
+      "config": "v1_7",
+      "field": "text",
+      "mode": "dolma_url_manifest",
+      "dolma_shuffle_urls": true,
+      "dolma_rows_per_shard": 128
+    },
+    {
+      "label": "c4_en",
+      "display": "C4",
+      "role": "broad",
+      "stage_role": "pretraining",
+      "subrole": "web_scrape",
+      "dataset": "allenai/c4",
+      "config": "en",
+      "field": "text"
+    },
+    {
+      "label": "slimpajama_627b_reupload",
+      "display": "SlimPajama",
+      "role": "broad",
+      "stage_role": "pretraining",
+      "subrole": "aggregate_mixture",
+      "dataset": "gmongaras/SlimPajama-627B_Reupload",
+      "field": "text"
+    },
+    {
+      "label": "pile_uncopyrighted",
+      "display": "Pile uncopyrighted",
+      "role": "broad",
+      "stage_role": "pretraining",
+      "subrole": "aggregate_mixture",
+      "dataset": "monology/pile-uncopyrighted",
+      "field": "text"
+    },
+    {
+      "label": "hh_rlhf_chosen",
+      "display": "HH-RLHF chosen",
+      "role": "targeted",
+      "stage_role": "post_training",
+      "subrole": "preference_chosen",
+      "dataset": "Anthropic/hh-rlhf",
+      "field": "chosen",
+      "mode": "hh_rlhf_last_assistant"
+    },
+    {
+      "label": "hh_rlhf_rejected",
+      "display": "HH-RLHF rejected",
+      "role": "targeted",
+      "stage_role": "post_training",
+      "subrole": "preference_rejected",
+      "dataset": "Anthropic/hh-rlhf",
+      "field": "rejected",
+      "mode": "hh_rlhf_last_assistant"
+    },
+    {
+      "label": "oasst1_assistant_en",
+      "display": "OASST1 assistant",
+      "role": "targeted",
+      "stage_role": "post_training",
+      "subrole": "assistant_dialogue",
+      "dataset": "OpenAssistant/oasst1",
+      "field": "text",
+      "mode": "oasst_assistant_text"
+    },
+    {
+      "label": "ultrafeedback_binarized_chosen",
+      "display": "UltraFeedback chosen",
+      "role": "targeted",
+      "stage_role": "post_training",
+      "subrole": "feedback_chosen",
+      "dataset": "HuggingFaceH4/ultrafeedback_binarized",
+      "split": "train_prefs",
+      "field": "chosen",
+      "mode": "message_list_last_assistant"
+    },
+    {
+      "label": "nemotron_math",
+      "display": "Nemotron-SFT-Math",
+      "role": "targeted",
+      "stage_role": "post_training",
+      "subrole": "math_capability",
+      "dataset": "nvidia/Nemotron-SFT-Math-v3",
+      "field": "messages",
+      "mode": "message_list_last_assistant"
+    },
+    {
+      "label": "beavertails",
+      "display": "BeaverTails",
+      "role": "targeted",
+      "stage_role": "post_training",
+      "subrole": "safety_harmlessness",
+      "dataset": "PKU-Alignment/BeaverTails",
+      "split": "30k_train",
+      "field": "response"
+    },
+    {
+      "label": "magicoder_oss_instruct",
+      "display": "Magicoder OSS Instruct",
+      "role": "targeted",
+      "stage_role": "post_training",
+      "subrole": "code_capability",
+      "dataset": "ise-uiuc/Magicoder-OSS-Instruct-75K",
+      "field": "solution"
+    },
+    {
+      "label": "dolly_15k",
+      "display": "Dolly 15k",
+      "role": "targeted",
+      "stage_role": "post_training",
+      "subrole": "general_instruction_sft",
+      "dataset": "databricks/databricks-dolly-15k",
+      "field": "response"
+    }
+  ]
+}

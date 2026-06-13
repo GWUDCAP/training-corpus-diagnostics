@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use Training Corpus Diagnostics or the lens-effects release artifacts, please cite the associated paper."
+title: "Lens Effects: Structured Geometry in Training Corpora"
+authors:
+  - family-names: "Lemaire"
+    given-names: "Kyle"
+date-released: 2026-06-13
+version: "0.1.0"
+repository-code: "https://github.com/GWUDCAP/training-corpus-diagnostics"

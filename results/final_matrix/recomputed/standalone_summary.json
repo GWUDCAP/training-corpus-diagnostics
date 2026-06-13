@@ -1,0 +1,156 @@
+{
+  "fineweb_sample_10BT": {
+    "display": "FineWeb",
+    "role": "broad",
+    "n_chunks": 2048,
+    "compression_ratio_lzma": 0.34216700139564965,
+    "semantic_spectrum": {
+      "total_variance": 0.7767542042120219,
+      "top1_share": 0.018645248105092382,
+      "top5_share": 0.07851788862293968
+    }
+  },
+  "falcon_refinedweb": {
+    "display": "RefinedWeb",
+    "role": "broad",
+    "n_chunks": 2048,
+    "compression_ratio_lzma": 0.3456547266012781,
+    "semantic_spectrum": {
+      "total_variance": 0.7822028250235834,
+      "top1_share": 0.019416715210432787,
+      "top5_share": 0.07828263835844035
+    }
+  },
+  "dolma_v1_7": {
+    "display": "Dolma",
+    "role": "broad",
+    "n_chunks": 2048,
+    "compression_ratio_lzma": 0.3447335367436941,
+    "semantic_spectrum": {
+      "total_variance": 0.7810236310352916,
+      "top1_share": 0.01940661490838879,
+      "top5_share": 0.07804768826713863
+    }
+  },
+  "c4_en": {
+    "display": "C4",
+    "role": "broad",
+    "n_chunks": 2048,
+    "compression_ratio_lzma": 0.33434264248598966,
+    "semantic_spectrum": {
+      "total_variance": 0.7733390872150117,
+      "top1_share": 0.018719292577710298,
+      "top5_share": 0.07896411736046106
+    }
+  },
+  "slimpajama_627b_reupload": {
+    "display": "SlimPajama",
+    "role": "broad",
+    "n_chunks": 2048,
+    "compression_ratio_lzma": 0.3427218870144618,
+    "semantic_spectrum": {
+      "total_variance": 0.7843627640753787,
+      "top1_share": 0.020726415897643517,
+      "top5_share": 0.07927848598489683
+    }
+  },
+  "pile_uncopyrighted": {
+    "display": "Pile uncopyrighted",
+    "role": "broad",
+    "n_chunks": 2048,
+    "compression_ratio_lzma": 0.3288604898828541,
+    "semantic_spectrum": {
+      "total_variance": 0.7905262308347935,
+      "top1_share": 0.03192973973037946,
+      "top5_share": 0.09675199413062562
+    }
+  },
+  "hh_rlhf_chosen": {
+    "display": "HH-RLHF chosen",
+    "role": "targeted",
+    "n_chunks": 2048,
+    "compression_ratio_lzma": 0.301128269700888,
+    "semantic_spectrum": {
+      "total_variance": 0.7772390835696078,
+      "top1_share": 0.027044985080394296,
+      "top5_share": 0.10152948451898755
+    }
+  },
+  "hh_rlhf_rejected": {
+    "display": "HH-RLHF rejected",
+    "role": "targeted",
+    "n_chunks": 2048,
+    "compression_ratio_lzma": 0.29883662872484906,
+    "semantic_spectrum": {
+      "total_variance": 0.7723404065257646,
+      "top1_share": 0.025286833230647135,
+      "top5_share": 0.1033892429812827
+    }
+  },
+  "oasst1_assistant_en": {
+    "display": "OASST1 assistant",
+    "role": "targeted",
+    "n_chunks": 2048,
+    "compression_ratio_lzma": 0.29815139579217803,
+    "semantic_spectrum": {
+      "total_variance": 0.7808927310837456,
+      "top1_share": 0.028353795173170774,
+      "top5_share": 0.10145412605892437
+    }
+  },
+  "ultrafeedback_binarized_chosen": {
+    "display": "UltraFeedback chosen",
+    "role": "targeted",
+    "n_chunks": 2048,
+    "compression_ratio_lzma": 0.29172001041608486,
+    "semantic_spectrum": {
+      "total_variance": 0.7690827497696887,
+      "top1_share": 0.03191405550865855,
+      "top5_share": 0.1043144703253832
+    }
+  },
+  "nemotron_math": {
+    "display": "Nemotron-SFT-Math",
+    "role": "targeted",
+    "n_chunks": 2048,
+    "compression_ratio_lzma": 0.2685248377713135,
+    "semantic_spectrum": {
+      "total_variance": 0.49897629914878966,
+      "top1_share": 0.1082477225142561,
+      "top5_share": 0.2506836406400889
+    }
+  },
+  "beavertails": {
+    "display": "BeaverTails",
+    "role": "targeted",
+    "n_chunks": 2048,
+    "compression_ratio_lzma": 0.2884453579294842,
+    "semantic_spectrum": {
+      "total_variance": 0.758304803609864,
+      "top1_share": 0.05235720167310362,
+      "top5_share": 0.1362872995474739
+    }
+  },
+  "magicoder_oss_instruct": {
+    "display": "Magicoder OSS Instruct",
+    "role": "targeted",
+    "n_chunks": 2048,
+    "compression_ratio_lzma": 0.23124892502005362,
+    "semantic_spectrum": {
+      "total_variance": 0.6021099557988909,
+      "top1_share": 0.05572704964313385,
+      "top5_share": 0.1715482559807132
+    }
+  },
+  "dolly_15k": {
+    "display": "Dolly 15k",
+    "role": "targeted",
+    "n_chunks": 2048,
+    "compression_ratio_lzma": 0.3281730889113812,
+    "semantic_spectrum": {
+      "total_variance": 0.7923425443763426,
+      "top1_share": 0.024911691013932608,
+      "top5_share": 0.09355049337809124
+    }
+  }
+}

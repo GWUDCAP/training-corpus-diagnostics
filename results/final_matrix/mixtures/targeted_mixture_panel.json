@@ -1,0 +1,3824 @@
+{
+  "schema": "lens_effects.targeted_mixture_panel.v1",
+  "manifest": "data/corpus_manifest.json",
+  "targeted_corpora": 8,
+  "directed_pairs": 56,
+  "alphas": [
+    0.0,
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "targeted_mix_bundle": {
+    "hh_rlhf_chosen__mix__hh_rlhf_rejected": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.027044985080394296,
+        "top5_share": 0.10152948451898755,
+        "compression_ratio": 0.301128269700888,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0009765625
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9782268254622731,
+        "lexical_js": 0.0005556162739645443,
+        "cluster_js": 0.00022482977505212205,
+        "top1_share": 0.026951828821851168,
+        "top5_share": 0.10122218837642824,
+        "compression_ratio": 0.3007035143635436,
+        "refusal_chunk_rate": 0.05322265625,
+        "assistant_marker_rate": 0.0009765625
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9512079070174637,
+        "lexical_js": 0.0016444173782100553,
+        "cluster_js": 0.0008705137501768959,
+        "top1_share": 0.027327738370189824,
+        "top5_share": 0.10250348497621752,
+        "compression_ratio": 0.3000921061954068,
+        "refusal_chunk_rate": 0.05859375,
+        "assistant_marker_rate": 0.0009765625
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.913060541836535,
+        "lexical_js": 0.00374409701533547,
+        "cluster_js": 0.002393193337319824,
+        "top1_share": 0.026122471189345214,
+        "top5_share": 0.10151161398909866,
+        "compression_ratio": 0.2994555445513568,
+        "refusal_chunk_rate": 0.052734375,
+        "assistant_marker_rate": 0.00048828125
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.8868494378363062,
+        "lexical_js": 0.005798956266873472,
+        "cluster_js": 0.0030206620155087535,
+        "top1_share": 0.025548752040091494,
+        "top5_share": 0.10148427421915981,
+        "compression_ratio": 0.29936642240388456,
+        "refusal_chunk_rate": 0.04833984375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.874373134678261,
+        "lexical_js": 0.007517131959795061,
+        "cluster_js": 0.005828173150028165,
+        "top1_share": 0.025286833230647135,
+        "top5_share": 0.1033892429812827,
+        "compression_ratio": 0.29883662872484906,
+        "refusal_chunk_rate": 0.05078125,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "hh_rlhf_chosen__mix__oasst1_assistant_en": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.027044985080394296,
+        "top5_share": 0.10152948451898755,
+        "compression_ratio": 0.301128269700888,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0009765625
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9658451001391675,
+        "lexical_js": 0.003738886456917018,
+        "cluster_js": 0.002221862150571601,
+        "top1_share": 0.025971745022090795,
+        "top5_share": 0.09907014782418966,
+        "compression_ratio": 0.30152658703988666,
+        "refusal_chunk_rate": 0.0556640625,
+        "assistant_marker_rate": 0.0009765625
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9079814042885075,
+        "lexical_js": 0.011607115418282103,
+        "cluster_js": 0.017075989779675022,
+        "top1_share": 0.024451297381813935,
+        "top5_share": 0.0966199432464567,
+        "compression_ratio": 0.30147333252074693,
+        "refusal_chunk_rate": 0.056640625,
+        "assistant_marker_rate": 0.0009765625
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.7996335815694563,
+        "lexical_js": 0.036804679556726866,
+        "cluster_js": 0.04122954337652111,
+        "top1_share": 0.024260639896416372,
+        "top5_share": 0.09375687602972436,
+        "compression_ratio": 0.30200603314222746,
+        "refusal_chunk_rate": 0.05224609375,
+        "assistant_marker_rate": 0.00048828125
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6570012965819994,
+        "lexical_js": 0.07679936915038509,
+        "cluster_js": 0.08029715074644207,
+        "top1_share": 0.02697172758498619,
+        "top5_share": 0.09631809480441111,
+        "compression_ratio": 0.30117510419954996,
+        "refusal_chunk_rate": 0.04833984375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.45307560696612253,
+        "lexical_js": 0.14811742571311923,
+        "cluster_js": 0.14942070307875455,
+        "top1_share": 0.028353795173170774,
+        "top5_share": 0.10145412605892437,
+        "compression_ratio": 0.29815139579217803,
+        "refusal_chunk_rate": 0.0498046875,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "hh_rlhf_chosen__mix__ultrafeedback_binarized_chosen": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.027044985080394296,
+        "top5_share": 0.10152948451898755,
+        "compression_ratio": 0.301128269700888,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0009765625
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9588821428901162,
+        "lexical_js": 0.0050161543814818054,
+        "cluster_js": 0.006320882213493665,
+        "top1_share": 0.02536771501485055,
+        "top5_share": 0.09853788548185645,
+        "compression_ratio": 0.30141689315583897,
+        "refusal_chunk_rate": 0.0537109375,
+        "assistant_marker_rate": 0.0009765625
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.8983980485266834,
+        "lexical_js": 0.016714867334842003,
+        "cluster_js": 0.02635123053645544,
+        "top1_share": 0.023211745080365748,
+        "top5_share": 0.09662690155842352,
+        "compression_ratio": 0.30125032931182777,
+        "refusal_chunk_rate": 0.05126953125,
+        "assistant_marker_rate": 0.0009765625
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.7818853720576391,
+        "lexical_js": 0.04773199409057639,
+        "cluster_js": 0.07102851754906453,
+        "top1_share": 0.02845967685615256,
+        "top5_share": 0.09712434642626781,
+        "compression_ratio": 0.2990082181987408,
+        "refusal_chunk_rate": 0.05126953125,
+        "assistant_marker_rate": 0.00048828125
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6221331321306537,
+        "lexical_js": 0.09824861608265445,
+        "cluster_js": 0.14600571847700652,
+        "top1_share": 0.03133875630778346,
+        "top5_share": 0.09974174716920395,
+        "compression_ratio": 0.2962238837268948,
+        "refusal_chunk_rate": 0.052734375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.37394908786793535,
+        "lexical_js": 0.18831166169316607,
+        "cluster_js": 0.24817772294004617,
+        "top1_share": 0.03191405550865855,
+        "top5_share": 0.1043144703253832,
+        "compression_ratio": 0.29172001041608486,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "hh_rlhf_chosen__mix__nemotron_math": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.027044985080394296,
+        "top5_share": 0.10152948451898755,
+        "compression_ratio": 0.301128269700888,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0009765625
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9559055430707701,
+        "lexical_js": 0.009011607339894263,
+        "cluster_js": 0.033482621906965285,
+        "top1_share": 0.05339980767613849,
+        "top5_share": 0.12999270386409043,
+        "compression_ratio": 0.30132048799769534,
+        "refusal_chunk_rate": 0.05126953125,
+        "assistant_marker_rate": 0.0009765625
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9044693397378213,
+        "lexical_js": 0.030613947873580207,
+        "cluster_js": 0.09264974734073646,
+        "top1_share": 0.10718262683625743,
+        "top5_share": 0.17784723261726634,
+        "compression_ratio": 0.29857720295402,
+        "refusal_chunk_rate": 0.04736328125,
+        "assistant_marker_rate": 0.0009765625
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.8068169501169682,
+        "lexical_js": 0.07896626360547974,
+        "cluster_js": 0.21240298813938377,
+        "top1_share": 0.14965130878628105,
+        "top5_share": 0.22996728960364438,
+        "compression_ratio": 0.2909000201538965,
+        "refusal_chunk_rate": 0.03662109375,
+        "assistant_marker_rate": 0.00048828125
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.673750756280792,
+        "lexical_js": 0.15850795566794076,
+        "cluster_js": 0.37779898883962226,
+        "top1_share": 0.13904393302935492,
+        "top5_share": 0.255426840628439,
+        "compression_ratio": 0.28174004261001856,
+        "refusal_chunk_rate": 0.025390625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.2565384981870784,
+        "lexical_js": 0.37818850950522354,
+        "cluster_js": 0.6886241158220083,
+        "top1_share": 0.1082477225142561,
+        "top5_share": 0.2506836406400889,
+        "compression_ratio": 0.2685248377713135,
+        "refusal_chunk_rate": 0.02587890625,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "hh_rlhf_chosen__mix__beavertails": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.027044985080394296,
+        "top5_share": 0.10152948451898755,
+        "compression_ratio": 0.301128269700888,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0009765625
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9701784508377238,
+        "lexical_js": 0.0010614804166686482,
+        "cluster_js": 0.002332921237391838,
+        "top1_share": 0.025817245815657502,
+        "top5_share": 0.10330068204937841,
+        "compression_ratio": 0.3012980723146854,
+        "refusal_chunk_rate": 0.05859375,
+        "assistant_marker_rate": 0.0009765625
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9181312150343915,
+        "lexical_js": 0.004582388101045411,
+        "cluster_js": 0.011198343293670528,
+        "top1_share": 0.030724806243392612,
+        "top5_share": 0.10813829192403042,
+        "compression_ratio": 0.3012100330533552,
+        "refusal_chunk_rate": 0.06298828125,
+        "assistant_marker_rate": 0.0009765625
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.8097256841777463,
+        "lexical_js": 0.017297509391179,
+        "cluster_js": 0.04017861635696794,
+        "top1_share": 0.03785821772999348,
+        "top5_share": 0.11378685794993453,
+        "compression_ratio": 0.29907361214675415,
+        "refusal_chunk_rate": 0.0625,
+        "assistant_marker_rate": 0.00048828125
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6691661148855753,
+        "lexical_js": 0.0471377951364265,
+        "cluster_js": 0.07949364035135602,
+        "top1_share": 0.04522587971830412,
+        "top5_share": 0.12445303023527589,
+        "compression_ratio": 0.2947790075785073,
+        "refusal_chunk_rate": 0.06591796875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.46058134306300275,
+        "lexical_js": 0.12385772418692118,
+        "cluster_js": 0.16333507931085994,
+        "top1_share": 0.05235720167310362,
+        "top5_share": 0.1362872995474739,
+        "compression_ratio": 0.2884453579294842,
+        "refusal_chunk_rate": 0.06591796875,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "hh_rlhf_chosen__mix__magicoder_oss_instruct": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.027044985080394296,
+        "top5_share": 0.10152948451898755,
+        "compression_ratio": 0.301128269700888,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0009765625
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9644207981990482,
+        "lexical_js": 0.030628738177501898,
+        "cluster_js": 0.031886701508149845,
+        "top1_share": 0.03647775297401529,
+        "top5_share": 0.11326190307552676,
+        "compression_ratio": 0.29784071274819257,
+        "refusal_chunk_rate": 0.05029296875,
+        "assistant_marker_rate": 0.0009765625
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9146496487981357,
+        "lexical_js": 0.07757407882843424,
+        "cluster_js": 0.0918916317772164,
+        "top1_share": 0.06839029713677604,
+        "top5_share": 0.13635226136754558,
+        "compression_ratio": 0.2883634651967925,
+        "refusal_chunk_rate": 0.04345703125,
+        "assistant_marker_rate": 0.0009765625
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.8201730769007367,
+        "lexical_js": 0.15445485427357417,
+        "cluster_js": 0.2138170490272696,
+        "top1_share": 0.09176732985658544,
+        "top5_share": 0.16241144546863356,
+        "compression_ratio": 0.2701792800238867,
+        "refusal_chunk_rate": 0.02880859375,
+        "assistant_marker_rate": 0.00048828125
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6869652193765794,
+        "lexical_js": 0.23983490871433588,
+        "cluster_js": 0.37356704242711103,
+        "top1_share": 0.0796783055727165,
+        "top5_share": 0.17791089833504578,
+        "compression_ratio": 0.2531085060101554,
+        "refusal_chunk_rate": 0.01611328125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.22306945983235207,
+        "lexical_js": 0.4389506015941621,
+        "cluster_js": 0.6783697817282925,
+        "top1_share": 0.05572704964313385,
+        "top5_share": 0.1715482559807132,
+        "compression_ratio": 0.23124892502005362,
+        "refusal_chunk_rate": 0.00927734375,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "hh_rlhf_chosen__mix__dolly_15k": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.027044985080394296,
+        "top5_share": 0.10152948451898755,
+        "compression_ratio": 0.301128269700888,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0009765625
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9747850727251303,
+        "lexical_js": 0.0007738625916629908,
+        "cluster_js": 0.0017528888749053701,
+        "top1_share": 0.026580521533187344,
+        "top5_share": 0.09819448111217995,
+        "compression_ratio": 0.30469583459982,
+        "refusal_chunk_rate": 0.05078125,
+        "assistant_marker_rate": 0.0009765625
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9288383465196696,
+        "lexical_js": 0.0034051856155632677,
+        "cluster_js": 0.007666688159749128,
+        "top1_share": 0.026971479146471803,
+        "top5_share": 0.09399750670654271,
+        "compression_ratio": 0.31035779590460505,
+        "refusal_chunk_rate": 0.046875,
+        "assistant_marker_rate": 0.0009765625
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.8246801659854949,
+        "lexical_js": 0.01435464597956,
+        "cluster_js": 0.03735798240804111,
+        "top1_share": 0.0262895478469328,
+        "top5_share": 0.08782576263438663,
+        "compression_ratio": 0.31757180633531595,
+        "refusal_chunk_rate": 0.03515625,
+        "assistant_marker_rate": 0.00048828125
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6918463058196761,
+        "lexical_js": 0.038650112522924114,
+        "cluster_js": 0.06905782367894753,
+        "top1_share": 0.02520746605884405,
+        "top5_share": 0.08757494111014019,
+        "compression_ratio": 0.324026161021503,
+        "refusal_chunk_rate": 0.02685546875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.5010376611077383,
+        "lexical_js": 0.10567158677205499,
+        "cluster_js": 0.14586112352032296,
+        "top1_share": 0.024911691013932608,
+        "top5_share": 0.09355049337809124,
+        "compression_ratio": 0.3281730889113812,
+        "refusal_chunk_rate": 0.02392578125,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "hh_rlhf_rejected__mix__hh_rlhf_chosen": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.025286833230647135,
+        "top5_share": 0.1033892429812827,
+        "compression_ratio": 0.29883662872484906,
+        "refusal_chunk_rate": 0.05078125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9758777052526943,
+        "lexical_js": 0.0008527680301547496,
+        "cluster_js": 0.0003633908699797921,
+        "top1_share": 0.02591819834241405,
+        "top5_share": 0.10322364313068393,
+        "compression_ratio": 0.2983436417751911,
+        "refusal_chunk_rate": 0.04931640625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9482386149646946,
+        "lexical_js": 0.002088192851361146,
+        "cluster_js": 0.0008576566310835388,
+        "top1_share": 0.02554875204009149,
+        "top5_share": 0.1014842742191598,
+        "compression_ratio": 0.2994874111237029,
+        "refusal_chunk_rate": 0.04833984375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.9139827410096021,
+        "lexical_js": 0.0045565835591971394,
+        "cluster_js": 0.002223300887880959,
+        "top1_share": 0.0261224711893452,
+        "top5_share": 0.10151161398909864,
+        "compression_ratio": 0.29968572412170846,
+        "refusal_chunk_rate": 0.052734375,
+        "assistant_marker_rate": 0.00048828125
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.8652347940570766,
+        "lexical_js": 0.008845282225900912,
+        "cluster_js": 0.0026871571549096133,
+        "top1_share": 0.027327738370189824,
+        "top5_share": 0.1025034849762175,
+        "compression_ratio": 0.30030668326602494,
+        "refusal_chunk_rate": 0.05859375,
+        "assistant_marker_rate": 0.0009765625
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.8336328848645359,
+        "lexical_js": 0.012965288235033453,
+        "cluster_js": 0.006222952558826156,
+        "top1_share": 0.027044985080394296,
+        "top5_share": 0.10152948451898755,
+        "compression_ratio": 0.301128269700888,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0009765625
+      }
+    ],
+    "hh_rlhf_rejected__mix__oasst1_assistant_en": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.025286833230647135,
+        "top5_share": 0.1033892429812827,
+        "compression_ratio": 0.29883662872484906,
+        "refusal_chunk_rate": 0.05078125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9674342757293546,
+        "lexical_js": 0.0026365875445372613,
+        "cluster_js": 0.0016538626792001344,
+        "top1_share": 0.02479675567840766,
+        "top5_share": 0.10119541608571381,
+        "compression_ratio": 0.29945119080121396,
+        "refusal_chunk_rate": 0.05224609375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9104242658695445,
+        "lexical_js": 0.009534631436511497,
+        "cluster_js": 0.013575865530732343,
+        "top1_share": 0.023722333780942684,
+        "top5_share": 0.09860753176411464,
+        "compression_ratio": 0.29963545614584036,
+        "refusal_chunk_rate": 0.0537109375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.8048640412206461,
+        "lexical_js": 0.03274450528591143,
+        "cluster_js": 0.04818484153845115,
+        "top1_share": 0.02422130574938291,
+        "top5_share": 0.09700326760072564,
+        "compression_ratio": 0.30029553757945593,
+        "refusal_chunk_rate": 0.05517578125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6602637197412234,
+        "lexical_js": 0.07221822750370716,
+        "cluster_js": 0.08209087247659688,
+        "top1_share": 0.02698969317420424,
+        "top5_share": 0.09713879454837722,
+        "compression_ratio": 0.2998611596153355,
+        "refusal_chunk_rate": 0.0556640625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.4410572254899424,
+        "lexical_js": 0.15046408444365947,
+        "cluster_js": 0.15765566177734988,
+        "top1_share": 0.028353795173170774,
+        "top5_share": 0.10145412605892437,
+        "compression_ratio": 0.29815139579217803,
+        "refusal_chunk_rate": 0.0498046875,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "hh_rlhf_rejected__mix__ultrafeedback_binarized_chosen": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.025286833230647135,
+        "top5_share": 0.1033892429812827,
+        "compression_ratio": 0.29883662872484906,
+        "refusal_chunk_rate": 0.05078125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9603077566138091,
+        "lexical_js": 0.0038915200697344377,
+        "cluster_js": 0.0066025341117634095,
+        "top1_share": 0.02433084080475605,
+        "top5_share": 0.10073856593496991,
+        "compression_ratio": 0.2993552109403629,
+        "refusal_chunk_rate": 0.05029296875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.8959453779006594,
+        "lexical_js": 0.014330414115382169,
+        "cluster_js": 0.026329807422471062,
+        "top1_share": 0.022539779601434225,
+        "top5_share": 0.09832246853458566,
+        "compression_ratio": 0.2994415678594358,
+        "refusal_chunk_rate": 0.04833984375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.7803651162776848,
+        "lexical_js": 0.04397631983919297,
+        "cluster_js": 0.06932258888870436,
+        "top1_share": 0.028427525219125283,
+        "top5_share": 0.09952272935453983,
+        "compression_ratio": 0.2975118922212627,
+        "refusal_chunk_rate": 0.05419921875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6315496238596793,
+        "lexical_js": 0.09317531731458657,
+        "cluster_js": 0.14183605086594084,
+        "top1_share": 0.03141665775847989,
+        "top5_share": 0.10031372889640067,
+        "compression_ratio": 0.29523669515902445,
+        "refusal_chunk_rate": 0.06005859375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.3675615247329214,
+        "lexical_js": 0.19067965098114947,
+        "cluster_js": 0.24664488165323895,
+        "top1_share": 0.03191405550865855,
+        "top5_share": 0.1043144703253832,
+        "compression_ratio": 0.29172001041608486,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "hh_rlhf_rejected__mix__nemotron_math": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.025286833230647135,
+        "top5_share": 0.1033892429812827,
+        "compression_ratio": 0.29883662872484906,
+        "refusal_chunk_rate": 0.05078125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.956285434617615,
+        "lexical_js": 0.00927071368687955,
+        "cluster_js": 0.03266666559652034,
+        "top1_share": 0.053497750122337005,
+        "top5_share": 0.13297475028095743,
+        "compression_ratio": 0.2991885545110014,
+        "refusal_chunk_rate": 0.0478515625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9060798962140633,
+        "lexical_js": 0.030088673190409025,
+        "cluster_js": 0.08980801258829815,
+        "top1_share": 0.10767765513999542,
+        "top5_share": 0.18026182676956884,
+        "compression_ratio": 0.2965544847793351,
+        "refusal_chunk_rate": 0.04443359375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.8179008703557824,
+        "lexical_js": 0.07680052446869462,
+        "cluster_js": 0.20878376606332585,
+        "top1_share": 0.1501896230891442,
+        "top5_share": 0.23171921350786548,
+        "compression_ratio": 0.2891269388605648,
+        "refusal_chunk_rate": 0.03955078125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6812984081233393,
+        "lexical_js": 0.15604606456254755,
+        "cluster_js": 0.3723180185887056,
+        "top1_share": 0.1409420314969518,
+        "top5_share": 0.2573278710933792,
+        "compression_ratio": 0.2803173052672644,
+        "refusal_chunk_rate": 0.03271484375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.25446168446689404,
+        "lexical_js": 0.37981799175916275,
+        "cluster_js": 0.6806399631168201,
+        "top1_share": 0.1082477225142561,
+        "top5_share": 0.2506836406400889,
+        "compression_ratio": 0.2685248377713135,
+        "refusal_chunk_rate": 0.02587890625,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "hh_rlhf_rejected__mix__beavertails": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.025286833230647135,
+        "top5_share": 0.1033892429812827,
+        "compression_ratio": 0.29883662872484906,
+        "refusal_chunk_rate": 0.05078125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9713321099543469,
+        "lexical_js": 0.0013286225190550444,
+        "cluster_js": 0.0012654884340337043,
+        "top1_share": 0.027569885644964008,
+        "top5_share": 0.10478498546763203,
+        "compression_ratio": 0.29892608505471774,
+        "refusal_chunk_rate": 0.05517578125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9201670503871581,
+        "lexical_js": 0.004848066884475188,
+        "cluster_js": 0.011109505016256233,
+        "top1_share": 0.032555988538697185,
+        "top5_share": 0.10817063571150241,
+        "compression_ratio": 0.29894547213003836,
+        "refusal_chunk_rate": 0.06005859375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.8165567078770136,
+        "lexical_js": 0.017770838403567045,
+        "cluster_js": 0.032576943750396686,
+        "top1_share": 0.0388987725073304,
+        "top5_share": 0.11610960771813068,
+        "compression_ratio": 0.29682802100376043,
+        "refusal_chunk_rate": 0.0654296875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6726653927927084,
+        "lexical_js": 0.04718525997771626,
+        "cluster_js": 0.07246669584362161,
+        "top1_share": 0.04554513512739727,
+        "top5_share": 0.12549309609932943,
+        "compression_ratio": 0.29298771179128186,
+        "refusal_chunk_rate": 0.0732421875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.44839629947299375,
+        "lexical_js": 0.13081243955608565,
+        "cluster_js": 0.13375713579302675,
+        "top1_share": 0.05235720167310362,
+        "top5_share": 0.1362872995474739,
+        "compression_ratio": 0.2884453579294842,
+        "refusal_chunk_rate": 0.06591796875,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "hh_rlhf_rejected__mix__magicoder_oss_instruct": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.025286833230647135,
+        "top5_share": 0.1033892429812827,
+        "compression_ratio": 0.29883662872484906,
+        "refusal_chunk_rate": 0.05078125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9645673353216464,
+        "lexical_js": 0.02674266353797713,
+        "cluster_js": 0.033363685103086106,
+        "top1_share": 0.03625831618632823,
+        "top5_share": 0.11544242558559224,
+        "compression_ratio": 0.29568655271106264,
+        "refusal_chunk_rate": 0.046875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9145168515361508,
+        "lexical_js": 0.07244187583508621,
+        "cluster_js": 0.094142778796397,
+        "top1_share": 0.06866648718096283,
+        "top5_share": 0.13783269291419586,
+        "compression_ratio": 0.28629388311167714,
+        "refusal_chunk_rate": 0.04052734375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.8301032951982089,
+        "lexical_js": 0.1482236787665711,
+        "cluster_js": 0.21316809466451825,
+        "top1_share": 0.09195747223921055,
+        "top5_share": 0.16320827583800757,
+        "compression_ratio": 0.2683419184184881,
+        "refusal_chunk_rate": 0.03173828125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6950022526172089,
+        "lexical_js": 0.2331694296936443,
+        "cluster_js": 0.3752815670062229,
+        "top1_share": 0.07948555203005757,
+        "top5_share": 0.178270443961543,
+        "compression_ratio": 0.25138812359598184,
+        "refusal_chunk_rate": 0.0234375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.22854692236864788,
+        "lexical_js": 0.43120045934144025,
+        "cluster_js": 0.6802726581704704,
+        "top1_share": 0.05572704964313385,
+        "top5_share": 0.1715482559807132,
+        "compression_ratio": 0.23124892502005362,
+        "refusal_chunk_rate": 0.00927734375,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "hh_rlhf_rejected__mix__dolly_15k": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.025286833230647135,
+        "top5_share": 0.1033892429812827,
+        "compression_ratio": 0.29883662872484906,
+        "refusal_chunk_rate": 0.05078125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9741026904238811,
+        "lexical_js": 0.0011019248973094258,
+        "cluster_js": 0.0019235755801542916,
+        "top1_share": 0.025931014353655142,
+        "top5_share": 0.10024578873238296,
+        "compression_ratio": 0.3026054382147704,
+        "refusal_chunk_rate": 0.04736328125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9266954787487182,
+        "lexical_js": 0.0037253734486321372,
+        "cluster_js": 0.011657908636335357,
+        "top1_share": 0.02660137897692927,
+        "top5_share": 0.09557493650732285,
+        "compression_ratio": 0.30849836019466725,
+        "refusal_chunk_rate": 0.0439453125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.8293978425190419,
+        "lexical_js": 0.014954642200540371,
+        "cluster_js": 0.04148105841109123,
+        "top1_share": 0.026885531114372946,
+        "top5_share": 0.0903687842697581,
+        "compression_ratio": 0.3161186388709392,
+        "refusal_chunk_rate": 0.0380859375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6885089496021329,
+        "lexical_js": 0.039785714945360345,
+        "cluster_js": 0.08504947891465098,
+        "top1_share": 0.025775689241571614,
+        "top5_share": 0.0883810494634152,
+        "compression_ratio": 0.323204721062239,
+        "refusal_chunk_rate": 0.0341796875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.4743038694966544,
+        "lexical_js": 0.11538265807957944,
+        "cluster_js": 0.16637766718871627,
+        "top1_share": 0.024911691013932608,
+        "top5_share": 0.09355049337809124,
+        "compression_ratio": 0.3281730889113812,
+        "refusal_chunk_rate": 0.02392578125,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "oasst1_assistant_en__mix__hh_rlhf_chosen": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.028353795173170774,
+        "top5_share": 0.10145412605892437,
+        "compression_ratio": 0.29815139579217803,
+        "refusal_chunk_rate": 0.0498046875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9595123837680711,
+        "lexical_js": 0.002110251800442732,
+        "cluster_js": 0.0016507876049456295,
+        "top1_share": 0.02799198460766951,
+        "top5_share": 0.09973782047704534,
+        "compression_ratio": 0.29860356998109994,
+        "refusal_chunk_rate": 0.048828125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9078477839582786,
+        "lexical_js": 0.006088675415810666,
+        "cluster_js": 0.010156464605158337,
+        "top1_share": 0.026971727584986182,
+        "top5_share": 0.09631809480441111,
+        "compression_ratio": 0.30147221429741056,
+        "refusal_chunk_rate": 0.04833984375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.7807862818431522,
+        "lexical_js": 0.022241279130490666,
+        "cluster_js": 0.03341588057831699,
+        "top1_share": 0.024260639896416372,
+        "top5_share": 0.0937568760297244,
+        "compression_ratio": 0.3024190425835877,
+        "refusal_chunk_rate": 0.05224609375,
+        "assistant_marker_rate": 0.00048828125
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.641969000464766,
+        "lexical_js": 0.052285629366603095,
+        "cluster_js": 0.08133539560832834,
+        "top1_share": 0.02445129738181394,
+        "top5_share": 0.09661994324645673,
+        "compression_ratio": 0.30178702866445756,
+        "refusal_chunk_rate": 0.056640625,
+        "assistant_marker_rate": 0.0009765625
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.45649607842571693,
+        "lexical_js": 0.12857703873866552,
+        "cluster_js": 0.15234350048647916,
+        "top1_share": 0.027044985080394296,
+        "top5_share": 0.10152948451898755,
+        "compression_ratio": 0.301128269700888,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0009765625
+      }
+    ],
+    "oasst1_assistant_en__mix__hh_rlhf_rejected": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.028353795173170774,
+        "top5_share": 0.10145412605892437,
+        "compression_ratio": 0.29815139579217803,
+        "refusal_chunk_rate": 0.0498046875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9605649450550536,
+        "lexical_js": 0.0021157551221686836,
+        "cluster_js": 0.001160450107663453,
+        "top1_share": 0.02797963967987881,
+        "top5_share": 0.09949582458453847,
+        "compression_ratio": 0.29852666521532034,
+        "refusal_chunk_rate": 0.04931640625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9047508588549606,
+        "lexical_js": 0.006649627192813385,
+        "cluster_js": 0.008750537135977714,
+        "top1_share": 0.02698969317420424,
+        "top5_share": 0.09713879454837719,
+        "compression_ratio": 0.30017802233371094,
+        "refusal_chunk_rate": 0.0556640625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.7760308833978737,
+        "lexical_js": 0.02331340528209411,
+        "cluster_js": 0.042402235300622,
+        "top1_share": 0.024221305749382922,
+        "top5_share": 0.09700326760072558,
+        "compression_ratio": 0.30066070818035845,
+        "refusal_chunk_rate": 0.05517578125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6416427056106777,
+        "lexical_js": 0.054499753269624925,
+        "cluster_js": 0.09423508616622747,
+        "top1_share": 0.023722333780942687,
+        "top5_share": 0.09860753176411464,
+        "compression_ratio": 0.29984088654630603,
+        "refusal_chunk_rate": 0.0537109375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.469969328910992,
+        "lexical_js": 0.12393259430321295,
+        "cluster_js": 0.16666900919430958,
+        "top1_share": 0.025286833230647135,
+        "top5_share": 0.1033892429812827,
+        "compression_ratio": 0.29883662872484906,
+        "refusal_chunk_rate": 0.05078125,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "oasst1_assistant_en__mix__ultrafeedback_binarized_chosen": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.028353795173170774,
+        "top5_share": 0.10145412605892437,
+        "compression_ratio": 0.29815139579217803,
+        "refusal_chunk_rate": 0.0498046875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9576928450568464,
+        "lexical_js": 0.002250020679625243,
+        "cluster_js": 0.0007883419002670108,
+        "top1_share": 0.02866733919863376,
+        "top5_share": 0.10100943927158122,
+        "compression_ratio": 0.2969961539496831,
+        "refusal_chunk_rate": 0.0498046875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.913441542945481,
+        "lexical_js": 0.004596737082231967,
+        "cluster_js": 0.003739240596273114,
+        "top1_share": 0.02900894853910686,
+        "top5_share": 0.09980536920131407,
+        "compression_ratio": 0.2971366921930386,
+        "refusal_chunk_rate": 0.04833984375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.8365389125541128,
+        "lexical_js": 0.011927475430366185,
+        "cluster_js": 0.009929074849798117,
+        "top1_share": 0.030474100748568506,
+        "top5_share": 0.09979229307261182,
+        "compression_ratio": 0.2951566109605965,
+        "refusal_chunk_rate": 0.0537109375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.7730341878630794,
+        "lexical_js": 0.020472548150389562,
+        "cluster_js": 0.033102678094141746,
+        "top1_share": 0.032005757423264336,
+        "top5_share": 0.10247696027108975,
+        "compression_ratio": 0.2929627323084991,
+        "refusal_chunk_rate": 0.05810546875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.7302093839970063,
+        "lexical_js": 0.031987377729217586,
+        "cluster_js": 0.0619317121945418,
+        "top1_share": 0.03191405550865855,
+        "top5_share": 0.1043144703253832,
+        "compression_ratio": 0.29172001041608486,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "oasst1_assistant_en__mix__nemotron_math": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.028353795173170774,
+        "top5_share": 0.10145412605892437,
+        "compression_ratio": 0.29815139579217803,
+        "refusal_chunk_rate": 0.0498046875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9172199597085595,
+        "lexical_js": 0.021807225106452496,
+        "cluster_js": 0.021039053675152977,
+        "top1_share": 0.05170914387569229,
+        "top5_share": 0.12909471824364813,
+        "compression_ratio": 0.2979214889771633,
+        "refusal_chunk_rate": 0.04736328125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.8475757515902388,
+        "lexical_js": 0.06330548160418842,
+        "cluster_js": 0.07195502453686484,
+        "top1_share": 0.09750784484160861,
+        "top5_share": 0.1718776011505569,
+        "compression_ratio": 0.2965462212201194,
+        "refusal_chunk_rate": 0.04443359375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.7283566111167326,
+        "lexical_js": 0.1335425087140458,
+        "cluster_js": 0.19058137263326705,
+        "top1_share": 0.13406761684120302,
+        "top5_share": 0.2227182218323944,
+        "compression_ratio": 0.2900678087000603,
+        "refusal_chunk_rate": 0.0390625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.597859556033938,
+        "lexical_js": 0.22038262935183456,
+        "cluster_js": 0.3439923534979128,
+        "top1_share": 0.12589267797804085,
+        "top5_share": 0.2461252326717436,
+        "compression_ratio": 0.28082725743535153,
+        "refusal_chunk_rate": 0.03076171875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.33555450228137496,
+        "lexical_js": 0.3579770465524165,
+        "cluster_js": 0.6459985666446149,
+        "top1_share": 0.1082477225142561,
+        "top5_share": 0.2506836406400889,
+        "compression_ratio": 0.2685248377713135,
+        "refusal_chunk_rate": 0.02587890625,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "oasst1_assistant_en__mix__beavertails": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.028353795173170774,
+        "top5_share": 0.10145412605892437,
+        "compression_ratio": 0.29815139579217803,
+        "refusal_chunk_rate": 0.0498046875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9604250313379276,
+        "lexical_js": 0.0018817585143479027,
+        "cluster_js": 0.0026123129565192747,
+        "top1_share": 0.027654574100688528,
+        "top5_share": 0.09982966250944851,
+        "compression_ratio": 0.298397884687845,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9036247305017638,
+        "lexical_js": 0.005441115479688957,
+        "cluster_js": 0.03271495900192848,
+        "top1_share": 0.029337738425260423,
+        "top5_share": 0.10320853569221193,
+        "compression_ratio": 0.2996406622328744,
+        "refusal_chunk_rate": 0.06005859375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.7732302244860637,
+        "lexical_js": 0.019837490438408274,
+        "cluster_js": 0.096724810886341,
+        "top1_share": 0.03589817634192525,
+        "top5_share": 0.11169570351911026,
+        "compression_ratio": 0.2982664984468411,
+        "refusal_chunk_rate": 0.06494140625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6269321365651633,
+        "lexical_js": 0.052377042128827295,
+        "cluster_js": 0.18962224550182233,
+        "top1_share": 0.0432599728340913,
+        "top5_share": 0.12290030933171768,
+        "compression_ratio": 0.2939460030893499,
+        "refusal_chunk_rate": 0.0712890625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.41208581726821236,
+        "lexical_js": 0.1631329416930458,
+        "cluster_js": 0.3377342683937864,
+        "top1_share": 0.05235720167310362,
+        "top5_share": 0.1362872995474739,
+        "compression_ratio": 0.2884453579294842,
+        "refusal_chunk_rate": 0.06591796875,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "oasst1_assistant_en__mix__magicoder_oss_instruct": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.028353795173170774,
+        "top5_share": 0.10145412605892437,
+        "compression_ratio": 0.29815139579217803,
+        "refusal_chunk_rate": 0.0498046875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9219652716368789,
+        "lexical_js": 0.012912620349465935,
+        "cluster_js": 0.010915415781343087,
+        "top1_share": 0.041676447118788824,
+        "top5_share": 0.11166677073879462,
+        "compression_ratio": 0.29425676935441514,
+        "refusal_chunk_rate": 0.04638671875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.8357011437228802,
+        "lexical_js": 0.044829932993712025,
+        "cluster_js": 0.05378736459800696,
+        "top1_share": 0.060624556430946656,
+        "top5_share": 0.12889795259068967,
+        "compression_ratio": 0.28671566178641916,
+        "refusal_chunk_rate": 0.04052734375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.7107300293847004,
+        "lexical_js": 0.10806361894916944,
+        "cluster_js": 0.13282421071765513,
+        "top1_share": 0.07382637446394848,
+        "top5_share": 0.15490364210689228,
+        "compression_ratio": 0.27038316656397937,
+        "refusal_chunk_rate": 0.03125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.5700731579911165,
+        "lexical_js": 0.18196280861108002,
+        "cluster_js": 0.2777753720710021,
+        "top1_share": 0.06260501173661417,
+        "top5_share": 0.1679062492392999,
+        "compression_ratio": 0.2526250872073975,
+        "refusal_chunk_rate": 0.021484375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.31930213605403085,
+        "lexical_js": 0.29077298479064884,
+        "cluster_js": 0.5316492030521144,
+        "top1_share": 0.05572704964313385,
+        "top5_share": 0.1715482559807132,
+        "compression_ratio": 0.23124892502005362,
+        "refusal_chunk_rate": 0.00927734375,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "oasst1_assistant_en__mix__dolly_15k": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.028353795173170774,
+        "top5_share": 0.10145412605892437,
+        "compression_ratio": 0.29815139579217803,
+        "refusal_chunk_rate": 0.0498046875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.965531999648015,
+        "lexical_js": 0.0015969442407417103,
+        "cluster_js": 0.0013983249245422364,
+        "top1_share": 0.027643020647235644,
+        "top5_share": 0.098444000469832,
+        "compression_ratio": 0.3008134637799465,
+        "refusal_chunk_rate": 0.046875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9221652564850247,
+        "lexical_js": 0.003633786018585411,
+        "cluster_js": 0.0070007148726492835,
+        "top1_share": 0.026583917645132866,
+        "top5_share": 0.09449588700978756,
+        "compression_ratio": 0.3067020176480042,
+        "refusal_chunk_rate": 0.0439453125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.8084680678902557,
+        "lexical_js": 0.013377133338363854,
+        "cluster_js": 0.04238082444703581,
+        "top1_share": 0.024505965330743625,
+        "top5_share": 0.08924014009918374,
+        "compression_ratio": 0.3137965785183572,
+        "refusal_chunk_rate": 0.03759765625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6928765492300584,
+        "lexical_js": 0.03219776602988081,
+        "cluster_js": 0.07908449291037752,
+        "top1_share": 0.023750728649732877,
+        "top5_share": 0.08827725769057908,
+        "compression_ratio": 0.3207897328745746,
+        "refusal_chunk_rate": 0.0322265625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.527998368955551,
+        "lexical_js": 0.09955980691713864,
+        "cluster_js": 0.14758687192511905,
+        "top1_share": 0.024911691013932608,
+        "top5_share": 0.09355049337809124,
+        "compression_ratio": 0.3281730889113812,
+        "refusal_chunk_rate": 0.02392578125,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "ultrafeedback_binarized_chosen__mix__hh_rlhf_chosen": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.03191405550865855,
+        "top5_share": 0.1043144703253832,
+        "compression_ratio": 0.29172001041608486,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.960854201240363,
+        "lexical_js": 0.0017291609015477442,
+        "cluster_js": 0.0024828856759387514,
+        "top1_share": 0.03136641435496625,
+        "top5_share": 0.10168494905599235,
+        "compression_ratio": 0.2935349982203411,
+        "refusal_chunk_rate": 0.052734375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9012251172399756,
+        "lexical_js": 0.0059251087291002525,
+        "cluster_js": 0.013108538353736689,
+        "top1_share": 0.031338756307783475,
+        "top5_share": 0.09974174716920393,
+        "compression_ratio": 0.2966542014838167,
+        "refusal_chunk_rate": 0.052734375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.7930344958973364,
+        "lexical_js": 0.018443698893449205,
+        "cluster_js": 0.057625865494578404,
+        "top1_share": 0.028459676856152548,
+        "top5_share": 0.09712434642626781,
+        "compression_ratio": 0.2993791668493308,
+        "refusal_chunk_rate": 0.05126953125,
+        "assistant_marker_rate": 0.00048828125
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6139197791545528,
+        "lexical_js": 0.05366821495278559,
+        "cluster_js": 0.1236250577949627,
+        "top1_share": 0.023211745080365755,
+        "top5_share": 0.09662690155842352,
+        "compression_ratio": 0.30151102494692,
+        "refusal_chunk_rate": 0.05126953125,
+        "assistant_marker_rate": 0.0009765625
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.33431498072255444,
+        "lexical_js": 0.17524480785005733,
+        "cluster_js": 0.2325054964777676,
+        "top1_share": 0.027044985080394296,
+        "top5_share": 0.10152948451898755,
+        "compression_ratio": 0.301128269700888,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0009765625
+      }
+    ],
+    "ultrafeedback_binarized_chosen__mix__hh_rlhf_rejected": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.03191405550865855,
+        "top5_share": 0.1043144703253832,
+        "compression_ratio": 0.29172001041608486,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9613304364214995,
+        "lexical_js": 0.0016832527901975405,
+        "cluster_js": 0.0020661863642170157,
+        "top1_share": 0.03139651752717518,
+        "top5_share": 0.10168674543389582,
+        "compression_ratio": 0.29353095425379633,
+        "refusal_chunk_rate": 0.05322265625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.8980749385068881,
+        "lexical_js": 0.006107371970971051,
+        "cluster_js": 0.01601126447330187,
+        "top1_share": 0.03141665775847989,
+        "top5_share": 0.10031372889640067,
+        "compression_ratio": 0.2956203317985247,
+        "refusal_chunk_rate": 0.06005859375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.7873878118753734,
+        "lexical_js": 0.019811848229383974,
+        "cluster_js": 0.07152145420731344,
+        "top1_share": 0.028427525219125283,
+        "top5_share": 0.09952272935453983,
+        "compression_ratio": 0.29779325459141864,
+        "refusal_chunk_rate": 0.05419921875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6147871252548521,
+        "lexical_js": 0.055975121575665594,
+        "cluster_js": 0.12534577200334093,
+        "top1_share": 0.022539779601434225,
+        "top5_share": 0.09832246853458565,
+        "compression_ratio": 0.29953764220619955,
+        "refusal_chunk_rate": 0.04833984375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.3553541619852213,
+        "lexical_js": 0.1654016670088742,
+        "cluster_js": 0.23978252444747505,
+        "top1_share": 0.025286833230647135,
+        "top5_share": 0.1033892429812827,
+        "compression_ratio": 0.29883662872484906,
+        "refusal_chunk_rate": 0.05078125,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "ultrafeedback_binarized_chosen__mix__oasst1_assistant_en": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.03191405550865855,
+        "top5_share": 0.1043144703253832,
+        "compression_ratio": 0.29172001041608486,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9631507774466068,
+        "lexical_js": 0.0015065254788896078,
+        "cluster_js": 0.0005728150734553724,
+        "top1_share": 0.03138484252812679,
+        "top5_share": 0.1026997792510687,
+        "compression_ratio": 0.292346626206791,
+        "refusal_chunk_rate": 0.0556640625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.911453009279557,
+        "lexical_js": 0.004211818168837412,
+        "cluster_js": 0.002944236694252981,
+        "top1_share": 0.03200575742326436,
+        "top5_share": 0.10247696027108978,
+        "compression_ratio": 0.2930461652150334,
+        "refusal_chunk_rate": 0.05810546875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.8340990092811107,
+        "lexical_js": 0.00947097364618185,
+        "cluster_js": 0.013822609462496346,
+        "top1_share": 0.030474100748568513,
+        "top5_share": 0.0997922930726118,
+        "compression_ratio": 0.29516575101130854,
+        "refusal_chunk_rate": 0.0537109375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.7094760022211761,
+        "lexical_js": 0.02378393761017852,
+        "cluster_js": 0.030540743030574913,
+        "top1_share": 0.02900894853910686,
+        "top5_share": 0.09980536920131404,
+        "compression_ratio": 0.29715550962707765,
+        "refusal_chunk_rate": 0.04833984375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.6151449256343268,
+        "lexical_js": 0.04547954450017952,
+        "cluster_js": 0.058081947577892826,
+        "top1_share": 0.028353795173170774,
+        "top5_share": 0.10145412605892437,
+        "compression_ratio": 0.29815139579217803,
+        "refusal_chunk_rate": 0.0498046875,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "ultrafeedback_binarized_chosen__mix__nemotron_math": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.03191405550865855,
+        "top5_share": 0.1043144703253832,
+        "compression_ratio": 0.29172001041608486,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9175487441216872,
+        "lexical_js": 0.014584088575920038,
+        "cluster_js": 0.022247574122740074,
+        "top1_share": 0.051583323308842355,
+        "top5_share": 0.1321489301506061,
+        "compression_ratio": 0.2929493264746198,
+        "refusal_chunk_rate": 0.05126953125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.8366088074500475,
+        "lexical_js": 0.04573261477640374,
+        "cluster_js": 0.08285787659218113,
+        "top1_share": 0.09482563365452717,
+        "top5_share": 0.17347326064960816,
+        "compression_ratio": 0.2922539812930568,
+        "refusal_chunk_rate": 0.048828125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.7346760913754959,
+        "lexical_js": 0.10180165138619511,
+        "cluster_js": 0.1956885319363206,
+        "top1_share": 0.12920540428667882,
+        "top5_share": 0.22105734159927604,
+        "compression_ratio": 0.2877969554168696,
+        "refusal_chunk_rate": 0.0380859375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.5885224606218318,
+        "lexical_js": 0.1837882369505447,
+        "cluster_js": 0.3510880322590669,
+        "top1_share": 0.1222607754570015,
+        "top5_share": 0.2435297192980016,
+        "compression_ratio": 0.2808230126677182,
+        "refusal_chunk_rate": 0.025390625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.2905035507021941,
+        "lexical_js": 0.341820003046722,
+        "cluster_js": 0.6504883649284972,
+        "top1_share": 0.1082477225142561,
+        "top5_share": 0.2506836406400889,
+        "compression_ratio": 0.2685248377713135,
+        "refusal_chunk_rate": 0.02587890625,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "ultrafeedback_binarized_chosen__mix__beavertails": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.03191405550865855,
+        "top5_share": 0.1043144703253832,
+        "compression_ratio": 0.29172001041608486,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.96052294409507,
+        "lexical_js": 0.0015296278266600325,
+        "cluster_js": 0.013271173185637392,
+        "top1_share": 0.030753465301068872,
+        "top5_share": 0.10336801457432637,
+        "compression_ratio": 0.2932264264526721,
+        "refusal_chunk_rate": 0.05859375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.8958402605717871,
+        "lexical_js": 0.0056455144492690255,
+        "cluster_js": 0.04453806279666348,
+        "top1_share": 0.03260651750933885,
+        "top5_share": 0.10942647992493951,
+        "compression_ratio": 0.2948033594798019,
+        "refusal_chunk_rate": 0.064453125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.7898709573914943,
+        "lexical_js": 0.01753575805818029,
+        "cluster_js": 0.12472658418699548,
+        "top1_share": 0.03892420121550962,
+        "top5_share": 0.11589606799768318,
+        "compression_ratio": 0.2952728753613181,
+        "refusal_chunk_rate": 0.06396484375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6147650503343028,
+        "lexical_js": 0.055412782680996156,
+        "cluster_js": 0.24748974786777994,
+        "top1_share": 0.043533313575191294,
+        "top5_share": 0.12418052117006648,
+        "compression_ratio": 0.2937458161711389,
+        "refusal_chunk_rate": 0.06591796875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.30471900382374456,
+        "lexical_js": 0.22493412565723922,
+        "cluster_js": 0.4421842253302066,
+        "top1_share": 0.05235720167310362,
+        "top5_share": 0.1362872995474739,
+        "compression_ratio": 0.2884453579294842,
+        "refusal_chunk_rate": 0.06591796875,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "ultrafeedback_binarized_chosen__mix__magicoder_oss_instruct": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.03191405550865855,
+        "top5_share": 0.1043144703253832,
+        "compression_ratio": 0.29172001041608486,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.923671442282381,
+        "lexical_js": 0.009845388074268036,
+        "cluster_js": 0.00947343819457933,
+        "top1_share": 0.04335491619693589,
+        "top5_share": 0.11451213266468994,
+        "compression_ratio": 0.2893993875376594,
+        "refusal_chunk_rate": 0.05029296875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.828707567583594,
+        "lexical_js": 0.037495284674077305,
+        "cluster_js": 0.04611278880559355,
+        "top1_share": 0.06103466257054801,
+        "top5_share": 0.13181865083035155,
+        "compression_ratio": 0.28262655145002813,
+        "refusal_chunk_rate": 0.044921875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.7124603568171735,
+        "lexical_js": 0.09317415460242218,
+        "cluster_js": 0.13489563756267964,
+        "top1_share": 0.07246695419101078,
+        "top5_share": 0.1555004598479626,
+        "compression_ratio": 0.26824953881226593,
+        "refusal_chunk_rate": 0.0302734375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.5587008689440149,
+        "lexical_js": 0.16641062197744927,
+        "cluster_js": 0.26052300154249414,
+        "top1_share": 0.06182844265531804,
+        "top5_share": 0.1679316901904757,
+        "compression_ratio": 0.2527376473661743,
+        "refusal_chunk_rate": 0.01611328125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.299421266141075,
+        "lexical_js": 0.27340707186789576,
+        "cluster_js": 0.5165158856825904,
+        "top1_share": 0.05572704964313385,
+        "top5_share": 0.1715482559807132,
+        "compression_ratio": 0.23124892502005362,
+        "refusal_chunk_rate": 0.00927734375,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "ultrafeedback_binarized_chosen__mix__dolly_15k": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.03191405550865855,
+        "top5_share": 0.1043144703253832,
+        "compression_ratio": 0.29172001041608486,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9639041250472307,
+        "lexical_js": 0.0013893393558667374,
+        "cluster_js": 0.0029742809229459845,
+        "top1_share": 0.03084147047453265,
+        "top5_share": 0.10070518814209581,
+        "compression_ratio": 0.2955905809674301,
+        "refusal_chunk_rate": 0.05078125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9077802828056245,
+        "lexical_js": 0.004468335440573841,
+        "cluster_js": 0.016103510635492903,
+        "top1_share": 0.03070974275938277,
+        "top5_share": 0.09780545817296452,
+        "compression_ratio": 0.3015864872637953,
+        "refusal_chunk_rate": 0.04833984375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.8120103163319133,
+        "lexical_js": 0.012284143559946134,
+        "cluster_js": 0.05306605848278206,
+        "top1_share": 0.028004810397062166,
+        "top5_share": 0.09136365795694748,
+        "compression_ratio": 0.3103050112208971,
+        "refusal_chunk_rate": 0.03662109375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6419249761041104,
+        "lexical_js": 0.03775971619007264,
+        "cluster_js": 0.1121663945581679,
+        "top1_share": 0.024706540660625973,
+        "top5_share": 0.08886180014122118,
+        "compression_ratio": 0.3198392993684945,
+        "refusal_chunk_rate": 0.02685546875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.3833058484410238,
+        "lexical_js": 0.15029633232180328,
+        "cluster_js": 0.21821130087593094,
+        "top1_share": 0.024911691013932608,
+        "top5_share": 0.09355049337809124,
+        "compression_ratio": 0.3281730889113812,
+        "refusal_chunk_rate": 0.02392578125,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "nemotron_math__mix__hh_rlhf_chosen": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.1082477225142561,
+        "top5_share": 0.2506836406400889,
+        "compression_ratio": 0.2685248377713135,
+        "refusal_chunk_rate": 0.02587890625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9891710303847279,
+        "lexical_js": 0.0003323531200136827,
+        "cluster_js": 0.03622395642482216,
+        "top1_share": 0.11011153243528697,
+        "top5_share": 0.25102735239037804,
+        "compression_ratio": 0.27532202056510247,
+        "refusal_chunk_rate": 0.02490234375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9730147231977928,
+        "lexical_js": 0.0014322023842796808,
+        "cluster_js": 0.09530567068426331,
+        "top1_share": 0.139043933029355,
+        "top5_share": 0.25542684062843907,
+        "compression_ratio": 0.2825320841045283,
+        "refusal_chunk_rate": 0.025390625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.9359788582904702,
+        "lexical_js": 0.006469441752692044,
+        "cluster_js": 0.21581232043677828,
+        "top1_share": 0.1496513087862811,
+        "top5_share": 0.22996728960364438,
+        "compression_ratio": 0.2916103624067056,
+        "refusal_chunk_rate": 0.03662109375,
+        "assistant_marker_rate": 0.00048828125
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.862412733585405,
+        "lexical_js": 0.023957300993991747,
+        "cluster_js": 0.3770658462328471,
+        "top1_share": 0.10718262683625743,
+        "top5_share": 0.17784723261726634,
+        "compression_ratio": 0.2990823486750298,
+        "refusal_chunk_rate": 0.04736328125,
+        "assistant_marker_rate": 0.0009765625
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.07064006699697624,
+        "lexical_js": 0.5196952371384886,
+        "cluster_js": 0.6887478115947817,
+        "top1_share": 0.027044985080394296,
+        "top5_share": 0.10152948451898755,
+        "compression_ratio": 0.301128269700888,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0009765625
+      }
+    ],
+    "nemotron_math__mix__hh_rlhf_rejected": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.1082477225142561,
+        "top5_share": 0.2506836406400889,
+        "compression_ratio": 0.2685248377713135,
+        "refusal_chunk_rate": 0.02587890625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9895850267015347,
+        "lexical_js": 0.000304053107122169,
+        "cluster_js": 0.03620722881928451,
+        "top1_share": 0.1117196528912402,
+        "top5_share": 0.2523442102326985,
+        "compression_ratio": 0.27516029242483253,
+        "refusal_chunk_rate": 0.025390625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9731631317193025,
+        "lexical_js": 0.0014193720613281827,
+        "cluster_js": 0.09571381948353089,
+        "top1_share": 0.1409420314969518,
+        "top5_share": 0.2573278710933791,
+        "compression_ratio": 0.2811432559677605,
+        "refusal_chunk_rate": 0.03271484375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.9361118916323607,
+        "lexical_js": 0.0065092576992800515,
+        "cluster_js": 0.2156589305837278,
+        "top1_share": 0.1501896230891442,
+        "top5_share": 0.23171921350786548,
+        "compression_ratio": 0.2898575270089306,
+        "refusal_chunk_rate": 0.03955078125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.8623577585130215,
+        "lexical_js": 0.02414074271993946,
+        "cluster_js": 0.37783779658831973,
+        "top1_share": 0.10767765513999542,
+        "top5_share": 0.18026182676956884,
+        "compression_ratio": 0.2970373779265186,
+        "refusal_chunk_rate": 0.04443359375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.08611566431449445,
+        "lexical_js": 0.5214648060392795,
+        "cluster_js": 0.6819490951665022,
+        "top1_share": 0.025286833230647135,
+        "top5_share": 0.1033892429812827,
+        "compression_ratio": 0.29883662872484906,
+        "refusal_chunk_rate": 0.05078125,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "nemotron_math__mix__oasst1_assistant_en": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.1082477225142561,
+        "top5_share": 0.2506836406400889,
+        "compression_ratio": 0.2685248377713135,
+        "refusal_chunk_rate": 0.02587890625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9901367557991111,
+        "lexical_js": 0.0005004513573501477,
+        "cluster_js": 0.03467337341186916,
+        "top1_share": 0.10567401096906658,
+        "top5_share": 0.24525009871232362,
+        "compression_ratio": 0.27545619409055866,
+        "refusal_chunk_rate": 0.02783203125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9728700600615928,
+        "lexical_js": 0.002084758010321326,
+        "cluster_js": 0.0917922482100981,
+        "top1_share": 0.12589267797804085,
+        "top5_share": 0.24612523267174355,
+        "compression_ratio": 0.2816169674844842,
+        "refusal_chunk_rate": 0.03076171875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.9320053396408754,
+        "lexical_js": 0.009800663058947808,
+        "cluster_js": 0.2111848862491315,
+        "top1_share": 0.134067616841203,
+        "top5_share": 0.22271822183239437,
+        "compression_ratio": 0.29078260765537717,
+        "refusal_chunk_rate": 0.0390625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.8532612101555777,
+        "lexical_js": 0.03335155881183119,
+        "cluster_js": 0.367338570941235,
+        "top1_share": 0.09750784484160861,
+        "top5_share": 0.17187760115055692,
+        "compression_ratio": 0.29699114251307923,
+        "refusal_chunk_rate": 0.04443359375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.2404546162065719,
+        "lexical_js": 0.41296475447226666,
+        "cluster_js": 0.6451742849332744,
+        "top1_share": 0.028353795173170774,
+        "top5_share": 0.10145412605892437,
+        "compression_ratio": 0.29815139579217803,
+        "refusal_chunk_rate": 0.0498046875,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "nemotron_math__mix__ultrafeedback_binarized_chosen": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.1082477225142561,
+        "top5_share": 0.2506836406400889,
+        "compression_ratio": 0.2685248377713135,
+        "refusal_chunk_rate": 0.02587890625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9899128896129654,
+        "lexical_js": 0.0006100658391139078,
+        "cluster_js": 0.03387266016146613,
+        "top1_share": 0.10447431037858501,
+        "top5_share": 0.24377949938000865,
+        "compression_ratio": 0.27536721031030703,
+        "refusal_chunk_rate": 0.02587890625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9725785880979286,
+        "lexical_js": 0.0026092040589587168,
+        "cluster_js": 0.09103156990513094,
+        "top1_share": 0.1222607754570015,
+        "top5_share": 0.2435297192980016,
+        "compression_ratio": 0.28148221497634085,
+        "refusal_chunk_rate": 0.025390625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.9312492396719725,
+        "lexical_js": 0.011163410244505352,
+        "cluster_js": 0.20671334245798748,
+        "top1_share": 0.1292054042866788,
+        "top5_share": 0.22105734159927595,
+        "compression_ratio": 0.2883111948496064,
+        "refusal_chunk_rate": 0.0380859375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.8510849984238528,
+        "lexical_js": 0.03728041682682585,
+        "cluster_js": 0.3645820098304527,
+        "top1_share": 0.09482563365452717,
+        "top5_share": 0.17347326064960816,
+        "compression_ratio": 0.2925957786589193,
+        "refusal_chunk_rate": 0.048828125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.2327169413940912,
+        "lexical_js": 0.4237479673670167,
+        "cluster_js": 0.6537843449172076,
+        "top1_share": 0.03191405550865855,
+        "top5_share": 0.1043144703253832,
+        "compression_ratio": 0.29172001041608486,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "nemotron_math__mix__beavertails": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.1082477225142561,
+        "top5_share": 0.2506836406400889,
+        "compression_ratio": 0.2685248377713135,
+        "refusal_chunk_rate": 0.02587890625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9908376754705471,
+        "lexical_js": 0.00025455864584839906,
+        "cluster_js": 0.033298401733309085,
+        "top1_share": 0.11169990890040155,
+        "top5_share": 0.2538183800961443,
+        "compression_ratio": 0.27457912323480754,
+        "refusal_chunk_rate": 0.03076171875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9757809979818093,
+        "lexical_js": 0.0011135121151907776,
+        "cluster_js": 0.09597782737977416,
+        "top1_share": 0.14676852053305978,
+        "top5_share": 0.26531988085841884,
+        "compression_ratio": 0.2799097135188021,
+        "refusal_chunk_rate": 0.037109375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.9404891384644505,
+        "lexical_js": 0.004966118246833967,
+        "cluster_js": 0.2163816692868562,
+        "top1_share": 0.15900680601758044,
+        "top5_share": 0.2510428152114787,
+        "compression_ratio": 0.2863473187757185,
+        "refusal_chunk_rate": 0.04931640625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.8686397893792602,
+        "lexical_js": 0.01923314539879823,
+        "cluster_js": 0.38154364073297464,
+        "top1_share": 0.11524181442380162,
+        "top5_share": 0.2052194769485443,
+        "compression_ratio": 0.29046700183591545,
+        "refusal_chunk_rate": 0.06201171875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.05310246549377729,
+        "lexical_js": 0.5541898150115474,
+        "cluster_js": 0.6915614585188798,
+        "top1_share": 0.05235720167310362,
+        "top5_share": 0.1362872995474739,
+        "compression_ratio": 0.2884453579294842,
+        "refusal_chunk_rate": 0.06591796875,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "nemotron_math__mix__magicoder_oss_instruct": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.1082477225142561,
+        "top5_share": 0.2506836406400889,
+        "compression_ratio": 0.2685248377713135,
+        "refusal_chunk_rate": 0.02587890625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9894896783331598,
+        "lexical_js": 0.004179061969439669,
+        "cluster_js": 0.03559034896291595,
+        "top1_share": 0.10850064502618863,
+        "top5_share": 0.2584492242900066,
+        "compression_ratio": 0.2700840664601679,
+        "refusal_chunk_rate": 0.0224609375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9739276138493338,
+        "lexical_js": 0.015352761780336701,
+        "cluster_js": 0.09467153226287604,
+        "top1_share": 0.14405332911208227,
+        "top5_share": 0.27652626189194357,
+        "compression_ratio": 0.2669414128499018,
+        "refusal_chunk_rate": 0.017578125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.9366729247706564,
+        "lexical_js": 0.04700743072632866,
+        "cluster_js": 0.21433972844057578,
+        "top1_share": 0.16688442475437223,
+        "top5_share": 0.27653864420487756,
+        "compression_ratio": 0.25828791916070376,
+        "refusal_chunk_rate": 0.015625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.8609680882872576,
+        "lexical_js": 0.10356070575888816,
+        "cluster_js": 0.38027613298879986,
+        "top1_share": 0.13146348705061364,
+        "top5_share": 0.24210556628246027,
+        "compression_ratio": 0.2483589214189606,
+        "refusal_chunk_rate": 0.01220703125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.21851960470314818,
+        "lexical_js": 0.4363006698709133,
+        "cluster_js": 0.6859489838146353,
+        "top1_share": 0.05572704964313385,
+        "top5_share": 0.1715482559807132,
+        "compression_ratio": 0.23124892502005362,
+        "refusal_chunk_rate": 0.00927734375,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "nemotron_math__mix__dolly_15k": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.1082477225142561,
+        "top5_share": 0.2506836406400889,
+        "compression_ratio": 0.2685248377713135,
+        "refusal_chunk_rate": 0.02587890625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.990726668633743,
+        "lexical_js": 0.0002611094575223515,
+        "cluster_js": 0.03578243954450032,
+        "top1_share": 0.10984574173855281,
+        "top5_share": 0.2487109271945611,
+        "compression_ratio": 0.27732565400831766,
+        "refusal_chunk_rate": 0.02294921875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9750602472602972,
+        "lexical_js": 0.0011371182038753744,
+        "cluster_js": 0.09542558125637018,
+        "top1_share": 0.13600346278744,
+        "top5_share": 0.2509119032627156,
+        "compression_ratio": 0.28731761726757504,
+        "refusal_chunk_rate": 0.02099609375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.9370622452313049,
+        "lexical_js": 0.005329269670742681,
+        "cluster_js": 0.2128825397811616,
+        "top1_share": 0.14278487192397324,
+        "top5_share": 0.22137645541123965,
+        "compression_ratio": 0.3023947732538623,
+        "refusal_chunk_rate": 0.02197265625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.8602277198756925,
+        "lexical_js": 0.020603735784891608,
+        "cluster_js": 0.3777748400674611,
+        "top1_share": 0.10226241190149056,
+        "top5_share": 0.16760977769658836,
+        "compression_ratio": 0.3172613479760366,
+        "refusal_chunk_rate": 0.02294921875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.14695883287147535,
+        "lexical_js": 0.47277664430393695,
+        "cluster_js": 0.6770943968912406,
+        "top1_share": 0.024911691013932608,
+        "top5_share": 0.09355049337809124,
+        "compression_ratio": 0.3281730889113812,
+        "refusal_chunk_rate": 0.02392578125,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "beavertails__mix__hh_rlhf_chosen": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.05235720167310362,
+        "top5_share": 0.1362872995474739,
+        "compression_ratio": 0.2884453579294842,
+        "refusal_chunk_rate": 0.06591796875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9618462124912922,
+        "lexical_js": 0.0018419207121011414,
+        "cluster_js": 0.0010733621831997744,
+        "top1_share": 0.049880784120972355,
+        "top5_share": 0.13222038096679775,
+        "compression_ratio": 0.29077882282090795,
+        "refusal_chunk_rate": 0.064453125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9050659119052137,
+        "lexical_js": 0.008122350211976229,
+        "cluster_js": 0.009993400393407525,
+        "top1_share": 0.04522587971830413,
+        "top5_share": 0.12445303023527592,
+        "compression_ratio": 0.29470029255749475,
+        "refusal_chunk_rate": 0.06591796875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.8010997242258673,
+        "lexical_js": 0.027585291728714077,
+        "cluster_js": 0.04022120903056546,
+        "top1_share": 0.03785821772999347,
+        "top5_share": 0.11378685794993446,
+        "compression_ratio": 0.29885235979461827,
+        "refusal_chunk_rate": 0.0625,
+        "assistant_marker_rate": 0.00048828125
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6917711173549252,
+        "lexical_js": 0.054991307118775416,
+        "cluster_js": 0.0842542238979217,
+        "top1_share": 0.03072480624339263,
+        "top5_share": 0.10813829192403045,
+        "compression_ratio": 0.3008844451404974,
+        "refusal_chunk_rate": 0.06298828125,
+        "assistant_marker_rate": 0.0009765625
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.5538421508193211,
+        "lexical_js": 0.10214202732625613,
+        "cluster_js": 0.15301461869103444,
+        "top1_share": 0.027044985080394296,
+        "top5_share": 0.10152948451898755,
+        "compression_ratio": 0.301128269700888,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0009765625
+      }
+    ],
+    "beavertails__mix__hh_rlhf_rejected": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.05235720167310362,
+        "top5_share": 0.1362872995474739,
+        "compression_ratio": 0.2884453579294842,
+        "refusal_chunk_rate": 0.06591796875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9604938147906914,
+        "lexical_js": 0.0018774253078350735,
+        "cluster_js": 0.0016330177875264248,
+        "top1_share": 0.04960331320159116,
+        "top5_share": 0.13176607200120133,
+        "compression_ratio": 0.2908334312129805,
+        "refusal_chunk_rate": 0.06494140625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9014741505010588,
+        "lexical_js": 0.008650974063062066,
+        "cluster_js": 0.010864833982239043,
+        "top1_share": 0.04554513512739728,
+        "top5_share": 0.12549309609932946,
+        "compression_ratio": 0.2928195620140803,
+        "refusal_chunk_rate": 0.0732421875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.7991075840077335,
+        "lexical_js": 0.027805265060720643,
+        "cluster_js": 0.0378192960861007,
+        "top1_share": 0.038898772507330405,
+        "top5_share": 0.11610960771813068,
+        "compression_ratio": 0.29639543947713315,
+        "refusal_chunk_rate": 0.0654296875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6925279119955479,
+        "lexical_js": 0.05641316382568108,
+        "cluster_js": 0.07905258684169084,
+        "top1_share": 0.03255598853869719,
+        "top5_share": 0.1081706357115024,
+        "compression_ratio": 0.2984224628341708,
+        "refusal_chunk_rate": 0.06005859375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.5462922880619884,
+        "lexical_js": 0.10552690218040497,
+        "cluster_js": 0.12573498647022663,
+        "top1_share": 0.025286833230647135,
+        "top5_share": 0.1033892429812827,
+        "compression_ratio": 0.29883662872484906,
+        "refusal_chunk_rate": 0.05078125,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "beavertails__mix__oasst1_assistant_en": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.05235720167310362,
+        "top5_share": 0.1362872995474739,
+        "compression_ratio": 0.2884453579294842,
+        "refusal_chunk_rate": 0.06591796875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9581109810853385,
+        "lexical_js": 0.002851569864306235,
+        "cluster_js": 0.00781510145883646,
+        "top1_share": 0.04874263214238269,
+        "top5_share": 0.13072692172815611,
+        "compression_ratio": 0.29125523471864306,
+        "refusal_chunk_rate": 0.0673828125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.8977790733302267,
+        "lexical_js": 0.01072360679622023,
+        "cluster_js": 0.03368881434528689,
+        "top1_share": 0.0432599728340913,
+        "top5_share": 0.12290030933171772,
+        "compression_ratio": 0.29356830183256954,
+        "refusal_chunk_rate": 0.0712890625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.7935173413243308,
+        "lexical_js": 0.031355481776688746,
+        "cluster_js": 0.09197055811279027,
+        "top1_share": 0.03589817634192525,
+        "top5_share": 0.11169570351911026,
+        "compression_ratio": 0.2977190966370407,
+        "refusal_chunk_rate": 0.06494140625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6848978882515496,
+        "lexical_js": 0.05904526287545639,
+        "cluster_js": 0.19482732928696025,
+        "top1_share": 0.029337738425260416,
+        "top5_share": 0.10320853569221192,
+        "compression_ratio": 0.29909767831142375,
+        "refusal_chunk_rate": 0.06005859375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.5468761786139776,
+        "lexical_js": 0.10727182071081422,
+        "cluster_js": 0.3258060830455437,
+        "top1_share": 0.028353795173170774,
+        "top5_share": 0.10145412605892437,
+        "compression_ratio": 0.29815139579217803,
+        "refusal_chunk_rate": 0.0498046875,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "beavertails__mix__ultrafeedback_binarized_chosen": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.05235720167310362,
+        "top5_share": 0.1362872995474739,
+        "compression_ratio": 0.2884453579294842,
+        "refusal_chunk_rate": 0.06591796875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9516892237296471,
+        "lexical_js": 0.004146251906087294,
+        "cluster_js": 0.01165775318837654,
+        "top1_share": 0.04865157921990698,
+        "top5_share": 0.1307688486101436,
+        "compression_ratio": 0.2912314280673428,
+        "refusal_chunk_rate": 0.0654296875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.8862186129228582,
+        "lexical_js": 0.015253479432496239,
+        "cluster_js": 0.049157070010168856,
+        "top1_share": 0.0435333135751913,
+        "top5_share": 0.12418052117006653,
+        "compression_ratio": 0.2933559057013465,
+        "refusal_chunk_rate": 0.06591796875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.7730736520491905,
+        "lexical_js": 0.04346757510506795,
+        "cluster_js": 0.13064971629385852,
+        "top1_share": 0.03892420121550962,
+        "top5_share": 0.11589606799768318,
+        "compression_ratio": 0.294759394269374,
+        "refusal_chunk_rate": 0.06396484375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6551574638402982,
+        "lexical_js": 0.08242045811112471,
+        "cluster_js": 0.2493006771120979,
+        "top1_share": 0.03260651750933886,
+        "top5_share": 0.10942647992493955,
+        "compression_ratio": 0.2942230943911162,
+        "refusal_chunk_rate": 0.064453125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.4882888105236881,
+        "lexical_js": 0.1482354690786708,
+        "cluster_js": 0.44204556723076316,
+        "top1_share": 0.03191405550865855,
+        "top5_share": 0.1043144703253832,
+        "compression_ratio": 0.29172001041608486,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "beavertails__mix__nemotron_math": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.05235720167310362,
+        "top5_share": 0.1362872995474739,
+        "compression_ratio": 0.2884453579294842,
+        "refusal_chunk_rate": 0.06591796875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9560145161235345,
+        "lexical_js": 0.009204167628564557,
+        "cluster_js": 0.036117954759210945,
+        "top1_share": 0.059842773273660284,
+        "top5_share": 0.1625375421108153,
+        "compression_ratio": 0.2907831629265702,
+        "refusal_chunk_rate": 0.06298828125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9060177411758864,
+        "lexical_js": 0.029122688819022167,
+        "cluster_js": 0.09467284529550134,
+        "top1_share": 0.1152418144238017,
+        "top5_share": 0.20521947694854437,
+        "compression_ratio": 0.28985405399601977,
+        "refusal_chunk_rate": 0.06201171875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.8120530500332622,
+        "lexical_js": 0.07312597972113513,
+        "cluster_js": 0.2146952869272239,
+        "top1_share": 0.1590068060175804,
+        "top5_share": 0.2510428152114787,
+        "compression_ratio": 0.28558134134432506,
+        "refusal_chunk_rate": 0.04931640625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6908985936059754,
+        "lexical_js": 0.1412857379185414,
+        "cluster_js": 0.38049306541151123,
+        "top1_share": 0.14676852053305978,
+        "top5_share": 0.2653198808584189,
+        "compression_ratio": 0.27908190725944393,
+        "refusal_chunk_rate": 0.037109375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.2824651088570158,
+        "lexical_js": 0.3760499081786644,
+        "cluster_js": 0.6931471802467067,
+        "top1_share": 0.1082477225142561,
+        "top5_share": 0.2506836406400889,
+        "compression_ratio": 0.2685248377713135,
+        "refusal_chunk_rate": 0.02587890625,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "beavertails__mix__magicoder_oss_instruct": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.05235720167310362,
+        "top5_share": 0.1362872995474739,
+        "compression_ratio": 0.2884453579294842,
+        "refusal_chunk_rate": 0.06591796875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9598662895918255,
+        "lexical_js": 0.008561323789241926,
+        "cluster_js": 0.034643996002969565,
+        "top1_share": 0.05037882710310029,
+        "top5_share": 0.14517995824914703,
+        "compression_ratio": 0.28677009921460467,
+        "refusal_chunk_rate": 0.06201171875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9119624892198246,
+        "lexical_js": 0.02583976110241713,
+        "cluster_js": 0.09444731265680106,
+        "top1_share": 0.07568065523309286,
+        "top5_share": 0.1644520421908225,
+        "compression_ratio": 0.27851147709364443,
+        "refusal_chunk_rate": 0.05810546875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.8184433298749084,
+        "lexical_js": 0.06382145673313465,
+        "cluster_js": 0.21441888241910131,
+        "top1_share": 0.09952795165001399,
+        "top5_share": 0.18157816001070998,
+        "compression_ratio": 0.2635805367783833,
+        "refusal_chunk_rate": 0.04150390625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6952001206195516,
+        "lexical_js": 0.12273525774068826,
+        "cluster_js": 0.3791927564591758,
+        "top1_share": 0.08499823496639014,
+        "top5_share": 0.1838508341558151,
+        "compression_ratio": 0.2494894153950974,
+        "refusal_chunk_rate": 0.02783203125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.2902805186934436,
+        "lexical_js": 0.3717185414322653,
+        "cluster_js": 0.6864928615316374,
+        "top1_share": 0.05572704964313385,
+        "top5_share": 0.1715482559807132,
+        "compression_ratio": 0.23124892502005362,
+        "refusal_chunk_rate": 0.00927734375,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "beavertails__mix__dolly_15k": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.05235720167310362,
+        "top5_share": 0.1362872995474739,
+        "compression_ratio": 0.2884453579294842,
+        "refusal_chunk_rate": 0.06591796875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9664648315422009,
+        "lexical_js": 0.0011844793314844614,
+        "cluster_js": 0.006281101304346382,
+        "top1_share": 0.04949913485111197,
+        "top5_share": 0.12991290434561417,
+        "compression_ratio": 0.29475586101836027,
+        "refusal_chunk_rate": 0.0625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9121785193903114,
+        "lexical_js": 0.005232648252078824,
+        "cluster_js": 0.0294935975374995,
+        "top1_share": 0.04519806475716992,
+        "top5_share": 0.11996984464724642,
+        "compression_ratio": 0.30313291790476793,
+        "refusal_chunk_rate": 0.0615234375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.8083721899741707,
+        "lexical_js": 0.01950577687756388,
+        "cluster_js": 0.09307067519555846,
+        "top1_share": 0.03958648810651614,
+        "top5_share": 0.104527999587451,
+        "compression_ratio": 0.31431519232164773,
+        "refusal_chunk_rate": 0.0478515625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6954843893235879,
+        "lexical_js": 0.044282654208151556,
+        "cluster_js": 0.18057294503676874,
+        "top1_share": 0.03200665453797525,
+        "top5_share": 0.09401516646224835,
+        "compression_ratio": 0.32282607699801597,
+        "refusal_chunk_rate": 0.03857421875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.5190806034441203,
+        "lexical_js": 0.10970266070338135,
+        "cluster_js": 0.3567480990292131,
+        "top1_share": 0.024911691013932608,
+        "top5_share": 0.09355049337809124,
+        "compression_ratio": 0.3281730889113812,
+        "refusal_chunk_rate": 0.02392578125,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "magicoder_oss_instruct__mix__hh_rlhf_chosen": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.05572704964313385,
+        "top5_share": 0.1715482559807132,
+        "compression_ratio": 0.23124892502005362,
+        "refusal_chunk_rate": 0.00927734375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9819591931464645,
+        "lexical_js": 0.0005371279791871361,
+        "cluster_js": 0.03413461180211619,
+        "top1_share": 0.055973872433090724,
+        "top5_share": 0.17117368958357504,
+        "compression_ratio": 0.2410745544748909,
+        "refusal_chunk_rate": 0.01123046875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9508696336499857,
+        "lexical_js": 0.002680298196958828,
+        "cluster_js": 0.09052799244168491,
+        "top1_share": 0.07967830557271652,
+        "top5_share": 0.17791089833504575,
+        "compression_ratio": 0.2537355402352348,
+        "refusal_chunk_rate": 0.01611328125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.8938446638352633,
+        "lexical_js": 0.011265776489834676,
+        "cluster_js": 0.21229977583570891,
+        "top1_share": 0.09176732985658548,
+        "top5_share": 0.16241144546863356,
+        "compression_ratio": 0.2708924190037691,
+        "refusal_chunk_rate": 0.02880859375,
+        "assistant_marker_rate": 0.00048828125
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.8055925057002193,
+        "lexical_js": 0.03780798612656035,
+        "cluster_js": 0.37339402895649426,
+        "top1_share": 0.06839029713677601,
+        "top5_share": 0.1363522613675455,
+        "compression_ratio": 0.2887942519675536,
+        "refusal_chunk_rate": 0.04345703125,
+        "assistant_marker_rate": 0.0009765625
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.17692911521656396,
+        "lexical_js": 0.4164918598625411,
+        "cluster_js": 0.6800600800299874,
+        "top1_share": 0.027044985080394296,
+        "top5_share": 0.10152948451898755,
+        "compression_ratio": 0.301128269700888,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0009765625
+      }
+    ],
+    "magicoder_oss_instruct__mix__hh_rlhf_rejected": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.05572704964313385,
+        "top5_share": 0.1715482559807132,
+        "compression_ratio": 0.23124892502005362,
+        "refusal_chunk_rate": 0.00927734375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9825277470852716,
+        "lexical_js": 0.0005070306075556256,
+        "cluster_js": 0.03406238167865522,
+        "top1_share": 0.05568904167483526,
+        "top5_share": 0.17126783587580885,
+        "compression_ratio": 0.24058014985432133,
+        "refusal_chunk_rate": 0.01171875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9514651193542577,
+        "lexical_js": 0.002658055693526815,
+        "cluster_js": 0.0947315217373014,
+        "top1_share": 0.07948555203005757,
+        "top5_share": 0.17827044396154296,
+        "compression_ratio": 0.2520043428787548,
+        "refusal_chunk_rate": 0.0234375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.8936682639706185,
+        "lexical_js": 0.011534107414903329,
+        "cluster_js": 0.21104338487930785,
+        "top1_share": 0.09195747223921055,
+        "top5_share": 0.16320827583800754,
+        "compression_ratio": 0.2689962411248782,
+        "refusal_chunk_rate": 0.03173828125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.8063048768067937,
+        "lexical_js": 0.039257466051242335,
+        "cluster_js": 0.3773434147351651,
+        "top1_share": 0.06866648718096283,
+        "top5_share": 0.13783269291419586,
+        "compression_ratio": 0.2867162336794677,
+        "refusal_chunk_rate": 0.04052734375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.19476975424143078,
+        "lexical_js": 0.40062552453237943,
+        "cluster_js": 0.6815645121154528,
+        "top1_share": 0.025286833230647135,
+        "top5_share": 0.1033892429812827,
+        "compression_ratio": 0.29883662872484906,
+        "refusal_chunk_rate": 0.05078125,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "magicoder_oss_instruct__mix__oasst1_assistant_en": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.05572704964313385,
+        "top5_share": 0.1715482559807132,
+        "compression_ratio": 0.23124892502005362,
+        "refusal_chunk_rate": 0.00927734375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9800609222609015,
+        "lexical_js": 0.0006088282666298118,
+        "cluster_js": 0.028202292241036687,
+        "top1_share": 0.0521592354938307,
+        "top5_share": 0.16558959308802396,
+        "compression_ratio": 0.2410429243815453,
+        "refusal_chunk_rate": 0.01416015625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9445727242467675,
+        "lexical_js": 0.0032724815264519895,
+        "cluster_js": 0.07598934459583846,
+        "top1_share": 0.06260501173661413,
+        "top5_share": 0.16790624923929987,
+        "compression_ratio": 0.2531647130924803,
+        "refusal_chunk_rate": 0.021484375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.8814453626396496,
+        "lexical_js": 0.013236794523429607,
+        "cluster_js": 0.18123386859568547,
+        "top1_share": 0.0738263744639485,
+        "top5_share": 0.15490364210689228,
+        "compression_ratio": 0.270738802536246,
+        "refusal_chunk_rate": 0.03125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.785979383390924,
+        "lexical_js": 0.03914733632747837,
+        "cluster_js": 0.3166779651447953,
+        "top1_share": 0.06062455643094666,
+        "top5_share": 0.12889795259068965,
+        "compression_ratio": 0.28682649853260067,
+        "refusal_chunk_rate": 0.04052734375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.43759746923796755,
+        "lexical_js": 0.18389105859353208,
+        "cluster_js": 0.5434200608782791,
+        "top1_share": 0.028353795173170774,
+        "top5_share": 0.10145412605892437,
+        "compression_ratio": 0.29815139579217803,
+        "refusal_chunk_rate": 0.0498046875,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "magicoder_oss_instruct__mix__ultrafeedback_binarized_chosen": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.05572704964313385,
+        "top5_share": 0.1715482559807132,
+        "compression_ratio": 0.23124892502005362,
+        "refusal_chunk_rate": 0.00927734375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9778884015017419,
+        "lexical_js": 0.0008558503392898237,
+        "cluster_js": 0.02464218044218455,
+        "top1_share": 0.05177201611849665,
+        "top5_share": 0.1657661716729686,
+        "compression_ratio": 0.24104501015830596,
+        "refusal_chunk_rate": 0.01220703125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9394962393472495,
+        "lexical_js": 0.0037707317276206038,
+        "cluster_js": 0.07166879052951516,
+        "top1_share": 0.061828442655318075,
+        "top5_share": 0.1679316901904758,
+        "compression_ratio": 0.25313516618620596,
+        "refusal_chunk_rate": 0.01611328125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.8703179306825458,
+        "lexical_js": 0.014233055914942082,
+        "cluster_js": 0.17354280193662688,
+        "top1_share": 0.07246695419101076,
+        "top5_share": 0.15550045984796268,
+        "compression_ratio": 0.26845773319443794,
+        "refusal_chunk_rate": 0.0302734375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.7736599745377871,
+        "lexical_js": 0.04062880209175918,
+        "cluster_js": 0.3071771879788206,
+        "top1_share": 0.061034662570547994,
+        "top5_share": 0.13181865083035152,
+        "compression_ratio": 0.28262949015021166,
+        "refusal_chunk_rate": 0.044921875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.4565949339534552,
+        "lexical_js": 0.16680887144588963,
+        "cluster_js": 0.5017505535640046,
+        "top1_share": 0.03191405550865855,
+        "top5_share": 0.1043144703253832,
+        "compression_ratio": 0.29172001041608486,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "magicoder_oss_instruct__mix__nemotron_math": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.05572704964313385,
+        "top5_share": 0.1715482559807132,
+        "compression_ratio": 0.23124892502005362,
+        "refusal_chunk_rate": 0.00927734375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9568249849493786,
+        "lexical_js": 0.006162830836798775,
+        "cluster_js": 0.03493937154401465,
+        "top1_share": 0.07479699040460772,
+        "top5_share": 0.19962793806141949,
+        "compression_ratio": 0.23920763770657683,
+        "refusal_chunk_rate": 0.009765625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9012040003471521,
+        "lexical_js": 0.021910567558662396,
+        "cluster_js": 0.09351438813870708,
+        "top1_share": 0.13146348705061364,
+        "top5_share": 0.24210556628246022,
+        "compression_ratio": 0.24831736103431923,
+        "refusal_chunk_rate": 0.01220703125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.8214152998295636,
+        "lexical_js": 0.057624131543457864,
+        "cluster_js": 0.21187565244763418,
+        "top1_share": 0.16688442475437226,
+        "top5_share": 0.2765386442048776,
+        "compression_ratio": 0.2582236589887932,
+        "refusal_chunk_rate": 0.015625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.7240899593588865,
+        "lexical_js": 0.11923479260594677,
+        "cluster_js": 0.37749599023456115,
+        "top1_share": 0.14405332911208227,
+        "top5_share": 0.27652626189194357,
+        "compression_ratio": 0.2667501940727887,
+        "refusal_chunk_rate": 0.017578125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.18173088796697223,
+        "lexical_js": 0.41961024326807606,
+        "cluster_js": 0.6857187030761913,
+        "top1_share": 0.1082477225142561,
+        "top5_share": 0.2506836406400889,
+        "compression_ratio": 0.2685248377713135,
+        "refusal_chunk_rate": 0.02587890625,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "magicoder_oss_instruct__mix__beavertails": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.05572704964313385,
+        "top5_share": 0.1715482559807132,
+        "compression_ratio": 0.23124892502005362,
+        "refusal_chunk_rate": 0.00927734375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9826086852857121,
+        "lexical_js": 0.00046849946098153586,
+        "cluster_js": 0.03388317312117487,
+        "top1_share": 0.05640969514306307,
+        "top5_share": 0.17287272365261824,
+        "compression_ratio": 0.2397348224684206,
+        "refusal_chunk_rate": 0.01708984375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.9514936098198338,
+        "lexical_js": 0.0024845117210891875,
+        "cluster_js": 0.0936673394873854,
+        "top1_share": 0.08499823496639014,
+        "top5_share": 0.1838508341558151,
+        "compression_ratio": 0.25014428666162836,
+        "refusal_chunk_rate": 0.02783203125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.8956360829401283,
+        "lexical_js": 0.01026527142580713,
+        "cluster_js": 0.21451130311172822,
+        "top1_share": 0.09952795165001403,
+        "top5_share": 0.18157816001071,
+        "compression_ratio": 0.2642539668672396,
+        "refusal_chunk_rate": 0.04150390625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.8120467109732241,
+        "lexical_js": 0.03562984627584147,
+        "cluster_js": 0.37741628608332256,
+        "top1_share": 0.07568065523309286,
+        "top5_share": 0.1644520421908225,
+        "compression_ratio": 0.2789626056703237,
+        "refusal_chunk_rate": 0.05810546875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.14105510553270492,
+        "lexical_js": 0.5089825874560379,
+        "cluster_js": 0.6863454189363962,
+        "top1_share": 0.05235720167310362,
+        "top5_share": 0.1362872995474739,
+        "compression_ratio": 0.2884453579294842,
+        "refusal_chunk_rate": 0.06591796875,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "magicoder_oss_instruct__mix__dolly_15k": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.05572704964313385,
+        "top5_share": 0.1715482559807132,
+        "compression_ratio": 0.23124892502005362,
+        "refusal_chunk_rate": 0.00927734375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9835856467701625,
+        "lexical_js": 0.00045288154671600415,
+        "cluster_js": 0.030991722552371412,
+        "top1_share": 0.05473424316041472,
+        "top5_share": 0.16805441817091799,
+        "compression_ratio": 0.24328665373331998,
+        "refusal_chunk_rate": 0.00927734375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.952045521761502,
+        "lexical_js": 0.0024506122542537418,
+        "cluster_js": 0.08831511844154583,
+        "top1_share": 0.07245319791563931,
+        "top5_share": 0.17137951316314304,
+        "compression_ratio": 0.2591112947911405,
+        "refusal_chunk_rate": 0.01171875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.8927082575844627,
+        "lexical_js": 0.010678281602605347,
+        "cluster_js": 0.2080414902880547,
+        "top1_share": 0.08201415076520416,
+        "top5_share": 0.15372117272603245,
+        "compression_ratio": 0.28257363136597147,
+        "refusal_chunk_rate": 0.01416015625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.8013183735965671,
+        "lexical_js": 0.03697461350696805,
+        "cluster_js": 0.37090053538983486,
+        "top1_share": 0.06108652987018841,
+        "top5_share": 0.12306881268935735,
+        "compression_ratio": 0.307838116824198,
+        "refusal_chunk_rate": 0.01904296875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.18755811853935508,
+        "lexical_js": 0.43193347639112306,
+        "cluster_js": 0.673022712933415,
+        "top1_share": 0.024911691013932608,
+        "top5_share": 0.09355049337809124,
+        "compression_ratio": 0.3281730889113812,
+        "refusal_chunk_rate": 0.02392578125,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "dolly_15k__mix__hh_rlhf_chosen": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.024911691013932608,
+        "top5_share": 0.09355049337809124,
+        "compression_ratio": 0.3281730889113812,
+        "refusal_chunk_rate": 0.02392578125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.939394503615183,
+        "lexical_js": 0.0033686999162498847,
+        "cluster_js": 0.0016458913599277352,
+        "top1_share": 0.025065935984444992,
+        "top5_share": 0.09128908085667903,
+        "compression_ratio": 0.32641446759225234,
+        "refusal_chunk_rate": 0.02490234375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.8698256032537225,
+        "lexical_js": 0.011181012571747214,
+        "cluster_js": 0.007790213168478466,
+        "top1_share": 0.02520746605884405,
+        "top5_share": 0.08757494111014019,
+        "compression_ratio": 0.324307206947772,
+        "refusal_chunk_rate": 0.02685546875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.7598224202345777,
+        "lexical_js": 0.03405113103457165,
+        "cluster_js": 0.03944446431549153,
+        "top1_share": 0.02628954784693281,
+        "top5_share": 0.08782576263438664,
+        "compression_ratio": 0.3177941538485972,
+        "refusal_chunk_rate": 0.03515625,
+        "assistant_marker_rate": 0.00048828125
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6556459995304612,
+        "lexical_js": 0.06368431264835289,
+        "cluster_js": 0.07871428998797107,
+        "top1_share": 0.02697147914647181,
+        "top5_share": 0.09399750670654272,
+        "compression_ratio": 0.31038971791912356,
+        "refusal_chunk_rate": 0.046875,
+        "assistant_marker_rate": 0.0009765625
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.5590782742047837,
+        "lexical_js": 0.10036611303365366,
+        "cluster_js": 0.14022413658301563,
+        "top1_share": 0.027044985080394296,
+        "top5_share": 0.10152948451898755,
+        "compression_ratio": 0.301128269700888,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0009765625
+      }
+    ],
+    "dolly_15k__mix__hh_rlhf_rejected": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.024911691013932608,
+        "top5_share": 0.09355049337809124,
+        "compression_ratio": 0.3281730889113812,
+        "refusal_chunk_rate": 0.02392578125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9402065047582554,
+        "lexical_js": 0.0031875363775206254,
+        "cluster_js": 0.001512996494299354,
+        "top1_share": 0.025306926690802794,
+        "top5_share": 0.0911152828355912,
+        "compression_ratio": 0.3268241451127686,
+        "refusal_chunk_rate": 0.025390625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.866009759834254,
+        "lexical_js": 0.0119470296645644,
+        "cluster_js": 0.015334881125906188,
+        "top1_share": 0.025775689241571625,
+        "top5_share": 0.08838104946341521,
+        "compression_ratio": 0.3233967642719612,
+        "refusal_chunk_rate": 0.0341796875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.7533880415927297,
+        "lexical_js": 0.03572675813168805,
+        "cluster_js": 0.05451220452492164,
+        "top1_share": 0.026885531114372932,
+        "top5_share": 0.0903687842697581,
+        "compression_ratio": 0.3162384882203071,
+        "refusal_chunk_rate": 0.0380859375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6466024351818268,
+        "lexical_js": 0.06688475373110721,
+        "cluster_js": 0.10152631050989275,
+        "top1_share": 0.026601378976929275,
+        "top5_share": 0.09557493650732286,
+        "compression_ratio": 0.3083657695031365,
+        "refusal_chunk_rate": 0.0439453125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.5561977624202646,
+        "lexical_js": 0.10414240166433841,
+        "cluster_js": 0.1740607853217186,
+        "top1_share": 0.025286833230647135,
+        "top5_share": 0.1033892429812827,
+        "compression_ratio": 0.29883662872484906,
+        "refusal_chunk_rate": 0.05078125,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "dolly_15k__mix__oasst1_assistant_en": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.024911691013932608,
+        "top5_share": 0.09355049337809124,
+        "compression_ratio": 0.3281730889113812,
+        "refusal_chunk_rate": 0.02392578125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9420173178234629,
+        "lexical_js": 0.007792369500465514,
+        "cluster_js": 0.0015521999346053052,
+        "top1_share": 0.024437095885213336,
+        "top5_share": 0.09119611279567748,
+        "compression_ratio": 0.325756538672888,
+        "refusal_chunk_rate": 0.02783203125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.8764120573093411,
+        "lexical_js": 0.017086105743925474,
+        "cluster_js": 0.010351771960349003,
+        "top1_share": 0.023750728649732877,
+        "top5_share": 0.08827725769057908,
+        "compression_ratio": 0.32075235437804983,
+        "refusal_chunk_rate": 0.0322265625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.7758163479456148,
+        "lexical_js": 0.04020052046188946,
+        "cluster_js": 0.041249545913233175,
+        "top1_share": 0.024505965330743618,
+        "top5_share": 0.08924014009918374,
+        "compression_ratio": 0.3136801955938483,
+        "refusal_chunk_rate": 0.03759765625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6906100080094245,
+        "lexical_js": 0.06203288776416086,
+        "cluster_js": 0.08391793803917269,
+        "top1_share": 0.026583917645132876,
+        "top5_share": 0.09449588700978756,
+        "compression_ratio": 0.3065640242901967,
+        "refusal_chunk_rate": 0.0439453125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.6338764776457381,
+        "lexical_js": 0.08351928834283268,
+        "cluster_js": 0.14783264997580542,
+        "top1_share": 0.028353795173170774,
+        "top5_share": 0.10145412605892437,
+        "compression_ratio": 0.29815139579217803,
+        "refusal_chunk_rate": 0.0498046875,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "dolly_15k__mix__ultrafeedback_binarized_chosen": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.024911691013932608,
+        "top5_share": 0.09355049337809124,
+        "compression_ratio": 0.3281730889113812,
+        "refusal_chunk_rate": 0.02392578125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9396563294080854,
+        "lexical_js": 0.00964526496605254,
+        "cluster_js": 0.002261720059921222,
+        "top1_share": 0.024345511083254185,
+        "top5_share": 0.0913292503108402,
+        "compression_ratio": 0.3252005328539421,
+        "refusal_chunk_rate": 0.02587890625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.8630403123789878,
+        "lexical_js": 0.024415732440229945,
+        "cluster_js": 0.025955262496584468,
+        "top1_share": 0.024706540660625984,
+        "top5_share": 0.08886180014122119,
+        "compression_ratio": 0.31985382926284395,
+        "refusal_chunk_rate": 0.02685546875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.7483826432165325,
+        "lexical_js": 0.05338510516829542,
+        "cluster_js": 0.06885408903698254,
+        "top1_share": 0.028004810397062162,
+        "top5_share": 0.09136365795694747,
+        "compression_ratio": 0.31000088564042666,
+        "refusal_chunk_rate": 0.03662109375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6583845640764242,
+        "lexical_js": 0.08227709869096159,
+        "cluster_js": 0.13460108561942583,
+        "top1_share": 0.03070974275938277,
+        "top5_share": 0.09780545817296452,
+        "compression_ratio": 0.30119472362785565,
+        "refusal_chunk_rate": 0.04833984375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.574787825149286,
+        "lexical_js": 0.11462982148994436,
+        "cluster_js": 0.22057518611258126,
+        "top1_share": 0.03191405550865855,
+        "top5_share": 0.1043144703253832,
+        "compression_ratio": 0.29172001041608486,
+        "refusal_chunk_rate": 0.0546875,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "dolly_15k__mix__nemotron_math": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.024911691013932608,
+        "top5_share": 0.09355049337809124,
+        "compression_ratio": 0.3281730889113812,
+        "refusal_chunk_rate": 0.02392578125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9224702777286483,
+        "lexical_js": 0.018893818312143137,
+        "cluster_js": 0.03177804543931634,
+        "top1_share": 0.051615675932060893,
+        "top5_share": 0.1218000086793423,
+        "compression_ratio": 0.3248158427214658,
+        "refusal_chunk_rate": 0.0234375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.8408696330849379,
+        "lexical_js": 0.057209963562949016,
+        "cluster_js": 0.0875283426649803,
+        "top1_share": 0.10226241190149055,
+        "top5_share": 0.16760977769658836,
+        "compression_ratio": 0.3166829707169736,
+        "refusal_chunk_rate": 0.02294921875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.7232792253124989,
+        "lexical_js": 0.12393400654422575,
+        "cluster_js": 0.20675592007974436,
+        "top1_share": 0.14278487192397324,
+        "top5_share": 0.22137645541123968,
+        "compression_ratio": 0.3015432983191557,
+        "refusal_chunk_rate": 0.02197265625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6049664921473552,
+        "lexical_js": 0.20767711030009203,
+        "cluster_js": 0.36990828871807097,
+        "top1_share": 0.13600346278744002,
+        "top5_share": 0.2509119032627157,
+        "compression_ratio": 0.2864916194380803,
+        "refusal_chunk_rate": 0.02099609375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.37480022531705415,
+        "lexical_js": 0.3301181378354143,
+        "cluster_js": 0.6794145734936183,
+        "top1_share": 0.1082477225142561,
+        "top5_share": 0.2506836406400889,
+        "compression_ratio": 0.2685248377713135,
+        "refusal_chunk_rate": 0.02587890625,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "dolly_15k__mix__beavertails": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.024911691013932608,
+        "top5_share": 0.09355049337809124,
+        "compression_ratio": 0.3281730889113812,
+        "refusal_chunk_rate": 0.02392578125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9422150931501463,
+        "lexical_js": 0.002577462528122912,
+        "cluster_js": 0.004481550282296829,
+        "top1_share": 0.026422263831410962,
+        "top5_share": 0.09230216977246297,
+        "compression_ratio": 0.32684679305368963,
+        "refusal_chunk_rate": 0.03076171875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.8650460513186148,
+        "lexical_js": 0.009178220976277148,
+        "cluster_js": 0.030102812462008872,
+        "top1_share": 0.03200665453797526,
+        "top5_share": 0.09401516646224836,
+        "compression_ratio": 0.32344908111981935,
+        "refusal_chunk_rate": 0.03857421875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.7485556479152131,
+        "lexical_js": 0.027334678822599406,
+        "cluster_js": 0.09850913147888156,
+        "top1_share": 0.03958648810651616,
+        "top5_share": 0.10452799958745103,
+        "compression_ratio": 0.3148873246398669,
+        "refusal_chunk_rate": 0.0478515625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6324566421894962,
+        "lexical_js": 0.05808806781549777,
+        "cluster_js": 0.18078217811696745,
+        "top1_share": 0.04519806475716991,
+        "top5_share": 0.11996984464724643,
+        "compression_ratio": 0.30329406615135523,
+        "refusal_chunk_rate": 0.0615234375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.5145495242100129,
+        "lexical_js": 0.10897521218798972,
+        "cluster_js": 0.3371562248543205,
+        "top1_share": 0.05235720167310362,
+        "top5_share": 0.1362872995474739,
+        "compression_ratio": 0.2884453579294842,
+        "refusal_chunk_rate": 0.06591796875,
+        "assistant_marker_rate": 0.0
+      }
+    ],
+    "dolly_15k__mix__magicoder_oss_instruct": [
+      {
+        "alpha_target": 0.0,
+        "lexical_rank_rho": 1.0,
+        "lexical_js": 0.0,
+        "cluster_js": 0.0,
+        "top1_share": 0.024911691013932608,
+        "top5_share": 0.09355049337809124,
+        "compression_ratio": 0.3281730889113812,
+        "refusal_chunk_rate": 0.02392578125,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.1,
+        "lexical_rank_rho": 0.9447930569588464,
+        "lexical_js": 0.052743995067027344,
+        "cluster_js": 0.03081474423056981,
+        "top1_share": 0.03364863618750284,
+        "top5_share": 0.10309702392580228,
+        "compression_ratio": 0.321697919990855,
+        "refusal_chunk_rate": 0.0224609375,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.25,
+        "lexical_rank_rho": 0.8683731203168134,
+        "lexical_js": 0.11124995443826292,
+        "cluster_js": 0.0918945156512707,
+        "top1_share": 0.06108652987018841,
+        "top5_share": 0.12306881268935732,
+        "compression_ratio": 0.307320155314983,
+        "refusal_chunk_rate": 0.01904296875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.5,
+        "lexical_rank_rho": 0.7494249056374865,
+        "lexical_js": 0.18930452472019332,
+        "cluster_js": 0.20610570139288226,
+        "top1_share": 0.08201415076520414,
+        "top5_share": 0.15372117272603242,
+        "compression_ratio": 0.2818156015232627,
+        "refusal_chunk_rate": 0.01416015625,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 0.75,
+        "lexical_rank_rho": 0.6299792478173383,
+        "lexical_js": 0.2619100786831226,
+        "cluster_js": 0.3685993491158943,
+        "top1_share": 0.07245319791563931,
+        "top5_share": 0.17137951316314304,
+        "compression_ratio": 0.2584087992401447,
+        "refusal_chunk_rate": 0.01171875,
+        "assistant_marker_rate": 0.0
+      },
+      {
+        "alpha_target": 1.0,
+        "lexical_rank_rho": 0.3167808844446919,
+        "lexical_js": 0.39778793975653987,
+        "cluster_js": 0.671674783311335,
+        "top1_share": 0.05572704964313385,
+        "top5_share": 0.1715482559807132,
+        "compression_ratio": 0.23124892502005362,
+        "refusal_chunk_rate": 0.00927734375,
+        "assistant_marker_rate": 0.0
+      }
+    ]
+  }
+}

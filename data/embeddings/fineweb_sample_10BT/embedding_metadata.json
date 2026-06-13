@@ -1,0 +1,19 @@
+{
+  "schema": "lens_effects.embedding_metadata.v1",
+  "label": "fineweb_sample_10BT",
+  "model_name": "Alibaba-NLP/gte-base-en-v1.5",
+  "trust_remote_code": true,
+  "batch_size": 16,
+  "max_length": 512,
+  "device": "cuda",
+  "shape": [
+    2048,
+    768
+  ],
+  "chunks_path": "data/chunks/fineweb_sample_10BT/chunks.json",
+  "chunks_sha256": "873d96cb175f48e9580c72aa96a4f169c4e162b9225d649e8d6ac42c00b72737",
+  "embeddings_sha256": "7f1108f21cc2b6736635e1f9d2fa25e99b59c0cac752ceaed59a8c224bd888ba",
+  "torch": "2.9.1+cu128",
+  "transformers_model_class": "NewModel",
+  "created_unix": 1778014319.3911474
+}

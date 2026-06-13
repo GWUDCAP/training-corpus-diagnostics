@@ -1,0 +1,23 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Local recomputation outputs
+runs/
+/recomputed/
+/reproduced_data/
+/reproduced_matrix/
+/my_scorecard_run/
+/*_scorecard_submission/
+*.log
+*.err
+*.tmp
+
+# Local packages
+*.zip
+*.tar
+*.tar.gz

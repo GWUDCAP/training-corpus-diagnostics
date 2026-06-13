@@ -1,0 +1,19 @@
+{
+  "schema": "lens_effects.embedding_metadata.v1",
+  "label": "magicoder_oss_instruct",
+  "model_name": "Alibaba-NLP/gte-base-en-v1.5",
+  "trust_remote_code": true,
+  "batch_size": 16,
+  "max_length": 512,
+  "device": "cuda",
+  "shape": [
+    2048,
+    768
+  ],
+  "chunks_path": "data/chunks/magicoder_oss_instruct/chunks.json",
+  "chunks_sha256": "4f91dd6704b2859f6768e0a472e83138ab123e8ab483e399d2291f5482001c82",
+  "embeddings_sha256": "e0555fa8b48d1ad1458c69996228e57d596c9bc7b3f334a731f49eb9924c25a4",
+  "torch": "2.9.1+cu128",
+  "transformers_model_class": "NewModel",
+  "created_unix": 1778014519.60099
+}

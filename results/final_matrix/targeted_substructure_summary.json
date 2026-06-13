@@ -1,0 +1,1272 @@
+{
+  "schema": "lens_effects.targeted_substructure_summary.v1",
+  "matrix": "results/final_matrix/recomputed/corpus_matrix.json",
+  "textual_convention": "Lexical JS and rho use the retained unordered pair rows from corpus_matrix.json; semantic cluster JS, compression, top1, and top5 are symmetric pair summaries.",
+  "targeted_labels": [
+    "hh_rlhf_chosen",
+    "hh_rlhf_rejected",
+    "oasst1_assistant_en",
+    "ultrafeedback_binarized_chosen",
+    "nemotron_math",
+    "beavertails",
+    "magicoder_oss_instruct",
+    "dolly_15k"
+  ],
+  "pair_count": 28,
+  "family_means": {
+    "lexical_js": 0.2535529079955291,
+    "rho": 0.37055544068357416,
+    "semantic_cluster_js": 0.40957619924986993,
+    "compression_abs_diff": 0.03139612516604834,
+    "top1_abs_diff": 0.029108936167082634,
+    "top5_abs_diff": 0.055557191174017403
+  },
+  "ranked_pairs": {
+    "lexical_js": [
+      {
+        "a": "nemotron_math",
+        "b": "beavertails",
+        "a_display": "Nemotron-SFT-Math",
+        "b_display": "BeaverTails",
+        "lexical_js": 0.5541898150115474
+      },
+      {
+        "a": "nemotron_math",
+        "b": "dolly_15k",
+        "a_display": "Nemotron-SFT-Math",
+        "b_display": "Dolly 15k",
+        "lexical_js": 0.47277664430393695
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "magicoder_oss_instruct",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "Magicoder OSS Instruct",
+        "lexical_js": 0.4389506015941621
+      },
+      {
+        "a": "nemotron_math",
+        "b": "magicoder_oss_instruct",
+        "a_display": "Nemotron-SFT-Math",
+        "b_display": "Magicoder OSS Instruct",
+        "lexical_js": 0.4363006698709133
+      },
+      {
+        "a": "magicoder_oss_instruct",
+        "b": "dolly_15k",
+        "a_display": "Magicoder OSS Instruct",
+        "b_display": "Dolly 15k",
+        "lexical_js": 0.43193347639112306
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "magicoder_oss_instruct",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "Magicoder OSS Instruct",
+        "lexical_js": 0.43120045934144025
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "nemotron_math",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "Nemotron-SFT-Math",
+        "lexical_js": 0.37981799175916275
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "nemotron_math",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "Nemotron-SFT-Math",
+        "lexical_js": 0.37818850950522354
+      },
+      {
+        "a": "beavertails",
+        "b": "magicoder_oss_instruct",
+        "a_display": "BeaverTails",
+        "b_display": "Magicoder OSS Instruct",
+        "lexical_js": 0.3717185414322653
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "nemotron_math",
+        "a_display": "OASST1 assistant",
+        "b_display": "Nemotron-SFT-Math",
+        "lexical_js": 0.3579770465524165
+      },
+      {
+        "a": "ultrafeedback_binarized_chosen",
+        "b": "nemotron_math",
+        "a_display": "UltraFeedback chosen",
+        "b_display": "Nemotron-SFT-Math",
+        "lexical_js": 0.341820003046722
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "magicoder_oss_instruct",
+        "a_display": "OASST1 assistant",
+        "b_display": "Magicoder OSS Instruct",
+        "lexical_js": 0.29077298479064884
+      },
+      {
+        "a": "ultrafeedback_binarized_chosen",
+        "b": "magicoder_oss_instruct",
+        "a_display": "UltraFeedback chosen",
+        "b_display": "Magicoder OSS Instruct",
+        "lexical_js": 0.27340707186789576
+      },
+      {
+        "a": "ultrafeedback_binarized_chosen",
+        "b": "beavertails",
+        "a_display": "UltraFeedback chosen",
+        "b_display": "BeaverTails",
+        "lexical_js": 0.22493412565723922
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "ultrafeedback_binarized_chosen",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "UltraFeedback chosen",
+        "lexical_js": 0.19067965098114947
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "ultrafeedback_binarized_chosen",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "UltraFeedback chosen",
+        "lexical_js": 0.18831166169316607
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "beavertails",
+        "a_display": "OASST1 assistant",
+        "b_display": "BeaverTails",
+        "lexical_js": 0.1631329416930458
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "oasst1_assistant_en",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "OASST1 assistant",
+        "lexical_js": 0.15046408444365947
+      },
+      {
+        "a": "ultrafeedback_binarized_chosen",
+        "b": "dolly_15k",
+        "a_display": "UltraFeedback chosen",
+        "b_display": "Dolly 15k",
+        "lexical_js": 0.15029633232180328
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "oasst1_assistant_en",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "OASST1 assistant",
+        "lexical_js": 0.14811742571311923
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "beavertails",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "BeaverTails",
+        "lexical_js": 0.13081243955608565
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "beavertails",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "BeaverTails",
+        "lexical_js": 0.12385772418692118
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "dolly_15k",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "Dolly 15k",
+        "lexical_js": 0.11538265807957944
+      },
+      {
+        "a": "beavertails",
+        "b": "dolly_15k",
+        "a_display": "BeaverTails",
+        "b_display": "Dolly 15k",
+        "lexical_js": 0.10970266070338135
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "dolly_15k",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "Dolly 15k",
+        "lexical_js": 0.10567158677205499
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "dolly_15k",
+        "a_display": "OASST1 assistant",
+        "b_display": "Dolly 15k",
+        "lexical_js": 0.09955980691713864
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "ultrafeedback_binarized_chosen",
+        "a_display": "OASST1 assistant",
+        "b_display": "UltraFeedback chosen",
+        "lexical_js": 0.031987377729217586
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "hh_rlhf_rejected",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "HH-RLHF rejected",
+        "lexical_js": 0.007517131959795061
+      }
+    ],
+    "rho": [
+      {
+        "a": "nemotron_math",
+        "b": "beavertails",
+        "a_display": "Nemotron-SFT-Math",
+        "b_display": "BeaverTails",
+        "rho": 0.05310246549377729
+      },
+      {
+        "a": "nemotron_math",
+        "b": "dolly_15k",
+        "a_display": "Nemotron-SFT-Math",
+        "b_display": "Dolly 15k",
+        "rho": 0.14695883287147535
+      },
+      {
+        "a": "magicoder_oss_instruct",
+        "b": "dolly_15k",
+        "a_display": "Magicoder OSS Instruct",
+        "b_display": "Dolly 15k",
+        "rho": 0.18755811853935508
+      },
+      {
+        "a": "nemotron_math",
+        "b": "magicoder_oss_instruct",
+        "a_display": "Nemotron-SFT-Math",
+        "b_display": "Magicoder OSS Instruct",
+        "rho": 0.21851960470314818
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "magicoder_oss_instruct",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "Magicoder OSS Instruct",
+        "rho": 0.22306945983235207
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "magicoder_oss_instruct",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "Magicoder OSS Instruct",
+        "rho": 0.22854692236864788
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "nemotron_math",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "Nemotron-SFT-Math",
+        "rho": 0.25446168446689404
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "nemotron_math",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "Nemotron-SFT-Math",
+        "rho": 0.2565384981870784
+      },
+      {
+        "a": "beavertails",
+        "b": "magicoder_oss_instruct",
+        "a_display": "BeaverTails",
+        "b_display": "Magicoder OSS Instruct",
+        "rho": 0.2902805186934436
+      },
+      {
+        "a": "ultrafeedback_binarized_chosen",
+        "b": "nemotron_math",
+        "a_display": "UltraFeedback chosen",
+        "b_display": "Nemotron-SFT-Math",
+        "rho": 0.2905035507021941
+      },
+      {
+        "a": "ultrafeedback_binarized_chosen",
+        "b": "magicoder_oss_instruct",
+        "a_display": "UltraFeedback chosen",
+        "b_display": "Magicoder OSS Instruct",
+        "rho": 0.299421266141075
+      },
+      {
+        "a": "ultrafeedback_binarized_chosen",
+        "b": "beavertails",
+        "a_display": "UltraFeedback chosen",
+        "b_display": "BeaverTails",
+        "rho": 0.30471900382374456
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "magicoder_oss_instruct",
+        "a_display": "OASST1 assistant",
+        "b_display": "Magicoder OSS Instruct",
+        "rho": 0.31930213605403085
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "nemotron_math",
+        "a_display": "OASST1 assistant",
+        "b_display": "Nemotron-SFT-Math",
+        "rho": 0.33555450228137496
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "ultrafeedback_binarized_chosen",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "UltraFeedback chosen",
+        "rho": 0.3675615247329214
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "ultrafeedback_binarized_chosen",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "UltraFeedback chosen",
+        "rho": 0.37394908786793535
+      },
+      {
+        "a": "ultrafeedback_binarized_chosen",
+        "b": "dolly_15k",
+        "a_display": "UltraFeedback chosen",
+        "b_display": "Dolly 15k",
+        "rho": 0.3833058484410238
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "beavertails",
+        "a_display": "OASST1 assistant",
+        "b_display": "BeaverTails",
+        "rho": 0.41208581726821236
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "oasst1_assistant_en",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "OASST1 assistant",
+        "rho": 0.4410572254899424
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "beavertails",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "BeaverTails",
+        "rho": 0.44839629947299375
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "oasst1_assistant_en",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "OASST1 assistant",
+        "rho": 0.45307560696612253
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "beavertails",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "BeaverTails",
+        "rho": 0.46058134306300275
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "dolly_15k",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "Dolly 15k",
+        "rho": 0.4743038694966544
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "dolly_15k",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "Dolly 15k",
+        "rho": 0.5010376611077383
+      },
+      {
+        "a": "beavertails",
+        "b": "dolly_15k",
+        "a_display": "BeaverTails",
+        "b_display": "Dolly 15k",
+        "rho": 0.5190806034441203
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "dolly_15k",
+        "a_display": "OASST1 assistant",
+        "b_display": "Dolly 15k",
+        "rho": 0.527998368955551
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "ultrafeedback_binarized_chosen",
+        "a_display": "OASST1 assistant",
+        "b_display": "UltraFeedback chosen",
+        "rho": 0.7302093839970063
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "hh_rlhf_rejected",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "HH-RLHF rejected",
+        "rho": 0.874373134678261
+      }
+    ],
+    "semantic_cluster_js": [
+      {
+        "a": "nemotron_math",
+        "b": "beavertails",
+        "a_display": "Nemotron-SFT-Math",
+        "b_display": "BeaverTails",
+        "semantic_cluster_js": 0.6915614585188798
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "nemotron_math",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "Nemotron-SFT-Math",
+        "semantic_cluster_js": 0.6886241158220083
+      },
+      {
+        "a": "beavertails",
+        "b": "magicoder_oss_instruct",
+        "a_display": "BeaverTails",
+        "b_display": "Magicoder OSS Instruct",
+        "semantic_cluster_js": 0.6864928615316374
+      },
+      {
+        "a": "nemotron_math",
+        "b": "magicoder_oss_instruct",
+        "a_display": "Nemotron-SFT-Math",
+        "b_display": "Magicoder OSS Instruct",
+        "semantic_cluster_js": 0.6859489838146353
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "nemotron_math",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "Nemotron-SFT-Math",
+        "semantic_cluster_js": 0.6806399631168201
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "magicoder_oss_instruct",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "Magicoder OSS Instruct",
+        "semantic_cluster_js": 0.6802726581704704
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "magicoder_oss_instruct",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "Magicoder OSS Instruct",
+        "semantic_cluster_js": 0.6783697817282925
+      },
+      {
+        "a": "nemotron_math",
+        "b": "dolly_15k",
+        "a_display": "Nemotron-SFT-Math",
+        "b_display": "Dolly 15k",
+        "semantic_cluster_js": 0.6770943968912406
+      },
+      {
+        "a": "magicoder_oss_instruct",
+        "b": "dolly_15k",
+        "a_display": "Magicoder OSS Instruct",
+        "b_display": "Dolly 15k",
+        "semantic_cluster_js": 0.673022712933415
+      },
+      {
+        "a": "ultrafeedback_binarized_chosen",
+        "b": "nemotron_math",
+        "a_display": "UltraFeedback chosen",
+        "b_display": "Nemotron-SFT-Math",
+        "semantic_cluster_js": 0.6504883649284972
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "nemotron_math",
+        "a_display": "OASST1 assistant",
+        "b_display": "Nemotron-SFT-Math",
+        "semantic_cluster_js": 0.6459985666446149
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "magicoder_oss_instruct",
+        "a_display": "OASST1 assistant",
+        "b_display": "Magicoder OSS Instruct",
+        "semantic_cluster_js": 0.5316492030521144
+      },
+      {
+        "a": "ultrafeedback_binarized_chosen",
+        "b": "magicoder_oss_instruct",
+        "a_display": "UltraFeedback chosen",
+        "b_display": "Magicoder OSS Instruct",
+        "semantic_cluster_js": 0.5165158856825904
+      },
+      {
+        "a": "ultrafeedback_binarized_chosen",
+        "b": "beavertails",
+        "a_display": "UltraFeedback chosen",
+        "b_display": "BeaverTails",
+        "semantic_cluster_js": 0.4421842253302066
+      },
+      {
+        "a": "beavertails",
+        "b": "dolly_15k",
+        "a_display": "BeaverTails",
+        "b_display": "Dolly 15k",
+        "semantic_cluster_js": 0.3567480990292131
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "beavertails",
+        "a_display": "OASST1 assistant",
+        "b_display": "BeaverTails",
+        "semantic_cluster_js": 0.3377342683937864
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "ultrafeedback_binarized_chosen",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "UltraFeedback chosen",
+        "semantic_cluster_js": 0.24817772294004617
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "ultrafeedback_binarized_chosen",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "UltraFeedback chosen",
+        "semantic_cluster_js": 0.24664488165323895
+      },
+      {
+        "a": "ultrafeedback_binarized_chosen",
+        "b": "dolly_15k",
+        "a_display": "UltraFeedback chosen",
+        "b_display": "Dolly 15k",
+        "semantic_cluster_js": 0.21821130087593094
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "dolly_15k",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "Dolly 15k",
+        "semantic_cluster_js": 0.16637766718871627
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "beavertails",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "BeaverTails",
+        "semantic_cluster_js": 0.16333507931085994
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "oasst1_assistant_en",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "OASST1 assistant",
+        "semantic_cluster_js": 0.15765566177734988
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "oasst1_assistant_en",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "OASST1 assistant",
+        "semantic_cluster_js": 0.14942070307875455
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "dolly_15k",
+        "a_display": "OASST1 assistant",
+        "b_display": "Dolly 15k",
+        "semantic_cluster_js": 0.14758687192511905
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "dolly_15k",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "Dolly 15k",
+        "semantic_cluster_js": 0.14586112352032296
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "beavertails",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "BeaverTails",
+        "semantic_cluster_js": 0.13375713579302675
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "ultrafeedback_binarized_chosen",
+        "a_display": "OASST1 assistant",
+        "b_display": "UltraFeedback chosen",
+        "semantic_cluster_js": 0.0619317121945418
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "hh_rlhf_rejected",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "HH-RLHF rejected",
+        "semantic_cluster_js": 0.005828173150028165
+      }
+    ],
+    "compression_abs_diff": [
+      {
+        "a": "magicoder_oss_instruct",
+        "b": "dolly_15k",
+        "a_display": "Magicoder OSS Instruct",
+        "b_display": "Dolly 15k",
+        "compression_abs_diff": 0.09692416389132757
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "magicoder_oss_instruct",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "Magicoder OSS Instruct",
+        "compression_abs_diff": 0.0698793446808344
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "magicoder_oss_instruct",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "Magicoder OSS Instruct",
+        "compression_abs_diff": 0.06758770370479544
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "magicoder_oss_instruct",
+        "a_display": "OASST1 assistant",
+        "b_display": "Magicoder OSS Instruct",
+        "compression_abs_diff": 0.06690247077212441
+      },
+      {
+        "a": "ultrafeedback_binarized_chosen",
+        "b": "magicoder_oss_instruct",
+        "a_display": "UltraFeedback chosen",
+        "b_display": "Magicoder OSS Instruct",
+        "compression_abs_diff": 0.06047108539603124
+      },
+      {
+        "a": "nemotron_math",
+        "b": "dolly_15k",
+        "a_display": "Nemotron-SFT-Math",
+        "b_display": "Dolly 15k",
+        "compression_abs_diff": 0.05964825114006772
+      },
+      {
+        "a": "beavertails",
+        "b": "magicoder_oss_instruct",
+        "a_display": "BeaverTails",
+        "b_display": "Magicoder OSS Instruct",
+        "compression_abs_diff": 0.057196432909430606
+      },
+      {
+        "a": "beavertails",
+        "b": "dolly_15k",
+        "a_display": "BeaverTails",
+        "b_display": "Dolly 15k",
+        "compression_abs_diff": 0.03972773098189697
+      },
+      {
+        "a": "nemotron_math",
+        "b": "magicoder_oss_instruct",
+        "a_display": "Nemotron-SFT-Math",
+        "b_display": "Magicoder OSS Instruct",
+        "compression_abs_diff": 0.037275912751259854
+      },
+      {
+        "a": "ultrafeedback_binarized_chosen",
+        "b": "dolly_15k",
+        "a_display": "UltraFeedback chosen",
+        "b_display": "Dolly 15k",
+        "compression_abs_diff": 0.03645307849529633
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "nemotron_math",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "Nemotron-SFT-Math",
+        "compression_abs_diff": 0.032603431929574545
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "nemotron_math",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "Nemotron-SFT-Math",
+        "compression_abs_diff": 0.03031179095353559
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "dolly_15k",
+        "a_display": "OASST1 assistant",
+        "b_display": "Dolly 15k",
+        "compression_abs_diff": 0.030021693119203163
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "nemotron_math",
+        "a_display": "OASST1 assistant",
+        "b_display": "Nemotron-SFT-Math",
+        "compression_abs_diff": 0.029626558020864557
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "dolly_15k",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "Dolly 15k",
+        "compression_abs_diff": 0.02933646018653213
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "dolly_15k",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "Dolly 15k",
+        "compression_abs_diff": 0.027044819210493176
+      },
+      {
+        "a": "ultrafeedback_binarized_chosen",
+        "b": "nemotron_math",
+        "a_display": "UltraFeedback chosen",
+        "b_display": "Nemotron-SFT-Math",
+        "compression_abs_diff": 0.02319517264477139
+      },
+      {
+        "a": "nemotron_math",
+        "b": "beavertails",
+        "a_display": "Nemotron-SFT-Math",
+        "b_display": "BeaverTails",
+        "compression_abs_diff": 0.01992052015817075
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "beavertails",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "BeaverTails",
+        "compression_abs_diff": 0.012682911771403793
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "beavertails",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "BeaverTails",
+        "compression_abs_diff": 0.010391270795364838
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "beavertails",
+        "a_display": "OASST1 assistant",
+        "b_display": "BeaverTails",
+        "compression_abs_diff": 0.009706037862693806
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "ultrafeedback_binarized_chosen",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "UltraFeedback chosen",
+        "compression_abs_diff": 0.009408259284803155
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "ultrafeedback_binarized_chosen",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "UltraFeedback chosen",
+        "compression_abs_diff": 0.0071166183087642
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "ultrafeedback_binarized_chosen",
+        "a_display": "OASST1 assistant",
+        "b_display": "UltraFeedback chosen",
+        "compression_abs_diff": 0.006431385376093168
+      },
+      {
+        "a": "ultrafeedback_binarized_chosen",
+        "b": "beavertails",
+        "a_display": "UltraFeedback chosen",
+        "b_display": "BeaverTails",
+        "compression_abs_diff": 0.0032746524866006377
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "oasst1_assistant_en",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "OASST1 assistant",
+        "compression_abs_diff": 0.002976873908709987
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "hh_rlhf_rejected",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "HH-RLHF rejected",
+        "compression_abs_diff": 0.0022916409760389556
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "oasst1_assistant_en",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "OASST1 assistant",
+        "compression_abs_diff": 0.0006852329326710316
+      }
+    ],
+    "top1_abs_diff": [
+      {
+        "a": "nemotron_math",
+        "b": "dolly_15k",
+        "a_display": "Nemotron-SFT-Math",
+        "b_display": "Dolly 15k",
+        "top1_abs_diff": 0.0833360315003235
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "nemotron_math",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "Nemotron-SFT-Math",
+        "top1_abs_diff": 0.08296088928360897
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "nemotron_math",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "Nemotron-SFT-Math",
+        "top1_abs_diff": 0.0812027374338618
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "nemotron_math",
+        "a_display": "OASST1 assistant",
+        "b_display": "Nemotron-SFT-Math",
+        "top1_abs_diff": 0.07989392734108533
+      },
+      {
+        "a": "ultrafeedback_binarized_chosen",
+        "b": "nemotron_math",
+        "a_display": "UltraFeedback chosen",
+        "b_display": "Nemotron-SFT-Math",
+        "top1_abs_diff": 0.07633366700559754
+      },
+      {
+        "a": "nemotron_math",
+        "b": "beavertails",
+        "a_display": "Nemotron-SFT-Math",
+        "b_display": "BeaverTails",
+        "top1_abs_diff": 0.05589052084115248
+      },
+      {
+        "a": "nemotron_math",
+        "b": "magicoder_oss_instruct",
+        "a_display": "Nemotron-SFT-Math",
+        "b_display": "Magicoder OSS Instruct",
+        "top1_abs_diff": 0.05252067287112225
+      },
+      {
+        "a": "magicoder_oss_instruct",
+        "b": "dolly_15k",
+        "a_display": "Magicoder OSS Instruct",
+        "b_display": "Dolly 15k",
+        "top1_abs_diff": 0.030815358629201244
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "magicoder_oss_instruct",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "Magicoder OSS Instruct",
+        "top1_abs_diff": 0.030440216412486718
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "magicoder_oss_instruct",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "Magicoder OSS Instruct",
+        "top1_abs_diff": 0.028682064562739557
+      },
+      {
+        "a": "beavertails",
+        "b": "dolly_15k",
+        "a_display": "BeaverTails",
+        "b_display": "Dolly 15k",
+        "top1_abs_diff": 0.027445510659171012
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "magicoder_oss_instruct",
+        "a_display": "OASST1 assistant",
+        "b_display": "Magicoder OSS Instruct",
+        "top1_abs_diff": 0.02737325446996308
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "beavertails",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "BeaverTails",
+        "top1_abs_diff": 0.027070368442456486
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "beavertails",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "BeaverTails",
+        "top1_abs_diff": 0.025312216592709325
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "beavertails",
+        "a_display": "OASST1 assistant",
+        "b_display": "BeaverTails",
+        "top1_abs_diff": 0.024003406499932847
+      },
+      {
+        "a": "ultrafeedback_binarized_chosen",
+        "b": "magicoder_oss_instruct",
+        "a_display": "UltraFeedback chosen",
+        "b_display": "Magicoder OSS Instruct",
+        "top1_abs_diff": 0.023812994134475303
+      },
+      {
+        "a": "ultrafeedback_binarized_chosen",
+        "b": "beavertails",
+        "a_display": "UltraFeedback chosen",
+        "b_display": "BeaverTails",
+        "top1_abs_diff": 0.02044314616444507
+      },
+      {
+        "a": "ultrafeedback_binarized_chosen",
+        "b": "dolly_15k",
+        "a_display": "UltraFeedback chosen",
+        "b_display": "Dolly 15k",
+        "top1_abs_diff": 0.007002364494725941
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "ultrafeedback_binarized_chosen",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "UltraFeedback chosen",
+        "top1_abs_diff": 0.0066272222780114146
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "ultrafeedback_binarized_chosen",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "UltraFeedback chosen",
+        "top1_abs_diff": 0.004869070428264254
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "ultrafeedback_binarized_chosen",
+        "a_display": "OASST1 assistant",
+        "b_display": "UltraFeedback chosen",
+        "top1_abs_diff": 0.0035602603354877756
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "dolly_15k",
+        "a_display": "OASST1 assistant",
+        "b_display": "Dolly 15k",
+        "top1_abs_diff": 0.0034421041592381657
+      },
+      {
+        "a": "beavertails",
+        "b": "magicoder_oss_instruct",
+        "a_display": "BeaverTails",
+        "b_display": "Magicoder OSS Instruct",
+        "top1_abs_diff": 0.003369847970030232
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "oasst1_assistant_en",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "OASST1 assistant",
+        "top1_abs_diff": 0.003066961942523639
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "dolly_15k",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "Dolly 15k",
+        "top1_abs_diff": 0.0021332940664616877
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "hh_rlhf_rejected",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "HH-RLHF rejected",
+        "top1_abs_diff": 0.001758151849747161
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "oasst1_assistant_en",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "OASST1 assistant",
+        "top1_abs_diff": 0.001308810092776478
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "dolly_15k",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "Dolly 15k",
+        "top1_abs_diff": 0.0003751422167145267
+      }
+    ],
+    "top5_abs_diff": [
+      {
+        "a": "nemotron_math",
+        "b": "dolly_15k",
+        "a_display": "Nemotron-SFT-Math",
+        "b_display": "Dolly 15k",
+        "top5_abs_diff": 0.15713314726199767
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "nemotron_math",
+        "a_display": "OASST1 assistant",
+        "b_display": "Nemotron-SFT-Math",
+        "top5_abs_diff": 0.14922951458116454
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "nemotron_math",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "Nemotron-SFT-Math",
+        "top5_abs_diff": 0.14915415612110136
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "nemotron_math",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "Nemotron-SFT-Math",
+        "top5_abs_diff": 0.1472943976588062
+      },
+      {
+        "a": "ultrafeedback_binarized_chosen",
+        "b": "nemotron_math",
+        "a_display": "UltraFeedback chosen",
+        "b_display": "Nemotron-SFT-Math",
+        "top5_abs_diff": 0.1463691703147057
+      },
+      {
+        "a": "nemotron_math",
+        "b": "beavertails",
+        "a_display": "Nemotron-SFT-Math",
+        "b_display": "BeaverTails",
+        "top5_abs_diff": 0.11439634109261501
+      },
+      {
+        "a": "nemotron_math",
+        "b": "magicoder_oss_instruct",
+        "a_display": "Nemotron-SFT-Math",
+        "b_display": "Magicoder OSS Instruct",
+        "top5_abs_diff": 0.07913538465937572
+      },
+      {
+        "a": "magicoder_oss_instruct",
+        "b": "dolly_15k",
+        "a_display": "Magicoder OSS Instruct",
+        "b_display": "Dolly 15k",
+        "top5_abs_diff": 0.07799776260262195
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "magicoder_oss_instruct",
+        "a_display": "OASST1 assistant",
+        "b_display": "Magicoder OSS Instruct",
+        "top5_abs_diff": 0.07009412992178882
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "magicoder_oss_instruct",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "Magicoder OSS Instruct",
+        "top5_abs_diff": 0.07001877146172564
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "magicoder_oss_instruct",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "Magicoder OSS Instruct",
+        "top5_abs_diff": 0.06815901299943049
+      },
+      {
+        "a": "ultrafeedback_binarized_chosen",
+        "b": "magicoder_oss_instruct",
+        "a_display": "UltraFeedback chosen",
+        "b_display": "Magicoder OSS Instruct",
+        "top5_abs_diff": 0.06723378565532999
+      },
+      {
+        "a": "beavertails",
+        "b": "dolly_15k",
+        "a_display": "BeaverTails",
+        "b_display": "Dolly 15k",
+        "top5_abs_diff": 0.04273680616938266
+      },
+      {
+        "a": "beavertails",
+        "b": "magicoder_oss_instruct",
+        "a_display": "BeaverTails",
+        "b_display": "Magicoder OSS Instruct",
+        "top5_abs_diff": 0.03526095643323929
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "beavertails",
+        "a_display": "OASST1 assistant",
+        "b_display": "BeaverTails",
+        "top5_abs_diff": 0.03483317348854953
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "beavertails",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "BeaverTails",
+        "top5_abs_diff": 0.03475781502848635
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "beavertails",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "BeaverTails",
+        "top5_abs_diff": 0.0328980565661912
+      },
+      {
+        "a": "ultrafeedback_binarized_chosen",
+        "b": "beavertails",
+        "a_display": "UltraFeedback chosen",
+        "b_display": "BeaverTails",
+        "top5_abs_diff": 0.0319728292220907
+      },
+      {
+        "a": "ultrafeedback_binarized_chosen",
+        "b": "dolly_15k",
+        "a_display": "UltraFeedback chosen",
+        "b_display": "Dolly 15k",
+        "top5_abs_diff": 0.010763976947291962
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "dolly_15k",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "Dolly 15k",
+        "top5_abs_diff": 0.009838749603191463
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "dolly_15k",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "Dolly 15k",
+        "top5_abs_diff": 0.007978991140896313
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "dolly_15k",
+        "a_display": "OASST1 assistant",
+        "b_display": "Dolly 15k",
+        "top5_abs_diff": 0.007903632680833134
+      },
+      {
+        "a": "oasst1_assistant_en",
+        "b": "ultrafeedback_binarized_chosen",
+        "a_display": "OASST1 assistant",
+        "b_display": "UltraFeedback chosen",
+        "top5_abs_diff": 0.002860344266458828
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "ultrafeedback_binarized_chosen",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "UltraFeedback chosen",
+        "top5_abs_diff": 0.0027849858063956484
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "oasst1_assistant_en",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "OASST1 assistant",
+        "top5_abs_diff": 0.0019351169223583292
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "hh_rlhf_rejected",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "HH-RLHF rejected",
+        "top5_abs_diff": 0.0018597584622951496
+      },
+      {
+        "a": "hh_rlhf_rejected",
+        "b": "ultrafeedback_binarized_chosen",
+        "a_display": "HH-RLHF rejected",
+        "b_display": "UltraFeedback chosen",
+        "top5_abs_diff": 0.0009252273441004988
+      },
+      {
+        "a": "hh_rlhf_chosen",
+        "b": "oasst1_assistant_en",
+        "a_display": "HH-RLHF chosen",
+        "b_display": "OASST1 assistant",
+        "top5_abs_diff": 7.535846006317959e-05
+      }
+    ]
+  },
+  "standalone_targeted": [
+    {
+      "label": "hh_rlhf_chosen",
+      "display": "HH-RLHF chosen",
+      "compression_ratio_lzma": 0.301128269700888,
+      "top1_share": 0.027044985080394296,
+      "top5_share": 0.10152948451898755
+    },
+    {
+      "label": "hh_rlhf_rejected",
+      "display": "HH-RLHF rejected",
+      "compression_ratio_lzma": 0.29883662872484906,
+      "top1_share": 0.025286833230647135,
+      "top5_share": 0.1033892429812827
+    },
+    {
+      "label": "oasst1_assistant_en",
+      "display": "OASST1 assistant",
+      "compression_ratio_lzma": 0.29815139579217803,
+      "top1_share": 0.028353795173170774,
+      "top5_share": 0.10145412605892437
+    },
+    {
+      "label": "ultrafeedback_binarized_chosen",
+      "display": "UltraFeedback chosen",
+      "compression_ratio_lzma": 0.29172001041608486,
+      "top1_share": 0.03191405550865855,
+      "top5_share": 0.1043144703253832
+    },
+    {
+      "label": "nemotron_math",
+      "display": "Nemotron-SFT-Math",
+      "compression_ratio_lzma": 0.2685248377713135,
+      "top1_share": 0.1082477225142561,
+      "top5_share": 0.2506836406400889
+    },
+    {
+      "label": "beavertails",
+      "display": "BeaverTails",
+      "compression_ratio_lzma": 0.2884453579294842,
+      "top1_share": 0.05235720167310362,
+      "top5_share": 0.1362872995474739
+    },
+    {
+      "label": "magicoder_oss_instruct",
+      "display": "Magicoder OSS Instruct",
+      "compression_ratio_lzma": 0.23124892502005362,
+      "top1_share": 0.05572704964313385,
+      "top5_share": 0.1715482559807132
+    },
+    {
+      "label": "dolly_15k",
+      "display": "Dolly 15k",
+      "compression_ratio_lzma": 0.3281730889113812,
+      "top1_share": 0.024911691013932608,
+      "top5_share": 0.09355049337809124
+    }
+  ]
+}

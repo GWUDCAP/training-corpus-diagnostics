@@ -1,0 +1,321 @@
+# Lens Effects: Structured Geometry in Training Corpora
+
+## Abstract
+
+Large language models are commonly trained in stages, with broad pretraining followed by more directed post-training. These stages are usually evaluated through downstream behavior: instruction following, helpfulness, safety behavior, specialization, robustness, output diversity, forgetting, or alignment tax (Ouyang et al., 2022; Bai et al., 2022; Kirk et al., 2024; Bianchi et al., 2024; Luo et al., 2023; Lin et al., 2024). We ask a simpler upstream question: whether the stage-linked preparation regimes associated with those corpora already differ in measurable structure before any model is trained on them.
+
+We compare a fourteen-corpus panel containing six pretraining corpora and eight post-training corpora, with randomized retained samples drawn under a matched chunk budget. The central result is that the pretraining side is unusually coherent: across retained family summaries, within-pretraining pairs are consistently less separated than pretraining/post-training pairs. Lexical JS is 0.0834 versus 0.1894, Spearman rho is 0.6156 versus 0.4038, and GTE cluster JS is 0.0630 versus 0.3737. Pairwise differences derived from compression ratio, top1 covariance share, and top5 covariance share show the same ordering.
+
+The recovered structure is graded rather than merely binary. The pretraining corpora form a compact broad-text region, while post-training corpora appear as structured departures from that region: some remain near the boundary, and others form stronger capability-, safety-, or response-shaped poles. Directed post-training mixtures preserve the same structure compositionally, with near-sibling mixtures remaining almost flat while more separated pairs move smoothly and substantially. The suite does not merely recover the broad distinction between pretraining and post-training corpora; it also recovers asymmetries within the post-training set that are invisible to that stage distinction alone.
+
+We use lens effects as a compact name for this measured pattern: motivated corpus preparation leaves graded statistical signatures before training. Calibrated on corpora with externally known training-stage roles, the suite computes diagnostic positions for new or unlabeled corpora relative to the retained panel.
+
+## 1. Introduction
+
+Modern language-model pipelines are organized around a practical distinction between pretraining and post-training. Pretraining datasets are typically assembled through large-scale, heterogeneous collection with comparatively loose admission criteria. Post-training datasets are usually assembled through narrower selection, filtering, labeling, or construction around desired behaviors, preferences, safety profiles, refusal behavior, instruction following, or specialized capabilities (Raffel et al., 2020; Ouyang et al., 2022; Bai et al., 2022; Rafailov et al., 2023). This operational distinction is already built into contemporary training practice.
+
+The distinction is also an intervention on the data distribution presented to the learner. A training corpus is not only a container of examples. It defines statistical regularities and relationships that a learner can extract, compress, and operationalize through exposure: which textual forms are common or peripheral, which features co-occur, which regions of text-space are dense or diffuse, and which behaviors or capabilities are made central by selection. A natural object of study, then, is not only the examples themselves but the exposure geometry they induce: the measurable structure different corpora place before the learner.
+
+This paper studies that inherited distinction directly. We ask whether the preparation asymmetries between pretraining and post-training corpora, including task conditioning, response extraction, formatting, filtering, preference shaping, and domain specialization, leave a statistical signature before training begins. The contribution is not the qualitative observation that curated response corpora differ from broad source-derived mixtures, but a measurement suite for comparing how they differ before optimization: in mass allocation, rank compatibility, semantic concentration, redundancy, and mixture behavior.
+
+The core empirical result is straightforward. Across several convergent, non-identical summaries, the pretraining side forms a compact region: pretraining/pretraining pairs are consistently much less separated than pretraining/post-training pairs. This appears in lexical distribution shift, lexical salience-rank preservation, retrieval-encoder cluster shift, semantic concentration, and compression-ratio differences. The structure is not a simple binary split. On the pretraining side, FineWeb, C4, Dolma, RefinedWeb, and SlimPajama occupy a tight low-concentration broad region, with Pile forming a more structured pretraining edge. On the post-training side, HH-RLHF chosen and rejected form a near-sibling pair; OASST1, UltraFeedback, and Dolly occupy a milder assistant/instruction neighborhood; BeaverTails sits as a safety-oriented intermediate with stronger standalone concentration; and Nemotron-SFT-Math and Magicoder OSS Instruct form stronger capability-oriented poles. The full directed post-training mixture panel preserves the same organization compositionally: near-sibling mixtures remain almost flat, while more separated pairs move smoothly and substantially.
+
+The paper makes four bounded empirical claims. First, datasets associated with pretraining and post-training form a distinct upstream statistical separation in this panel. Second, that separation is not exhausted by a binary stage label: both sides are internally structured, and the pretraining side is unusually compact. Third, the same ordering appears in both pairwise and standalone summaries, indicating that the recovered structure is graded rather than merely relational. Fourth, directed post-training mixtures preserve the same organization compositionally: near-sibling pairs remain nearly flat under interpolation, while more separated pairs move smoothly and substantially. Together, these claims make the suite a diagnostic instrument for positioning corpora after calibration on a panel where the stage roles are known. The paper does not establish that these corpus-level measurements cause downstream post-training effects. It identifies upstream variables that later work can test against those effects: mass reallocation, rank distortion, concentration, and compatibility loss.
+
+## 2. Dataset Panel and Role Assignment
+
+We study a fourteen-corpus panel organized first by inherited training-stage role rather than by benchmark convention. The panel contains six datasets commonly used for pretraining, FineWeb, RefinedWeb, Dolma, C4, SlimPajama, and Pile uncopyrighted (Penedo et al., 2024; Penedo et al., 2023; Soldaini et al., 2024; Raffel et al., 2020; Soboleva et al., 2023; Gao et al., 2020), and eight datasets used for post-training, HH-RLHF chosen, HH-RLHF rejected, OASST1 assistant, UltraFeedback chosen, Nemotron-SFT-Math, BeaverTails, Magicoder OSS Instruct, and Dolly 15k (Bai et al., 2022; Kopf et al., 2023; Cui et al., 2023; NVIDIA, 2026; Ji et al., 2023; Wei et al., 2023; Conover et al., 2023). The role assignment is external to the measurements: the pretraining/post-training split is inherited from how these datasets are assembled and used, not inferred from the metrics reported here.
+
+The pretraining panel includes broad web-derived and aggregate-mixture corpora as well as a more structured Pile edge; the post-training panel includes preference, assistant, safety, math, code, and instruction sources. These subtypes broaden panel coverage rather than define the primary comparison.
+
+### Table 1. Corpus panel and role assignment
+
+| Panel role | Corpus | Paper shorthand | Source field / extraction rule |
+|---|---|---|---|
+| Pretraining | FineWeb | FineWeb | `HuggingFaceFW/fineweb`, `sample-10BT`, field `text` |
+| Pretraining | RefinedWeb | RefinedWeb | `tiiuae/falcon-refinedweb`, field `content` |
+| Pretraining | Dolma | Dolma | `allenai/dolma`, `v1_7`, manifest-backed source adapter, field `text` |
+| Pretraining | C4 | C4 | `allenai/c4`, `en`, field `text` |
+| Pretraining | SlimPajama | SlimPajama | `gmongaras/SlimPajama-627B_Reupload`, field `text` |
+| Pretraining | Pile uncopyrighted | Pile | `monology/pile-uncopyrighted`, field `text` |
+| Post-training | HH-RLHF chosen | HH chosen | `Anthropic/hh-rlhf`, final assistant completion from `chosen` transcript |
+| Post-training | HH-RLHF rejected | HH rejected | `Anthropic/hh-rlhf`, final assistant completion from `rejected` transcript |
+| Post-training | OASST1 assistant | OASST1 | `OpenAssistant/oasst1`, English assistant rows, field `text` |
+| Post-training | UltraFeedback chosen | UltraFeedback | `HuggingFaceH4/ultrafeedback_binarized`, `train_prefs`, final assistant message from `chosen` |
+| Post-training | Nemotron-SFT-Math | Nemotron | `nvidia/Nemotron-SFT-Math-v3`, final assistant message from `messages` |
+| Post-training | BeaverTails | BeaverTails | `PKU-Alignment/BeaverTails`, `30k_train`, field `response` |
+| Post-training | Magicoder OSS Instruct | Magicoder | `ise-uiuc/Magicoder-OSS-Instruct-75K`, field `solution` |
+| Post-training | Dolly 15k | Dolly | `databricks/databricks-dolly-15k`, field `response` |
+
+SlimPajama is read from the listed public re-upload mirror for reproducible access. The original dataset citation remains Soboleva et al. (2023), and mirror/license caveats are recorded in the release provenance table.
+
+All analyses use 2048 chunks per corpus, chunks of up to 768 characters, and at most two chunks per source document. Under the retained builder, chunks shorter than `max(64, chunk_chars // 4)` are discarded; this is 192 characters under the retained setting. The 2048-chunk value is a matched-sample measurement budget: every corpus contributes the same number of retained text units to each comparison. It is not intended to exhaust the upstream datasets or equalize total character mass exactly, but to define an auditable unit shared across the full fourteen-corpus panel and the associated stability checks. The retained chunks remain length-variable; chunk-length summaries are reported in the appendix and release artifacts.
+
+The retained panel is drawn with randomized reservoir sampling. For streamed sources, the builder scans up to 50,000 nonempty source documents per corpus, maintains a 12,000-document reservoir, and then chunks sampled documents until the 2048 retained chunks are filled. Source adapters preserve the same retained-sample contract while recording source-specific references such as dataset row positions or shard references. Each retained chunk has a provenance sidecar row recording source position, source reference, source-text hash, chunk hash, character span, sampling mode, seed, scan budget, and document sample rank. These provenance records support audit of sampled upstream positions, retained text, and chunk/embedding alignment.
+
+For structured post-training datasets, the retained text is the model-side or assistant-side response field: chosen or rejected completions, assistant messages, responses, or solutions. This convention measures the textual object most directly selected by the post-training source and keeps the retained post-training objects aligned across assistant, safety, math, code, preference, and instruction sources.
+
+## 3. Measurement Families
+
+We compare corpora using several convergent, non-identical summaries. The point is not to maximize metric count, but to witness different ways a corpus can reshape the training signal. Lexical divergence measures probability-mass redistribution over surface forms. Rank statistics measure whether high- and low-frequency lexical features preserve their relative order across corpora. Retrieval-encoder cluster divergence measures mass redistribution over embedding neighborhoods. Embedding concentration measures whether examples occupy broad or narrow semantic regions. Compression-style summaries measure redundancy, templating, and structural regularity. Directed mixtures test whether pairwise relationships behave coherently under interpolation.
+
+These summaries are not definitions of pretraining or post-training. They are operational witnesses of corpus geometry. They are also not all statistically independent: compression ratio, spectral top1 share, and spectral top5 share are intrinsic per-corpus scalars whose pairwise summaries are absolute differences. The load-bearing pairwise views are lexical/rank and embedding-cluster comparisons; compression, spectral top1, and spectral top5 are corroborating scalar-derived concentration and regularity views. A robust stage-level pattern should therefore appear across structurally different views, especially pairwise lexical/rank summaries, pairwise embedding-cluster summaries, standalone concentration/regularity summaries, and mixture behavior, rather than depending on one metric.
+
+### 3.1 Semantic comparisons
+
+For each corpus, we compute chunk-level embedding summaries and compare corpora through occupancy over a shared semantic partition. The primary embedding pairwise metric is cluster Jensen-Shannon divergence (`cluster_js`) (Lin, 1991). Lower values indicate lower pairwise separation in retrieval-encoder embedding space. Higher values indicate stronger redistribution of embedding-neighborhood mass. The retained setting uses `Alibaba-NLP/gte-base-en-v1.5` GTE c768 embeddings, a pooled pairwise cluster reference, and `k=24` clusters (Li et al., 2023). We also report encoder, chunk-size, and cluster-count stability checks, so this embedding-space claim does not depend only on the retained GTE c768, `k=24` configuration.
+
+Cluster JS is reported in natural-log units, so its two-distribution ceiling is `ln(2) = 0.6931`. Values at that ceiling indicate disjoint cluster occupancy under the retained partition. They are informative as evidence of strong separation, but they should not be read as ranking further separation among ceiling-hitting pairs. To complement this bounded cluster view, we also report continuous embedding-space sensitivity summaries in the release artifacts and main robustness discussion.
+
+We also report spectral top1 share and spectral top5 share as standalone concentration summaries, defined as the top eigenvalue's share and the top five eigenvalues' share of the embedding covariance trace. These are intrinsic corpus summaries rather than directional pairwise metrics, so in the main text they are interpreted either as per-corpus values or through absolute differences across corpora.
+
+### 3.2 Lexical and rank-statistical comparisons
+
+The lexical family captures both distributional drift and changes in salience ordering. The primary retained metrics are lexical Jensen-Shannon divergence (`lexical_js`) and Spearman rank correlation (`rho`) (Spearman, 1904; Lin, 1991). Both are computed on a reference vocabulary selected from the baseline side of an ordered pair. The retained textual summary averages the regex-tokenizer and GPT-2-tokenizer settings across the released n-gram and vocabulary grid. In the retained cross-stage textual summary, pretraining datasets are used as the reference side for pretraining/post-training comparisons. The release also reports reverse-direction, two-direction, and tokenizer-subset lexical summaries; the ordering is unchanged under each convention.
+
+A useful distinction here is between reweighting and reordering. Two corpora may differ because one amplifies or attenuates a broadly similar salience profile, or because the salience ordering itself changes. We therefore retain both lexical JS and Spearman rho: lexical JS captures lexical distributional drift, while Spearman rho captures preservation or disruption of lexical salience ordering.
+
+### 3.3 Compression-style comparisons
+
+The compression family supplies a non-semantic, non-embedding view of corpus structure. We summarize each corpus by its standalone LZMA compression ratio and compare corpora through absolute differences in those ratios. The retained implementation concatenates the 2048 chunks with blank-line separators and compresses the resulting UTF-8 byte string with LZMA preset 6. Lower absolute differences indicate lower pairwise separation under this lens.
+
+The same standalone-derived absolute-difference convention is used for compression ratio, spectral top1 share, and spectral top5 share. These quantities are corpus properties rather than directional pairwise measures, so family-level comparisons are computed as absolute differences between standalone corpus values.
+
+### 3.4 Aggregation levels
+
+We analyze the panel at four aggregation levels:
+
+1. within-pretraining versus pretraining/post-training family summaries;
+2. standalone per-corpus summaries;
+3. post-training to post-training structure; and
+4. full directed post-training mixture trajectories.
+
+The recovered structure should remain visible across more than one aggregation frame.
+
+## 4. Primary Regime Split
+
+The first result is the primary regime split: the pretraining side forms a compact region under the retained pairwise summaries, with pretraining/pretraining pairs consistently much less separated than pretraining/post-training pairs. This pattern appears across lexical, embedding-cluster, compression, and concentration views before any appeal to internal post-training structure or mixture behavior.
+
+### Table 2. Cross-stage family summaries
+
+| Metric family | Summary | Within-pretraining | Pretraining/post-training | Interpretation |
+|---|---|---:|---:|---|
+| Lexical | lexical JS, retained textual grid | 0.0834 | 0.1894 | Within-pretraining shows lower lexical separation |
+| Lexical check | lexical JS, GPT-2 tokenizer subset | 0.0976 | 0.1987 | Tokenizer-specific check preserves the ordering |
+| Lexical | Spearman rho, retained textual grid | 0.6156 | 0.4038 | Within-pretraining preserves lexical ordering more strongly |
+| Lexical check | Spearman rho, GPT-2 tokenizer subset | 0.5987 | 0.3862 | Tokenizer-specific check preserves the ordering |
+| Embedding cluster | cluster JS, GTE c768 | 0.0630 | 0.3737 | Within-pretraining shows lower embedding-neighborhood separation |
+| Compression | abs diff in compression ratio | 0.0077 | 0.0515 | Within-pretraining is more internally compatible |
+| Semantic concentration | abs diff in spectral top1 share | 0.0048 | 0.0237 | Within-pretraining differs less in concentration |
+| Semantic concentration | abs diff in spectral top5 share | 0.0065 | 0.0513 | Within-pretraining differs less in concentration |
+
+For JS and absolute-difference summaries, lower values indicate closer corpora. For rho, higher values indicate closer corpora. The GPT-2 rows are shown because the code and math corpora contain punctuation and symbolic structure that a simple regex tokenizer can suppress; they are tokenizer-subset checks rather than additional metric families.
+
+The repeated ordering across the retained summaries is the main empirical object of the paper. Lexical JS, rho, and cluster JS capture different forms of pairwise separation, while compression ratio and semantic concentration summarize intrinsic corpus structure and enter family comparisons through absolute pairwise differences. These summaries are therefore not redundant restatements of one quantity, but they also should not be treated as six independent witnesses. Because the lexical summaries use a reference-vocabulary construction, we also recomputed the cross-stage lexical summaries in the reverse direction and as a two-direction average. The ordering remained unchanged: within-pretraining two-direction lexical JS was 0.0834, while pretraining/post-training lexical JS was 0.1894 with pretraining reference, 0.1971 with post-training reference, and 0.1933 under two-direction averaging. Within-pretraining rho was 0.6156, while pretraining/post-training rho was 0.4038 with pretraining reference, 0.4098 with post-training reference, and 0.4068 under two-direction averaging.
+
+![Figure 1. Primary regime summary](../figures/fig1_primary_regime_summary.png)
+
+**Figure 1. Primary regime summary.** Within-pretraining versus pretraining/post-training family summaries for the retained metric families. For rho, higher values indicate greater closeness; for the other summaries, lower values indicate greater closeness.
+
+## 5. Standalone Structure and Cross-Stage Ordering
+
+The primary cross-stage separation is not only a matter of within-pretraining pairs being less separated than pretraining/post-training pairs. Standalone corpus summaries also induce a graded ordering that is broadly consistent with the pairwise result. FineWeb, C4, Dolma, RefinedWeb, and SlimPajama occupy a tight low-concentration broad region, with Pile forming a more structured pretraining edge. The post-training corpora overlap that broad region at the mild end, especially Dolly, and extend much further at the capability and safety poles, with Nemotron-SFT-Math, Magicoder OSS Instruct, and BeaverTails showing stronger concentration or compression structure. The recovered structure is therefore not only relational. It also appears in intrinsic corpus summaries computed one corpus at a time.
+
+### Table 3. Standalone semantic concentration and compression summaries
+
+| Corpus | Top1 share | Top5 share | Compression ratio |
+|---|---:|---:|---:|
+| FineWeb | 0.0186 | 0.0785 | 0.3422 |
+| C4 | 0.0187 | 0.0790 | 0.3343 |
+| Dolma | 0.0194 | 0.0780 | 0.3447 |
+| RefinedWeb | 0.0194 | 0.0783 | 0.3457 |
+| SlimPajama | 0.0207 | 0.0793 | 0.3427 |
+| Pile | 0.0319 | 0.0968 | 0.3289 |
+| Dolly | 0.0249 | 0.0936 | 0.3282 |
+| HH rejected | 0.0253 | 0.1034 | 0.2988 |
+| HH chosen | 0.0270 | 0.1015 | 0.3011 |
+| OASST1 | 0.0284 | 0.1015 | 0.2982 |
+| UltraFeedback | 0.0319 | 0.1043 | 0.2917 |
+| BeaverTails | 0.0524 | 0.1363 | 0.2884 |
+| Magicoder | 0.0557 | 0.1715 | 0.2312 |
+| Nemotron | 0.1082 | 0.2507 | 0.2685 |
+
+![Figure 2. Standalone corpus summaries](../figures/fig2_standalone_spectrum.png)
+
+**Figure 2. Standalone corpus summaries.** Compression ratio and spectral top5 share place FineWeb, C4, Dolma, RefinedWeb, and SlimPajama near the lower-concentration pretraining end, Pile at the more structured pretraining edge, Dolly near the mild end of the post-training side, and Nemotron-SFT-Math, Magicoder, and BeaverTails near stronger post-training concentration or compression poles.
+
+The stability checks support this panel-level result. In 200 bootstrap resamples of the retained chunks, all six cross-stage orderings were preserved in 200/200 replicates. Same-corpus split baselines were substantially smaller than the cross-stage scale for divergence-style summaries: pooled same-corpus lexical JS was 0.0294 and pooled same-corpus semantic cluster JS was 0.0055. Leave-one-corpus-out checks preserved all six orderings in all fourteen omissions. The GTE c768 semantic ordering was preserved across k in {12, 16, 24, 32, 48}.
+
+![Figure 3. Bootstrap stability](../figures/fig3_bootstrap_stability.png)
+
+**Figure 3. Bootstrap stability.** Ordering-stability bootstrap over 200 within-corpus chunk resamples, shown with 2.5-97.5% resample intervals. These intervals are used here as an ordering-stability diagnostic. Within-sample nonparametric resampling perturbs plug-in statistics relative to the canonical estimate, so the bands should not be read as coverage intervals for the canonical point estimates.
+
+## 6. Post-Training Corpora as Structured Departures
+
+The post-training side of the panel does not behave like a single undifferentiated opposite class. It is better understood as a structured family of departures from the pretraining region. Nemotron-SFT-Math is especially important here, because it behaves as a strong post-training pole in both standalone and pairwise summaries and blocks a narrow reading under which the observed separation would only reflect assistant formatting or safety-language style. Magicoder OSS Instruct strengthens the same point from a different capability direction. Along the standalone summaries, the post-training corpora do not form a single undifferentiated band. Instead, they show a very tight HH alignment pair; a milder assistant, preference, and instruction region containing OASST1, UltraFeedback, and Dolly; a safety-oriented BeaverTails corpus that is mild in some pairwise neighborhoods but stronger under standalone concentration and compression summaries; and a stronger capability-oriented end marked by Nemotron-SFT-Math and Magicoder OSS Instruct.
+
+The claim is not that all post-training corpora differ from pretraining corpora for the same local textual reason. Different post-training corpora can depart through different mechanisms, including preference comparison, assistant-style supervision, safety-oriented selection, general instruction tuning, or more explicit capability steering. The empirical point is that datasets assembled for post-training purposes appear as measurable and internally structured departures from the broader pretraining region. This internal structure also appears directly in post-training/post-training comparisons. The retained panel contains 28 unordered post-training pairs, and those pairs span a wide range: HH-RLHF chosen versus rejected is a close preference-pair comparison, OASST1 versus UltraFeedback is a mild assistant/preference-neighborhood comparison, and pairs involving Nemotron-SFT-Math or Magicoder OSS Instruct often form the strongest separations.
+
+### Table 4. Representative post-training/post-training comparisons
+
+| Comparison | Lexical JS | Spearman rho | Semantic cluster JS | Interpretation |
+|---|---:|---:|---:|---|
+| HH chosen vs HH rejected | 0.0075 | 0.8744 | 0.0058 | Near-sibling preference pair |
+| OASST1 vs UltraFeedback | 0.0320 | 0.7302 | 0.0619 | Mild assistant/preference neighborhood |
+| BeaverTails vs Dolly | 0.1097 | 0.5191 | 0.3567 | Safety/instruction-neighborhood comparison |
+| Magicoder vs Dolly | 0.4319 | 0.1876 | 0.6730 | Capability/instruction separation |
+| Nemotron vs BeaverTails | 0.5542 | 0.0531 | 0.6916 | Strong capability/safety separation |
+
+The same structure appears in the semantic summaries. HH chosen/rejected remains close under semantic cluster JS, while many of the largest semantic separations involve Nemotron-SFT-Math or Magicoder OSS Instruct. The HH chosen/rejected near-sibling result should be read with its construction in mind: the two datasets are paired preference completions from the same source regime, so their closeness is an expected consequence of paired construction rather than independent evidence that all preference data are near-degenerate. The middle of the post-training panel is not empty: OASST1, UltraFeedback, and Dolly form milder neighborhoods under at least some metrics, while BeaverTails bridges that middle region and stronger safety-oriented concentration.
+
+![Figure 4. Post-training internal structure](../figures/fig4_targeted_structure.png)
+
+**Figure 4. Post-training internal structure.** Post-training/post-training comparisons over retained unordered pair rows. HH chosen/rejected are near-siblings, OASST1/UltraFeedback remain relatively close, and Nemotron-SFT-Math and Magicoder OSS Instruct participate in many of the strongest separations.
+
+## 7. Composition Under Mixture
+
+The post-training/post-training comparisons above are static pairwise summaries. We also ask whether those relationships behave coherently under simple corpus mixtures. For each ordered post-training pair, we form mixtures along a fixed alpha grid from the baseline corpus to the target corpus. The retained panel covers all 56 directed post-training trajectories over alpha values 0.0, 0.1, 0.25, 0.5, 0.75, and 1.0.
+
+The flattest trajectories are the HH-RLHF chosen/rejected directions. At the endpoint, HH rejected to HH chosen has cluster JS 0.0062, lexical JS 0.0130, and rho 0.8336; the reverse direction is similarly small, with cluster JS 0.0058, lexical JS 0.0075, and rho 0.8744. These mixtures recover the near-sibling relation already visible in the pairwise table. Because HH chosen and rejected are paired completions from the same source regime, their flat mixture trajectories should be read as a construction-expected lower endpoint, not as independent evidence about unrelated preference corpora.
+
+The strongest trajectories involve the capability-oriented corpora. Nemotron-SFT-Math and Magicoder trajectories to or from HH preference completions approach the semantic cluster-JS ceiling at the endpoint, with endpoint cluster JS values around 0.68-0.69 and large lexical movement. Several Nemotron or Magicoder trajectories also show low endpoint rho. For near-ceiling semantic endpoints, the path through the interior remains informative, but the endpoint value should not be used for fine ranking under this metric; continuous embedding-space sensitivity summaries provide a complementary unbounded check on the strongest separations. The point is not that all trajectories are linear in every metric, but that flat, mild, and strong mixture paths correspond to the same organization recovered from the static post-training/post-training comparisons.
+
+These paths matter because they show that the post-training structure is not only a collection of endpoint distances. Under direct interpolation, near-sibling pairs remain nearly flat, while more separated pairs move substantially. The mixture panel therefore supplies a compositional check on the same internal geometry rather than a separate source of evidence.
+
+![Figure 5. Mixture trajectories](../figures/fig5_mixture_trajectories.png)
+
+**Figure 5. Representative post-training mixture trajectories.** Near-sibling HH chosen/rejected mixtures remain nearly flat, OASST1/UltraFeedback remains comparatively mild, and trajectories involving Nemotron-SFT-Math or Magicoder show stronger lexical and semantic movement.
+
+## 8. Robustness Across Measurement Choices
+
+We next check whether the same ordering appears under nearby measurement choices. These checks keep the same corpus panel and vary the semantic and textual settings around the canonical configuration.
+
+For embedding-cluster summaries, the pretraining/post-training ordering holds across retrieval-style encoder families and chunk lengths. In the retained GTE c768 setting, within-pretraining cluster JS remains lower than pretraining/post-training cluster JS, 0.0630 versus 0.3737. Auxiliary BGE (Xiao et al., 2023), MiniLM (Wang et al., 2020), and GTE chunk-length sweeps preserve the same ordering in the released sweep artifacts. The GTE c256 setting truncates more aggressively than the retained c768 setting and still preserves the ordering, with within-pretraining cluster JS 0.0593 versus pretraining/post-training cluster JS 0.3400.
+
+The semantic cluster-count check gives the same result. Varying k over {12, 16, 24, 32, 48} preserves the ordering in all five settings. Within-pretraining cluster JS ranges from 0.0565 to 0.0743, while pretraining/post-training cluster JS ranges from 0.3599 to 0.3825.
+
+Continuous embedding-space summaries provide the same qualitative separation without relying on cluster occupancy. Centroid and sliced-Wasserstein summaries are lower within the pretraining side than across the pretraining/post-training boundary in the released sensitivity artifacts.
+
+The textual grid gives a parallel check for lexical summaries. Across 54 settings spanning tokenizer choice, n-gram order, vocabulary cutoff, and compressor, the lexical JS ordering and rho ordering both hold in every setting. The result also survives changes in aggregation level: the same structure appears in pairwise family summaries, standalone per-corpus summaries, post-training/post-training structure, post-training mixture behavior, and stability checks.
+
+![Figure 6. Robustness summaries](../figures/fig6_robustness_summaries.png)
+
+**Figure 6. Robustness summaries.** The pretraining/post-training ordering remains visible across retrieval-style encoder families, chunk lengths, and cluster counts.
+
+## 9. Discussion
+
+The main empirical contribution of this paper is to show that pretraining and post-training corpora have distinct and robust statistical footprints before training begins. The question for discussion is what follows from that result. The measurements do not by themselves establish systematic relation to downstream model effects, but they show that stage-linked corpus preparation is already visible as a structured data intervention and as a meaningful shift in the distributions and geometry a model will be exposed to.
+
+If the result were weak, irregular, or limited to one metric family, the pretraining/post-training distinction would remain only a practical vocabulary for describing how datasets are used. That is not what we observe. Across lexical, rank-statistical, retrieval-encoder, standalone concentration, mixture, and robustness summaries, the inherited stage distinction is recoverable from corpus statistics alone. The labels are not produced by the measurements, but the measurements show that the labeled data objects occupy different statistical regimes. This makes the stage distinction more than nomenclature: it is also a measurable split in the data objects themselves.
+
+The ordering of datasets along these measurements deserves interpretation. Broad web-derived corpora occupy the least concentrated end of the panel, while structured pretraining mixtures and the Pile edge move away from that endpoint without leaving the pretraining band. Post-training corpora form a further band: mild instruction and assistant corpora are closest to the pretraining region, while safety, code, and math corpora form stronger poles and represent more restricted text-producing regimes. From this, we treat the suite as a tool for measuring degrees and forms of narrowing away from broad human-text exposure.
+
+This interpretation does not exhaust what the findings elicit. Corpus preparation changes the allocation of training mass over possible text. Some interventions mostly change weights: a feature, style, topic, or behavior becomes more or less frequent while preserving much of the original rank structure. Other interventions perturb rank: textual features that were peripheral under a broader source-derived distribution become central, or features that were common become rare or absent. Narrowness alone cannot account for these additional coordinates or the possible role they may play in training outcomes.
+
+Optical lenses reweight and rerank light from an object field; corpus preparation reweights and reranks the statistical regularities exposed to learners during training. We use lens effects as a compact name for this measured pattern: prepared corpora leave readable, graded signatures in mass allocation, rank structure, semantic concentration, redundancy, and mixture geometry before optimization begins. The name is interpretive, but the object it names is empirical: the repeated ordering across pairwise, standalone, mixture, and robustness summaries. In this sense, the result is not only a pairwise separation among sampled corpora. Corpus-internal summaries also carry direction, allowing datasets to be positioned before training under the retained measurement suite. Calibrated on corpora with externally known roles, the suite can then be applied as a label-free instrument: a new corpus can be placed relative to the retained panel before any model is trained on it.
+
+Pretraining-style preparation tends to preserve a broad, comparatively rank- and weight-preserving allocation over human textual production, subject to filtering, deduplication, quality control, and source selection. Post-training-style preparation is more explicitly interventionist: it concentrates examples around trainer-selected behaviors, preferences, safety profiles, response formats, or specialized capabilities. These choices are often motivated by plausible downstream goals, but the mapping from corpus filtration to model behavior is not formally specified. A dataset selected to improve math, code, safety, or instruction following is not thereby guaranteed to produce only the intended local improvement, nor to preserve the broader capabilities induced during pretraining. These interventions may be useful or necessary, but they are not neutral with respect to the empirical constraint landscape presented to the learner. They change what the model repeatedly encounters as common, rare, nearby, redundant, admissible, or suppressed. The point is not that such choices are irrational, but that their distributional effects are measurable and should not be treated as invisible implementation details.
+
+The broad side also cautions against treating source labels such as web scrape or aggregate mixture as sufficient explanations by themselves. In the retained randomized panel, Dolma and SlimPajama sit with the lower-concentration broad region, while Pile occupies the more structured pretraining edge under standalone concentration and compression summaries. The interpretation is therefore not that aggregation alone determines position, but that preparation, mixture composition, and retained source content leave measurable structure inside the pretraining region.
+
+The downstream relevance of these corpus-level coordinates does not require treating them as a complete causal explanation of model behavior. Training-data composition is already known to change model behavior: pretraining domain weights affect downstream accuracy and training efficiency (Xie et al., 2023), SFT data composition changes math, code, and general alignment abilities while producing ability conflicts and forgetting (Dong et al., 2024; Kotha et al., 2024), fine-tuning on narrow tasks can induce broader misalignment (Betley et al., 2026), fine-tuning data can degrade safety alignment even when benignly selected (Qi et al., 2024), and InstructGPT's PPO-ptx results show that mixing pretraining loss back into RLHF can recover regressions on public NLP tasks without removing the preference-optimization gain (Ouyang et al., 2022). Against that background, the question is not whether data differences can matter. They already do. The question is whether the measurable corpus coordinates reported here help organize which post-training interventions produce which downstream shifts.
+
+The InstructGPT replay result is especially useful as a concrete example. Ouyang et al. (2022) report that PPO fine-tuning produced regressions on some public NLP datasets, and that PPO-ptx reduced those regressions by mixing PPO updates with updates that increase likelihood on the pretraining distribution, without compromising labeler preference scores. In our terms, this is not only an optimization modification; it is also a change in the effective exposure geometry of the post-training stage. A corpus-level diagnostic can measure that move directly: compare the post-training stream, the pretraining replay stream, and their mixture before training. The present paper does not show that such coordinates predict downstream recovery, but it identifies the kind of upstream quantity that replay interventions are implicitly manipulating.
+
+Operationally, the released suite provides pre-exposure diagnostics for data interventions. Before exposing a model to a new post-training corpus, practitioners can measure how sharply that corpus reallocates mass, disrupts rank compatibility, concentrates semantic neighborhoods, increases redundancy, or departs from broader source-derived regimes. This makes downstream effects investigable as possible consequences of measurable upstream data geometry rather than only as consequences of objectives, optimizers, or model internals.
+
+## 10. Limitations
+
+This study is intentionally upstream in scope. It establishes a corpus-level distinction, but does not by itself demonstrate downstream consequences for training dynamics, geometry, capability redistribution, or safety-relevant behavior.
+
+The dataset panel is finite. It contains six pretraining corpora and eight post-training corpora. This is still a bounded corpus panel, not a universal taxonomy of all possible corpora.
+
+The retained summaries are operational witnesses rather than definitions of a new corpus kind. No single metric is identical to the full measured lens effect, and the summaries should not be read as statistically independent measurements. Compression, top1, and top5 are especially dependent on the same general fact that some corpora are intrinsically more concentrated or regular than others. The argument depends on repeated recovery of the same ordering across several convergent, non-identical summaries, especially summaries that capture both concentration and salience-order change.
+
+The matched 2048-chunk budget supports ordering and stability claims, not fine-grained quantitative ranking of every corpus. Same-corpus split baselines are below the retained cross-stage scale, but they are not negligible. Small differences between neighboring corpora in the standalone spectrum should therefore be read descriptively rather than as precise corpus-level distances.
+
+The post-training extraction convention measures response-side text. This keeps the measured object aligned across assistant, safety, math, code, and instruction sources, but it does not exhaust every possible training serialization. Prompt-plus-response serializations, chat templates, and loss-weighting conventions would define different exposure objects rather than invalidating the response-side corpus object measured here.
+
+The semantic checks are embedding-space checks under retrieval-style encoders and continuous embedding summaries. GTE, BGE, and MiniLM vary model family and training details, but they do not exhaust non-retrieval semantic representations such as topic models or other corpus-level latent-variable summaries. The paper's semantic claims should therefore be read as retrieval-encoder and embedding-space semantic claims.
+
+The mixture results cover all directed post-training pairs in the retained panel, but they remain simple two-corpus mixtures under a fixed measurement design. They test whether measured post-training relationships compose smoothly under interpolation, not whether all possible mixture paths or weighting schemes have the same geometry.
+
+The stability analyses do not solve panel selection. Leave-one-corpus-out checks preserve all six retained orderings under every omission, but this should still be read as evidence about the retained panel rather than corpus-universal invariance.
+
+Semantic cluster JS also has a ceiling. Under the natural-log convention used here, cluster JS cannot exceed `ln(2) = 0.6931`; several strong post-training/post-training comparisons approach that value. The ceiling strengthens the qualitative conclusion that those pairs have nearly disjoint cluster occupancy under the retained partition, but it prevents fine ranking among near-saturated semantic endpoints. Continuous embedding-space sensitivity summaries are included to check the strongest separations without relying only on bounded cluster occupancy.
+
+Compression-ratio differences should be treated as a supporting witness rather than as the most stable member of the suite. The compression ordering is preserved in the retained panel and in the stability checks, but compression is especially sensitive to formatting, repetition, and length distribution. The main claim therefore rests on cross-family convergence, not on compression magnitude alone.
+
+Randomized reservoir sampling reduces, but does not eliminate, extraction-sample dependence. The retained builder scans a bounded number of nonempty documents, samples from that stream, and records provenance for the retained chunks. The resulting panel is an auditable randomized sample from each upstream corpus. It is not a fully stratified estimate over all shards, time periods, source partitions, or hidden dataset components. Dolma uses a manifest-backed shard reader rather than the standard Hugging Face row-stream path; the retained recipe shuffles Dolma shard URLs and limits rows per shard to reduce component-order artifacts, but this remains a source-access asymmetry specific to that corpus.
+
+The release supports recomputation of the retained metrics from bundled chunks and cached embeddings, and includes a source-to-chunks and chunks-to-embeddings builder for upstream regeneration and panel substitution. The retained sample includes chunk metadata and provenance sidecars, including source references, stream positions when available, hashes, character spans, and sampling parameters. The audit boundary for the paper-facing numbers is the retained matched sample and cached embeddings; the public builder applies the same extraction and measurement rules to regenerated or substituted panels.
+
+Finally, this paper does not claim that downstream post-training effects are explained by corpus-level departure alone. It identifies measurable corpus coordinates that can be tested against downstream shifts, rather than treating corpus geometry as a complete explanation of those shifts.
+
+## 11. Conclusion
+
+Pretraining corpora and more directed post-training corpora show measurably different corpus-level structure before training. In this panel, pretraining corpora are less separated from one another than from post-training corpora across lexical, rank-statistical, retrieval-encoder cluster, compression-style, standalone, and mixture views. The pretraining panel is unusually internally compatible. The post-training panel is not a single residual class, but a structured family of departures with interpretable internal geometry and compositional behavior.
+
+The results do not complete the downstream bridge. They do not show that corpus geometry alone explains forgetting, alignment tax, specialization, diversity loss, safety drift, or capability redistribution. They do show that the data objects used at different stages already differ along measurable axes before optimization: mass allocation, rank compatibility, semantic concentration, redundancy, and mixture behavior.
+
+At minimum, this makes it harder to treat pretraining and post-training as cleanly modular stages acting on neutral material. Post-training is not merely additional data; it is a distributional intervention on the empirical constraint landscape inherited from pretraining. The measurement suite released with this paper provides pre-exposure diagnostics for that intervention: after calibration on the retained panel, practitioners can ask before training how sharply a candidate corpus concentrates, reorders, or departs from broader source-derived regimes.
+
+## References
+
+Bai, Y., Jones, A., Ndousse, K., Askell, A., Chen, A., DasSarma, N., Drain, D., Fort, S., Ganguli, D., Henighan, T., et al. (2022). Training a helpful and harmless assistant with reinforcement learning from human feedback. arXiv:2204.05862. https://arxiv.org/abs/2204.05862
+
+Betley, J., Warncke, N., Sztyber-Betley, A., Tan, D., Bao, X., Soto, M., Srivastava, M., Labenz, N., and Evans, O. (2026). Training large language models on narrow tasks can lead to broad misalignment. Nature, 649, 584-589. https://www.nature.com/articles/s41586-025-09937-5
+
+Bianchi, F., Suzgun, M., Attanasio, G., Rottger, P., Jurafsky, D., Hashimoto, T., and Zou, J. (2024). Safety-tuned LLaMAs: Lessons from improving the safety of large language models that follow instructions. ICLR 2024. https://openreview.net/forum?id=gT5hALch9z
+
+Conover, M., Hayes, M., Mathur, A., Xie, J., Wan, J., Shah, S., Ghodsi, A., Wendell, P., Zaharia, M., and Xin, R. (2023). Free Dolly: Introducing the world's first truly open instruction-tuned LLM. Databricks. https://www.databricks.com/blog/2023/04/12/dolly-first-open-commercially-viable-instruction-tuned-llm
+
+Cui, G., Yuan, L., Ding, N., Yao, G., Zhu, W., Ni, Y., Xie, G., Liu, Z., and Sun, M. (2023). UltraFeedback: Boosting language models with high-quality feedback. arXiv:2310.01377. https://arxiv.org/abs/2310.01377
+
+Dong, G., Yuan, H., Lu, K., Li, C., Xue, M., Liu, D., Wang, W., Yuan, Z., Zhou, C., and Zhou, J. (2024). How abilities in large language models are affected by supervised fine-tuning data composition. ACL 2024. https://aclanthology.org/2024.acl-long.12/
+
+Gao, L., Biderman, S., Black, S., Golding, L., Hoppe, T., Foster, C., Phang, J., He, H., Thite, A., Nabeshima, N., Presser, S., and Leahy, C. (2020). The Pile: An 800GB dataset of diverse text for language modeling. arXiv:2101.00027. https://arxiv.org/abs/2101.00027
+
+Ji, J., Liu, M., Dai, J., Pan, X., Zhang, C., Bian, C., Chen, B., Sun, R., Wang, Y., and Yang, Y. (2023). BeaverTails: Towards improved safety alignment of LLM via a human-preference dataset. NeurIPS 2023 Datasets and Benchmarks. https://proceedings.neurips.cc/paper_files/paper/2023/hash/4dbb61cb68671edc4ca3712d70083b9f-Abstract-Datasets_and_Benchmarks.html
+
+Kirk, R., Mediratta, I., Nalmpantis, C., Luketina, J., Hambro, E., Grefenstette, E., and Raileanu, R. (2024). Understanding the effects of RLHF on LLM generalisation and diversity. ICLR 2024. https://openreview.net/forum?id=PXD3FAVHJT
+
+Kopf, A., Kilcher, Y., von Rutte, D., Anagnostidis, S., Tam, Z.-R., Stevens, K., Barhoum, A., Nguyen, D., Stanley, O., Nagyfi, R., et al. (2023). OpenAssistant Conversations: Democratizing large language model alignment. NeurIPS 2023 Datasets and Benchmarks. https://proceedings.neurips.cc/paper_files/paper/2023/hash/949f0f8f32267d297c2d4e3ee10a2e7e-Abstract-Datasets_and_Benchmarks.html
+
+Kotha, S., Springer, J. M., and Raghunathan, A. (2024). Understanding catastrophic forgetting in language models via implicit inference. ICLR 2024. https://openreview.net/forum?id=VrHiF2hsrm
+
+Li, Z., Zhang, X., Zhang, Y., Long, D., Xie, P., and Zhang, M. (2023). Towards general text embeddings with multi-stage contrastive learning. arXiv:2308.03281. https://arxiv.org/abs/2308.03281
+
+Lin, J. (1991). Divergence measures based on the Shannon entropy. IEEE Transactions on Information Theory, 37(1), 145-151. https://doi.org/10.1109/18.61115
+
+Lin, Y., Lin, H., Xiong, W., Diao, S., Liu, J., Zhang, J., Pan, R., Wang, H., Hu, W., Zhang, H., et al. (2024). Mitigating the alignment tax of RLHF. EMNLP 2024. https://aclanthology.org/2024.emnlp-main.35/
+
+Luo, Y., Yang, Z., Meng, F., Li, Y., Zhou, J., and Zhang, Y. (2023). An empirical study of catastrophic forgetting in large language models during continual fine-tuning. arXiv:2308.08747. https://arxiv.org/abs/2308.08747
+
+NVIDIA. (2026). Nemotron-SFT-Math-v3 dataset card. Hugging Face. arXiv:2512.15489. https://huggingface.co/datasets/nvidia/Nemotron-SFT-Math-v3
+
+Ouyang, L., Wu, J., Jiang, X., Almeida, D., Wainwright, C., Mishkin, P., Zhang, C., Agarwal, S., Slama, K., Ray, A., et al. (2022). Training language models to follow instructions with human feedback. arXiv:2203.02155. https://arxiv.org/abs/2203.02155
+
+Penedo, G., Malartic, Q., Hesslow, D., Cojocaru, R., Alobeidli, H., Cappelli, A., Pannier, B., Almazrouei, E., and Launay, J. (2023). The RefinedWeb dataset for Falcon LLM: Outperforming curated corpora with web data only. NeurIPS 2023 Datasets and Benchmarks. https://proceedings.neurips.cc/paper_files/paper/2023/hash/fa3ed726cc5073b9c31e3e49a807789c-Abstract-Datasets_and_Benchmarks.html
+
+Penedo, G., Kydlicek, H., Ben Allal, L., Lozhkov, A., Mitchell, M., Raffel, C., von Werra, L., and Wolf, T. (2024). The FineWeb datasets: Decanting the web for the finest text data at scale. arXiv:2406.17557. https://arxiv.org/abs/2406.17557
+
+Qi, X., Zeng, Y., Xie, T., Chen, P.-Y., Jia, R., Mittal, P., and Henderson, P. (2024). Fine-tuning aligned language models compromises safety, even when users do not intend to! ICLR 2024. https://openreview.net/forum?id=hTEGyKf0dZ
+
+Raffel, C., Shazeer, N., Roberts, A., Lee, K., Narang, S., Matena, M., Zhou, Y., Li, W., and Liu, P. J. (2020). Exploring the limits of transfer learning with a unified text-to-text transformer. Journal of Machine Learning Research, 21(140), 1-67. https://www.jmlr.org/papers/v21/20-074.html
+
+Rafailov, R., Sharma, A., Mitchell, E., Manning, C. D., Ermon, S., and Finn, C. (2023). Direct preference optimization: Your language model is secretly a reward model. NeurIPS 2023. https://proceedings.neurips.cc/paper_files/paper/2023/hash/a85b405ed65c6477a4fe8302b5e06ce7-Abstract-Conference.html
+
+Soboleva, D., Al-Khateeb, F., Myers, R., Steeves, J. R., Hestness, J., and Dey, N. (2023). SlimPajama: A 627B token cleaned and deduplicated version of RedPajama. Cerebras. https://huggingface.co/datasets/cerebras/SlimPajama-627B
+
+Soldaini, L., Kinney, R., Bhagia, A., Schwenk, D., Atkinson, D., Arthur, R., Bogin, B., Chandu, K., Dumas, J., Elazar, Y., et al. (2024). Dolma: An open corpus of three trillion tokens for language model pretraining research. ACL 2024. https://aclanthology.org/2024.acl-long.840/
+
+Spearman, C. (1904). The proof and measurement of association between two things. American Journal of Psychology, 15(1), 72-101.
+
+Wang, W., Wei, F., Dong, L., Bao, H., Yang, N., and Zhou, M. (2020). MiniLM: Deep self-attention distillation for task-agnostic compression of pre-trained transformers. NeurIPS 2020. https://www.microsoft.com/en-us/research/publication/minilm-deep-self-attention-distillation-for-task-agnostic-compression-of-pre-trained-transformers/
+
+Wei, Y., Wang, Z., Liu, J., Ding, Y., and Zhang, L. (2023). Magicoder: Source code is all you need. arXiv:2312.02120. https://arxiv.org/abs/2312.02120
+
+Xiao, S., Liu, Z., Zhang, P., and Muennighoff, N. (2023). C-Pack: Packaged resources to advance general Chinese embedding. arXiv:2309.07597. https://arxiv.org/abs/2309.07597
+
+Xie, S. M., Pham, H., Dong, X., Du, N., Liu, H., Lu, Y., Liang, P., Le, Q. V., Ma, T., and Yu, A. W. (2023). DoReMi: Optimizing data mixtures speeds up language model pretraining. NeurIPS 2023. https://openreview.net/forum?id=lXuByUeHhd

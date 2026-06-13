@@ -1,0 +1,18 @@
+{
+  "schema": "lens_effects.results_manifest.v3",
+  "final_sources": [
+    "final_matrix/recomputed/family_summary.json",
+    "final_matrix/recomputed/standalone_summary.json",
+    "final_matrix/recomputed/directional_lexical_sensitivity.json",
+    "final_matrix/targeted_substructure_summary.json",
+    "final_matrix/mixtures/targeted_mixture_panel.json",
+    "final_matrix/sweeps/semantic_summary.json",
+    "final_matrix/sweeps/textual_grid_summary.json",
+    "final_matrix/continuous_embedding_sensitivity.json"
+  ],
+  "notes": [
+    "Use final_matrix for manuscript-facing numbers.",
+    "Use standalone-derived absolute pairwise differences for compression, top1, and top5 family comparisons.",
+    "The continuous embedding sensitivity is a non-binned ceiling companion, not a bootstrapped headline family."
+  ]
+}

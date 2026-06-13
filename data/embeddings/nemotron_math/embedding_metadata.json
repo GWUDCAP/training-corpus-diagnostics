@@ -1,0 +1,19 @@
+{
+  "schema": "lens_effects.embedding_metadata.v1",
+  "label": "nemotron_math",
+  "model_name": "Alibaba-NLP/gte-base-en-v1.5",
+  "trust_remote_code": true,
+  "batch_size": 16,
+  "max_length": 512,
+  "device": "cuda",
+  "shape": [
+    2048,
+    768
+  ],
+  "chunks_path": "data/chunks/nemotron_math/chunks.json",
+  "chunks_sha256": "3a2e78743005ea28c3b00a7bb5b9848cc2aa4e4e82b82a0ddf2a22f186cda307",
+  "embeddings_sha256": "12a385cdb21d723767bb1283bce1c27fd4d14937b1662566d5f7a0b7d7d78009",
+  "torch": "2.9.1+cu128",
+  "transformers_model_class": "NewModel",
+  "created_unix": 1778014489.5484257
+}

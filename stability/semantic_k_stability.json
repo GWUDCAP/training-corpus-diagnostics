@@ -1,0 +1,44 @@
+{
+  "schema": "lens_effects.semantic_k_stability.v1",
+  "manifest": "data/corpus_manifest.json",
+  "seed": 0,
+  "k_values": [
+    12,
+    16,
+    24,
+    32,
+    48
+  ],
+  "rows": [
+    {
+      "k": 12,
+      "bb_cluster_js": 0.056470595400959306,
+      "bt_cluster_js": 0.3599057517999678,
+      "ordering_held": true
+    },
+    {
+      "k": 16,
+      "bb_cluster_js": 0.05741336389286527,
+      "bt_cluster_js": 0.36792535667477316,
+      "ordering_held": true
+    },
+    {
+      "k": 24,
+      "bb_cluster_js": 0.06299492462117139,
+      "bt_cluster_js": 0.37371401875182014,
+      "ordering_held": true
+    },
+    {
+      "k": 32,
+      "bb_cluster_js": 0.06958667004821667,
+      "bt_cluster_js": 0.3765288988549645,
+      "ordering_held": true
+    },
+    {
+      "k": 48,
+      "bb_cluster_js": 0.07430113859444029,
+      "bt_cluster_js": 0.38245995120934834,
+      "ordering_held": true
+    }
+  ]
+}

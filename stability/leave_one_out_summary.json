@@ -1,0 +1,566 @@
+{
+  "schema": "corpus_bootstrap_hardening.leave_one_out.v1",
+  "seed": 0,
+  "rows": [
+    {
+      "omitted": "fineweb_sample_10BT",
+      "omitted_display": "FineWeb",
+      "lexical_js": {
+        "bb": 0.06771154149932705,
+        "bt": 0.17672295244700026
+      },
+      "rho": {
+        "bb": 0.6503804839202312,
+        "bt": 0.42197491760479167
+      },
+      "semantic_cluster_js": {
+        "bb": 0.07072344105137725,
+        "bt": 0.37136300696712093
+      },
+      "compression_abs_diff": {
+        "bb": 0.008795873538910492,
+        "bt": 0.050984092262376504
+      },
+      "top1_abs_diff": {
+        "bb": 0.005548139058918598,
+        "bt": 0.023297527997005844
+      },
+      "top5_abs_diff": {
+        "bb": 0.007680891870686085,
+        "bt": 0.050739716896182355
+      },
+      "pair_counts": {
+        "bb": 10,
+        "bt": 40
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "omitted": "falcon_refinedweb",
+      "omitted_display": "RefinedWeb",
+      "lexical_js": {
+        "bb": 0.06372957678561768,
+        "bt": 0.1757004041413885
+      },
+      "rho": {
+        "bb": 0.660680492375745,
+        "bt": 0.42303874406828446
+      },
+      "semantic_cluster_js": {
+        "bb": 0.07029009108936735,
+        "bt": 0.3741058020715594
+      },
+      "compression_abs_diff": {
+        "bb": 0.008025067650030438,
+        "bt": 0.05028654722125081
+      },
+      "top1_abs_diff": {
+        "bb": 0.005715221314101464,
+        "bt": 0.023451821418073927
+      },
+      "top5_abs_diff": {
+        "bb": 0.007633841817786221,
+        "bt": 0.05069266684328248
+      },
+      "pair_counts": {
+        "bb": 10,
+        "bt": 40
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "omitted": "dolma_v1_7",
+      "omitted_display": "Dolma",
+      "lexical_js": {
+        "bb": 0.05978449060357469,
+        "bt": 0.17477098520679452
+      },
+      "rho": {
+        "bb": 0.6706282123793988,
+        "bt": 0.4229427233848376
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0726610495731985,
+        "bt": 0.377809120165559
+      },
+      "compression_abs_diff": {
+        "bb": 0.008393543593064035,
+        "bt": 0.0504707851927676
+      },
+      "top1_abs_diff": {
+        "bb": 0.005715221314101464,
+        "bt": 0.02344980135766513
+      },
+      "top5_abs_diff": {
+        "bb": 0.007539861781265536,
+        "bt": 0.05064567682502215
+      },
+      "pair_counts": {
+        "bb": 10,
+        "bt": 40
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "omitted": "c4_en",
+      "omitted_display": "C4",
+      "lexical_js": {
+        "bb": 0.05344801254711469,
+        "bt": 0.17449793130336047
+      },
+      "rho": {
+        "bb": 0.6687417361405416,
+        "bt": 0.41844218673193667
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06638075128802849,
+        "bt": 0.37170879311434757
+      },
+      "compression_abs_diff": {
+        "bb": 0.0072310017569784946,
+        "bt": 0.05254896404430849
+      },
+      "top1_abs_diff": {
+        "bb": 0.005577756847965766,
+        "bt": 0.02331233689152943
+      },
+      "top5_abs_diff": {
+        "bb": 0.007680891870686085,
+        "bt": 0.05082896264368664
+      },
+      "pair_counts": {
+        "bb": 10,
+        "bt": 40
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "omitted": "slimpajama_627b_reupload",
+      "omitted_display": "SlimPajama",
+      "lexical_js": {
+        "bb": 0.049699136474066485,
+        "bt": 0.17257007820112802
+      },
+      "rho": {
+        "bb": 0.6988177890138509,
+        "bt": 0.42714829530767445
+      },
+      "semantic_cluster_js": {
+        "bb": 0.07320408483856902,
+        "bt": 0.37795338700082637
+      },
+      "compression_abs_diff": {
+        "bb": 0.008795873538910492,
+        "bt": 0.05087311513861407
+      },
+      "top1_abs_diff": {
+        "bb": 0.005453281176659325,
+        "bt": 0.023713761555516067
+      },
+      "top5_abs_diff": {
+        "bb": 0.007618018145798944,
+        "bt": 0.05089183636857377
+      },
+      "pair_counts": {
+        "bb": 10,
+        "bt": 40
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "omitted": "pile_uncopyrighted",
+      "omitted_display": "Pile uncopyrighted",
+      "lexical_js": {
+        "bb": 0.04704047483660012,
+        "bt": 0.1697614610478782
+      },
+      "rho": {
+        "bb": 0.6991416341659888,
+        "bt": 0.4367735014688533
+      },
+      "semantic_cluster_js": {
+        "bb": 0.024710129858758978,
+        "bt": 0.3693440027748971
+      },
+      "compression_abs_diff": {
+        "bb": 0.005038140715724271,
+        "bt": 0.05364539456493561
+      },
+      "top1_abs_diff": {
+        "bb": 0.0009719516435649333,
+        "bt": 0.024847559389808566
+      },
+      "top5_abs_diff": {
+        "bb": 0.000628614887507406,
+        "bt": 0.054226462960092835
+      },
+      "pair_counts": {
+        "bb": 10,
+        "bt": 40
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "omitted": "hh_rlhf_chosen",
+      "omitted_display": "HH-RLHF chosen",
+      "lexical_js": {
+        "bb": 0.056902205457716785,
+        "bt": 0.18115560452479926
+      },
+      "rho": {
+        "bb": 0.6747317246659594,
+        "bt": 0.4176044936631865
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06299492461654993,
+        "bt": 0.38867609953184046
+      },
+      "compression_abs_diff": {
+        "bb": 0.0077132501322697035,
+        "bt": 0.05330382193989108
+      },
+      "top1_abs_diff": {
+        "bb": 0.004830261892551925,
+        "bt": 0.02603302560771673
+      },
+      "top5_abs_diff": {
+        "bb": 0.006463686728955046,
+        "bt": 0.05583020204536424
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 42
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "omitted": "hh_rlhf_rejected",
+      "omitted_display": "HH-RLHF rejected",
+      "lexical_js": {
+        "bb": 0.056902205457716785,
+        "bt": 0.18143416800108902
+      },
+      "rho": {
+        "bb": 0.6747317246659594,
+        "bt": 0.41778348474243315
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06299492461654993,
+        "bt": 0.3864586215914293
+      },
+      "compression_abs_diff": {
+        "bb": 0.0077132501322697035,
+        "bt": 0.052976444657599805
+      },
+      "top1_abs_diff": {
+        "bb": 0.004830261892551925,
+        "bt": 0.026200468641025987
+      },
+      "top5_abs_diff": {
+        "bb": 0.006463686728955046,
+        "bt": 0.05556452226503637
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 42
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "omitted": "oasst1_assistant_en",
+      "omitted_display": "OASST1 assistant",
+      "lexical_js": {
+        "bb": 0.056902205457716785,
+        "bt": 0.18335239700233408
+      },
+      "rho": {
+        "bb": 0.6747317246659594,
+        "bt": 0.415223759756807
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06299492461654993,
+        "bt": 0.39316714439058476
+      },
+      "compression_abs_diff": {
+        "bb": 0.0077132501322697035,
+        "bt": 0.05287855423864681
+      },
+      "top1_abs_diff": {
+        "bb": 0.004830261892551925,
+        "bt": 0.02590837702745231
+      },
+      "top5_abs_diff": {
+        "bb": 0.006463686728955046,
+        "bt": 0.05584096753965899
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 42
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "omitted": "ultrafeedback_binarized_chosen",
+      "omitted_display": "UltraFeedback chosen",
+      "lexical_js": {
+        "bb": 0.056902205457716785,
+        "bt": 0.18128537873700917
+      },
+      "rho": {
+        "bb": 0.6747317246659594,
+        "bt": 0.4176830268408751
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06299492461654993,
+        "bt": 0.39433764166710844
+      },
+      "compression_abs_diff": {
+        "bb": 0.0077132501322697035,
+        "bt": 0.051959784899204914
+      },
+      "top1_abs_diff": {
+        "bb": 0.004830261892551925,
+        "bt": 0.025569304614548708
+      },
+      "top5_abs_diff": {
+        "bb": 0.006463686728955046,
+        "bt": 0.05543234693016487
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 42
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "omitted": "nemotron_math",
+      "omitted_display": "Nemotron-SFT-Math",
+      "lexical_js": {
+        "bb": 0.056902205457716785,
+        "bt": 0.15300802528500118
+      },
+      "rho": {
+        "bb": 0.6747317246659594,
+        "bt": 0.44514426391129447
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06299492461654993,
+        "bt": 0.3319606309867886
+      },
+      "compression_abs_diff": {
+        "bb": 0.0077132501322697035,
+        "bt": 0.04864618880709472
+      },
+      "top1_abs_diff": {
+        "bb": 0.004830261892551925,
+        "bt": 0.01466524191002149
+      },
+      "top5_abs_diff": {
+        "bb": 0.006463686728955046,
+        "bt": 0.03452246545663549
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 42
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "omitted": "beavertails",
+      "omitted_display": "BeaverTails",
+      "lexical_js": {
+        "bb": 0.056902205457716785,
+        "bt": 0.17452414584458523
+      },
+      "rho": {
+        "bb": 0.6747317246659594,
+        "bt": 0.42791359577460497
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06299492461654993,
+        "bt": 0.3613509748176604
+      },
+      "compression_abs_diff": {
+        "bb": 0.0077132501322697035,
+        "bt": 0.05149197740111912
+      },
+      "top1_abs_diff": {
+        "bb": 0.004830261892551925,
+        "bt": 0.02264960203018612
+      },
+      "top5_abs_diff": {
+        "bb": 0.006463686728955046,
+        "bt": 0.050864799898437625
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 42
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "omitted": "magicoder_oss_instruct",
+      "omitted_display": "Magicoder OSS Instruct",
+      "lexical_js": {
+        "bb": 0.056902205457716785,
+        "bt": 0.1538431566864636
+      },
+      "rho": {
+        "bb": 0.6747317246659594,
+        "bt": 0.44662886499294735
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06299492461654993,
+        "bt": 0.3380746622498706
+      },
+      "compression_abs_diff": {
+        "bb": 0.0077132501322697035,
+        "bt": 0.043321058414057596
+      },
+      "top1_abs_diff": {
+        "bb": 0.004830261892551925,
+        "bt": 0.022168195177324664
+      },
+      "top5_abs_diff": {
+        "bb": 0.006463686728955046,
+        "bt": 0.04582752040797488
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 42
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "omitted": "dolly_15k",
+      "omitted_display": "Dolly 15k",
+      "lexical_js": {
+        "bb": 0.056902205457716785,
+        "bt": 0.18342887371545183
+      },
+      "rho": {
+        "bb": 0.6747317246659594,
+        "bt": 0.4124456684063559
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06299492461654993,
+        "bt": 0.39568637422379804
+      },
+      "compression_abs_diff": {
+        "bb": 0.0077132501322697035,
+        "bt": 0.05716736754139012
+      },
+      "top1_abs_diff": {
+        "bb": 0.004830261892551925,
+        "bt": 0.026236196471189275
+      },
+      "top5_abs_diff": {
+        "bb": 0.006463686728955046,
+        "bt": 0.0568176055058478
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 42
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    }
+  ]
+}

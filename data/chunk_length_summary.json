@@ -1,0 +1,152 @@
+{
+  "schema": "lens_effects.chunk_length_summary.v1",
+  "source": "data/chunks/*/chunks.json",
+  "settings": {
+    "chunks_per_corpus": 2048,
+    "max_chunk_chars": 768,
+    "min_retained_chars": 192,
+    "max_chunks_per_source_document": 2
+  },
+  "pooled_by_role": {
+    "broad": {
+      "mean_chars": 697.7,
+      "median_chars": 768.0,
+      "min_chars": 192,
+      "max_chars": 768
+    },
+    "targeted": {
+      "mean_chars": 561.5,
+      "median_chars": 607.0,
+      "min_chars": 192,
+      "max_chars": 768
+    }
+  },
+  "corpora": [
+    {
+      "role": "broad",
+      "corpus": "FineWeb",
+      "chunks": 2048,
+      "min_chars": 194,
+      "mean_chars": 710.9,
+      "median_chars": 768.0,
+      "max_chars": 768
+    },
+    {
+      "role": "broad",
+      "corpus": "RefinedWeb",
+      "chunks": 2048,
+      "min_chars": 193,
+      "mean_chars": 688.0,
+      "median_chars": 768.0,
+      "max_chars": 768
+    },
+    {
+      "role": "broad",
+      "corpus": "Dolma",
+      "chunks": 2048,
+      "min_chars": 192,
+      "mean_chars": 710.1,
+      "median_chars": 768.0,
+      "max_chars": 768
+    },
+    {
+      "role": "broad",
+      "corpus": "C4",
+      "chunks": 2048,
+      "min_chars": 192,
+      "mean_chars": 664.5,
+      "median_chars": 768.0,
+      "max_chars": 768
+    },
+    {
+      "role": "broad",
+      "corpus": "SlimPajama",
+      "chunks": 2048,
+      "min_chars": 196,
+      "mean_chars": 708.8,
+      "median_chars": 768.0,
+      "max_chars": 768
+    },
+    {
+      "role": "broad",
+      "corpus": "Pile uncopyrighted",
+      "chunks": 2048,
+      "min_chars": 192,
+      "mean_chars": 703.8,
+      "median_chars": 768.0,
+      "max_chars": 768
+    },
+    {
+      "role": "targeted",
+      "corpus": "HH-RLHF chosen",
+      "chunks": 2048,
+      "min_chars": 192,
+      "mean_chars": 484.8,
+      "median_chars": 446.0,
+      "max_chars": 768
+    },
+    {
+      "role": "targeted",
+      "corpus": "HH-RLHF rejected",
+      "chunks": 2048,
+      "min_chars": 192,
+      "mean_chars": 476.7,
+      "median_chars": 437.0,
+      "max_chars": 768
+    },
+    {
+      "role": "targeted",
+      "corpus": "OASST1 assistant",
+      "chunks": 2048,
+      "min_chars": 192,
+      "mean_chars": 604.5,
+      "median_chars": 748.0,
+      "max_chars": 768
+    },
+    {
+      "role": "targeted",
+      "corpus": "UltraFeedback chosen",
+      "chunks": 2048,
+      "min_chars": 192,
+      "mean_chars": 668.2,
+      "median_chars": 768.0,
+      "max_chars": 768
+    },
+    {
+      "role": "targeted",
+      "corpus": "Nemotron-SFT-Math",
+      "chunks": 2048,
+      "min_chars": 193,
+      "mean_chars": 695.1,
+      "median_chars": 768.0,
+      "max_chars": 768
+    },
+    {
+      "role": "targeted",
+      "corpus": "BeaverTails",
+      "chunks": 2048,
+      "min_chars": 192,
+      "mean_chars": 428.6,
+      "median_chars": 402.0,
+      "max_chars": 768
+    },
+    {
+      "role": "targeted",
+      "corpus": "Magicoder OSS Instruct",
+      "chunks": 2048,
+      "min_chars": 193,
+      "mean_chars": 639.4,
+      "median_chars": 764.5,
+      "max_chars": 768
+    },
+    {
+      "role": "targeted",
+      "corpus": "Dolly 15k",
+      "chunks": 2048,
+      "min_chars": 192,
+      "mean_chars": 494.7,
+      "median_chars": 456.0,
+      "max_chars": 768
+    }
+  ]
+}

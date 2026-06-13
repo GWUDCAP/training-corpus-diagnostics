@@ -1,0 +1,44 @@
+{
+  "pair_counts": {
+    "broad_broad": 15,
+    "broad_targeted": 48,
+    "targeted_targeted": 28,
+    "directed_textual_broad_broad": 30,
+    "directed_textual_broad_targeted": 48,
+    "directed_textual_targeted_targeted": 56
+  },
+  "metrics": {
+    "broad_broad": {
+      "lexical_js": 0.08339160481072147,
+      "rho": 0.6155708584898139,
+      "semantic_cluster_js": 0.06299492461654993,
+      "compression_abs_diff": 0.0077132501322697035,
+      "top1_abs_diff": 0.004830261892551935,
+      "top5_abs_diff": 0.006463686728955048
+    },
+    "broad_targeted": {
+      "lexical_js": 0.18943464152634185,
+      "rho": 0.4037680721885555,
+      "semantic_cluster_js": 0.3737140186823851,
+      "compression_abs_diff": 0.05146814973737551,
+      "top1_abs_diff": 0.023678801434933158,
+      "top5_abs_diff": 0.05133755375614004
+    },
+    "targeted_targeted": {
+      "lexical_js": 0.24650232707985478,
+      "rho": 0.38583758508950844,
+      "semantic_cluster_js": 0.4095761992498699,
+      "compression_abs_diff": 0.03139612516604833,
+      "top1_abs_diff": 0.029108936167082638,
+      "top5_abs_diff": 0.05555719117401741
+    }
+  },
+  "ordering_held": {
+    "lexical_js_bt_gt_bb": true,
+    "rho_bb_gt_bt": true,
+    "semantic_cluster_js_bt_gt_bb": true,
+    "compression_abs_diff_bt_gt_bb": true,
+    "top1_abs_diff_bt_gt_bb": true,
+    "top5_abs_diff_bt_gt_bb": true
+  }
+}

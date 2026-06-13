@@ -1,0 +1,1539 @@
+{
+  "schema": "lens_effects.corpus_matrix.v1",
+  "manifest": "data/corpus_manifest.json",
+  "settings": {
+    "textual_grid": [
+      [
+        "regex",
+        1,
+        256
+      ],
+      [
+        "regex",
+        1,
+        512
+      ],
+      [
+        "regex",
+        1,
+        1024
+      ],
+      [
+        "regex",
+        2,
+        256
+      ],
+      [
+        "regex",
+        2,
+        512
+      ],
+      [
+        "regex",
+        2,
+        1024
+      ],
+      [
+        "regex",
+        3,
+        256
+      ],
+      [
+        "regex",
+        3,
+        512
+      ],
+      [
+        "regex",
+        3,
+        1024
+      ],
+      [
+        "gpt2",
+        1,
+        256
+      ],
+      [
+        "gpt2",
+        1,
+        512
+      ],
+      [
+        "gpt2",
+        1,
+        1024
+      ],
+      [
+        "gpt2",
+        2,
+        256
+      ],
+      [
+        "gpt2",
+        2,
+        512
+      ],
+      [
+        "gpt2",
+        2,
+        1024
+      ],
+      [
+        "gpt2",
+        3,
+        256
+      ],
+      [
+        "gpt2",
+        3,
+        512
+      ],
+      [
+        "gpt2",
+        3,
+        1024
+      ]
+    ],
+    "semantic_k": 24,
+    "seed": 0,
+    "gpt2_revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e"
+  },
+  "roles": {
+    "broad": [
+      "fineweb_sample_10BT",
+      "falcon_refinedweb",
+      "dolma_v1_7",
+      "c4_en",
+      "slimpajama_627b_reupload",
+      "pile_uncopyrighted"
+    ],
+    "targeted": [
+      "hh_rlhf_chosen",
+      "hh_rlhf_rejected",
+      "oasst1_assistant_en",
+      "ultrafeedback_binarized_chosen",
+      "nemotron_math",
+      "beavertails",
+      "magicoder_oss_instruct",
+      "dolly_15k"
+    ],
+    "candidate": []
+  },
+  "standalone": {
+    "fineweb_sample_10BT": {
+      "display": "FineWeb",
+      "role": "broad",
+      "n_chunks": 2048,
+      "compression_ratio_lzma": 0.34216700139564965,
+      "semantic_spectrum": {
+        "total_variance": 0.7767542042120219,
+        "top1_share": 0.018645248105092382,
+        "top5_share": 0.07851788862293968
+      }
+    },
+    "falcon_refinedweb": {
+      "display": "RefinedWeb",
+      "role": "broad",
+      "n_chunks": 2048,
+      "compression_ratio_lzma": 0.3456547266012781,
+      "semantic_spectrum": {
+        "total_variance": 0.7822028250235834,
+        "top1_share": 0.019416715210432787,
+        "top5_share": 0.07828263835844035
+      }
+    },
+    "dolma_v1_7": {
+      "display": "Dolma",
+      "role": "broad",
+      "n_chunks": 2048,
+      "compression_ratio_lzma": 0.3447335367436941,
+      "semantic_spectrum": {
+        "total_variance": 0.7810236310352916,
+        "top1_share": 0.01940661490838879,
+        "top5_share": 0.07804768826713863
+      }
+    },
+    "c4_en": {
+      "display": "C4",
+      "role": "broad",
+      "n_chunks": 2048,
+      "compression_ratio_lzma": 0.33434264248598966,
+      "semantic_spectrum": {
+        "total_variance": 0.7733390872150117,
+        "top1_share": 0.018719292577710298,
+        "top5_share": 0.07896411736046106
+      }
+    },
+    "slimpajama_627b_reupload": {
+      "display": "SlimPajama",
+      "role": "broad",
+      "n_chunks": 2048,
+      "compression_ratio_lzma": 0.3427218870144618,
+      "semantic_spectrum": {
+        "total_variance": 0.7843627640753787,
+        "top1_share": 0.020726415897643517,
+        "top5_share": 0.07927848598489683
+      }
+    },
+    "pile_uncopyrighted": {
+      "display": "Pile uncopyrighted",
+      "role": "broad",
+      "n_chunks": 2048,
+      "compression_ratio_lzma": 0.3288604898828541,
+      "semantic_spectrum": {
+        "total_variance": 0.7905262308347935,
+        "top1_share": 0.03192973973037946,
+        "top5_share": 0.09675199413062562
+      }
+    },
+    "hh_rlhf_chosen": {
+      "display": "HH-RLHF chosen",
+      "role": "targeted",
+      "n_chunks": 2048,
+      "compression_ratio_lzma": 0.301128269700888,
+      "semantic_spectrum": {
+        "total_variance": 0.7772390835696078,
+        "top1_share": 0.027044985080394296,
+        "top5_share": 0.10152948451898755
+      }
+    },
+    "hh_rlhf_rejected": {
+      "display": "HH-RLHF rejected",
+      "role": "targeted",
+      "n_chunks": 2048,
+      "compression_ratio_lzma": 0.29883662872484906,
+      "semantic_spectrum": {
+        "total_variance": 0.7723404065257646,
+        "top1_share": 0.025286833230647135,
+        "top5_share": 0.1033892429812827
+      }
+    },
+    "oasst1_assistant_en": {
+      "display": "OASST1 assistant",
+      "role": "targeted",
+      "n_chunks": 2048,
+      "compression_ratio_lzma": 0.29815139579217803,
+      "semantic_spectrum": {
+        "total_variance": 0.7808927310837456,
+        "top1_share": 0.028353795173170774,
+        "top5_share": 0.10145412605892437
+      }
+    },
+    "ultrafeedback_binarized_chosen": {
+      "display": "UltraFeedback chosen",
+      "role": "targeted",
+      "n_chunks": 2048,
+      "compression_ratio_lzma": 0.29172001041608486,
+      "semantic_spectrum": {
+        "total_variance": 0.7690827497696887,
+        "top1_share": 0.03191405550865855,
+        "top5_share": 0.1043144703253832
+      }
+    },
+    "nemotron_math": {
+      "display": "Nemotron-SFT-Math",
+      "role": "targeted",
+      "n_chunks": 2048,
+      "compression_ratio_lzma": 0.2685248377713135,
+      "semantic_spectrum": {
+        "total_variance": 0.49897629914878966,
+        "top1_share": 0.1082477225142561,
+        "top5_share": 0.2506836406400889
+      }
+    },
+    "beavertails": {
+      "display": "BeaverTails",
+      "role": "targeted",
+      "n_chunks": 2048,
+      "compression_ratio_lzma": 0.2884453579294842,
+      "semantic_spectrum": {
+        "total_variance": 0.758304803609864,
+        "top1_share": 0.05235720167310362,
+        "top5_share": 0.1362872995474739
+      }
+    },
+    "magicoder_oss_instruct": {
+      "display": "Magicoder OSS Instruct",
+      "role": "targeted",
+      "n_chunks": 2048,
+      "compression_ratio_lzma": 0.23124892502005362,
+      "semantic_spectrum": {
+        "total_variance": 0.6021099557988909,
+        "top1_share": 0.05572704964313385,
+        "top5_share": 0.1715482559807132
+      }
+    },
+    "dolly_15k": {
+      "display": "Dolly 15k",
+      "role": "targeted",
+      "n_chunks": 2048,
+      "compression_ratio_lzma": 0.3281730889113812,
+      "semantic_spectrum": {
+        "total_variance": 0.7923425443763426,
+        "top1_share": 0.024911691013932608,
+        "top5_share": 0.09355049337809124
+      }
+    }
+  },
+  "pairs": [
+    {
+      "a": "fineweb_sample_10BT",
+      "b": "falcon_refinedweb",
+      "a_display": "FineWeb",
+      "b_display": "RefinedWeb",
+      "pair_class": "broad_broad",
+      "lexical_js": 0.017017023299466513,
+      "rho": 0.8128952180676311,
+      "compression_abs_diff": 0.0034877252056284558,
+      "semantic_cluster_js": 0.00935213855564879,
+      "top1_abs_diff": 0.0007714671053404044,
+      "top5_abs_diff": 0.0002352502644993315
+    },
+    {
+      "a": "fineweb_sample_10BT",
+      "b": "dolma_v1_7",
+      "a_display": "FineWeb",
+      "b_display": "Dolma",
+      "pair_class": "broad_broad",
+      "lexical_js": 0.017884803891985837,
+      "rho": 0.7981603544365509,
+      "compression_abs_diff": 0.002566535348044463,
+      "semantic_cluster_js": 0.026769059381924754,
+      "top1_abs_diff": 0.000761366803296408,
+      "top5_abs_diff": 0.00047020035580104536
+    },
+    {
+      "a": "fineweb_sample_10BT",
+      "b": "c4_en",
+      "a_display": "FineWeb",
+      "b_display": "C4",
+      "pair_class": "broad_broad",
+      "lexical_js": 0.022821483611073556,
+      "rho": 0.77141374906719,
+      "compression_abs_diff": 0.00782435890965999,
+      "semantic_cluster_js": 0.011935431172357406,
+      "top1_abs_diff": 7.404447261791583e-05,
+      "top5_abs_diff": 0.00044622873752138414
+    },
+    {
+      "a": "fineweb_sample_10BT",
+      "b": "slimpajama_627b_reupload",
+      "a_display": "FineWeb",
+      "b_display": "SlimPajama",
+      "pair_class": "broad_broad",
+      "lexical_js": 0.07622768900473245,
+      "rho": 0.5994723084084133,
+      "compression_abs_diff": 0.0005548856188121731,
+      "semantic_cluster_js": 0.027998557722852698,
+      "top1_abs_diff": 0.002081167792551134,
+      "top5_abs_diff": 0.0007605973619571466
+    },
+    {
+      "a": "fineweb_sample_10BT",
+      "b": "pile_uncopyrighted",
+      "a_display": "FineWeb",
+      "b_display": "Pile uncopyrighted",
+      "pair_class": "broad_broad",
+      "lexical_js": 0.06521512986397895,
+      "rho": 0.649334314447826,
+      "compression_abs_diff": 0.013306511512795549,
+      "semantic_cluster_js": 0.1616342719016929,
+      "top1_abs_diff": 0.013284491625287075,
+      "top5_abs_diff": 0.018234105507685935
+    },
+    {
+      "a": "fineweb_sample_10BT",
+      "b": "hh_rlhf_chosen",
+      "a_display": "FineWeb",
+      "b_display": "HH-RLHF chosen",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.09198446410112797,
+      "rho": 0.5239094679935958,
+      "compression_abs_diff": 0.04103873169476163,
+      "semantic_cluster_js": 0.25645062594756673,
+      "top1_abs_diff": 0.008399736975301914,
+      "top5_abs_diff": 0.02301159589604787
+    },
+    {
+      "a": "fineweb_sample_10BT",
+      "b": "hh_rlhf_rejected",
+      "a_display": "FineWeb",
+      "b_display": "HH-RLHF rejected",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.09196349242586425,
+      "rho": 0.526595236711262,
+      "compression_abs_diff": 0.04333037267080059,
+      "semantic_cluster_js": 0.2548091462608783,
+      "top1_abs_diff": 0.0066415851255547526,
+      "top5_abs_diff": 0.02487135435834302
+    },
+    {
+      "a": "fineweb_sample_10BT",
+      "b": "oasst1_assistant_en",
+      "a_display": "FineWeb",
+      "b_display": "OASST1 assistant",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.12115308883941792,
+      "rho": 0.4576050024228419,
+      "compression_abs_diff": 0.04401560560347162,
+      "semantic_cluster_js": 0.2707288626256123,
+      "top1_abs_diff": 0.009708547068078392,
+      "top5_abs_diff": 0.02293623743598469
+    },
+    {
+      "a": "fineweb_sample_10BT",
+      "b": "ultrafeedback_binarized_chosen",
+      "a_display": "FineWeb",
+      "b_display": "UltraFeedback chosen",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.14928221477389056,
+      "rho": 0.42736874727536633,
+      "compression_abs_diff": 0.05044699097956479,
+      "semantic_cluster_js": 0.2507994642746273,
+      "top1_abs_diff": 0.013268807403566167,
+      "top5_abs_diff": 0.02579658170244352
+    },
+    {
+      "a": "fineweb_sample_10BT",
+      "b": "nemotron_math",
+      "a_display": "FineWeb",
+      "b_display": "Nemotron-SFT-Math",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.3361179859829871,
+      "rho": 0.2854289274809315,
+      "compression_abs_diff": 0.07364216362433618,
+      "semantic_cluster_js": 0.6855963093886985,
+      "top1_abs_diff": 0.08960247440916372,
+      "top5_abs_diff": 0.17216575201714923
+    },
+    {
+      "a": "fineweb_sample_10BT",
+      "b": "beavertails",
+      "a_display": "FineWeb",
+      "b_display": "BeaverTails",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.14653406083452078,
+      "rho": 0.4201047670005911,
+      "compression_abs_diff": 0.053721643466165425,
+      "semantic_cluster_js": 0.4541709334602124,
+      "top1_abs_diff": 0.03371195356801124,
+      "top5_abs_diff": 0.05776941092453422
+    },
+    {
+      "a": "fineweb_sample_10BT",
+      "b": "magicoder_oss_instruct",
+      "a_display": "FineWeb",
+      "b_display": "Magicoder OSS Instruct",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.3307582292307449,
+      "rho": 0.25881318544449555,
+      "compression_abs_diff": 0.11091807637559603,
+      "semantic_cluster_js": 0.676294389628924,
+      "top1_abs_diff": 0.03708180153804147,
+      "top5_abs_diff": 0.09303036735777351
+    },
+    {
+      "a": "fineweb_sample_10BT",
+      "b": "dolly_15k",
+      "a_display": "FineWeb",
+      "b_display": "Dolly 15k",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.09051496335206972,
+      "rho": 0.5352000026292871,
+      "compression_abs_diff": 0.013993912484268456,
+      "semantic_cluster_js": 0.23490288648312546,
+      "top1_abs_diff": 0.006266442908840226,
+      "top5_abs_diff": 0.015032604755151557
+    },
+    {
+      "a": "falcon_refinedweb",
+      "b": "dolma_v1_7",
+      "a_display": "RefinedWeb",
+      "b_display": "Dolma",
+      "pair_class": "broad_broad",
+      "lexical_js": 0.02835535769552335,
+      "rho": 0.7563239143306184,
+      "compression_abs_diff": 0.0009211898575839927,
+      "semantic_cluster_js": 0.03541943217222342,
+      "top1_abs_diff": 1.010030204399645e-05,
+      "top5_abs_diff": 0.00023495009130171385
+    },
+    {
+      "a": "falcon_refinedweb",
+      "b": "c4_en",
+      "a_display": "RefinedWeb",
+      "b_display": "C4",
+      "pair_class": "broad_broad",
+      "lexical_js": 0.03466869329446073,
+      "rho": 0.7404719634491539,
+      "compression_abs_diff": 0.011312084115288445,
+      "semantic_cluster_js": 0.008211276844268657,
+      "top1_abs_diff": 0.0006974226327224886,
+      "top5_abs_diff": 0.0006814790020207157
+    },
+    {
+      "a": "falcon_refinedweb",
+      "b": "slimpajama_627b_reupload",
+      "a_display": "RefinedWeb",
+      "b_display": "SlimPajama",
+      "pair_class": "broad_broad",
+      "lexical_js": 0.08663012183501125,
+      "rho": 0.5774937350566433,
+      "compression_abs_diff": 0.0029328395868162827,
+      "semantic_cluster_js": 0.026972978635672294,
+      "top1_abs_diff": 0.0013097006872107297,
+      "top5_abs_diff": 0.000995847626456478
+    },
+    {
+      "a": "falcon_refinedweb",
+      "b": "pile_uncopyrighted",
+      "a_display": "RefinedWeb",
+      "b_display": "Pile uncopyrighted",
+      "pair_class": "broad_broad",
+      "lexical_js": 0.07545118010231892,
+      "rho": 0.6258768176908545,
+      "compression_abs_diff": 0.016794236718424005,
+      "semantic_cluster_js": 0.1620671321467623,
+      "top1_abs_diff": 0.01251302451994667,
+      "top5_abs_diff": 0.018469355772185267
+    },
+    {
+      "a": "falcon_refinedweb",
+      "b": "hh_rlhf_chosen",
+      "a_display": "RefinedWeb",
+      "b_display": "HH-RLHF chosen",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.0998137154913343,
+      "rho": 0.5188133442262368,
+      "compression_abs_diff": 0.04452645690039009,
+      "semantic_cluster_js": 0.24227496926507042,
+      "top1_abs_diff": 0.007628269869961509,
+      "top5_abs_diff": 0.023246846160547202
+    },
+    {
+      "a": "falcon_refinedweb",
+      "b": "hh_rlhf_rejected",
+      "a_display": "RefinedWeb",
+      "b_display": "HH-RLHF rejected",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.09725205691519934,
+      "rho": 0.5283228329293707,
+      "compression_abs_diff": 0.04681809787642904,
+      "semantic_cluster_js": 0.25730438208178796,
+      "top1_abs_diff": 0.005870118020214348,
+      "top5_abs_diff": 0.02510660462284235
+    },
+    {
+      "a": "falcon_refinedweb",
+      "b": "oasst1_assistant_en",
+      "a_display": "RefinedWeb",
+      "b_display": "OASST1 assistant",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.12397384750314486,
+      "rho": 0.4637400020725809,
+      "compression_abs_diff": 0.047503330809100075,
+      "semantic_cluster_js": 0.22619878329141435,
+      "top1_abs_diff": 0.008937079962737987,
+      "top5_abs_diff": 0.023171487700484023
+    },
+    {
+      "a": "falcon_refinedweb",
+      "b": "ultrafeedback_binarized_chosen",
+      "a_display": "RefinedWeb",
+      "b_display": "UltraFeedback chosen",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.1518219450368307,
+      "rho": 0.4349423973958494,
+      "compression_abs_diff": 0.05393471618519324,
+      "semantic_cluster_js": 0.23037340525655503,
+      "top1_abs_diff": 0.012497340298225763,
+      "top5_abs_diff": 0.02603183196694285
+    },
+    {
+      "a": "falcon_refinedweb",
+      "b": "nemotron_math",
+      "a_display": "RefinedWeb",
+      "b_display": "Nemotron-SFT-Math",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.3488794637436552,
+      "rho": 0.26413513283607876,
+      "compression_abs_diff": 0.07712988882996463,
+      "semantic_cluster_js": 0.6837199745350164,
+      "top1_abs_diff": 0.08883100730382332,
+      "top5_abs_diff": 0.17240100228164856
+    },
+    {
+      "a": "falcon_refinedweb",
+      "b": "beavertails",
+      "a_display": "RefinedWeb",
+      "b_display": "BeaverTails",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.15827207528630355,
+      "rho": 0.40919489728626884,
+      "compression_abs_diff": 0.05720936867179388,
+      "semantic_cluster_js": 0.45021885702397424,
+      "top1_abs_diff": 0.03294048646267084,
+      "top5_abs_diff": 0.05800466118903355
+    },
+    {
+      "a": "falcon_refinedweb",
+      "b": "magicoder_oss_instruct",
+      "a_display": "RefinedWeb",
+      "b_display": "Magicoder OSS Instruct",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.3383302296217624,
+      "rho": 0.24251227693135785,
+      "compression_abs_diff": 0.11440580158122449,
+      "semantic_cluster_js": 0.66814268525409,
+      "top1_abs_diff": 0.03631033443270107,
+      "top5_abs_diff": 0.09326561762227284
+    },
+    {
+      "a": "falcon_refinedweb",
+      "b": "dolly_15k",
+      "a_display": "RefinedWeb",
+      "b_display": "Dolly 15k",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.09779766421770578,
+      "rho": 0.5162272693374335,
+      "compression_abs_diff": 0.01748163768989691,
+      "semantic_cluster_js": 0.21580775718419695,
+      "top1_abs_diff": 0.005494975803499821,
+      "top5_abs_diff": 0.015267855019650889
+    },
+    {
+      "a": "dolma_v1_7",
+      "b": "c4_en",
+      "a_display": "Dolma",
+      "b_display": "C4",
+      "pair_class": "broad_broad",
+      "lexical_js": 0.07773974061627133,
+      "rho": 0.5940530773511918,
+      "compression_abs_diff": 0.010390894257704453,
+      "semantic_cluster_js": 0.0479609209660756,
+      "top1_abs_diff": 0.0006873223306784922,
+      "top5_abs_diff": 0.0009164290933224295
+    },
+    {
+      "a": "dolma_v1_7",
+      "b": "slimpajama_627b_reupload",
+      "a_display": "Dolma",
+      "b_display": "SlimPajama",
+      "pair_class": "broad_broad",
+      "lexical_js": 0.07722774697629513,
+      "rho": 0.5678171358571145,
+      "compression_abs_diff": 0.00201164972923229,
+      "semantic_cluster_js": 0.014059900342003,
+      "top1_abs_diff": 0.0013198009892547262,
+      "top5_abs_diff": 0.001230797717758192
+    },
+    {
+      "a": "dolma_v1_7",
+      "b": "pile_uncopyrighted",
+      "a_display": "Dolma",
+      "b_display": "Pile uncopyrighted",
+      "pair_class": "broad_broad",
+      "lexical_js": 0.1039057140428325,
+      "rho": 0.6014818459645069,
+      "compression_abs_diff": 0.015873046860840012,
+      "semantic_cluster_js": 0.09410406065403722,
+      "top1_abs_diff": 0.012523124821990667,
+      "top5_abs_diff": 0.01870430586348698
+    },
+    {
+      "a": "dolma_v1_7",
+      "b": "hh_rlhf_chosen",
+      "a_display": "Dolma",
+      "b_display": "HH-RLHF chosen",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.13230904029263352,
+      "rho": 0.44800990195461643,
+      "compression_abs_diff": 0.043605267042806095,
+      "semantic_cluster_js": 0.2638556960069727,
+      "top1_abs_diff": 0.0076383701720055056,
+      "top5_abs_diff": 0.023481796251848916
+    },
+    {
+      "a": "dolma_v1_7",
+      "b": "hh_rlhf_rejected",
+      "a_display": "Dolma",
+      "b_display": "HH-RLHF rejected",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.12485670795407712,
+      "rho": 0.45770855381462094,
+      "compression_abs_diff": 0.04589690801884505,
+      "semantic_cluster_js": 0.2685623621846953,
+      "top1_abs_diff": 0.0058802183222583446,
+      "top5_abs_diff": 0.025341554714144066
+    },
+    {
+      "a": "dolma_v1_7",
+      "b": "oasst1_assistant_en",
+      "a_display": "Dolma",
+      "b_display": "OASST1 assistant",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.11831538606248733,
+      "rho": 0.46716278621119733,
+      "compression_abs_diff": 0.04658214095151608,
+      "semantic_cluster_js": 0.19956207532095713,
+      "top1_abs_diff": 0.008947180264781984,
+      "top5_abs_diff": 0.023406437791785736
+    },
+    {
+      "a": "dolma_v1_7",
+      "b": "ultrafeedback_binarized_chosen",
+      "a_display": "Dolma",
+      "b_display": "UltraFeedback chosen",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.13614533115690663,
+      "rho": 0.44426897071017446,
+      "compression_abs_diff": 0.05301352632760925,
+      "semantic_cluster_js": 0.20777509483354606,
+      "top1_abs_diff": 0.012507440600269759,
+      "top5_abs_diff": 0.026266782058244564
+    },
+    {
+      "a": "dolma_v1_7",
+      "b": "nemotron_math",
+      "a_display": "Dolma",
+      "b_display": "Nemotron-SFT-Math",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.38245631698522525,
+      "rho": 0.2734019518740061,
+      "compression_abs_diff": 0.07620869897238064,
+      "semantic_cluster_js": 0.6470635291644229,
+      "top1_abs_diff": 0.0888411076058673,
+      "top5_abs_diff": 0.17263595237295026
+    },
+    {
+      "a": "dolma_v1_7",
+      "b": "beavertails",
+      "a_display": "Dolma",
+      "b_display": "BeaverTails",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.1793213779556896,
+      "rho": 0.36749059895437847,
+      "compression_abs_diff": 0.05628817881420989,
+      "semantic_cluster_js": 0.45070415903626176,
+      "top1_abs_diff": 0.03295058676471483,
+      "top5_abs_diff": 0.058239611280335266
+    },
+    {
+      "a": "dolma_v1_7",
+      "b": "magicoder_oss_instruct",
+      "a_display": "Dolma",
+      "b_display": "Magicoder OSS Instruct",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.35230461539532715,
+      "rho": 0.24667177615337435,
+      "compression_abs_diff": 0.1134846117236405,
+      "semantic_cluster_js": 0.6095532813492621,
+      "top1_abs_diff": 0.03632043473474506,
+      "top5_abs_diff": 0.09350056771357455
+    },
+    {
+      "a": "dolma_v1_7",
+      "b": "dolly_15k",
+      "a_display": "Dolma",
+      "b_display": "Dolly 15k",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.11819917228848345,
+      "rho": 0.4828181524955614,
+      "compression_abs_diff": 0.01656044783231292,
+      "semantic_cluster_js": 0.17883189223600568,
+      "top1_abs_diff": 0.005505076105543818,
+      "top5_abs_diff": 0.015502805110952603
+    },
+    {
+      "a": "c4_en",
+      "b": "slimpajama_627b_reupload",
+      "a_display": "C4",
+      "b_display": "SlimPajama",
+      "pair_class": "broad_broad",
+      "lexical_js": 0.08583030433395995,
+      "rho": 0.6274024106228634,
+      "compression_abs_diff": 0.008379244528472163,
+      "semantic_cluster_js": 0.03842160279456315,
+      "top1_abs_diff": 0.0020071233199332184,
+      "top5_abs_diff": 0.0003143686244357624
+    },
+    {
+      "a": "c4_en",
+      "b": "pile_uncopyrighted",
+      "a_display": "C4",
+      "b_display": "Pile uncopyrighted",
+      "pair_class": "broad_broad",
+      "lexical_js": 0.12447561391376337,
+      "rho": 0.6345663767080739,
+      "compression_abs_diff": 0.005482152603135559,
+      "semantic_cluster_js": 0.17458712459069917,
+      "top1_abs_diff": 0.013210447152669159,
+      "top5_abs_diff": 0.01778787677016455
+    },
+    {
+      "a": "c4_en",
+      "b": "hh_rlhf_chosen",
+      "a_display": "C4",
+      "b_display": "HH-RLHF chosen",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.09042582443282518,
+      "rho": 0.5543681698925815,
+      "compression_abs_diff": 0.03321437278510164,
+      "semantic_cluster_js": 0.257356833042666,
+      "top1_abs_diff": 0.008325692502683998,
+      "top5_abs_diff": 0.022565367158526486
+    },
+    {
+      "a": "c4_en",
+      "b": "hh_rlhf_rejected",
+      "a_display": "C4",
+      "b_display": "HH-RLHF rejected",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.09227482465631791,
+      "rho": 0.5507943676394054,
+      "compression_abs_diff": 0.0355060137611406,
+      "semantic_cluster_js": 0.2609188441492535,
+      "top1_abs_diff": 0.006567540652936837,
+      "top5_abs_diff": 0.024425125620821636
+    },
+    {
+      "a": "c4_en",
+      "b": "oasst1_assistant_en",
+      "a_display": "C4",
+      "b_display": "OASST1 assistant",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.13542878736208822,
+      "rho": 0.48833373714434486,
+      "compression_abs_diff": 0.03619124669381163,
+      "semantic_cluster_js": 0.26109432800028426,
+      "top1_abs_diff": 0.009634502595460476,
+      "top5_abs_diff": 0.022490008698463307
+    },
+    {
+      "a": "c4_en",
+      "b": "ultrafeedback_binarized_chosen",
+      "a_display": "C4",
+      "b_display": "UltraFeedback chosen",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.16159400045814257,
+      "rho": 0.458208341751263,
+      "compression_abs_diff": 0.0426226320699048,
+      "semantic_cluster_js": 0.2555054730209776,
+      "top1_abs_diff": 0.013194762930948251,
+      "top5_abs_diff": 0.025350352964922135
+    },
+    {
+      "a": "c4_en",
+      "b": "nemotron_math",
+      "a_display": "C4",
+      "b_display": "Nemotron-SFT-Math",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.34455018117481484,
+      "rho": 0.272372703457324,
+      "compression_abs_diff": 0.06581780471467619,
+      "semantic_cluster_js": 0.691690555986472,
+      "top1_abs_diff": 0.0895284299365458,
+      "top5_abs_diff": 0.17171952327962786
+    },
+    {
+      "a": "c4_en",
+      "b": "beavertails",
+      "a_display": "C4",
+      "b_display": "BeaverTails",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.1337377016296123,
+      "rho": 0.46863175635039855,
+      "compression_abs_diff": 0.045897284556505435,
+      "semantic_cluster_js": 0.4417895402716758,
+      "top1_abs_diff": 0.033637909095393326,
+      "top5_abs_diff": 0.057323182187012836
+    },
+    {
+      "a": "c4_en",
+      "b": "magicoder_oss_instruct",
+      "a_display": "C4",
+      "b_display": "Magicoder OSS Instruct",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.38383354468690584,
+      "rho": 0.24685101031762102,
+      "compression_abs_diff": 0.10309371746593604,
+      "semantic_cluster_js": 0.6736650989807993,
+      "top1_abs_diff": 0.03700775706542356,
+      "top5_abs_diff": 0.09258413862025212
+    },
+    {
+      "a": "c4_en",
+      "b": "dolly_15k",
+      "a_display": "C4",
+      "b_display": "Dolly 15k",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.08388565572927821,
+      "rho": 0.5610222356579511,
+      "compression_abs_diff": 0.006169553574608466,
+      "semantic_cluster_js": 0.22790049872845006,
+      "top1_abs_diff": 0.00619239843622231,
+      "top5_abs_diff": 0.014586376017630173
+    },
+    {
+      "a": "slimpajama_627b_reupload",
+      "b": "pile_uncopyrighted",
+      "a_display": "SlimPajama",
+      "b_display": "Pile uncopyrighted",
+      "pair_class": "broad_broad",
+      "lexical_js": 0.08989527035246787,
+      "rho": 0.5918795631619352,
+      "compression_abs_diff": 0.013861397131607722,
+      "semantic_cluster_js": 0.10542998136746762,
+      "top1_abs_diff": 0.01120332383273594,
+      "top5_abs_diff": 0.01747350814572879
+    },
+    {
+      "a": "slimpajama_627b_reupload",
+      "b": "hh_rlhf_chosen",
+      "a_display": "SlimPajama",
+      "b_display": "HH-RLHF chosen",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.17141014285325853,
+      "rho": 0.35574809259099305,
+      "compression_abs_diff": 0.041593617313573805,
+      "semantic_cluster_js": 0.2420929248830579,
+      "top1_abs_diff": 0.006318569182750779,
+      "top5_abs_diff": 0.022250998534090724
+    },
+    {
+      "a": "slimpajama_627b_reupload",
+      "b": "hh_rlhf_rejected",
+      "a_display": "SlimPajama",
+      "b_display": "HH-RLHF rejected",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.16376981185467634,
+      "rho": 0.36441820746350145,
+      "compression_abs_diff": 0.04388525828961276,
+      "semantic_cluster_js": 0.28264113039810895,
+      "top1_abs_diff": 0.004560417333003618,
+      "top5_abs_diff": 0.024110756996385874
+    },
+    {
+      "a": "slimpajama_627b_reupload",
+      "b": "oasst1_assistant_en",
+      "a_display": "SlimPajama",
+      "b_display": "OASST1 assistant",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.10042325735059425,
+      "rho": 0.5202008780078043,
+      "compression_abs_diff": 0.04457049122228379,
+      "semantic_cluster_js": 0.21402611316241554,
+      "top1_abs_diff": 0.007627379275527257,
+      "top5_abs_diff": 0.022175640074027544
+    },
+    {
+      "a": "slimpajama_627b_reupload",
+      "b": "ultrafeedback_binarized_chosen",
+      "a_display": "SlimPajama",
+      "b_display": "UltraFeedback chosen",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.11368676036795078,
+      "rho": 0.5039290640063325,
+      "compression_abs_diff": 0.05100187659837696,
+      "semantic_cluster_js": 0.20548459283653586,
+      "top1_abs_diff": 0.011187639611015033,
+      "top5_abs_diff": 0.025035984340486372
+    },
+    {
+      "a": "slimpajama_627b_reupload",
+      "b": "nemotron_math",
+      "a_display": "SlimPajama",
+      "b_display": "Nemotron-SFT-Math",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.37776365343116725,
+      "rho": 0.26378840686504,
+      "compression_abs_diff": 0.07419704924314835,
+      "semantic_cluster_js": 0.6530804699916324,
+      "top1_abs_diff": 0.08752130661661259,
+      "top5_abs_diff": 0.17140515465519207
+    },
+    {
+      "a": "slimpajama_627b_reupload",
+      "b": "beavertails",
+      "a_display": "SlimPajama",
+      "b_display": "BeaverTails",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.21743102363089445,
+      "rho": 0.31358036728122135,
+      "compression_abs_diff": 0.0542765290849776,
+      "semantic_cluster_js": 0.44458987195764516,
+      "top1_abs_diff": 0.03163078577546011,
+      "top5_abs_diff": 0.057008813562577074
+    },
+    {
+      "a": "slimpajama_627b_reupload",
+      "b": "magicoder_oss_instruct",
+      "a_display": "SlimPajama",
+      "b_display": "Magicoder OSS Instruct",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.3058537727155802,
+      "rho": 0.31506939098361764,
+      "compression_abs_diff": 0.1114729619944082,
+      "semantic_cluster_js": 0.5857757673060702,
+      "top1_abs_diff": 0.03500063374549034,
+      "top5_abs_diff": 0.09226976999581636
+    },
+    {
+      "a": "slimpajama_627b_reupload",
+      "b": "dolly_15k",
+      "a_display": "SlimPajama",
+      "b_display": "Dolly 15k",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.1421723305089066,
+      "rho": 0.423829993043514,
+      "compression_abs_diff": 0.014548798103080629,
+      "semantic_cluster_js": 0.19244654618596452,
+      "top1_abs_diff": 0.004185275116289092,
+      "top5_abs_diff": 0.01427200739319441
+    },
+    {
+      "a": "pile_uncopyrighted",
+      "b": "hh_rlhf_chosen",
+      "a_display": "Pile uncopyrighted",
+      "b_display": "HH-RLHF chosen",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.2502216599177594,
+      "rho": 0.27229716049699104,
+      "compression_abs_diff": 0.027732220181966083,
+      "semantic_cluster_js": 0.3518456672718502,
+      "top1_abs_diff": 0.004884754649985161,
+      "top5_abs_diff": 0.004777490388361935
+    },
+    {
+      "a": "pile_uncopyrighted",
+      "b": "hh_rlhf_rejected",
+      "a_display": "Pile uncopyrighted",
+      "b_display": "HH-RLHF rejected",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.22996959318201102,
+      "rho": 0.2823907025784779,
+      "compression_abs_diff": 0.03002386115800504,
+      "semantic_cluster_js": 0.3827749248397274,
+      "top1_abs_diff": 0.006642906499732322,
+      "top5_abs_diff": 0.006637248850657085
+    },
+    {
+      "a": "pile_uncopyrighted",
+      "b": "oasst1_assistant_en",
+      "a_display": "Pile uncopyrighted",
+      "b_display": "OASST1 assistant",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.1058260769668173,
+      "rho": 0.4830545042570298,
+      "compression_abs_diff": 0.03070909409067607,
+      "semantic_cluster_js": 0.2536426699492375,
+      "top1_abs_diff": 0.003575944557208683,
+      "top5_abs_diff": 0.004702131928298756
+    },
+    {
+      "a": "pile_uncopyrighted",
+      "b": "ultrafeedback_binarized_chosen",
+      "a_display": "Pile uncopyrighted",
+      "b_display": "UltraFeedback chosen",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.09781678296853073,
+      "rho": 0.5013834081912655,
+      "compression_abs_diff": 0.03714047946676924,
+      "semantic_cluster_js": 0.22615391651368638,
+      "top1_abs_diff": 1.5684221720907443e-05,
+      "top5_abs_diff": 0.007562476194757584
+    },
+    {
+      "a": "pile_uncopyrighted",
+      "b": "nemotron_math",
+      "a_display": "Pile uncopyrighted",
+      "b_display": "Nemotron-SFT-Math",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.34804330681718176,
+      "rho": 0.26967099028307834,
+      "compression_abs_diff": 0.06033565211154063,
+      "semantic_cluster_js": 0.6347755562431213,
+      "top1_abs_diff": 0.07631798278387664,
+      "top5_abs_diff": 0.15393164650946328
+    },
+    {
+      "a": "pile_uncopyrighted",
+      "b": "beavertails",
+      "a_display": "Pile uncopyrighted",
+      "b_display": "BeaverTails",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.29612096154104994,
+      "rho": 0.24104553115160612,
+      "compression_abs_diff": 0.040415131953369876,
+      "semantic_cluster_js": 0.5200585926629797,
+      "top1_abs_diff": 0.020427461942724164,
+      "top5_abs_diff": 0.039535305416848285
+    },
+    {
+      "a": "pile_uncopyrighted",
+      "b": "magicoder_oss_instruct",
+      "a_display": "Pile uncopyrighted",
+      "b_display": "Magicoder OSS Instruct",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.20997894323800229,
+      "rho": 0.3564646853161843,
+      "compression_abs_diff": 0.09761156486280048,
+      "semantic_cluster_js": 0.5257058597407731,
+      "top1_abs_diff": 0.023797309912754396,
+      "top5_abs_diff": 0.07479626185008757
+    },
+    {
+      "a": "pile_uncopyrighted",
+      "b": "dolly_15k",
+      "a_display": "Pile uncopyrighted",
+      "b_display": "Dolly 15k",
+      "pair_class": "broad_targeted",
+      "lexical_js": 0.21828675034265468,
+      "rho": 0.31296757818164017,
+      "compression_abs_diff": 0.0006874009714729068,
+      "semantic_cluster_js": 0.2695555985372249,
+      "top1_abs_diff": 0.007018048716446849,
+      "top5_abs_diff": 0.003201500752534378
+    },
+    {
+      "a": "hh_rlhf_chosen",
+      "b": "hh_rlhf_rejected",
+      "a_display": "HH-RLHF chosen",
+      "b_display": "HH-RLHF rejected",
+      "pair_class": "targeted_targeted",
+      "lexical_js": 0.007517131959795061,
+      "rho": 0.874373134678261,
+      "compression_abs_diff": 0.0022916409760389556,
+      "semantic_cluster_js": 0.005828173150028165,
+      "top1_abs_diff": 0.001758151849747161,
+      "top5_abs_diff": 0.0018597584622951496
+    },
+    {
+      "a": "hh_rlhf_chosen",
+      "b": "oasst1_assistant_en",
+      "a_display": "HH-RLHF chosen",
+      "b_display": "OASST1 assistant",
+      "pair_class": "targeted_targeted",
+      "lexical_js": 0.14811742571311923,
+      "rho": 0.45307560696612253,
+      "compression_abs_diff": 0.002976873908709987,
+      "semantic_cluster_js": 0.14942070307875455,
+      "top1_abs_diff": 0.001308810092776478,
+      "top5_abs_diff": 7.535846006317959e-05
+    },
+    {
+      "a": "hh_rlhf_chosen",
+      "b": "ultrafeedback_binarized_chosen",
+      "a_display": "HH-RLHF chosen",
+      "b_display": "UltraFeedback chosen",
+      "pair_class": "targeted_targeted",
+      "lexical_js": 0.18831166169316607,
+      "rho": 0.37394908786793535,
+      "compression_abs_diff": 0.009408259284803155,
+      "semantic_cluster_js": 0.24817772294004617,
+      "top1_abs_diff": 0.004869070428264254,
+      "top5_abs_diff": 0.0027849858063956484
+    },
+    {
+      "a": "hh_rlhf_chosen",
+      "b": "nemotron_math",
+      "a_display": "HH-RLHF chosen",
+      "b_display": "Nemotron-SFT-Math",
+      "pair_class": "targeted_targeted",
+      "lexical_js": 0.37818850950522354,
+      "rho": 0.2565384981870784,
+      "compression_abs_diff": 0.032603431929574545,
+      "semantic_cluster_js": 0.6886241158220083,
+      "top1_abs_diff": 0.0812027374338618,
+      "top5_abs_diff": 0.14915415612110136
+    },
+    {
+      "a": "hh_rlhf_chosen",
+      "b": "beavertails",
+      "a_display": "HH-RLHF chosen",
+      "b_display": "BeaverTails",
+      "pair_class": "targeted_targeted",
+      "lexical_js": 0.12385772418692118,
+      "rho": 0.46058134306300275,
+      "compression_abs_diff": 0.012682911771403793,
+      "semantic_cluster_js": 0.16333507931085994,
+      "top1_abs_diff": 0.025312216592709325,
+      "top5_abs_diff": 0.03475781502848635
+    },
+    {
+      "a": "hh_rlhf_chosen",
+      "b": "magicoder_oss_instruct",
+      "a_display": "HH-RLHF chosen",
+      "b_display": "Magicoder OSS Instruct",
+      "pair_class": "targeted_targeted",
+      "lexical_js": 0.4389506015941621,
+      "rho": 0.22306945983235207,
+      "compression_abs_diff": 0.0698793446808344,
+      "semantic_cluster_js": 0.6783697817282925,
+      "top1_abs_diff": 0.028682064562739557,
+      "top5_abs_diff": 0.07001877146172564
+    },
+    {
+      "a": "hh_rlhf_chosen",
+      "b": "dolly_15k",
+      "a_display": "HH-RLHF chosen",
+      "b_display": "Dolly 15k",
+      "pair_class": "targeted_targeted",
+      "lexical_js": 0.10567158677205499,
+      "rho": 0.5010376611077383,
+      "compression_abs_diff": 0.027044819210493176,
+      "semantic_cluster_js": 0.14586112352032296,
+      "top1_abs_diff": 0.0021332940664616877,
+      "top5_abs_diff": 0.007978991140896313
+    },
+    {
+      "a": "hh_rlhf_rejected",
+      "b": "oasst1_assistant_en",
+      "a_display": "HH-RLHF rejected",
+      "b_display": "OASST1 assistant",
+      "pair_class": "targeted_targeted",
+      "lexical_js": 0.15046408444365947,
+      "rho": 0.4410572254899424,
+      "compression_abs_diff": 0.0006852329326710316,
+      "semantic_cluster_js": 0.15765566177734988,
+      "top1_abs_diff": 0.003066961942523639,
+      "top5_abs_diff": 0.0019351169223583292
+    },
+    {
+      "a": "hh_rlhf_rejected",
+      "b": "ultrafeedback_binarized_chosen",
+      "a_display": "HH-RLHF rejected",
+      "b_display": "UltraFeedback chosen",
+      "pair_class": "targeted_targeted",
+      "lexical_js": 0.19067965098114947,
+      "rho": 0.3675615247329214,
+      "compression_abs_diff": 0.0071166183087642,
+      "semantic_cluster_js": 0.24664488165323895,
+      "top1_abs_diff": 0.0066272222780114146,
+      "top5_abs_diff": 0.0009252273441004988
+    },
+    {
+      "a": "hh_rlhf_rejected",
+      "b": "nemotron_math",
+      "a_display": "HH-RLHF rejected",
+      "b_display": "Nemotron-SFT-Math",
+      "pair_class": "targeted_targeted",
+      "lexical_js": 0.37981799175916275,
+      "rho": 0.25446168446689404,
+      "compression_abs_diff": 0.03031179095353559,
+      "semantic_cluster_js": 0.6806399631168201,
+      "top1_abs_diff": 0.08296088928360897,
+      "top5_abs_diff": 0.1472943976588062
+    },
+    {
+      "a": "hh_rlhf_rejected",
+      "b": "beavertails",
+      "a_display": "HH-RLHF rejected",
+      "b_display": "BeaverTails",
+      "pair_class": "targeted_targeted",
+      "lexical_js": 0.13081243955608565,
+      "rho": 0.44839629947299375,
+      "compression_abs_diff": 0.010391270795364838,
+      "semantic_cluster_js": 0.13375713579302675,
+      "top1_abs_diff": 0.027070368442456486,
+      "top5_abs_diff": 0.0328980565661912
+    },
+    {
+      "a": "hh_rlhf_rejected",
+      "b": "magicoder_oss_instruct",
+      "a_display": "HH-RLHF rejected",
+      "b_display": "Magicoder OSS Instruct",
+      "pair_class": "targeted_targeted",
+      "lexical_js": 0.43120045934144025,
+      "rho": 0.22854692236864788,
+      "compression_abs_diff": 0.06758770370479544,
+      "semantic_cluster_js": 0.6802726581704704,
+      "top1_abs_diff": 0.030440216412486718,
+      "top5_abs_diff": 0.06815901299943049
+    },
+    {
+      "a": "hh_rlhf_rejected",
+      "b": "dolly_15k",
+      "a_display": "HH-RLHF rejected",
+      "b_display": "Dolly 15k",
+      "pair_class": "targeted_targeted",
+      "lexical_js": 0.11538265807957944,
+      "rho": 0.4743038694966544,
+      "compression_abs_diff": 0.02933646018653213,
+      "semantic_cluster_js": 0.16637766718871627,
+      "top1_abs_diff": 0.0003751422167145267,
+      "top5_abs_diff": 0.009838749603191463
+    },
+    {
+      "a": "oasst1_assistant_en",
+      "b": "ultrafeedback_binarized_chosen",
+      "a_display": "OASST1 assistant",
+      "b_display": "UltraFeedback chosen",
+      "pair_class": "targeted_targeted",
+      "lexical_js": 0.031987377729217586,
+      "rho": 0.7302093839970063,
+      "compression_abs_diff": 0.006431385376093168,
+      "semantic_cluster_js": 0.0619317121945418,
+      "top1_abs_diff": 0.0035602603354877756,
+      "top5_abs_diff": 0.002860344266458828
+    },
+    {
+      "a": "oasst1_assistant_en",
+      "b": "nemotron_math",
+      "a_display": "OASST1 assistant",
+      "b_display": "Nemotron-SFT-Math",
+      "pair_class": "targeted_targeted",
+      "lexical_js": 0.3579770465524165,
+      "rho": 0.33555450228137496,
+      "compression_abs_diff": 0.029626558020864557,
+      "semantic_cluster_js": 0.6459985666446149,
+      "top1_abs_diff": 0.07989392734108533,
+      "top5_abs_diff": 0.14922951458116454
+    },
+    {
+      "a": "oasst1_assistant_en",
+      "b": "beavertails",
+      "a_display": "OASST1 assistant",
+      "b_display": "BeaverTails",
+      "pair_class": "targeted_targeted",
+      "lexical_js": 0.1631329416930458,
+      "rho": 0.41208581726821236,
+      "compression_abs_diff": 0.009706037862693806,
+      "semantic_cluster_js": 0.3377342683937864,
+      "top1_abs_diff": 0.024003406499932847,
+      "top5_abs_diff": 0.03483317348854953
+    },
+    {
+      "a": "oasst1_assistant_en",
+      "b": "magicoder_oss_instruct",
+      "a_display": "OASST1 assistant",
+      "b_display": "Magicoder OSS Instruct",
+      "pair_class": "targeted_targeted",
+      "lexical_js": 0.29077298479064884,
+      "rho": 0.31930213605403085,
+      "compression_abs_diff": 0.06690247077212441,
+      "semantic_cluster_js": 0.5316492030521144,
+      "top1_abs_diff": 0.02737325446996308,
+      "top5_abs_diff": 0.07009412992178882
+    },
+    {
+      "a": "oasst1_assistant_en",
+      "b": "dolly_15k",
+      "a_display": "OASST1 assistant",
+      "b_display": "Dolly 15k",
+      "pair_class": "targeted_targeted",
+      "lexical_js": 0.09955980691713864,
+      "rho": 0.527998368955551,
+      "compression_abs_diff": 0.030021693119203163,
+      "semantic_cluster_js": 0.14758687192511905,
+      "top1_abs_diff": 0.0034421041592381657,
+      "top5_abs_diff": 0.007903632680833134
+    },
+    {
+      "a": "ultrafeedback_binarized_chosen",
+      "b": "nemotron_math",
+      "a_display": "UltraFeedback chosen",
+      "b_display": "Nemotron-SFT-Math",
+      "pair_class": "targeted_targeted",
+      "lexical_js": 0.341820003046722,
+      "rho": 0.2905035507021941,
+      "compression_abs_diff": 0.02319517264477139,
+      "semantic_cluster_js": 0.6504883649284972,
+      "top1_abs_diff": 0.07633366700559754,
+      "top5_abs_diff": 0.1463691703147057
+    },
+    {
+      "a": "ultrafeedback_binarized_chosen",
+      "b": "beavertails",
+      "a_display": "UltraFeedback chosen",
+      "b_display": "BeaverTails",
+      "pair_class": "targeted_targeted",
+      "lexical_js": 0.22493412565723922,
+      "rho": 0.30471900382374456,
+      "compression_abs_diff": 0.0032746524866006377,
+      "semantic_cluster_js": 0.4421842253302066,
+      "top1_abs_diff": 0.02044314616444507,
+      "top5_abs_diff": 0.0319728292220907
+    },
+    {
+      "a": "ultrafeedback_binarized_chosen",
+      "b": "magicoder_oss_instruct",
+      "a_display": "UltraFeedback chosen",
+      "b_display": "Magicoder OSS Instruct",
+      "pair_class": "targeted_targeted",
+      "lexical_js": 0.27340707186789576,
+      "rho": 0.299421266141075,
+      "compression_abs_diff": 0.06047108539603124,
+      "semantic_cluster_js": 0.5165158856825904,
+      "top1_abs_diff": 0.023812994134475303,
+      "top5_abs_diff": 0.06723378565532999
+    },
+    {
+      "a": "ultrafeedback_binarized_chosen",
+      "b": "dolly_15k",
+      "a_display": "UltraFeedback chosen",
+      "b_display": "Dolly 15k",
+      "pair_class": "targeted_targeted",
+      "lexical_js": 0.15029633232180328,
+      "rho": 0.3833058484410238,
+      "compression_abs_diff": 0.03645307849529633,
+      "semantic_cluster_js": 0.21821130087593094,
+      "top1_abs_diff": 0.007002364494725941,
+      "top5_abs_diff": 0.010763976947291962
+    },
+    {
+      "a": "nemotron_math",
+      "b": "beavertails",
+      "a_display": "Nemotron-SFT-Math",
+      "b_display": "BeaverTails",
+      "pair_class": "targeted_targeted",
+      "lexical_js": 0.5541898150115474,
+      "rho": 0.05310246549377729,
+      "compression_abs_diff": 0.01992052015817075,
+      "semantic_cluster_js": 0.6915614585188798,
+      "top1_abs_diff": 0.05589052084115248,
+      "top5_abs_diff": 0.11439634109261501
+    },
+    {
+      "a": "nemotron_math",
+      "b": "magicoder_oss_instruct",
+      "a_display": "Nemotron-SFT-Math",
+      "b_display": "Magicoder OSS Instruct",
+      "pair_class": "targeted_targeted",
+      "lexical_js": 0.4363006698709133,
+      "rho": 0.21851960470314818,
+      "compression_abs_diff": 0.037275912751259854,
+      "semantic_cluster_js": 0.6859489838146353,
+      "top1_abs_diff": 0.05252067287112225,
+      "top5_abs_diff": 0.07913538465937572
+    },
+    {
+      "a": "nemotron_math",
+      "b": "dolly_15k",
+      "a_display": "Nemotron-SFT-Math",
+      "b_display": "Dolly 15k",
+      "pair_class": "targeted_targeted",
+      "lexical_js": 0.47277664430393695,
+      "rho": 0.14695883287147535,
+      "compression_abs_diff": 0.05964825114006772,
+      "semantic_cluster_js": 0.6770943968912406,
+      "top1_abs_diff": 0.0833360315003235,
+      "top5_abs_diff": 0.15713314726199767
+    },
+    {
+      "a": "beavertails",
+      "b": "magicoder_oss_instruct",
+      "a_display": "BeaverTails",
+      "b_display": "Magicoder OSS Instruct",
+      "pair_class": "targeted_targeted",
+      "lexical_js": 0.3717185414322653,
+      "rho": 0.2902805186934436,
+      "compression_abs_diff": 0.057196432909430606,
+      "semantic_cluster_js": 0.6864928615316374,
+      "top1_abs_diff": 0.003369847970030232,
+      "top5_abs_diff": 0.03526095643323929
+    },
+    {
+      "a": "beavertails",
+      "b": "dolly_15k",
+      "a_display": "BeaverTails",
+      "b_display": "Dolly 15k",
+      "pair_class": "targeted_targeted",
+      "lexical_js": 0.10970266070338135,
+      "rho": 0.5190806034441203,
+      "compression_abs_diff": 0.03972773098189697,
+      "semantic_cluster_js": 0.3567480990292131,
+      "top1_abs_diff": 0.027445510659171012,
+      "top5_abs_diff": 0.04273680616938266
+    },
+    {
+      "a": "magicoder_oss_instruct",
+      "b": "dolly_15k",
+      "a_display": "Magicoder OSS Instruct",
+      "b_display": "Dolly 15k",
+      "pair_class": "targeted_targeted",
+      "lexical_js": 0.43193347639112306,
+      "rho": 0.18755811853935508,
+      "compression_abs_diff": 0.09692416389132757,
+      "semantic_cluster_js": 0.673022712933415,
+      "top1_abs_diff": 0.030815358629201244,
+      "top5_abs_diff": 0.07799776260262195
+    }
+  ],
+  "family_summary": {
+    "pair_counts": {
+      "broad_broad": 15,
+      "broad_targeted": 48,
+      "targeted_targeted": 28,
+      "directed_textual_broad_broad": 30,
+      "directed_textual_broad_targeted": 48,
+      "directed_textual_targeted_targeted": 56
+    },
+    "metrics": {
+      "broad_broad": {
+        "lexical_js": 0.08339160481072147,
+        "rho": 0.6155708584898139,
+        "semantic_cluster_js": 0.06299492461654993,
+        "compression_abs_diff": 0.0077132501322697035,
+        "top1_abs_diff": 0.004830261892551935,
+        "top5_abs_diff": 0.006463686728955048
+      },
+      "broad_targeted": {
+        "lexical_js": 0.18943464152634185,
+        "rho": 0.4037680721885555,
+        "semantic_cluster_js": 0.3737140186823851,
+        "compression_abs_diff": 0.05146814973737551,
+        "top1_abs_diff": 0.023678801434933158,
+        "top5_abs_diff": 0.05133755375614004
+      },
+      "targeted_targeted": {
+        "lexical_js": 0.24650232707985478,
+        "rho": 0.38583758508950844,
+        "semantic_cluster_js": 0.4095761992498699,
+        "compression_abs_diff": 0.03139612516604833,
+        "top1_abs_diff": 0.029108936167082638,
+        "top5_abs_diff": 0.05555719117401741
+      }
+    },
+    "ordering_held": {
+      "lexical_js_bt_gt_bb": true,
+      "rho_bb_gt_bt": true,
+      "semantic_cluster_js_bt_gt_bb": true,
+      "compression_abs_diff_bt_gt_bb": true,
+      "top1_abs_diff_bt_gt_bb": true,
+      "top5_abs_diff_bt_gt_bb": true
+    }
+  },
+  "directional_lexical_sensitivity": {
+    "schema": "lens_effects.directional_lexical_sensitivity.v1",
+    "note": "The primary broad-targeted textual summary uses broad corpora as the reference vocabulary. This table reports the reverse direction and the two-direction average as a sensitivity check.",
+    "broad_broad_two_direction": {
+      "lexical_js": 0.08339160481072147,
+      "rho": 0.6155708584898139,
+      "semantic_cluster_js": 0.06299492461654993,
+      "compression_abs_diff": 0.0077132501322697035,
+      "top1_abs_diff": 0.004830261892551935,
+      "top5_abs_diff": 0.006463686728955048
+    },
+    "broad_targeted_broad_reference": {
+      "lexical_js": 0.18943464152634185,
+      "rho": 0.4037680721885555
+    },
+    "broad_targeted_targeted_reference": {
+      "lexical_js": 0.1971178702039246,
+      "rho": 0.4098429468950186
+    },
+    "broad_targeted_two_direction_average": {
+      "lexical_js": 0.19327625586513322,
+      "rho": 0.40680550954178707
+    },
+    "ordering_checks": {
+      "primary_lexical_js_bt_gt_bb": true,
+      "reverse_lexical_js_bt_gt_bb": true,
+      "symmetric_lexical_js_bt_gt_bb": true,
+      "primary_rho_bb_gt_bt": true,
+      "reverse_rho_bb_gt_bt": true,
+      "symmetric_rho_bb_gt_bt": true
+    }
+  }
+}

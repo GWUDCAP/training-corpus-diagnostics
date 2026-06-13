@@ -1,0 +1,19 @@
+{
+  "schema": "lens_effects.embedding_metadata.v1",
+  "label": "slimpajama_627b_reupload",
+  "model_name": "Alibaba-NLP/gte-base-en-v1.5",
+  "trust_remote_code": true,
+  "batch_size": 16,
+  "max_length": 512,
+  "device": "cuda",
+  "shape": [
+    2048,
+    768
+  ],
+  "chunks_path": "data/chunks/slimpajama_627b_reupload/chunks.json",
+  "chunks_sha256": "a6794f14d23b984fe41734bc11d2ddf5d09883bab99314a02c25924e0e820296",
+  "embeddings_sha256": "bec500459f9682c66e76b9ddfc4172fe1333f70dd0e24d3921180390d0f11573",
+  "torch": "2.9.1+cu128",
+  "transformers_model_class": "NewModel",
+  "created_unix": 1778014379.4867659
+}

@@ -1,0 +1,7916 @@
+{
+  "schema": "corpus_bootstrap_hardening.bootstrap.v1",
+  "seed": 0,
+  "replicates": 200,
+  "sampling_unit": "canonical corpus chunk",
+  "metrics": {
+    "lexical_js": {
+      "bb": {
+        "mean": 0.07964036021774577,
+        "median": 0.08006020151500909,
+        "q025": 0.07357374996537291,
+        "q500": 0.08006020151500909,
+        "q975": 0.08465937293672791
+      },
+      "bt": {
+        "mean": 0.19270646672702277,
+        "median": 0.19272592107388442,
+        "q025": 0.18891071777093033,
+        "q500": 0.19272592107388442,
+        "q975": 0.19646319808346602
+      }
+    },
+    "rho": {
+      "bb": {
+        "mean": 0.6251328012654195,
+        "median": 0.624819486721855,
+        "q025": 0.6122652679959385,
+        "q500": 0.624819486721855,
+        "q975": 0.6369505874525241
+      },
+      "bt": {
+        "mean": 0.41981697088869935,
+        "median": 0.4200055492561456,
+        "q025": 0.41166428823475576,
+        "q500": 0.4200055492561456,
+        "q975": 0.4265831851844689
+      }
+    },
+    "semantic_cluster_js": {
+      "bb": {
+        "mean": 0.06608848474076474,
+        "median": 0.066245514387413,
+        "q025": 0.06196552209276003,
+        "q500": 0.066245514387413,
+        "q975": 0.0701672956511941
+      },
+      "bt": {
+        "mean": 0.3763781643961744,
+        "median": 0.37637261480408696,
+        "q025": 0.37189511315222346,
+        "q500": 0.37637261480408696,
+        "q975": 0.3804794115605917
+      }
+    },
+    "compression_abs_diff": {
+      "bb": {
+        "mean": 0.005254189629299719,
+        "median": 0.0052594870012239205,
+        "q025": 0.0030490830979537026,
+        "q500": 0.0052594870012239205,
+        "q975": 0.0078104494158750485
+      },
+      "bt": {
+        "mean": 0.03196741971552155,
+        "median": 0.03203874080977451,
+        "q025": 0.02967571621954779,
+        "q500": 0.03203874080977451,
+        "q975": 0.03438050750263822
+      }
+    },
+    "top1_abs_diff": {
+      "bb": {
+        "mean": 0.004819334495146815,
+        "median": 0.004808288997265616,
+        "q025": 0.004013668875006613,
+        "q500": 0.004808288997265616,
+        "q975": 0.005516666447160651
+      },
+      "bt": {
+        "mean": 0.02358634909874518,
+        "median": 0.02358051618412119,
+        "q025": 0.02279018795688176,
+        "q500": 0.02358051618412119,
+        "q975": 0.0243694732746826
+      }
+    },
+    "top5_abs_diff": {
+      "bb": {
+        "mean": 0.006673645209497206,
+        "median": 0.006680334865687946,
+        "q025": 0.005610189739957206,
+        "q500": 0.006680334865687946,
+        "q975": 0.007785017965832485
+      },
+      "bt": {
+        "mean": 0.05071073864259581,
+        "median": 0.05070104377137667,
+        "q025": 0.04936580069359711,
+        "q500": 0.05070104377137667,
+        "q975": 0.05209263541735058
+      }
+    }
+  },
+  "ordering_counts": {
+    "lexical_js": 200,
+    "rho": 200,
+    "semantic_cluster_js": 200,
+    "compression_abs_diff": 200,
+    "top1_abs_diff": 200,
+    "top5_abs_diff": 200
+  },
+  "rows": [
+    {
+      "replicate": 0,
+      "lexical_js": {
+        "bb": 0.07938583130828271,
+        "bt": 0.19191989840711332
+      },
+      "rho": {
+        "bb": 0.6332578461540694,
+        "bt": 0.42555555062751904
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06594758633797977,
+        "bt": 0.37681330401750185
+      },
+      "compression_abs_diff": {
+        "bb": 0.006139920555777352,
+        "bt": 0.03270163113928312
+      },
+      "top1_abs_diff": {
+        "bb": 0.00496892002866699,
+        "bt": 0.02374742377619871
+      },
+      "top5_abs_diff": {
+        "bb": 0.006899978494104154,
+        "bt": 0.05040838076667436
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 1,
+      "lexical_js": {
+        "bb": 0.07987966468334205,
+        "bt": 0.1935859064123361
+      },
+      "rho": {
+        "bb": 0.6328009464688422,
+        "bt": 0.4231301026010792
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06580006494515232,
+        "bt": 0.3769948629837813
+      },
+      "compression_abs_diff": {
+        "bb": 0.006009053971300943,
+        "bt": 0.03150647223066204
+      },
+      "top1_abs_diff": {
+        "bb": 0.004672715850767949,
+        "bt": 0.023746940069964525
+      },
+      "top5_abs_diff": {
+        "bb": 0.00611526314817026,
+        "bt": 0.05088220879696426
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 2,
+      "lexical_js": {
+        "bb": 0.08186709686679428,
+        "bt": 0.1935532228506102
+      },
+      "rho": {
+        "bb": 0.6240796622685411,
+        "bt": 0.4172620078553508
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06662957808002613,
+        "bt": 0.3769619983463787
+      },
+      "compression_abs_diff": {
+        "bb": 0.006598294168131283,
+        "bt": 0.03180484242738884
+      },
+      "top1_abs_diff": {
+        "bb": 0.00414403146752545,
+        "bt": 0.02322070718265439
+      },
+      "top5_abs_diff": {
+        "bb": 0.0065953043385975855,
+        "bt": 0.05020341979587014
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 3,
+      "lexical_js": {
+        "bb": 0.07501850417535867,
+        "bt": 0.19189936848603115
+      },
+      "rho": {
+        "bb": 0.6326210931391544,
+        "bt": 0.4196860669938412
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0632131551722362,
+        "bt": 0.3752972327326774
+      },
+      "compression_abs_diff": {
+        "bb": 0.0041496814634686035,
+        "bt": 0.03394243554134507
+      },
+      "top1_abs_diff": {
+        "bb": 0.005072575564209762,
+        "bt": 0.02363005276052822
+      },
+      "top5_abs_diff": {
+        "bb": 0.006052266074469639,
+        "bt": 0.05073270853723281
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 4,
+      "lexical_js": {
+        "bb": 0.08047026045112139,
+        "bt": 0.19368206628324422
+      },
+      "rho": {
+        "bb": 0.6231736053551025,
+        "bt": 0.41555312541212497
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0636374657100245,
+        "bt": 0.37510618171945387
+      },
+      "compression_abs_diff": {
+        "bb": 0.004725895661463786,
+        "bt": 0.0319473808207073
+      },
+      "top1_abs_diff": {
+        "bb": 0.004355205939058656,
+        "bt": 0.023862196125375133
+      },
+      "top5_abs_diff": {
+        "bb": 0.006575499845336252,
+        "bt": 0.05045422154546649
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 5,
+      "lexical_js": {
+        "bb": 0.08204418334551891,
+        "bt": 0.1940565993322072
+      },
+      "rho": {
+        "bb": 0.6221530954710734,
+        "bt": 0.41634563991034446
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06924963668287143,
+        "bt": 0.3792563018379385
+      },
+      "compression_abs_diff": {
+        "bb": 0.0056795666934356635,
+        "bt": 0.03344382036412041
+      },
+      "top1_abs_diff": {
+        "bb": 0.005157683419116044,
+        "bt": 0.023773104818086543
+      },
+      "top5_abs_diff": {
+        "bb": 0.007160427310070718,
+        "bt": 0.05172465825914165
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 6,
+      "lexical_js": {
+        "bb": 0.07526748431822906,
+        "bt": 0.19163061925032876
+      },
+      "rho": {
+        "bb": 0.6319361486900184,
+        "bt": 0.422859740646026
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06497111997449305,
+        "bt": 0.3760311872056595
+      },
+      "compression_abs_diff": {
+        "bb": 0.0061190006953945626,
+        "bt": 0.031149044293094452
+      },
+      "top1_abs_diff": {
+        "bb": 0.004744577334849344,
+        "bt": 0.023259229872416087
+      },
+      "top5_abs_diff": {
+        "bb": 0.00629644420257856,
+        "bt": 0.050780610641688366
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 7,
+      "lexical_js": {
+        "bb": 0.08114436528392031,
+        "bt": 0.19458867877132943
+      },
+      "rho": {
+        "bb": 0.6227278739918872,
+        "bt": 0.4166676118495998
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06806262122316316,
+        "bt": 0.38019253318491814
+      },
+      "compression_abs_diff": {
+        "bb": 0.0036648997142949224,
+        "bt": 0.03233750764987287
+      },
+      "top1_abs_diff": {
+        "bb": 0.004756736556297238,
+        "bt": 0.024190526256772257
+      },
+      "top5_abs_diff": {
+        "bb": 0.006320767195407207,
+        "bt": 0.050644013263278616
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 8,
+      "lexical_js": {
+        "bb": 0.07713568354388647,
+        "bt": 0.190112857452707
+      },
+      "rho": {
+        "bb": 0.6237644574796535,
+        "bt": 0.4235444740760184
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06376858828963737,
+        "bt": 0.37273021470780554
+      },
+      "compression_abs_diff": {
+        "bb": 0.0060646049509031075,
+        "bt": 0.03049366284830765
+      },
+      "top1_abs_diff": {
+        "bb": 0.004494436833638764,
+        "bt": 0.023532194563025115
+      },
+      "top5_abs_diff": {
+        "bb": 0.005712414815490783,
+        "bt": 0.05067944155175388
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 9,
+      "lexical_js": {
+        "bb": 0.08259631663297622,
+        "bt": 0.1950554330178135
+      },
+      "rho": {
+        "bb": 0.6245592968894914,
+        "bt": 0.42204562160054593
+      },
+      "semantic_cluster_js": {
+        "bb": 0.07051687600542178,
+        "bt": 0.3793668028007667
+      },
+      "compression_abs_diff": {
+        "bb": 0.004739037760470344,
+        "bt": 0.031141012928444557
+      },
+      "top1_abs_diff": {
+        "bb": 0.005307758195852085,
+        "bt": 0.02305701150251199
+      },
+      "top5_abs_diff": {
+        "bb": 0.007061763390431136,
+        "bt": 0.05086064284290715
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 10,
+      "lexical_js": {
+        "bb": 0.07634543518760525,
+        "bt": 0.1921641922793802
+      },
+      "rho": {
+        "bb": 0.6250711031215397,
+        "bt": 0.4164578564885579
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06592952985769629,
+        "bt": 0.3775547457372886
+      },
+      "compression_abs_diff": {
+        "bb": 0.0057268642764118005,
+        "bt": 0.03199159259559991
+      },
+      "top1_abs_diff": {
+        "bb": 0.005076704270348389,
+        "bt": 0.023168528445271702
+      },
+      "top5_abs_diff": {
+        "bb": 0.008246094157650439,
+        "bt": 0.04998716106064041
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 11,
+      "lexical_js": {
+        "bb": 0.07466082733832219,
+        "bt": 0.1915600263630611
+      },
+      "rho": {
+        "bb": 0.6372923341363901,
+        "bt": 0.42466162001684243
+      },
+      "semantic_cluster_js": {
+        "bb": 0.062489528006914874,
+        "bt": 0.37683056916590485
+      },
+      "compression_abs_diff": {
+        "bb": 0.004405636668097379,
+        "bt": 0.03385959213875157
+      },
+      "top1_abs_diff": {
+        "bb": 0.004958098444355172,
+        "bt": 0.023088991831573518
+      },
+      "top5_abs_diff": {
+        "bb": 0.00729797648025036,
+        "bt": 0.049853058823807694
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 12,
+      "lexical_js": {
+        "bb": 0.08465832444443468,
+        "bt": 0.19776446478358037
+      },
+      "rho": {
+        "bb": 0.6157628746229447,
+        "bt": 0.41389951961623767
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06882647447576297,
+        "bt": 0.37666200642250597
+      },
+      "compression_abs_diff": {
+        "bb": 0.00616061989774511,
+        "bt": 0.03364690645823971
+      },
+      "top1_abs_diff": {
+        "bb": 0.0045164944462731905,
+        "bt": 0.023512936593958412
+      },
+      "top5_abs_diff": {
+        "bb": 0.0059379642178508905,
+        "bt": 0.050721574336487656
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 13,
+      "lexical_js": {
+        "bb": 0.08391070222810129,
+        "bt": 0.19436232992652722
+      },
+      "rho": {
+        "bb": 0.6171981548015253,
+        "bt": 0.415649224724477
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06197169559135582,
+        "bt": 0.3748645119611367
+      },
+      "compression_abs_diff": {
+        "bb": 0.004937869564589827,
+        "bt": 0.03311557797672896
+      },
+      "top1_abs_diff": {
+        "bb": 0.004998928604009275,
+        "bt": 0.02383166242210685
+      },
+      "top5_abs_diff": {
+        "bb": 0.006852064131329873,
+        "bt": 0.05154305399336304
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 14,
+      "lexical_js": {
+        "bb": 0.08344148103730221,
+        "bt": 0.19368866696964696
+      },
+      "rho": {
+        "bb": 0.630878954729399,
+        "bt": 0.4228385376782253
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06390221324084096,
+        "bt": 0.37750296964159985
+      },
+      "compression_abs_diff": {
+        "bb": 0.0063421855708147255,
+        "bt": 0.031256095561607806
+      },
+      "top1_abs_diff": {
+        "bb": 0.004506892275139762,
+        "bt": 0.02400321920954197
+      },
+      "top5_abs_diff": {
+        "bb": 0.00635939031227224,
+        "bt": 0.052059587052577024
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 15,
+      "lexical_js": {
+        "bb": 0.08265899491907876,
+        "bt": 0.19357080837345422
+      },
+      "rho": {
+        "bb": 0.6222425280924028,
+        "bt": 0.421797363223551
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0627464396532412,
+        "bt": 0.37039307211433053
+      },
+      "compression_abs_diff": {
+        "bb": 0.004261899884103983,
+        "bt": 0.0314388515975362
+      },
+      "top1_abs_diff": {
+        "bb": 0.005259966642916225,
+        "bt": 0.02356283182040397
+      },
+      "top5_abs_diff": {
+        "bb": 0.007547350557137651,
+        "bt": 0.05068510355220452
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 16,
+      "lexical_js": {
+        "bb": 0.07771739377307094,
+        "bt": 0.1926018308824553
+      },
+      "rho": {
+        "bb": 0.6286085074097314,
+        "bt": 0.4196734461151362
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06734112789331899,
+        "bt": 0.3759599394451451
+      },
+      "compression_abs_diff": {
+        "bb": 0.0051554433530836144,
+        "bt": 0.033047401226432876
+      },
+      "top1_abs_diff": {
+        "bb": 0.005318782264112395,
+        "bt": 0.022791562237982458
+      },
+      "top5_abs_diff": {
+        "bb": 0.007157473460270206,
+        "bt": 0.050180166758116734
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 17,
+      "lexical_js": {
+        "bb": 0.076272745717096,
+        "bt": 0.19126740013274088
+      },
+      "rho": {
+        "bb": 0.6235346164515021,
+        "bt": 0.4185459434880605
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06455477353805276,
+        "bt": 0.3801301779653769
+      },
+      "compression_abs_diff": {
+        "bb": 0.00417207424966193,
+        "bt": 0.03143225414091593
+      },
+      "top1_abs_diff": {
+        "bb": 0.004542525810747712,
+        "bt": 0.024222254084451746
+      },
+      "top5_abs_diff": {
+        "bb": 0.005746841572959024,
+        "bt": 0.0514745225321841
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 18,
+      "lexical_js": {
+        "bb": 0.07991336638356934,
+        "bt": 0.19181974608218266
+      },
+      "rho": {
+        "bb": 0.6255511592465378,
+        "bt": 0.4205310830751256
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0672966051451334,
+        "bt": 0.37469889741576407
+      },
+      "compression_abs_diff": {
+        "bb": 0.007922150557103248,
+        "bt": 0.031833777736921864
+      },
+      "top1_abs_diff": {
+        "bb": 0.004474680155710314,
+        "bt": 0.023055629745048864
+      },
+      "top5_abs_diff": {
+        "bb": 0.006651285015172143,
+        "bt": 0.04926035955484063
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 19,
+      "lexical_js": {
+        "bb": 0.0755545879670593,
+        "bt": 0.19032864603619426
+      },
+      "rho": {
+        "bb": 0.6278781753465561,
+        "bt": 0.425652633343486
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06434556002056026,
+        "bt": 0.3763320210153032
+      },
+      "compression_abs_diff": {
+        "bb": 0.005919824756180316,
+        "bt": 0.0314414979822068
+      },
+      "top1_abs_diff": {
+        "bb": 0.004621264353454422,
+        "bt": 0.02341757349735822
+      },
+      "top5_abs_diff": {
+        "bb": 0.006987017213399101,
+        "bt": 0.05085430788091191
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 20,
+      "lexical_js": {
+        "bb": 0.08196284211192058,
+        "bt": 0.19504968888186194
+      },
+      "rho": {
+        "bb": 0.6273823835062389,
+        "bt": 0.41499465184083895
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06545175168807918,
+        "bt": 0.3769443812432771
+      },
+      "compression_abs_diff": {
+        "bb": 0.00669569152781256,
+        "bt": 0.03275506246812438
+      },
+      "top1_abs_diff": {
+        "bb": 0.004143671068656874,
+        "bt": 0.02372061528057871
+      },
+      "top5_abs_diff": {
+        "bb": 0.006121638554977731,
+        "bt": 0.0513225187588132
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 21,
+      "lexical_js": {
+        "bb": 0.07611604421124267,
+        "bt": 0.18948391968689693
+      },
+      "rho": {
+        "bb": 0.6316834151577527,
+        "bt": 0.42321852784626285
+      },
+      "semantic_cluster_js": {
+        "bb": 0.061724755647524346,
+        "bt": 0.3760401625472545
+      },
+      "compression_abs_diff": {
+        "bb": 0.004366840891956973,
+        "bt": 0.030163217972427336
+      },
+      "top1_abs_diff": {
+        "bb": 0.005376736505331038,
+        "bt": 0.023787663634976277
+      },
+      "top5_abs_diff": {
+        "bb": 0.006743195433528759,
+        "bt": 0.05052320641973023
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 22,
+      "lexical_js": {
+        "bb": 0.08204987375528902,
+        "bt": 0.1924333284638554
+      },
+      "rho": {
+        "bb": 0.6246865052392636,
+        "bt": 0.4244452933775948
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06700326238960568,
+        "bt": 0.37460702879615687
+      },
+      "compression_abs_diff": {
+        "bb": 0.006095620118191458,
+        "bt": 0.03231037057641365
+      },
+      "top1_abs_diff": {
+        "bb": 0.005058075814650762,
+        "bt": 0.02393298016255714
+      },
+      "top5_abs_diff": {
+        "bb": 0.006842192377132409,
+        "bt": 0.051656035785184684
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 23,
+      "lexical_js": {
+        "bb": 0.08256233741817878,
+        "bt": 0.19383898072777717
+      },
+      "rho": {
+        "bb": 0.6255933118495869,
+        "bt": 0.4163906616455084
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06640480488131621,
+        "bt": 0.3788032733047901
+      },
+      "compression_abs_diff": {
+        "bb": 0.0045375704570433184,
+        "bt": 0.031227541699910332
+      },
+      "top1_abs_diff": {
+        "bb": 0.004747973514921533,
+        "bt": 0.023192201820326264
+      },
+      "top5_abs_diff": {
+        "bb": 0.005624228946649253,
+        "bt": 0.05076877970506503
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 24,
+      "lexical_js": {
+        "bb": 0.07985406119339493,
+        "bt": 0.19127840622786688
+      },
+      "rho": {
+        "bb": 0.6328216724041035,
+        "bt": 0.42657622169327764
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06647832144841187,
+        "bt": 0.3727228290416398
+      },
+      "compression_abs_diff": {
+        "bb": 0.004731988380506589,
+        "bt": 0.03152654970254961
+      },
+      "top1_abs_diff": {
+        "bb": 0.00509889463916722,
+        "bt": 0.02311168435809703
+      },
+      "top5_abs_diff": {
+        "bb": 0.006897680303579362,
+        "bt": 0.05058073279097372
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 25,
+      "lexical_js": {
+        "bb": 0.08283740627184252,
+        "bt": 0.19426764430002433
+      },
+      "rho": {
+        "bb": 0.6273732518848185,
+        "bt": 0.42168349192550086
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06661719906553373,
+        "bt": 0.3797264163352172
+      },
+      "compression_abs_diff": {
+        "bb": 0.004433063901375136,
+        "bt": 0.0320663992421056
+      },
+      "top1_abs_diff": {
+        "bb": 0.005105581019216704,
+        "bt": 0.024550230960830057
+      },
+      "top5_abs_diff": {
+        "bb": 0.007690182011535997,
+        "bt": 0.052126186793988116
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 26,
+      "lexical_js": {
+        "bb": 0.07555512281703271,
+        "bt": 0.19200394909537222
+      },
+      "rho": {
+        "bb": 0.6231781549836519,
+        "bt": 0.41570527919882877
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06440453991647335,
+        "bt": 0.3774347327866829
+      },
+      "compression_abs_diff": {
+        "bb": 0.0047757336833589,
+        "bt": 0.032722921796993175
+      },
+      "top1_abs_diff": {
+        "bb": 0.005161891454525007,
+        "bt": 0.023390771888959893
+      },
+      "top5_abs_diff": {
+        "bb": 0.00729124866557382,
+        "bt": 0.050495245433205
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 27,
+      "lexical_js": {
+        "bb": 0.08397585309035192,
+        "bt": 0.19574988289412518
+      },
+      "rho": {
+        "bb": 0.6213563967692912,
+        "bt": 0.42298952978770005
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06726724287091211,
+        "bt": 0.3734329948600279
+      },
+      "compression_abs_diff": {
+        "bb": 0.006671213127632336,
+        "bt": 0.03267958811252218
+      },
+      "top1_abs_diff": {
+        "bb": 0.005125283593703802,
+        "bt": 0.02415229614023427
+      },
+      "top5_abs_diff": {
+        "bb": 0.007544989424881492,
+        "bt": 0.05109124571130596
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 28,
+      "lexical_js": {
+        "bb": 0.07995439663621244,
+        "bt": 0.19255580135786177
+      },
+      "rho": {
+        "bb": 0.6287052095005717,
+        "bt": 0.420277838588218
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06798202471482968,
+        "bt": 0.38047875734508746
+      },
+      "compression_abs_diff": {
+        "bb": 0.003708018125588005,
+        "bt": 0.03320724189888636
+      },
+      "top1_abs_diff": {
+        "bb": 0.00499234365986678,
+        "bt": 0.02405470689505636
+      },
+      "top5_abs_diff": {
+        "bb": 0.006602736373862079,
+        "bt": 0.05022901827633262
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 29,
+      "lexical_js": {
+        "bb": 0.07180705136139053,
+        "bt": 0.19085159621050574
+      },
+      "rho": {
+        "bb": 0.6393548356849319,
+        "bt": 0.42502540056866617
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06636432074919907,
+        "bt": 0.37737210684304423
+      },
+      "compression_abs_diff": {
+        "bb": 0.005155655638847201,
+        "bt": 0.03311592529483365
+      },
+      "top1_abs_diff": {
+        "bb": 0.004173553187407679,
+        "bt": 0.02349539692394825
+      },
+      "top5_abs_diff": {
+        "bb": 0.0065235083197976735,
+        "bt": 0.05153313872674888
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 30,
+      "lexical_js": {
+        "bb": 0.08081021585395384,
+        "bt": 0.19366585652166393
+      },
+      "rho": {
+        "bb": 0.6312393340511716,
+        "bt": 0.42274596632950995
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06645866865571076,
+        "bt": 0.3773796857471239
+      },
+      "compression_abs_diff": {
+        "bb": 0.006023739839591186,
+        "bt": 0.03521341128316943
+      },
+      "top1_abs_diff": {
+        "bb": 0.004827783832774119,
+        "bt": 0.023679304546444735
+      },
+      "top5_abs_diff": {
+        "bb": 0.00734299146915918,
+        "bt": 0.051127696073205935
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 31,
+      "lexical_js": {
+        "bb": 0.0777366563828344,
+        "bt": 0.19285143943323643
+      },
+      "rho": {
+        "bb": 0.6224487610854271,
+        "bt": 0.4178100231694037
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06603521790745055,
+        "bt": 0.3803718854862604
+      },
+      "compression_abs_diff": {
+        "bb": 0.005145977657331313,
+        "bt": 0.030822832930917036
+      },
+      "top1_abs_diff": {
+        "bb": 0.0048096931570928095,
+        "bt": 0.02373895254302795
+      },
+      "top5_abs_diff": {
+        "bb": 0.006640983796695291,
+        "bt": 0.05051965861458698
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 32,
+      "lexical_js": {
+        "bb": 0.07891012610294869,
+        "bt": 0.19156858317278405
+      },
+      "rho": {
+        "bb": 0.6086801120595923,
+        "bt": 0.4123499518449571
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06427122514037689,
+        "bt": 0.37900013459432635
+      },
+      "compression_abs_diff": {
+        "bb": 0.0042162480127609795,
+        "bt": 0.03355638532526903
+      },
+      "top1_abs_diff": {
+        "bb": 0.00533441413965157,
+        "bt": 0.023160452084242555
+      },
+      "top5_abs_diff": {
+        "bb": 0.006846367067650625,
+        "bt": 0.05074517534007311
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 33,
+      "lexical_js": {
+        "bb": 0.08002501392341715,
+        "bt": 0.19343739750339783
+      },
+      "rho": {
+        "bb": 0.623407273603305,
+        "bt": 0.4192567964822789
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06609676553356594,
+        "bt": 0.37606537802328316
+      },
+      "compression_abs_diff": {
+        "bb": 0.006116864053546505,
+        "bt": 0.032336897924933
+      },
+      "top1_abs_diff": {
+        "bb": 0.0045419192922855935,
+        "bt": 0.023594664429854095
+      },
+      "top5_abs_diff": {
+        "bb": 0.007202529954899107,
+        "bt": 0.05128558733684574
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 34,
+      "lexical_js": {
+        "bb": 0.08382032351576035,
+        "bt": 0.19462144785557256
+      },
+      "rho": {
+        "bb": 0.6173772449220835,
+        "bt": 0.41706782865542086
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06445046019504354,
+        "bt": 0.3743612798160003
+      },
+      "compression_abs_diff": {
+        "bb": 0.006096671879917576,
+        "bt": 0.03202837606459905
+      },
+      "top1_abs_diff": {
+        "bb": 0.004289127739901474,
+        "bt": 0.024367762669480875
+      },
+      "top5_abs_diff": {
+        "bb": 0.0060307196969362035,
+        "bt": 0.05014264111474582
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 35,
+      "lexical_js": {
+        "bb": 0.07963993683153797,
+        "bt": 0.19128143774945253
+      },
+      "rho": {
+        "bb": 0.6251548375542232,
+        "bt": 0.42330023647316545
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0692634740410451,
+        "bt": 0.3781485722310474
+      },
+      "compression_abs_diff": {
+        "bb": 0.005471951993594263,
+        "bt": 0.03186812292260388
+      },
+      "top1_abs_diff": {
+        "bb": 0.004674466451761236,
+        "bt": 0.023382534815484194
+      },
+      "top5_abs_diff": {
+        "bb": 0.005637712782139517,
+        "bt": 0.05051955309128037
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 36,
+      "lexical_js": {
+        "bb": 0.07999152402044415,
+        "bt": 0.19172457222625186
+      },
+      "rho": {
+        "bb": 0.6167026793590691,
+        "bt": 0.41927591914831064
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06658796154159714,
+        "bt": 0.37415459448781796
+      },
+      "compression_abs_diff": {
+        "bb": 0.005312220392899969,
+        "bt": 0.03475302864335109
+      },
+      "top1_abs_diff": {
+        "bb": 0.004431188093211118,
+        "bt": 0.02364985416418953
+      },
+      "top5_abs_diff": {
+        "bb": 0.006742357406725612,
+        "bt": 0.049962432473333186
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 37,
+      "lexical_js": {
+        "bb": 0.07604193181151674,
+        "bt": 0.19060438166792018
+      },
+      "rho": {
+        "bb": 0.6310806002739582,
+        "bt": 0.42277397003796685
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06323993109048337,
+        "bt": 0.37623054909890374
+      },
+      "compression_abs_diff": {
+        "bb": 0.004012791068523475,
+        "bt": 0.03465811269396984
+      },
+      "top1_abs_diff": {
+        "bb": 0.004451738666167982,
+        "bt": 0.024011606146588205
+      },
+      "top5_abs_diff": {
+        "bb": 0.005942602112385217,
+        "bt": 0.051357671115563906
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 38,
+      "lexical_js": {
+        "bb": 0.08245201773272512,
+        "bt": 0.19535321815092813
+      },
+      "rho": {
+        "bb": 0.6223297888981577,
+        "bt": 0.41786092760349236
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06525942076676938,
+        "bt": 0.37738854736858835
+      },
+      "compression_abs_diff": {
+        "bb": 0.005706936280400086,
+        "bt": 0.032847092752233735
+      },
+      "top1_abs_diff": {
+        "bb": 0.005306161835068445,
+        "bt": 0.02394657436884325
+      },
+      "top5_abs_diff": {
+        "bb": 0.006898381998416509,
+        "bt": 0.05118308891494352
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 39,
+      "lexical_js": {
+        "bb": 0.07435240240272263,
+        "bt": 0.18930093022541752
+      },
+      "rho": {
+        "bb": 0.6305093790636357,
+        "bt": 0.4229399721533111
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06465240321244653,
+        "bt": 0.375464710489063
+      },
+      "compression_abs_diff": {
+        "bb": 0.008195440095298474,
+        "bt": 0.034373389420809204
+      },
+      "top1_abs_diff": {
+        "bb": 0.005301848410207923,
+        "bt": 0.02291267025822075
+      },
+      "top5_abs_diff": {
+        "bb": 0.0066781553396747465,
+        "bt": 0.05008689778863845
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 40,
+      "lexical_js": {
+        "bb": 0.07617870756996627,
+        "bt": 0.19242473120213743
+      },
+      "rho": {
+        "bb": 0.6208391726640526,
+        "bt": 0.4200222040989661
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06632099845737598,
+        "bt": 0.3773843416655344
+      },
+      "compression_abs_diff": {
+        "bb": 0.0061891415516084364,
+        "bt": 0.032457784265222354
+      },
+      "top1_abs_diff": {
+        "bb": 0.004654974245323244,
+        "bt": 0.023541859668595927
+      },
+      "top5_abs_diff": {
+        "bb": 0.006299964447433932,
+        "bt": 0.05090740938328001
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 41,
+      "lexical_js": {
+        "bb": 0.08131103496278863,
+        "bt": 0.19328270530110192
+      },
+      "rho": {
+        "bb": 0.623522458401569,
+        "bt": 0.4142030187627126
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06565759103672342,
+        "bt": 0.3764468175276278
+      },
+      "compression_abs_diff": {
+        "bb": 0.004752060534389161,
+        "bt": 0.031165612541881896
+      },
+      "top1_abs_diff": {
+        "bb": 0.004832573341633003,
+        "bt": 0.023775297008962994
+      },
+      "top5_abs_diff": {
+        "bb": 0.0063476522685501895,
+        "bt": 0.05074495149005261
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 42,
+      "lexical_js": {
+        "bb": 0.08546915737200837,
+        "bt": 0.1981578546274753
+      },
+      "rho": {
+        "bb": 0.6163705347569035,
+        "bt": 0.408758355563174
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06734037082248934,
+        "bt": 0.3799634446126509
+      },
+      "compression_abs_diff": {
+        "bb": 0.008154644714200797,
+        "bt": 0.031937575855502845
+      },
+      "top1_abs_diff": {
+        "bb": 0.005130710598481531,
+        "bt": 0.023768679634387852
+      },
+      "top5_abs_diff": {
+        "bb": 0.006898829453864276,
+        "bt": 0.0504086970218014
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 43,
+      "lexical_js": {
+        "bb": 0.0829307768516659,
+        "bt": 0.19340692314008556
+      },
+      "rho": {
+        "bb": 0.62533510858796,
+        "bt": 0.42099243071019465
+      },
+      "semantic_cluster_js": {
+        "bb": 0.07016257042753797,
+        "bt": 0.37759558248559505
+      },
+      "compression_abs_diff": {
+        "bb": 0.003916930743749754,
+        "bt": 0.03257838177726038
+      },
+      "top1_abs_diff": {
+        "bb": 0.005237068410303419,
+        "bt": 0.024267879020607324
+      },
+      "top5_abs_diff": {
+        "bb": 0.007365291970901941,
+        "bt": 0.050850017148328465
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 44,
+      "lexical_js": {
+        "bb": 0.08153306952748789,
+        "bt": 0.1960786986841239
+      },
+      "rho": {
+        "bb": 0.6243612636171872,
+        "bt": 0.4177583884267258
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06676239704423967,
+        "bt": 0.3766186938859509
+      },
+      "compression_abs_diff": {
+        "bb": 0.005114649600970555,
+        "bt": 0.030795219327141226
+      },
+      "top1_abs_diff": {
+        "bb": 0.004293148832676659,
+        "bt": 0.024207982596140848
+      },
+      "top5_abs_diff": {
+        "bb": 0.006702258939244279,
+        "bt": 0.04967723946586702
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 45,
+      "lexical_js": {
+        "bb": 0.08393296928819209,
+        "bt": 0.1960610037544865
+      },
+      "rho": {
+        "bb": 0.6191906368060669,
+        "bt": 0.41877011266348746
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06746440471019124,
+        "bt": 0.3779338368945142
+      },
+      "compression_abs_diff": {
+        "bb": 0.00419028522913558,
+        "bt": 0.031011415951494967
+      },
+      "top1_abs_diff": {
+        "bb": 0.004596559306840469,
+        "bt": 0.022813963223348426
+      },
+      "top5_abs_diff": {
+        "bb": 0.007260261308130783,
+        "bt": 0.05022995196822632
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 46,
+      "lexical_js": {
+        "bb": 0.08133954485011591,
+        "bt": 0.19281342810781332
+      },
+      "rho": {
+        "bb": 0.6191276897485873,
+        "bt": 0.4197472194016931
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06417480170103,
+        "bt": 0.3773552898162847
+      },
+      "compression_abs_diff": {
+        "bb": 0.005638153312258837,
+        "bt": 0.03063239583112772
+      },
+      "top1_abs_diff": {
+        "bb": 0.004520198030268661,
+        "bt": 0.023746828872006825
+      },
+      "top5_abs_diff": {
+        "bb": 0.006349600618185698,
+        "bt": 0.050722885532159805
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 47,
+      "lexical_js": {
+        "bb": 0.07976713302448962,
+        "bt": 0.1932084680345313
+      },
+      "rho": {
+        "bb": 0.6263631609597506,
+        "bt": 0.41920205018303985
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0650660254866616,
+        "bt": 0.37346737301082533
+      },
+      "compression_abs_diff": {
+        "bb": 0.004865025703189332,
+        "bt": 0.0318583208923763
+      },
+      "top1_abs_diff": {
+        "bb": 0.004278710759289069,
+        "bt": 0.023542622660511978
+      },
+      "top5_abs_diff": {
+        "bb": 0.006678178131175026,
+        "bt": 0.05081929110953023
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 48,
+      "lexical_js": {
+        "bb": 0.08151166207095178,
+        "bt": 0.19437044402691508
+      },
+      "rho": {
+        "bb": 0.6320874668531306,
+        "bt": 0.42317076591610414
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06606242957813799,
+        "bt": 0.3775529628382845
+      },
+      "compression_abs_diff": {
+        "bb": 0.006868652691154361,
+        "bt": 0.033768061042263126
+      },
+      "top1_abs_diff": {
+        "bb": 0.004405146574367826,
+        "bt": 0.0229042888441663
+      },
+      "top5_abs_diff": {
+        "bb": 0.0054035253741623376,
+        "bt": 0.05152781447587118
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 49,
+      "lexical_js": {
+        "bb": 0.08343436366752913,
+        "bt": 0.19561795039903984
+      },
+      "rho": {
+        "bb": 0.6201759724854755,
+        "bt": 0.41751098125047875
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06374645001492313,
+        "bt": 0.3776549161488689
+      },
+      "compression_abs_diff": {
+        "bb": 0.006074696140156792,
+        "bt": 0.03256633818202261
+      },
+      "top1_abs_diff": {
+        "bb": 0.005506982674425775,
+        "bt": 0.023386888449006937
+      },
+      "top5_abs_diff": {
+        "bb": 0.006893996159775632,
+        "bt": 0.051035998630252995
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 50,
+      "lexical_js": {
+        "bb": 0.07584353826836919,
+        "bt": 0.1907373904795627
+      },
+      "rho": {
+        "bb": 0.629446521669598,
+        "bt": 0.4204117187407743
+      },
+      "semantic_cluster_js": {
+        "bb": 0.062450230231138965,
+        "bt": 0.37622015349426596
+      },
+      "compression_abs_diff": {
+        "bb": 0.006870910018675954,
+        "bt": 0.032228450173619715
+      },
+      "top1_abs_diff": {
+        "bb": 0.004805585308368601,
+        "bt": 0.024180278713429735
+      },
+      "top5_abs_diff": {
+        "bb": 0.006667354160319347,
+        "bt": 0.05103386565200837
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 51,
+      "lexical_js": {
+        "bb": 0.07488926808832197,
+        "bt": 0.18963558952925832
+      },
+      "rho": {
+        "bb": 0.6285827129787623,
+        "bt": 0.4224255803077874
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06732131702563628,
+        "bt": 0.3789545194929711
+      },
+      "compression_abs_diff": {
+        "bb": 0.004019659272700598,
+        "bt": 0.03215751307649404
+      },
+      "top1_abs_diff": {
+        "bb": 0.004013896460126736,
+        "bt": 0.023117408460856147
+      },
+      "top5_abs_diff": {
+        "bb": 0.005589923234097216,
+        "bt": 0.051880138805801945
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 52,
+      "lexical_js": {
+        "bb": 0.08071487501960957,
+        "bt": 0.1919412504948311
+      },
+      "rho": {
+        "bb": 0.6254109737554988,
+        "bt": 0.42107457098803075
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0665296115594873,
+        "bt": 0.37711431954898034
+      },
+      "compression_abs_diff": {
+        "bb": 0.005060808173381729,
+        "bt": 0.0335651776450816
+      },
+      "top1_abs_diff": {
+        "bb": 0.004649517091279744,
+        "bt": 0.023386044698522648
+      },
+      "top5_abs_diff": {
+        "bb": 0.005561953046552545,
+        "bt": 0.05054917132888178
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 53,
+      "lexical_js": {
+        "bb": 0.08391782337762936,
+        "bt": 0.19519952259385878
+      },
+      "rho": {
+        "bb": 0.6332612040188524,
+        "bt": 0.42288934162424185
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06739550529485432,
+        "bt": 0.3793614849587151
+      },
+      "compression_abs_diff": {
+        "bb": 0.0054201394826258135,
+        "bt": 0.033826670519738845
+      },
+      "top1_abs_diff": {
+        "bb": 0.004850053313961868,
+        "bt": 0.023836275057859815
+      },
+      "top5_abs_diff": {
+        "bb": 0.006780728104589827,
+        "bt": 0.050047379567340185
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 54,
+      "lexical_js": {
+        "bb": 0.0765644256697461,
+        "bt": 0.19276843963620108
+      },
+      "rho": {
+        "bb": 0.6260680314150989,
+        "bt": 0.4160353121333826
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06444898171585152,
+        "bt": 0.3774356636409946
+      },
+      "compression_abs_diff": {
+        "bb": 0.0036427684150612187,
+        "bt": 0.033337296540637544
+      },
+      "top1_abs_diff": {
+        "bb": 0.004993242405533607,
+        "bt": 0.024090583653012292
+      },
+      "top5_abs_diff": {
+        "bb": 0.00647535251197543,
+        "bt": 0.05152411858073493
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 55,
+      "lexical_js": {
+        "bb": 0.08083104245760528,
+        "bt": 0.19179021123959097
+      },
+      "rho": {
+        "bb": 0.6295750784544792,
+        "bt": 0.41881508492345
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06629365948577746,
+        "bt": 0.375014628890729
+      },
+      "compression_abs_diff": {
+        "bb": 0.0033991834081643782,
+        "bt": 0.03429031653197165
+      },
+      "top1_abs_diff": {
+        "bb": 0.0050629615913905185,
+        "bt": 0.023749241864143292
+      },
+      "top5_abs_diff": {
+        "bb": 0.006980796174855391,
+        "bt": 0.05124529581945216
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 56,
+      "lexical_js": {
+        "bb": 0.07891647896562333,
+        "bt": 0.1922978618704363
+      },
+      "rho": {
+        "bb": 0.6308062888598177,
+        "bt": 0.4249391079906504
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06850391179764842,
+        "bt": 0.3745888295124573
+      },
+      "compression_abs_diff": {
+        "bb": 0.0050744609917758995,
+        "bt": 0.03267885702587343
+      },
+      "top1_abs_diff": {
+        "bb": 0.004783054853004909,
+        "bt": 0.02379443383500417
+      },
+      "top5_abs_diff": {
+        "bb": 0.007429051485602034,
+        "bt": 0.050074797405017135
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 57,
+      "lexical_js": {
+        "bb": 0.0735766914242946,
+        "bt": 0.1904333120615652
+      },
+      "rho": {
+        "bb": 0.6339085902793616,
+        "bt": 0.42214733051228803
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06338862987377723,
+        "bt": 0.376072107673167
+      },
+      "compression_abs_diff": {
+        "bb": 0.005465689119280709,
+        "bt": 0.031094112365357963
+      },
+      "top1_abs_diff": {
+        "bb": 0.004735062322913695,
+        "bt": 0.02394416038800097
+      },
+      "top5_abs_diff": {
+        "bb": 0.006938590218472972,
+        "bt": 0.05133086885629473
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 58,
+      "lexical_js": {
+        "bb": 0.07639522912221901,
+        "bt": 0.19094230206445242
+      },
+      "rho": {
+        "bb": 0.6237699857704445,
+        "bt": 0.418767813592316
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0646841918685676,
+        "bt": 0.3740380301211618
+      },
+      "compression_abs_diff": {
+        "bb": 0.003292342782262351,
+        "bt": 0.02978682878537375
+      },
+      "top1_abs_diff": {
+        "bb": 0.004800622718580985,
+        "bt": 0.024487914186731314
+      },
+      "top5_abs_diff": {
+        "bb": 0.005981834160445528,
+        "bt": 0.0514497619804736
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 59,
+      "lexical_js": {
+        "bb": 0.07712236788902609,
+        "bt": 0.1925634934552284
+      },
+      "rho": {
+        "bb": 0.6213862365231075,
+        "bt": 0.4186286960989474
+      },
+      "semantic_cluster_js": {
+        "bb": 0.07035157937378318,
+        "bt": 0.3809702328840383
+      },
+      "compression_abs_diff": {
+        "bb": 0.0070152393621954025,
+        "bt": 0.03183174043014412
+      },
+      "top1_abs_diff": {
+        "bb": 0.005060306443520484,
+        "bt": 0.02394266281910511
+      },
+      "top5_abs_diff": {
+        "bb": 0.007784426757454352,
+        "bt": 0.050769577259830244
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 60,
+      "lexical_js": {
+        "bb": 0.07858388586494178,
+        "bt": 0.19362081439741993
+      },
+      "rho": {
+        "bb": 0.6178756054197415,
+        "bt": 0.41508096309088627
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06445093268014916,
+        "bt": 0.37788840533535323
+      },
+      "compression_abs_diff": {
+        "bb": 0.005306809050224165,
+        "bt": 0.03247329238999493
+      },
+      "top1_abs_diff": {
+        "bb": 0.005568541627769391,
+        "bt": 0.023325729345936946
+      },
+      "top5_abs_diff": {
+        "bb": 0.00717933467684254,
+        "bt": 0.05205506233701182
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 61,
+      "lexical_js": {
+        "bb": 0.08315257902965151,
+        "bt": 0.19529523598329965
+      },
+      "rho": {
+        "bb": 0.6226886121988799,
+        "bt": 0.41576814611458063
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06349368144622344,
+        "bt": 0.3770112900758445
+      },
+      "compression_abs_diff": {
+        "bb": 0.006193202621400404,
+        "bt": 0.03286304017463416
+      },
+      "top1_abs_diff": {
+        "bb": 0.004997636695964522,
+        "bt": 0.023668480258905097
+      },
+      "top5_abs_diff": {
+        "bb": 0.007426884551529717,
+        "bt": 0.05051586947296374
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 62,
+      "lexical_js": {
+        "bb": 0.0825507713550072,
+        "bt": 0.19368865739401528
+      },
+      "rho": {
+        "bb": 0.6215732466949226,
+        "bt": 0.41706193929746815
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06850540355710541,
+        "bt": 0.3771150132106735
+      },
+      "compression_abs_diff": {
+        "bb": 0.0053072586385719545,
+        "bt": 0.030019830249540358
+      },
+      "top1_abs_diff": {
+        "bb": 0.004861637669132322,
+        "bt": 0.023678940059857673
+      },
+      "top5_abs_diff": {
+        "bb": 0.007550765312578386,
+        "bt": 0.05056347277096623
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 63,
+      "lexical_js": {
+        "bb": 0.0816965806643481,
+        "bt": 0.1916948730815565
+      },
+      "rho": {
+        "bb": 0.6297166133148091,
+        "bt": 0.4237420235488749
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06826505159687844,
+        "bt": 0.37683863059647765
+      },
+      "compression_abs_diff": {
+        "bb": 0.0037872270586461697,
+        "bt": 0.03064595127350191
+      },
+      "top1_abs_diff": {
+        "bb": 0.0042931339291987355,
+        "bt": 0.022955530432529916
+      },
+      "top5_abs_diff": {
+        "bb": 0.0056107093939536164,
+        "bt": 0.05019179836162833
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 64,
+      "lexical_js": {
+        "bb": 0.07700592961459447,
+        "bt": 0.1921064583254847
+      },
+      "rho": {
+        "bb": 0.6292990330833328,
+        "bt": 0.41873831229847647
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06450026315081832,
+        "bt": 0.3763621151681104
+      },
+      "compression_abs_diff": {
+        "bb": 0.0052625965851412935,
+        "bt": 0.034020205457538165
+      },
+      "top1_abs_diff": {
+        "bb": 0.005482011506263752,
+        "bt": 0.02359717694494144
+      },
+      "top5_abs_diff": {
+        "bb": 0.0064355660859212694,
+        "bt": 0.051249262589220246
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 65,
+      "lexical_js": {
+        "bb": 0.08127032367351308,
+        "bt": 0.19326774697316199
+      },
+      "rho": {
+        "bb": 0.6306110732928981,
+        "bt": 0.42102926109808164
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0656727046496037,
+        "bt": 0.3760486627352641
+      },
+      "compression_abs_diff": {
+        "bb": 0.004745601692340407,
+        "bt": 0.03429628780958877
+      },
+      "top1_abs_diff": {
+        "bb": 0.004406797065060186,
+        "bt": 0.02387020595287409
+      },
+      "top5_abs_diff": {
+        "bb": 0.006118500627622721,
+        "bt": 0.05095889028044782
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 66,
+      "lexical_js": {
+        "bb": 0.08317917890853514,
+        "bt": 0.19322733635964054
+      },
+      "rho": {
+        "bb": 0.6193236763808992,
+        "bt": 0.42014430439855865
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06444166223963481,
+        "bt": 0.3735893198286904
+      },
+      "compression_abs_diff": {
+        "bb": 0.004874712440846616,
+        "bt": 0.03275111683444636
+      },
+      "top1_abs_diff": {
+        "bb": 0.005124891922533923,
+        "bt": 0.023014743185895987
+      },
+      "top5_abs_diff": {
+        "bb": 0.006359703133275229,
+        "bt": 0.04985869905543198
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 67,
+      "lexical_js": {
+        "bb": 0.07587173558320276,
+        "bt": 0.18918371314457647
+      },
+      "rho": {
+        "bb": 0.6272186022100635,
+        "bt": 0.42246885700365483
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06061776281204067,
+        "bt": 0.3742593095482056
+      },
+      "compression_abs_diff": {
+        "bb": 0.0027740331802723656,
+        "bt": 0.03289771460684376
+      },
+      "top1_abs_diff": {
+        "bb": 0.004505451093203448,
+        "bt": 0.023553353726446156
+      },
+      "top5_abs_diff": {
+        "bb": 0.0069124774150358,
+        "bt": 0.0502391589210166
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 68,
+      "lexical_js": {
+        "bb": 0.08011830863591086,
+        "bt": 0.1922776199014258
+      },
+      "rho": {
+        "bb": 0.6262228185294328,
+        "bt": 0.41865671370959223
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06628104413023199,
+        "bt": 0.37318437326789206
+      },
+      "compression_abs_diff": {
+        "bb": 0.0056192488872857885,
+        "bt": 0.03397815851544742
+      },
+      "top1_abs_diff": {
+        "bb": 0.0047652156746304545,
+        "bt": 0.024083455420498067
+      },
+      "top5_abs_diff": {
+        "bb": 0.006765529700725127,
+        "bt": 0.05113314343046351
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 69,
+      "lexical_js": {
+        "bb": 0.07743318979258329,
+        "bt": 0.19279663844151382
+      },
+      "rho": {
+        "bb": 0.6217569393483257,
+        "bt": 0.4167406312815967
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06738857934987094,
+        "bt": 0.3781133773388836
+      },
+      "compression_abs_diff": {
+        "bb": 0.0061806466218632915,
+        "bt": 0.032639822974352896
+      },
+      "top1_abs_diff": {
+        "bb": 0.005548477696935339,
+        "bt": 0.023104542653205575
+      },
+      "top5_abs_diff": {
+        "bb": 0.007971469751309006,
+        "bt": 0.05018283053216238
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 70,
+      "lexical_js": {
+        "bb": 0.08196774514707236,
+        "bt": 0.19524108363795237
+      },
+      "rho": {
+        "bb": 0.6193906541919474,
+        "bt": 0.41437531578116266
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06495126989078664,
+        "bt": 0.37567899688756584
+      },
+      "compression_abs_diff": {
+        "bb": 0.0058669795596914395,
+        "bt": 0.03111945694473714
+      },
+      "top1_abs_diff": {
+        "bb": 0.005386144705137785,
+        "bt": 0.02265218648334434
+      },
+      "top5_abs_diff": {
+        "bb": 0.007318866727711872,
+        "bt": 0.049847328465139014
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 71,
+      "lexical_js": {
+        "bb": 0.07622991372445939,
+        "bt": 0.19060671814245245
+      },
+      "rho": {
+        "bb": 0.6243151410285201,
+        "bt": 0.42076705590471924
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06642039510876664,
+        "bt": 0.3748483523208617
+      },
+      "compression_abs_diff": {
+        "bb": 0.007041167886057161,
+        "bt": 0.03164294748833164
+      },
+      "top1_abs_diff": {
+        "bb": 0.005708661334378873,
+        "bt": 0.023568391256931265
+      },
+      "top5_abs_diff": {
+        "bb": 0.007688063433600883,
+        "bt": 0.05086249663145829
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 72,
+      "lexical_js": {
+        "bb": 0.08146913668878798,
+        "bt": 0.1921493515732945
+      },
+      "rho": {
+        "bb": 0.6225826757019738,
+        "bt": 0.4163809375887546
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06544412635930028,
+        "bt": 0.3764487160163708
+      },
+      "compression_abs_diff": {
+        "bb": 0.003893447450921798,
+        "bt": 0.031051037415357297
+      },
+      "top1_abs_diff": {
+        "bb": 0.004774821502738111,
+        "bt": 0.02369432272363888
+      },
+      "top5_abs_diff": {
+        "bb": 0.0060962341157487785,
+        "bt": 0.05119187559351059
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 73,
+      "lexical_js": {
+        "bb": 0.07550852515312134,
+        "bt": 0.18980043129926072
+      },
+      "rho": {
+        "bb": 0.6272881509238107,
+        "bt": 0.4229828476277162
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06498915267063408,
+        "bt": 0.3715056945809437
+      },
+      "compression_abs_diff": {
+        "bb": 0.0049777906844940085,
+        "bt": 0.03206892789841364
+      },
+      "top1_abs_diff": {
+        "bb": 0.004199392527918307,
+        "bt": 0.022943339774666477
+      },
+      "top5_abs_diff": {
+        "bb": 0.0060266579293394166,
+        "bt": 0.05034532804244255
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 74,
+      "lexical_js": {
+        "bb": 0.08145289831549603,
+        "bt": 0.1932737097925558
+      },
+      "rho": {
+        "bb": 0.6299198354356218,
+        "bt": 0.42332686629178484
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0661816210741468,
+        "bt": 0.3729090578166134
+      },
+      "compression_abs_diff": {
+        "bb": 0.004757312259068044,
+        "bt": 0.02998299168403058
+      },
+      "top1_abs_diff": {
+        "bb": 0.004971524814793047,
+        "bt": 0.0237762274745713
+      },
+      "top5_abs_diff": {
+        "bb": 0.00759368281465595,
+        "bt": 0.051571097753098684
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 75,
+      "lexical_js": {
+        "bb": 0.08279233246045196,
+        "bt": 0.19264004678010993
+      },
+      "rho": {
+        "bb": 0.6257661140997174,
+        "bt": 0.420702592530448
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06704991788908833,
+        "bt": 0.37633336549841795
+      },
+      "compression_abs_diff": {
+        "bb": 0.005755549976916713,
+        "bt": 0.033429647958533
+      },
+      "top1_abs_diff": {
+        "bb": 0.005006675405940914,
+        "bt": 0.023251621435396563
+      },
+      "top5_abs_diff": {
+        "bb": 0.006717129784763868,
+        "bt": 0.05060091742943115
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 76,
+      "lexical_js": {
+        "bb": 0.08257219317985363,
+        "bt": 0.19467856088854563
+      },
+      "rho": {
+        "bb": 0.6254667022984289,
+        "bt": 0.4150062675070873
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06538807826453259,
+        "bt": 0.3741885080127106
+      },
+      "compression_abs_diff": {
+        "bb": 0.005025901784919782,
+        "bt": 0.029251197493762687
+      },
+      "top1_abs_diff": {
+        "bb": 0.005029784368628851,
+        "bt": 0.022308312892494808
+      },
+      "top5_abs_diff": {
+        "bb": 0.005987318155957735,
+        "bt": 0.048975987577881776
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 77,
+      "lexical_js": {
+        "bb": 0.07422456745989493,
+        "bt": 0.18836549295843197
+      },
+      "rho": {
+        "bb": 0.6282871560528142,
+        "bt": 0.42428815460226216
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06679409141607037,
+        "bt": 0.3805049259652562
+      },
+      "compression_abs_diff": {
+        "bb": 0.005866391893914495,
+        "bt": 0.031648680211557985
+      },
+      "top1_abs_diff": {
+        "bb": 0.005179106922184363,
+        "bt": 0.0232140542142088
+      },
+      "top5_abs_diff": {
+        "bb": 0.006440250376760751,
+        "bt": 0.04989378054743581
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 78,
+      "lexical_js": {
+        "bb": 0.08078845196652376,
+        "bt": 0.19289141525600847
+      },
+      "rho": {
+        "bb": 0.6270038070431574,
+        "bt": 0.42402048071195964
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06528207979938465,
+        "bt": 0.37825329864351825
+      },
+      "compression_abs_diff": {
+        "bb": 0.004555424025797953,
+        "bt": 0.032977179416884835
+      },
+      "top1_abs_diff": {
+        "bb": 0.00438061314147625,
+        "bt": 0.023409347030531737
+      },
+      "top5_abs_diff": {
+        "bb": 0.006995169794133157,
+        "bt": 0.05186551495915462
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 79,
+      "lexical_js": {
+        "bb": 0.08026031698068259,
+        "bt": 0.19286852134586716
+      },
+      "rho": {
+        "bb": 0.6301602444286627,
+        "bt": 0.4234600808145809
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0662097736489289,
+        "bt": 0.3771111829121865
+      },
+      "compression_abs_diff": {
+        "bb": 0.0035205394265097,
+        "bt": 0.031834503478277015
+      },
+      "top1_abs_diff": {
+        "bb": 0.004336759835936066,
+        "bt": 0.024048752069571366
+      },
+      "top5_abs_diff": {
+        "bb": 0.0066388704131956746,
+        "bt": 0.05158148989290906
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 80,
+      "lexical_js": {
+        "bb": 0.08001184730882244,
+        "bt": 0.19303845166541145
+      },
+      "rho": {
+        "bb": 0.6257414536426427,
+        "bt": 0.4232162550574727
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06703537086290276,
+        "bt": 0.37503079565261094
+      },
+      "compression_abs_diff": {
+        "bb": 0.004478988827754733,
+        "bt": 0.03429449957851785
+      },
+      "top1_abs_diff": {
+        "bb": 0.004630415409977193,
+        "bt": 0.02390122828096135
+      },
+      "top5_abs_diff": {
+        "bb": 0.006297522367148175,
+        "bt": 0.05100203575122767
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 81,
+      "lexical_js": {
+        "bb": 0.07680431908179972,
+        "bt": 0.192148563099248
+      },
+      "rho": {
+        "bb": 0.6307935365631366,
+        "bt": 0.42252422175875354
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06784908061725736,
+        "bt": 0.3788872995839303
+      },
+      "compression_abs_diff": {
+        "bb": 0.004209687586978284,
+        "bt": 0.03278229787564229
+      },
+      "top1_abs_diff": {
+        "bb": 0.005045989220290218,
+        "bt": 0.02325605227043225
+      },
+      "top5_abs_diff": {
+        "bb": 0.006472505084896236,
+        "bt": 0.050858501767668894
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 82,
+      "lexical_js": {
+        "bb": 0.07751228944673422,
+        "bt": 0.19111959952738125
+      },
+      "rho": {
+        "bb": 0.6322996650922226,
+        "bt": 0.4246499469485053
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0628432402981124,
+        "bt": 0.3762099972936554
+      },
+      "compression_abs_diff": {
+        "bb": 0.005065998569530669,
+        "bt": 0.03036380514511128
+      },
+      "top1_abs_diff": {
+        "bb": 0.004918012646347625,
+        "bt": 0.02342978814450174
+      },
+      "top5_abs_diff": {
+        "bb": 0.00647943606309427,
+        "bt": 0.05157578455762307
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 83,
+      "lexical_js": {
+        "bb": 0.08224526362798283,
+        "bt": 0.19495949976887883
+      },
+      "rho": {
+        "bb": 0.6291580377860578,
+        "bt": 0.42034064109589964
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0674056545075746,
+        "bt": 0.37336940943156555
+      },
+      "compression_abs_diff": {
+        "bb": 0.005928371734308393,
+        "bt": 0.029306154413258855
+      },
+      "top1_abs_diff": {
+        "bb": 0.005185429691833345,
+        "bt": 0.023971726151170117
+      },
+      "top5_abs_diff": {
+        "bb": 0.006188166129709612,
+        "bt": 0.050328712040141964
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 84,
+      "lexical_js": {
+        "bb": 0.08239442926296284,
+        "bt": 0.19703795913791375
+      },
+      "rho": {
+        "bb": 0.6148170871405096,
+        "bt": 0.4075678378483052
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06539274619932804,
+        "bt": 0.3756335255726864
+      },
+      "compression_abs_diff": {
+        "bb": 0.006526783941235522,
+        "bt": 0.032923615026170285
+      },
+      "top1_abs_diff": {
+        "bb": 0.00438329952400111,
+        "bt": 0.022894326912934027
+      },
+      "top5_abs_diff": {
+        "bb": 0.006913295493177096,
+        "bt": 0.04981068760239595
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 85,
+      "lexical_js": {
+        "bb": 0.0827952706530601,
+        "bt": 0.19421830072663424
+      },
+      "rho": {
+        "bb": 0.6137440152534165,
+        "bt": 0.4196386206300791
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06513554149830808,
+        "bt": 0.37528709026815826
+      },
+      "compression_abs_diff": {
+        "bb": 0.003981449580481359,
+        "bt": 0.030603783716658863
+      },
+      "top1_abs_diff": {
+        "bb": 0.004188783598879027,
+        "bt": 0.023609302346655484
+      },
+      "top5_abs_diff": {
+        "bb": 0.006682491600200868,
+        "bt": 0.050781066199618086
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 86,
+      "lexical_js": {
+        "bb": 0.07559096727046563,
+        "bt": 0.18993586867796775
+      },
+      "rho": {
+        "bb": 0.6307762829236052,
+        "bt": 0.4228788841567548
+      },
+      "semantic_cluster_js": {
+        "bb": 0.07123930781503172,
+        "bt": 0.3794360517000614
+      },
+      "compression_abs_diff": {
+        "bb": 0.003491448307915612,
+        "bt": 0.029663639725211577
+      },
+      "top1_abs_diff": {
+        "bb": 0.004374706236789217,
+        "bt": 0.023274909179118022
+      },
+      "top5_abs_diff": {
+        "bb": 0.007410930007597137,
+        "bt": 0.049713158476697245
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 87,
+      "lexical_js": {
+        "bb": 0.08461984431056362,
+        "bt": 0.19463694557749692
+      },
+      "rho": {
+        "bb": 0.6218726704167986,
+        "bt": 0.4188030914334509
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06878582512485577,
+        "bt": 0.3727242985341028
+      },
+      "compression_abs_diff": {
+        "bb": 0.005373380646272285,
+        "bt": 0.032491759998246175
+      },
+      "top1_abs_diff": {
+        "bb": 0.005457445169802706,
+        "bt": 0.02330985712378901
+      },
+      "top5_abs_diff": {
+        "bb": 0.007619347724129987,
+        "bt": 0.05068041999293293
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 88,
+      "lexical_js": {
+        "bb": 0.07740823707616389,
+        "bt": 0.1931086582754156
+      },
+      "rho": {
+        "bb": 0.6230774571525214,
+        "bt": 0.4201622231812226
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0637427845259057,
+        "bt": 0.3751837118505979
+      },
+      "compression_abs_diff": {
+        "bb": 0.005641754080379648,
+        "bt": 0.03080227903570025
+      },
+      "top1_abs_diff": {
+        "bb": 0.004357511418425915,
+        "bt": 0.02288148027208003
+      },
+      "top5_abs_diff": {
+        "bb": 0.00598089347761409,
+        "bt": 0.050361392401339404
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 89,
+      "lexical_js": {
+        "bb": 0.0828362757888275,
+        "bt": 0.19645636972139624
+      },
+      "rho": {
+        "bb": 0.6247076733724707,
+        "bt": 0.4156038790647814
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06457726117658659,
+        "bt": 0.3755268752258038
+      },
+      "compression_abs_diff": {
+        "bb": 0.002622434017690787,
+        "bt": 0.031005159670006804
+      },
+      "top1_abs_diff": {
+        "bb": 0.004562839470250294,
+        "bt": 0.023187889612930595
+      },
+      "top5_abs_diff": {
+        "bb": 0.006101461306300084,
+        "bt": 0.050390405525888436
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 90,
+      "lexical_js": {
+        "bb": 0.0805645848711364,
+        "bt": 0.19415507060692497
+      },
+      "rho": {
+        "bb": 0.6233969794012324,
+        "bt": 0.418406175469445
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06610386063145389,
+        "bt": 0.37576431262596843
+      },
+      "compression_abs_diff": {
+        "bb": 0.00488544596450623,
+        "bt": 0.0313100450660986
+      },
+      "top1_abs_diff": {
+        "bb": 0.004906987538413207,
+        "bt": 0.023723262712754208
+      },
+      "top5_abs_diff": {
+        "bb": 0.006096441362196936,
+        "bt": 0.05097209258613481
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 91,
+      "lexical_js": {
+        "bb": 0.07895223244702149,
+        "bt": 0.19253487885901918
+      },
+      "rho": {
+        "bb": 0.6265643743623757,
+        "bt": 0.4172257882140349
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06604559650883772,
+        "bt": 0.3774151770634695
+      },
+      "compression_abs_diff": {
+        "bb": 0.007342162167933587,
+        "bt": 0.03295380857274221
+      },
+      "top1_abs_diff": {
+        "bb": 0.004630952109684972,
+        "bt": 0.023775492966689262
+      },
+      "top5_abs_diff": {
+        "bb": 0.006040665868158765,
+        "bt": 0.05149829304720883
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 92,
+      "lexical_js": {
+        "bb": 0.08099892955941093,
+        "bt": 0.1937334027522588
+      },
+      "rho": {
+        "bb": 0.6237773724319055,
+        "bt": 0.4153356977723093
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06588448611566015,
+        "bt": 0.37545145404642116
+      },
+      "compression_abs_diff": {
+        "bb": 0.004206380140949613,
+        "bt": 0.032721846015342525
+      },
+      "top1_abs_diff": {
+        "bb": 0.004808522000283334,
+        "bt": 0.022875380632302794
+      },
+      "top5_abs_diff": {
+        "bb": 0.007671199458076034,
+        "bt": 0.05130871556168031
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 93,
+      "lexical_js": {
+        "bb": 0.08138405860158675,
+        "bt": 0.19354047863431156
+      },
+      "rho": {
+        "bb": 0.6252963515293829,
+        "bt": 0.4171641851057258
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06396724688082743,
+        "bt": 0.377510239415724
+      },
+      "compression_abs_diff": {
+        "bb": 0.0030511476532391873,
+        "bt": 0.031117448698368605
+      },
+      "top1_abs_diff": {
+        "bb": 0.004933937039955842,
+        "bt": 0.02349920237004494
+      },
+      "top5_abs_diff": {
+        "bb": 0.0066871181277496795,
+        "bt": 0.05198923481678877
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 94,
+      "lexical_js": {
+        "bb": 0.08242498264607628,
+        "bt": 0.19416341576452112
+      },
+      "rho": {
+        "bb": 0.6291007438317798,
+        "bt": 0.42019977129358327
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0637524457753754,
+        "bt": 0.3765068501679621
+      },
+      "compression_abs_diff": {
+        "bb": 0.004450741392885451,
+        "bt": 0.03251628716103743
+      },
+      "top1_abs_diff": {
+        "bb": 0.004524380470844058,
+        "bt": 0.023397532159171928
+      },
+      "top5_abs_diff": {
+        "bb": 0.006190233059182531,
+        "bt": 0.05049186130243305
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 95,
+      "lexical_js": {
+        "bb": 0.08023150509095958,
+        "bt": 0.1925321564056376
+      },
+      "rho": {
+        "bb": 0.6215792929049011,
+        "bt": 0.4172628624631325
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06560495754258665,
+        "bt": 0.3769725379266713
+      },
+      "compression_abs_diff": {
+        "bb": 0.004457701981206363,
+        "bt": 0.030466398727824074
+      },
+      "top1_abs_diff": {
+        "bb": 0.004995739106483209,
+        "bt": 0.0242092106334257
+      },
+      "top5_abs_diff": {
+        "bb": 0.007022422929881855,
+        "bt": 0.051311003480083606
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 96,
+      "lexical_js": {
+        "bb": 0.08196805341938057,
+        "bt": 0.19458155895226117
+      },
+      "rho": {
+        "bb": 0.6271708103654503,
+        "bt": 0.4214813801504067
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06800660352177341,
+        "bt": 0.3778446571259961
+      },
+      "compression_abs_diff": {
+        "bb": 0.005662991623458497,
+        "bt": 0.032004603648155404
+      },
+      "top1_abs_diff": {
+        "bb": 0.004909639179770636,
+        "bt": 0.02408368511302482
+      },
+      "top5_abs_diff": {
+        "bb": 0.007134633036340942,
+        "bt": 0.05175484959720722
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 97,
+      "lexical_js": {
+        "bb": 0.07560139536450773,
+        "bt": 0.1913424113829012
+      },
+      "rho": {
+        "bb": 0.6306555562997236,
+        "bt": 0.4233984658106158
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06433247780236226,
+        "bt": 0.37689451076562414
+      },
+      "compression_abs_diff": {
+        "bb": 0.005295006699537545,
+        "bt": 0.029708125527302093
+      },
+      "top1_abs_diff": {
+        "bb": 0.00474392588385242,
+        "bt": 0.023392742188672034
+      },
+      "top5_abs_diff": {
+        "bb": 0.006384046474420963,
+        "bt": 0.04976925376113369
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 98,
+      "lexical_js": {
+        "bb": 0.08220618331651429,
+        "bt": 0.19488356811025034
+      },
+      "rho": {
+        "bb": 0.6200719640720308,
+        "bt": 0.4156625878162386
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06478772067584913,
+        "bt": 0.37776705565074287
+      },
+      "compression_abs_diff": {
+        "bb": 0.004111571213262568,
+        "bt": 0.0328582076252096
+      },
+      "top1_abs_diff": {
+        "bb": 0.004808055994247899,
+        "bt": 0.02404740959755376
+      },
+      "top5_abs_diff": {
+        "bb": 0.00714841625952879,
+        "bt": 0.051165843162739255
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 99,
+      "lexical_js": {
+        "bb": 0.08340328548970372,
+        "bt": 0.19433540579606348
+      },
+      "rho": {
+        "bb": 0.6246737737317365,
+        "bt": 0.42221443337530057
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06788252118099423,
+        "bt": 0.37595570658983996
+      },
+      "compression_abs_diff": {
+        "bb": 0.005492810774843952,
+        "bt": 0.03075550312115902
+      },
+      "top1_abs_diff": {
+        "bb": 0.005248122570055691,
+        "bt": 0.023452600625165937
+      },
+      "top5_abs_diff": {
+        "bb": 0.007161162759903238,
+        "bt": 0.05009216578716525
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 100,
+      "lexical_js": {
+        "bb": 0.08244815216222294,
+        "bt": 0.19277022444201064
+      },
+      "rho": {
+        "bb": 0.626383619621709,
+        "bt": 0.4211403214247104
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0633239077761744,
+        "bt": 0.37287089541717866
+      },
+      "compression_abs_diff": {
+        "bb": 0.002968565441819793,
+        "bt": 0.03352900190408827
+      },
+      "top1_abs_diff": {
+        "bb": 0.00541542864550026,
+        "bt": 0.02375793949498983
+      },
+      "top5_abs_diff": {
+        "bb": 0.006577735946917484,
+        "bt": 0.05101578788329906
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 101,
+      "lexical_js": {
+        "bb": 0.08434055586330653,
+        "bt": 0.19392946143752518
+      },
+      "rho": {
+        "bb": 0.61164962746507,
+        "bt": 0.41585391934626753
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0660352851385129,
+        "bt": 0.3766738079310595
+      },
+      "compression_abs_diff": {
+        "bb": 0.005564487947339913,
+        "bt": 0.029850366389359315
+      },
+      "top1_abs_diff": {
+        "bb": 0.004320904522198413,
+        "bt": 0.023382104294952064
+      },
+      "top5_abs_diff": {
+        "bb": 0.00570445593527504,
+        "bt": 0.050718115723350936
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 102,
+      "lexical_js": {
+        "bb": 0.08293246500980876,
+        "bt": 0.1950227395190843
+      },
+      "rho": {
+        "bb": 0.6226005467862684,
+        "bt": 0.417842908735561
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06385583253783028,
+        "bt": 0.3749828414781297
+      },
+      "compression_abs_diff": {
+        "bb": 0.006647092623129365,
+        "bt": 0.03400645756593246
+      },
+      "top1_abs_diff": {
+        "bb": 0.00525354446050844,
+        "bt": 0.022865461027030524
+      },
+      "top5_abs_diff": {
+        "bb": 0.007704797332338715,
+        "bt": 0.05001310387836977
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 103,
+      "lexical_js": {
+        "bb": 0.08377836387780167,
+        "bt": 0.19362664166144425
+      },
+      "rho": {
+        "bb": 0.6180596376250782,
+        "bt": 0.41713783042394553
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06840974257955516,
+        "bt": 0.3816495764431809
+      },
+      "compression_abs_diff": {
+        "bb": 0.005268429287279184,
+        "bt": 0.03131264995443383
+      },
+      "top1_abs_diff": {
+        "bb": 0.004831630838626755,
+        "bt": 0.02343524084740779
+      },
+      "top5_abs_diff": {
+        "bb": 0.007319296056087377,
+        "bt": 0.050974088515068794
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 104,
+      "lexical_js": {
+        "bb": 0.08307374807713526,
+        "bt": 0.19485402112217898
+      },
+      "rho": {
+        "bb": 0.6280023345632587,
+        "bt": 0.4203695921353927
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06655618675724596,
+        "bt": 0.37442485994635616
+      },
+      "compression_abs_diff": {
+        "bb": 0.004004760692400065,
+        "bt": 0.03202532792829268
+      },
+      "top1_abs_diff": {
+        "bb": 0.0051109629266170445,
+        "bt": 0.023880788818052435
+      },
+      "top5_abs_diff": {
+        "bb": 0.006696527514526141,
+        "bt": 0.0518777326271273
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 105,
+      "lexical_js": {
+        "bb": 0.0812457032834088,
+        "bt": 0.19539419567021352
+      },
+      "rho": {
+        "bb": 0.6282723128563834,
+        "bt": 0.4162870208274147
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06828793116099555,
+        "bt": 0.3800598097652795
+      },
+      "compression_abs_diff": {
+        "bb": 0.004441541851491012,
+        "bt": 0.03203975888810956
+      },
+      "top1_abs_diff": {
+        "bb": 0.005278546386442761,
+        "bt": 0.022736590993954534
+      },
+      "top5_abs_diff": {
+        "bb": 0.006402974015721019,
+        "bt": 0.048910557758994645
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 106,
+      "lexical_js": {
+        "bb": 0.07962201153633361,
+        "bt": 0.1927169122331215
+      },
+      "rho": {
+        "bb": 0.6170992478803634,
+        "bt": 0.4213512174589207
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06408021700479521,
+        "bt": 0.3745866822693822
+      },
+      "compression_abs_diff": {
+        "bb": 0.0065942245333802585,
+        "bt": 0.03125847074834997
+      },
+      "top1_abs_diff": {
+        "bb": 0.004823425564626031,
+        "bt": 0.024176002022013737
+      },
+      "top5_abs_diff": {
+        "bb": 0.006673080971496171,
+        "bt": 0.0521557266333324
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 107,
+      "lexical_js": {
+        "bb": 0.0767291941763158,
+        "bt": 0.19351778930923033
+      },
+      "rho": {
+        "bb": 0.6187279064214419,
+        "bt": 0.41338151064871664
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06362406328118901,
+        "bt": 0.37656931654043896
+      },
+      "compression_abs_diff": {
+        "bb": 0.0032612948973199866,
+        "bt": 0.030787348645832102
+      },
+      "top1_abs_diff": {
+        "bb": 0.00462045771262604,
+        "bt": 0.02362358398275387
+      },
+      "top5_abs_diff": {
+        "bb": 0.006645389946419736,
+        "bt": 0.0504426989952503
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 108,
+      "lexical_js": {
+        "bb": 0.08409006160835873,
+        "bt": 0.193666794060302
+      },
+      "rho": {
+        "bb": 0.6152187808582162,
+        "bt": 0.4193752419462153
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06507790331972807,
+        "bt": 0.37745867535865124
+      },
+      "compression_abs_diff": {
+        "bb": 0.005529028731889341,
+        "bt": 0.029368239291852494
+      },
+      "top1_abs_diff": {
+        "bb": 0.00533175162780308,
+        "bt": 0.024237675087626104
+      },
+      "top5_abs_diff": {
+        "bb": 0.00783383636612987,
+        "bt": 0.0504910340670803
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 109,
+      "lexical_js": {
+        "bb": 0.08078683068196826,
+        "bt": 0.19509406850718036
+      },
+      "rho": {
+        "bb": 0.628257273321919,
+        "bt": 0.42029036408737824
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06517489376184178,
+        "bt": 0.3761865105754488
+      },
+      "compression_abs_diff": {
+        "bb": 0.007808150008729405,
+        "bt": 0.034759191339374114
+      },
+      "top1_abs_diff": {
+        "bb": 0.005346072575399981,
+        "bt": 0.02388363068593438
+      },
+      "top5_abs_diff": {
+        "bb": 0.007451723476493425,
+        "bt": 0.05225465068555402
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 110,
+      "lexical_js": {
+        "bb": 0.07881040132248657,
+        "bt": 0.1919235768428286
+      },
+      "rho": {
+        "bb": 0.6196221958303251,
+        "bt": 0.41914409516722567
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06750912289906189,
+        "bt": 0.37746624335941714
+      },
+      "compression_abs_diff": {
+        "bb": 0.006774418722128467,
+        "bt": 0.02972393096238603
+      },
+      "top1_abs_diff": {
+        "bb": 0.00467341797406312,
+        "bt": 0.02299641738712946
+      },
+      "top5_abs_diff": {
+        "bb": 0.00668876411816818,
+        "bt": 0.05015755334071153
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 111,
+      "lexical_js": {
+        "bb": 0.07707960819816571,
+        "bt": 0.19090710308855463
+      },
+      "rho": {
+        "bb": 0.6291643325071344,
+        "bt": 0.42380615884649275
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06269621487531375,
+        "bt": 0.37571909853580787
+      },
+      "compression_abs_diff": {
+        "bb": 0.004305730360399386,
+        "bt": 0.03020161469509106
+      },
+      "top1_abs_diff": {
+        "bb": 0.0042837384927364745,
+        "bt": 0.02427899490511991
+      },
+      "top5_abs_diff": {
+        "bb": 0.0062774082331243175,
+        "bt": 0.05070565483870054
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 112,
+      "lexical_js": {
+        "bb": 0.0793341025732272,
+        "bt": 0.192768476345384
+      },
+      "rho": {
+        "bb": 0.6204924304402006,
+        "bt": 0.41617476871738956
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06791602794307812,
+        "bt": 0.3772732591858965
+      },
+      "compression_abs_diff": {
+        "bb": 0.0052544719438311575,
+        "bt": 0.030460164446725464
+      },
+      "top1_abs_diff": {
+        "bb": 0.004301832480245743,
+        "bt": 0.02423383583922725
+      },
+      "top5_abs_diff": {
+        "bb": 0.006026230050879737,
+        "bt": 0.050295916993628474
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 113,
+      "lexical_js": {
+        "bb": 0.08044993011780706,
+        "bt": 0.19413200289538002
+      },
+      "rho": {
+        "bb": 0.6290836155421705,
+        "bt": 0.41998889441332504
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06729748576105969,
+        "bt": 0.376933964023863
+      },
+      "compression_abs_diff": {
+        "bb": 0.005817480690321884,
+        "bt": 0.02991772536427859
+      },
+      "top1_abs_diff": {
+        "bb": 0.005133071036889167,
+        "bt": 0.02403186873060058
+      },
+      "top5_abs_diff": {
+        "bb": 0.00658746003213499,
+        "bt": 0.05067661415405781
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 114,
+      "lexical_js": {
+        "bb": 0.07590012412678153,
+        "bt": 0.1915579628748267
+      },
+      "rho": {
+        "bb": 0.6235571434017186,
+        "bt": 0.41841695042509713
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06639111078937267,
+        "bt": 0.377667822277212
+      },
+      "compression_abs_diff": {
+        "bb": 0.005813022479054206,
+        "bt": 0.032232217102379515
+      },
+      "top1_abs_diff": {
+        "bb": 0.005272499441388432,
+        "bt": 0.02344812389154573
+      },
+      "top5_abs_diff": {
+        "bb": 0.007369136419843215,
+        "bt": 0.05026769984190559
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 115,
+      "lexical_js": {
+        "bb": 0.08318049854738639,
+        "bt": 0.19489520655502712
+      },
+      "rho": {
+        "bb": 0.6170626875372474,
+        "bt": 0.4116877681247881
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0665989075925724,
+        "bt": 0.37873686467076256
+      },
+      "compression_abs_diff": {
+        "bb": 0.0046667732422545054,
+        "bt": 0.030996007527022546
+      },
+      "top1_abs_diff": {
+        "bb": 0.004562880973956422,
+        "bt": 0.02318520863042187
+      },
+      "top5_abs_diff": {
+        "bb": 0.006188314045544003,
+        "bt": 0.05036209354747572
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 116,
+      "lexical_js": {
+        "bb": 0.07957604884328048,
+        "bt": 0.19184571893621002
+      },
+      "rho": {
+        "bb": 0.6093337277446845,
+        "bt": 0.415763241166861
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06746623186099591,
+        "bt": 0.370650582874167
+      },
+      "compression_abs_diff": {
+        "bb": 0.003637092006562385,
+        "bt": 0.031573947133071885
+      },
+      "top1_abs_diff": {
+        "bb": 0.005059808871227794,
+        "bt": 0.02404412355755982
+      },
+      "top5_abs_diff": {
+        "bb": 0.006792910968417249,
+        "bt": 0.050209999060539856
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 117,
+      "lexical_js": {
+        "bb": 0.08007515688086196,
+        "bt": 0.1918398156564667
+      },
+      "rho": {
+        "bb": 0.6238206029029084,
+        "bt": 0.4206992683156994
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06521230781473829,
+        "bt": 0.3742068498871463
+      },
+      "compression_abs_diff": {
+        "bb": 0.004099884514870087,
+        "bt": 0.032073743877655714
+      },
+      "top1_abs_diff": {
+        "bb": 0.00507266393882142,
+        "bt": 0.02390918722711537
+      },
+      "top5_abs_diff": {
+        "bb": 0.0058044230631862535,
+        "bt": 0.04968294179398946
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 118,
+      "lexical_js": {
+        "bb": 0.08034715410226294,
+        "bt": 0.19097887333680608
+      },
+      "rho": {
+        "bb": 0.6260671141957033,
+        "bt": 0.4206006384725831
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06516493058649787,
+        "bt": 0.3781282495222644
+      },
+      "compression_abs_diff": {
+        "bb": 0.0042006288326110145,
+        "bt": 0.029367806884711644
+      },
+      "top1_abs_diff": {
+        "bb": 0.00396628733977735,
+        "bt": 0.02313954876959441
+      },
+      "top5_abs_diff": {
+        "bb": 0.006186755976696736,
+        "bt": 0.05070639842125063
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 119,
+      "lexical_js": {
+        "bb": 0.08035621816043406,
+        "bt": 0.1933539973709896
+      },
+      "rho": {
+        "bb": 0.6358631423412405,
+        "bt": 0.4206030969333214
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06623187017702264,
+        "bt": 0.3767157564521617
+      },
+      "compression_abs_diff": {
+        "bb": 0.0065947818538750905,
+        "bt": 0.030913876873626605
+      },
+      "top1_abs_diff": {
+        "bb": 0.004548652039504822,
+        "bt": 0.024325039844227264
+      },
+      "top5_abs_diff": {
+        "bb": 0.007459799159660351,
+        "bt": 0.0525152050149367
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 120,
+      "lexical_js": {
+        "bb": 0.07404045633675857,
+        "bt": 0.19035508342779436
+      },
+      "rho": {
+        "bb": 0.6337337622811068,
+        "bt": 0.4233912570365746
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0665949704700401,
+        "bt": 0.37861709259136483
+      },
+      "compression_abs_diff": {
+        "bb": 0.005396490966210145,
+        "bt": 0.031351754131258514
+      },
+      "top1_abs_diff": {
+        "bb": 0.004620188353806663,
+        "bt": 0.023909329504467128
+      },
+      "top5_abs_diff": {
+        "bb": 0.006469705185912211,
+        "bt": 0.05129042058545954
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 121,
+      "lexical_js": {
+        "bb": 0.07437632819561478,
+        "bt": 0.19139485579161045
+      },
+      "rho": {
+        "bb": 0.6271161963056214,
+        "bt": 0.41500599157377877
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06654752337819811,
+        "bt": 0.37566021027448304
+      },
+      "compression_abs_diff": {
+        "bb": 0.0037712990246448973,
+        "bt": 0.03405307133061903
+      },
+      "top1_abs_diff": {
+        "bb": 0.0052176667321045585,
+        "bt": 0.02344965880613707
+      },
+      "top5_abs_diff": {
+        "bb": 0.006835064106840141,
+        "bt": 0.05069643270405281
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 122,
+      "lexical_js": {
+        "bb": 0.08123080990198385,
+        "bt": 0.1942296816086333
+      },
+      "rho": {
+        "bb": 0.6167079015233872,
+        "bt": 0.410560805750494
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06278986188524252,
+        "bt": 0.37775320513190414
+      },
+      "compression_abs_diff": {
+        "bb": 0.005446501527759055,
+        "bt": 0.03197240420949252
+      },
+      "top1_abs_diff": {
+        "bb": 0.0047368225336440065,
+        "bt": 0.022947050316553738
+      },
+      "top5_abs_diff": {
+        "bb": 0.006154493373922543,
+        "bt": 0.050004582284371234
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 123,
+      "lexical_js": {
+        "bb": 0.08210940860773652,
+        "bt": 0.19439226645785257
+      },
+      "rho": {
+        "bb": 0.6194017824624695,
+        "bt": 0.4157080394348765
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06721645803269832,
+        "bt": 0.3790068319567632
+      },
+      "compression_abs_diff": {
+        "bb": 0.0036752130504753714,
+        "bt": 0.03140871892480356
+      },
+      "top1_abs_diff": {
+        "bb": 0.005125768121904561,
+        "bt": 0.023789802560027357
+      },
+      "top5_abs_diff": {
+        "bb": 0.00719121198414285,
+        "bt": 0.05108727919248477
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 124,
+      "lexical_js": {
+        "bb": 0.07559089781851891,
+        "bt": 0.19158628667961952
+      },
+      "rho": {
+        "bb": 0.631988075008726,
+        "bt": 0.41723510384077117
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06749813626108873,
+        "bt": 0.3772276831305787
+      },
+      "compression_abs_diff": {
+        "bb": 0.0062829987433986306,
+        "bt": 0.031069953635663467
+      },
+      "top1_abs_diff": {
+        "bb": 0.004897865924212456,
+        "bt": 0.023010450680678154
+      },
+      "top5_abs_diff": {
+        "bb": 0.00695079379937116,
+        "bt": 0.0498796707973761
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 125,
+      "lexical_js": {
+        "bb": 0.0821876904245531,
+        "bt": 0.19372433484258098
+      },
+      "rho": {
+        "bb": 0.6249282365475382,
+        "bt": 0.4233930591999984
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06399304006496188,
+        "bt": 0.38043516843072306
+      },
+      "compression_abs_diff": {
+        "bb": 0.004263656756581529,
+        "bt": 0.030608455020862162
+      },
+      "top1_abs_diff": {
+        "bb": 0.00464960882786444,
+        "bt": 0.023720563573929525
+      },
+      "top5_abs_diff": {
+        "bb": 0.005847715376912121,
+        "bt": 0.05077891498709661
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 126,
+      "lexical_js": {
+        "bb": 0.07499537259792423,
+        "bt": 0.18820582381659554
+      },
+      "rho": {
+        "bb": 0.6334301873550028,
+        "bt": 0.4265715466723883
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06691090075565367,
+        "bt": 0.37526300308656996
+      },
+      "compression_abs_diff": {
+        "bb": 0.006614373598401779,
+        "bt": 0.031132805912799374
+      },
+      "top1_abs_diff": {
+        "bb": 0.0046677332386579245,
+        "bt": 0.024352023472723267
+      },
+      "top5_abs_diff": {
+        "bb": 0.006654515961962664,
+        "bt": 0.05126550837653305
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 127,
+      "lexical_js": {
+        "bb": 0.08440916251716708,
+        "bt": 0.19469790696360192
+      },
+      "rho": {
+        "bb": 0.6219080563201518,
+        "bt": 0.4155727068347927
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06718728595212271,
+        "bt": 0.3759024110436939
+      },
+      "compression_abs_diff": {
+        "bb": 0.005707002800901032,
+        "bt": 0.03237582073539788
+      },
+      "top1_abs_diff": {
+        "bb": 0.005030899270007688,
+        "bt": 0.02356121261625123
+      },
+      "top5_abs_diff": {
+        "bb": 0.006695304542444018,
+        "bt": 0.049996845270697886
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 128,
+      "lexical_js": {
+        "bb": 0.07597431189163052,
+        "bt": 0.19025379568518583
+      },
+      "rho": {
+        "bb": 0.62355389466259,
+        "bt": 0.418048326641468
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06677845773051459,
+        "bt": 0.37746589000848235
+      },
+      "compression_abs_diff": {
+        "bb": 0.004993286126329708,
+        "bt": 0.03221340740004345
+      },
+      "top1_abs_diff": {
+        "bb": 0.005065026774931528,
+        "bt": 0.023373003700705528
+      },
+      "top5_abs_diff": {
+        "bb": 0.006709865100553048,
+        "bt": 0.049368504312539585
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 129,
+      "lexical_js": {
+        "bb": 0.07942417519696691,
+        "bt": 0.1922974442442007
+      },
+      "rho": {
+        "bb": 0.6285360090417228,
+        "bt": 0.41929206570563005
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06787172093451535,
+        "bt": 0.3760325438727224
+      },
+      "compression_abs_diff": {
+        "bb": 0.005256377417306547,
+        "bt": 0.03237747265342151
+      },
+      "top1_abs_diff": {
+        "bb": 0.004860022249893497,
+        "bt": 0.02356917258959366
+      },
+      "top5_abs_diff": {
+        "bb": 0.0073889769579105705,
+        "bt": 0.049530817932820076
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 130,
+      "lexical_js": {
+        "bb": 0.07179380942976374,
+        "bt": 0.18869806038470824
+      },
+      "rho": {
+        "bb": 0.6369418247170403,
+        "bt": 0.424608981778168
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06665727711670931,
+        "bt": 0.37814855298028877
+      },
+      "compression_abs_diff": {
+        "bb": 0.005965162773589866,
+        "bt": 0.03327590867382376
+      },
+      "top1_abs_diff": {
+        "bb": 0.004821161940116203,
+        "bt": 0.023176819941249416
+      },
+      "top5_abs_diff": {
+        "bb": 0.006421891165190559,
+        "bt": 0.05083162188105463
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 131,
+      "lexical_js": {
+        "bb": 0.08361092615461162,
+        "bt": 0.19488443490844629
+      },
+      "rho": {
+        "bb": 0.6221174274089619,
+        "bt": 0.4170753382327752
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0680362181811563,
+        "bt": 0.3729011873675312
+      },
+      "compression_abs_diff": {
+        "bb": 0.004074409798654222,
+        "bt": 0.0332191380687358
+      },
+      "top1_abs_diff": {
+        "bb": 0.004638376448063304,
+        "bt": 0.023379888665609565
+      },
+      "top5_abs_diff": {
+        "bb": 0.0065986930081839805,
+        "bt": 0.05116710513093194
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 132,
+      "lexical_js": {
+        "bb": 0.08287732280977121,
+        "bt": 0.19278262005110203
+      },
+      "rho": {
+        "bb": 0.6229777578785568,
+        "bt": 0.41994027597757655
+      },
+      "semantic_cluster_js": {
+        "bb": 0.07001294115021536,
+        "bt": 0.3763109950953462
+      },
+      "compression_abs_diff": {
+        "bb": 0.006602512936804575,
+        "bt": 0.03347057783874028
+      },
+      "top1_abs_diff": {
+        "bb": 0.004810101410119923,
+        "bt": 0.023292611900951773
+      },
+      "top5_abs_diff": {
+        "bb": 0.006959502079869443,
+        "bt": 0.05073764929961461
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 133,
+      "lexical_js": {
+        "bb": 0.07310629263022757,
+        "bt": 0.18765482985161122
+      },
+      "rho": {
+        "bb": 0.6347639140268431,
+        "bt": 0.42835508214713897
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06312949496777784,
+        "bt": 0.37108048007863154
+      },
+      "compression_abs_diff": {
+        "bb": 0.004936418252901063,
+        "bt": 0.03288783952987937
+      },
+      "top1_abs_diff": {
+        "bb": 0.004737848190804593,
+        "bt": 0.023812329278939576
+      },
+      "top5_abs_diff": {
+        "bb": 0.006110572582239396,
+        "bt": 0.05142880162457634
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 134,
+      "lexical_js": {
+        "bb": 0.08495072315882513,
+        "bt": 0.19333458107013027
+      },
+      "rho": {
+        "bb": 0.6204312690222792,
+        "bt": 0.4258668143060163
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06881960205478475,
+        "bt": 0.37273102395995233
+      },
+      "compression_abs_diff": {
+        "bb": 0.004961569655163724,
+        "bt": 0.03291070410239887
+      },
+      "top1_abs_diff": {
+        "bb": 0.005499914968693886,
+        "bt": 0.023700450194197514
+      },
+      "top5_abs_diff": {
+        "bb": 0.006720980777183667,
+        "bt": 0.05020983647548788
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 135,
+      "lexical_js": {
+        "bb": 0.0819967714131044,
+        "bt": 0.19451416157501147
+      },
+      "rho": {
+        "bb": 0.6189139980082922,
+        "bt": 0.4136629051792476
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06722355289404197,
+        "bt": 0.37480472493096323
+      },
+      "compression_abs_diff": {
+        "bb": 0.0026885277541736754,
+        "bt": 0.03435252851984094
+      },
+      "top1_abs_diff": {
+        "bb": 0.004987061175859464,
+        "bt": 0.023349474643405293
+      },
+      "top5_abs_diff": {
+        "bb": 0.006795311717135442,
+        "bt": 0.049840379839779896
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 136,
+      "lexical_js": {
+        "bb": 0.07966274725053402,
+        "bt": 0.18939355643459008
+      },
+      "rho": {
+        "bb": 0.6341138765820842,
+        "bt": 0.4331527235999196
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06822099753840843,
+        "bt": 0.3747422748566909
+      },
+      "compression_abs_diff": {
+        "bb": 0.003591998301374035,
+        "bt": 0.03065060321468698
+      },
+      "top1_abs_diff": {
+        "bb": 0.005105323495466668,
+        "bt": 0.023235436390948005
+      },
+      "top5_abs_diff": {
+        "bb": 0.006498007319564567,
+        "bt": 0.050584721007974544
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 137,
+      "lexical_js": {
+        "bb": 0.07840546951129501,
+        "bt": 0.1924907473132947
+      },
+      "rho": {
+        "bb": 0.6299215680953165,
+        "bt": 0.4164859037718476
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06556894881766988,
+        "bt": 0.37518382258780053
+      },
+      "compression_abs_diff": {
+        "bb": 0.004147013585035788,
+        "bt": 0.03324350110093838
+      },
+      "top1_abs_diff": {
+        "bb": 0.004883375920046648,
+        "bt": 0.02344207203502932
+      },
+      "top5_abs_diff": {
+        "bb": 0.006844177681918694,
+        "bt": 0.05124968738125247
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 138,
+      "lexical_js": {
+        "bb": 0.08193957650108712,
+        "bt": 0.19506142832072834
+      },
+      "rho": {
+        "bb": 0.612739399133914,
+        "bt": 0.4107485725234954
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06816005870817742,
+        "bt": 0.3773032406550958
+      },
+      "compression_abs_diff": {
+        "bb": 0.005565473858825452,
+        "bt": 0.030347378575506543
+      },
+      "top1_abs_diff": {
+        "bb": 0.004668377878104283,
+        "bt": 0.023132358142429112
+      },
+      "top5_abs_diff": {
+        "bb": 0.006358673053895379,
+        "bt": 0.05060563055950292
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 139,
+      "lexical_js": {
+        "bb": 0.08161061493038058,
+        "bt": 0.1923326065127179
+      },
+      "rho": {
+        "bb": 0.6232126349017729,
+        "bt": 0.41919561569408126
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06594593108681975,
+        "bt": 0.3729680864117999
+      },
+      "compression_abs_diff": {
+        "bb": 0.004830386521038121,
+        "bt": 0.03215435578049394
+      },
+      "top1_abs_diff": {
+        "bb": 0.0053352438080824394,
+        "bt": 0.024053868495216537
+      },
+      "top5_abs_diff": {
+        "bb": 0.006787626656526719,
+        "bt": 0.050631618992713345
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 140,
+      "lexical_js": {
+        "bb": 0.07865423815916191,
+        "bt": 0.19181782681437964
+      },
+      "rho": {
+        "bb": 0.6218284009313482,
+        "bt": 0.42105309492668225
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06607546218967228,
+        "bt": 0.37467684157865944
+      },
+      "compression_abs_diff": {
+        "bb": 0.004091335354712625,
+        "bt": 0.03189953708017743
+      },
+      "top1_abs_diff": {
+        "bb": 0.005233787348427764,
+        "bt": 0.023800087564943558
+      },
+      "top5_abs_diff": {
+        "bb": 0.006694070378955256,
+        "bt": 0.050431314530673926
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 141,
+      "lexical_js": {
+        "bb": 0.08047142129850594,
+        "bt": 0.19154862805224038
+      },
+      "rho": {
+        "bb": 0.6258731430085723,
+        "bt": 0.4237579344404107
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0679011533497751,
+        "bt": 0.37561246169342394
+      },
+      "compression_abs_diff": {
+        "bb": 0.005881264754615484,
+        "bt": 0.03209569776013426
+      },
+      "top1_abs_diff": {
+        "bb": 0.004618713201439069,
+        "bt": 0.02391834118193407
+      },
+      "top5_abs_diff": {
+        "bb": 0.007322035294136648,
+        "bt": 0.051249523533849074
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 142,
+      "lexical_js": {
+        "bb": 0.0808906179641076,
+        "bt": 0.19382285510431055
+      },
+      "rho": {
+        "bb": 0.6230936723329646,
+        "bt": 0.42304329511009625
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06483470757297448,
+        "bt": 0.3746768687579936
+      },
+      "compression_abs_diff": {
+        "bb": 0.004723392686505347,
+        "bt": 0.03238607953085138
+      },
+      "top1_abs_diff": {
+        "bb": 0.003994589024016216,
+        "bt": 0.023014710116432167
+      },
+      "top5_abs_diff": {
+        "bb": 0.00598141866504233,
+        "bt": 0.050329358214301595
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 143,
+      "lexical_js": {
+        "bb": 0.08394486311331503,
+        "bt": 0.19408207364164887
+      },
+      "rho": {
+        "bb": 0.620824016585599,
+        "bt": 0.420283006203887
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06905604264402361,
+        "bt": 0.3751864465821035
+      },
+      "compression_abs_diff": {
+        "bb": 0.00465621937101449,
+        "bt": 0.03174252696851402
+      },
+      "top1_abs_diff": {
+        "bb": 0.00525071110682076,
+        "bt": 0.024506431342189203
+      },
+      "top5_abs_diff": {
+        "bb": 0.007808075092579653,
+        "bt": 0.05106443907879158
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 144,
+      "lexical_js": {
+        "bb": 0.07438466141701884,
+        "bt": 0.1893320872341597
+      },
+      "rho": {
+        "bb": 0.6261793395810689,
+        "bt": 0.42430833442904287
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0680818008984104,
+        "bt": 0.3753613224274434
+      },
+      "compression_abs_diff": {
+        "bb": 0.0071258120360041125,
+        "bt": 0.033098088831501817
+      },
+      "top1_abs_diff": {
+        "bb": 0.004766714629171054,
+        "bt": 0.02350479218603016
+      },
+      "top5_abs_diff": {
+        "bb": 0.006598043598522706,
+        "bt": 0.05173472460962711
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 145,
+      "lexical_js": {
+        "bb": 0.07688265986135885,
+        "bt": 0.1920247339544162
+      },
+      "rho": {
+        "bb": 0.6214177014070797,
+        "bt": 0.41955616774242604
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06947345623874727,
+        "bt": 0.3763831144400635
+      },
+      "compression_abs_diff": {
+        "bb": 0.007303885289306833,
+        "bt": 0.031334896125615984
+      },
+      "top1_abs_diff": {
+        "bb": 0.005475987289473018,
+        "bt": 0.023920446632922438
+      },
+      "top5_abs_diff": {
+        "bb": 0.007570975928514164,
+        "bt": 0.05015271330719041
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 146,
+      "lexical_js": {
+        "bb": 0.07460423658506864,
+        "bt": 0.19116794791640446
+      },
+      "rho": {
+        "bb": 0.6322198905792988,
+        "bt": 0.4204146947301024
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06481220521914041,
+        "bt": 0.3746523187205743
+      },
+      "compression_abs_diff": {
+        "bb": 0.005594104591873141,
+        "bt": 0.030561254978384186
+      },
+      "top1_abs_diff": {
+        "bb": 0.004549336738661607,
+        "bt": 0.023984195130684022
+      },
+      "top5_abs_diff": {
+        "bb": 0.00602128733617575,
+        "bt": 0.051250382150412756
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 147,
+      "lexical_js": {
+        "bb": 0.079188590038465,
+        "bt": 0.1917329344055435
+      },
+      "rho": {
+        "bb": 0.6182873535822714,
+        "bt": 0.4200857212144286
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06485479618336185,
+        "bt": 0.3716525718882169
+      },
+      "compression_abs_diff": {
+        "bb": 0.006583324492511603,
+        "bt": 0.029704474914011996
+      },
+      "top1_abs_diff": {
+        "bb": 0.0037774543474115873,
+        "bt": 0.023939203539073955
+      },
+      "top5_abs_diff": {
+        "bb": 0.00576625227682099,
+        "bt": 0.05034246784847743
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 148,
+      "lexical_js": {
+        "bb": 0.08277799115603128,
+        "bt": 0.19430759689227348
+      },
+      "rho": {
+        "bb": 0.6279801732833706,
+        "bt": 0.4215761693767341
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06576232815161177,
+        "bt": 0.37783265766920643
+      },
+      "compression_abs_diff": {
+        "bb": 0.003829079835894837,
+        "bt": 0.03324127344906538
+      },
+      "top1_abs_diff": {
+        "bb": 0.005371201098965809,
+        "bt": 0.024854335600569422
+      },
+      "top5_abs_diff": {
+        "bb": 0.007229363802541614,
+        "bt": 0.050747103217753504
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 149,
+      "lexical_js": {
+        "bb": 0.0817355847465592,
+        "bt": 0.19408234678671674
+      },
+      "rho": {
+        "bb": 0.6248287956179904,
+        "bt": 0.41746610280412333
+      },
+      "semantic_cluster_js": {
+        "bb": 0.062350162548003706,
+        "bt": 0.3774816585979231
+      },
+      "compression_abs_diff": {
+        "bb": 0.00803318728760742,
+        "bt": 0.029696263904061482
+      },
+      "top1_abs_diff": {
+        "bb": 0.004363898588416167,
+        "bt": 0.02443618687754989
+      },
+      "top5_abs_diff": {
+        "bb": 0.005668955869000993,
+        "bt": 0.05187737809932447
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 150,
+      "lexical_js": {
+        "bb": 0.0809500258464692,
+        "bt": 0.1923077166603959
+      },
+      "rho": {
+        "bb": 0.6248101778257197,
+        "bt": 0.4186906066614684
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06517093098084156,
+        "bt": 0.37190133215899285
+      },
+      "compression_abs_diff": {
+        "bb": 0.0042974757218832964,
+        "bt": 0.032239693364770346
+      },
+      "top1_abs_diff": {
+        "bb": 0.004077437641300564,
+        "bt": 0.023141530002051606
+      },
+      "top5_abs_diff": {
+        "bb": 0.005430792771080763,
+        "bt": 0.050849432542400964
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 151,
+      "lexical_js": {
+        "bb": 0.07345903306742697,
+        "bt": 0.18889242396428663
+      },
+      "rho": {
+        "bb": 0.6330120205977291,
+        "bt": 0.425142484710104
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06889650113323807,
+        "bt": 0.3782624915995694
+      },
+      "compression_abs_diff": {
+        "bb": 0.006431513089866351,
+        "bt": 0.03226673096040503
+      },
+      "top1_abs_diff": {
+        "bb": 0.004738593819321277,
+        "bt": 0.02363799084094509
+      },
+      "top5_abs_diff": {
+        "bb": 0.007069257901233206,
+        "bt": 0.04989793062467155
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 152,
+      "lexical_js": {
+        "bb": 0.0754795378733918,
+        "bt": 0.1928669652004249
+      },
+      "rho": {
+        "bb": 0.6259412364680862,
+        "bt": 0.4196810792063484
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06352222218816783,
+        "bt": 0.37450970468736045
+      },
+      "compression_abs_diff": {
+        "bb": 0.00575127153578782,
+        "bt": 0.03132337694394027
+      },
+      "top1_abs_diff": {
+        "bb": 0.00493388270660386,
+        "bt": 0.023325673876518016
+      },
+      "top5_abs_diff": {
+        "bb": 0.007488211904693822,
+        "bt": 0.05015176465923745
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 153,
+      "lexical_js": {
+        "bb": 0.08470026413616417,
+        "bt": 0.1945467646906421
+      },
+      "rho": {
+        "bb": 0.6140117311600941,
+        "bt": 0.42150908090113837
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06867586043252151,
+        "bt": 0.37623440503617145
+      },
+      "compression_abs_diff": {
+        "bb": 0.004132697382023221,
+        "bt": 0.03200103401068619
+      },
+      "top1_abs_diff": {
+        "bb": 0.005005704008070931,
+        "bt": 0.023146373368775414
+      },
+      "top5_abs_diff": {
+        "bb": 0.006917057074387408,
+        "bt": 0.048873449439963336
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 154,
+      "lexical_js": {
+        "bb": 0.07601351958295798,
+        "bt": 0.19291292586212286
+      },
+      "rho": {
+        "bb": 0.625190729853783,
+        "bt": 0.4165356316016038
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06831921657577152,
+        "bt": 0.3780922610120112
+      },
+      "compression_abs_diff": {
+        "bb": 0.00481118108821161,
+        "bt": 0.032685161759017596
+      },
+      "top1_abs_diff": {
+        "bb": 0.005091482182353801,
+        "bt": 0.02352781733351843
+      },
+      "top5_abs_diff": {
+        "bb": 0.007242314818156698,
+        "bt": 0.05029863199054848
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 155,
+      "lexical_js": {
+        "bb": 0.0785950505039576,
+        "bt": 0.19308280091896082
+      },
+      "rho": {
+        "bb": 0.6170679067176067,
+        "bt": 0.4184048297628207
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0638317957275663,
+        "bt": 0.37617670451520563
+      },
+      "compression_abs_diff": {
+        "bb": 0.006090034812525197,
+        "bt": 0.03130685466964669
+      },
+      "top1_abs_diff": {
+        "bb": 0.004568788322451346,
+        "bt": 0.02320731961792183
+      },
+      "top5_abs_diff": {
+        "bb": 0.006148874881550674,
+        "bt": 0.05121057497819823
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 156,
+      "lexical_js": {
+        "bb": 0.07836775321620584,
+        "bt": 0.19138335115119043
+      },
+      "rho": {
+        "bb": 0.6361783300350964,
+        "bt": 0.4258955532891744
+      },
+      "semantic_cluster_js": {
+        "bb": 0.059681801173439145,
+        "bt": 0.3758667804360611
+      },
+      "compression_abs_diff": {
+        "bb": 0.005771834115742636,
+        "bt": 0.03207424743499518
+      },
+      "top1_abs_diff": {
+        "bb": 0.004414924180428482,
+        "bt": 0.023591859778648718
+      },
+      "top5_abs_diff": {
+        "bb": 0.007416815939985688,
+        "bt": 0.05048400097131844
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 157,
+      "lexical_js": {
+        "bb": 0.0775957552845548,
+        "bt": 0.19205226342085213
+      },
+      "rho": {
+        "bb": 0.6230387211693442,
+        "bt": 0.419078484066749
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06775355941421814,
+        "bt": 0.3779033139890691
+      },
+      "compression_abs_diff": {
+        "bb": 0.005273651456529425,
+        "bt": 0.03103830992625313
+      },
+      "top1_abs_diff": {
+        "bb": 0.004420340660738532,
+        "bt": 0.023979272319939904
+      },
+      "top5_abs_diff": {
+        "bb": 0.006006797815992735,
+        "bt": 0.05066252254561667
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 158,
+      "lexical_js": {
+        "bb": 0.08412642981453984,
+        "bt": 0.19395178365725818
+      },
+      "rho": {
+        "bb": 0.6112029551520141,
+        "bt": 0.41683557612400096
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06318889091990718,
+        "bt": 0.3774626277379423
+      },
+      "compression_abs_diff": {
+        "bb": 0.006339109691283464,
+        "bt": 0.03146925095628584
+      },
+      "top1_abs_diff": {
+        "bb": 0.0037078096275865954,
+        "bt": 0.022674097517606722
+      },
+      "top5_abs_diff": {
+        "bb": 0.0061441550101333725,
+        "bt": 0.051095697350398844
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 159,
+      "lexical_js": {
+        "bb": 0.07800641044682947,
+        "bt": 0.19082457664944816
+      },
+      "rho": {
+        "bb": 0.6227618424678415,
+        "bt": 0.4218201159646359
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0613264063730589,
+        "bt": 0.37519639593905757
+      },
+      "compression_abs_diff": {
+        "bb": 0.0032994435187409963,
+        "bt": 0.03260716560816814
+      },
+      "top1_abs_diff": {
+        "bb": 0.004560896729898398,
+        "bt": 0.024270288540054457
+      },
+      "top5_abs_diff": {
+        "bb": 0.006742476772674862,
+        "bt": 0.051396234040302136
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 160,
+      "lexical_js": {
+        "bb": 0.07713043453980072,
+        "bt": 0.19140861874371437
+      },
+      "rho": {
+        "bb": 0.6177320643854894,
+        "bt": 0.4145554098578598
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0665797577549394,
+        "bt": 0.378750051861015
+      },
+      "compression_abs_diff": {
+        "bb": 0.0044982497648581735,
+        "bt": 0.03406211413159873
+      },
+      "top1_abs_diff": {
+        "bb": 0.0044257523338555,
+        "bt": 0.02382339883860271
+      },
+      "top5_abs_diff": {
+        "bb": 0.006584979861969339,
+        "bt": 0.051205005950131534
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 161,
+      "lexical_js": {
+        "bb": 0.07598810828752295,
+        "bt": 0.18891118684289554
+      },
+      "rho": {
+        "bb": 0.6223659399560544,
+        "bt": 0.42640933000956166
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06818277520139268,
+        "bt": 0.3753337487598792
+      },
+      "compression_abs_diff": {
+        "bb": 0.005142776084439634,
+        "bt": 0.03245303051945113
+      },
+      "top1_abs_diff": {
+        "bb": 0.005010283524758356,
+        "bt": 0.023390469640227188
+      },
+      "top5_abs_diff": {
+        "bb": 0.006836004558989603,
+        "bt": 0.05092206151490614
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 162,
+      "lexical_js": {
+        "bb": 0.08565530110157438,
+        "bt": 0.19672950420418775
+      },
+      "rho": {
+        "bb": 0.6078659590215916,
+        "bt": 0.4079929847952675
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06872414628654817,
+        "bt": 0.37338345418267876
+      },
+      "compression_abs_diff": {
+        "bb": 0.005113908546287284,
+        "bt": 0.03077818743715859
+      },
+      "top1_abs_diff": {
+        "bb": 0.005691866092245738,
+        "bt": 0.023214141977303055
+      },
+      "top5_abs_diff": {
+        "bb": 0.0071208790163672705,
+        "bt": 0.04989435333718048
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 163,
+      "lexical_js": {
+        "bb": 0.07525888876591272,
+        "bt": 0.19034581886973087
+      },
+      "rho": {
+        "bb": 0.6259994360297457,
+        "bt": 0.4183016292456127
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06628800242777881,
+        "bt": 0.3758360255648914
+      },
+      "compression_abs_diff": {
+        "bb": 0.006638847788517544,
+        "bt": 0.03291555983648605
+      },
+      "top1_abs_diff": {
+        "bb": 0.004488570638872305,
+        "bt": 0.02359592961012343
+      },
+      "top5_abs_diff": {
+        "bb": 0.00622967658560685,
+        "bt": 0.05089538615695376
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 164,
+      "lexical_js": {
+        "bb": 0.08004524614915622,
+        "bt": 0.19225839775941722
+      },
+      "rho": {
+        "bb": 0.6316015017781206,
+        "bt": 0.4212749932233908
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06834319653803497,
+        "bt": 0.37968262785887824
+      },
+      "compression_abs_diff": {
+        "bb": 0.006567632312097608,
+        "bt": 0.03181974934364748
+      },
+      "top1_abs_diff": {
+        "bb": 0.005057571382187,
+        "bt": 0.02346130192364843
+      },
+      "top5_abs_diff": {
+        "bb": 0.006391170013315444,
+        "bt": 0.05114938896578697
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 165,
+      "lexical_js": {
+        "bb": 0.076440249188339,
+        "bt": 0.18947839451870385
+      },
+      "rho": {
+        "bb": 0.6245376477517613,
+        "bt": 0.4232393828211878
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06310885408371342,
+        "bt": 0.37852402580957034
+      },
+      "compression_abs_diff": {
+        "bb": 0.005790770043542611,
+        "bt": 0.03251325406202718
+      },
+      "top1_abs_diff": {
+        "bb": 0.00425834217013539,
+        "bt": 0.023779321769909004
+      },
+      "top5_abs_diff": {
+        "bb": 0.005949633253040403,
+        "bt": 0.05122970179799565
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 166,
+      "lexical_js": {
+        "bb": 0.07601973860250862,
+        "bt": 0.19158152050788588
+      },
+      "rho": {
+        "bb": 0.6248016641877968,
+        "bt": 0.4154923281728215
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0658500101239897,
+        "bt": 0.3741356226592145
+      },
+      "compression_abs_diff": {
+        "bb": 0.0074883775047978164,
+        "bt": 0.03203772273143946
+      },
+      "top1_abs_diff": {
+        "bb": 0.004780661310293747,
+        "bt": 0.023322894707345113
+      },
+      "top5_abs_diff": {
+        "bb": 0.0059635810099252515,
+        "bt": 0.050100150186973245
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 167,
+      "lexical_js": {
+        "bb": 0.0749316771086998,
+        "bt": 0.19194272850652763
+      },
+      "rho": {
+        "bb": 0.6330924751241335,
+        "bt": 0.4245139721307099
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06416754007037447,
+        "bt": 0.38136734714733606
+      },
+      "compression_abs_diff": {
+        "bb": 0.005978915682138092,
+        "bt": 0.034046218000507326
+      },
+      "top1_abs_diff": {
+        "bb": 0.004495428159283633,
+        "bt": 0.023860687396954895
+      },
+      "top5_abs_diff": {
+        "bb": 0.00621287301445807,
+        "bt": 0.05209177512564193
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 168,
+      "lexical_js": {
+        "bb": 0.08151046062643594,
+        "bt": 0.19485197294854173
+      },
+      "rho": {
+        "bb": 0.6270777962343792,
+        "bt": 0.41749078831432457
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06634285194247026,
+        "bt": 0.37497223212775715
+      },
+      "compression_abs_diff": {
+        "bb": 0.005759297281179485,
+        "bt": 0.03274603632762172
+      },
+      "top1_abs_diff": {
+        "bb": 0.0057894286152130854,
+        "bt": 0.023524625905700165
+      },
+      "top5_abs_diff": {
+        "bb": 0.008578588620498737,
+        "bt": 0.05037073102289147
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 169,
+      "lexical_js": {
+        "bb": 0.08289431294288421,
+        "bt": 0.1937494149550866
+      },
+      "rho": {
+        "bb": 0.6213196621386561,
+        "bt": 0.4189516703699187
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0694772508040742,
+        "bt": 0.3798225687770363
+      },
+      "compression_abs_diff": {
+        "bb": 0.0045309156934308795,
+        "bt": 0.030909886248275745
+      },
+      "top1_abs_diff": {
+        "bb": 0.0048438063877126085,
+        "bt": 0.024188531530436912
+      },
+      "top5_abs_diff": {
+        "bb": 0.006260816857006191,
+        "bt": 0.050311283049035316
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 170,
+      "lexical_js": {
+        "bb": 0.08392719450185507,
+        "bt": 0.19780141803556164
+      },
+      "rho": {
+        "bb": 0.6179349669632936,
+        "bt": 0.41407565693146164
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06692342663674473,
+        "bt": 0.3760696983590928
+      },
+      "compression_abs_diff": {
+        "bb": 0.0056575767309944664,
+        "bt": 0.030601176427427695
+      },
+      "top1_abs_diff": {
+        "bb": 0.005470368038425059,
+        "bt": 0.02381319534652762
+      },
+      "top5_abs_diff": {
+        "bb": 0.007197791433969213,
+        "bt": 0.05074571245626456
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 171,
+      "lexical_js": {
+        "bb": 0.08186649732552477,
+        "bt": 0.1948179174765506
+      },
+      "rho": {
+        "bb": 0.624022845888081,
+        "bt": 0.4193369342600528
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0672930846914769,
+        "bt": 0.37708510335885403
+      },
+      "compression_abs_diff": {
+        "bb": 0.0045581642177475,
+        "bt": 0.032230171140825714
+      },
+      "top1_abs_diff": {
+        "bb": 0.005243071651829284,
+        "bt": 0.023567331001031006
+      },
+      "top5_abs_diff": {
+        "bb": 0.006488599143395627,
+        "bt": 0.05013862325252267
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 172,
+      "lexical_js": {
+        "bb": 0.07248131223199325,
+        "bt": 0.18895592165429784
+      },
+      "rho": {
+        "bb": 0.6299241703282039,
+        "bt": 0.41934630763298486
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06168183681771551,
+        "bt": 0.37283554772503374
+      },
+      "compression_abs_diff": {
+        "bb": 0.0037400693260918882,
+        "bt": 0.03142252158624167
+      },
+      "top1_abs_diff": {
+        "bb": 0.005131674187810045,
+        "bt": 0.023499523060190184
+      },
+      "top5_abs_diff": {
+        "bb": 0.006722553688702681,
+        "bt": 0.05104042371405105
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 173,
+      "lexical_js": {
+        "bb": 0.07408129474775992,
+        "bt": 0.18972382465700863
+      },
+      "rho": {
+        "bb": 0.6290703695152953,
+        "bt": 0.4212010184261139
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0679787379323891,
+        "bt": 0.3722104817168867
+      },
+      "compression_abs_diff": {
+        "bb": 0.007073289940160412,
+        "bt": 0.03288315126483372
+      },
+      "top1_abs_diff": {
+        "bb": 0.004775467212709979,
+        "bt": 0.024086212449974508
+      },
+      "top5_abs_diff": {
+        "bb": 0.006710683316222232,
+        "bt": 0.04996842753831044
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 174,
+      "lexical_js": {
+        "bb": 0.08162369232349936,
+        "bt": 0.19330491573995676
+      },
+      "rho": {
+        "bb": 0.6293872507549085,
+        "bt": 0.42132659239519105
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06420681576832425,
+        "bt": 0.37707970980201355
+      },
+      "compression_abs_diff": {
+        "bb": 0.004403265101955935,
+        "bt": 0.030637019789826636
+      },
+      "top1_abs_diff": {
+        "bb": 0.004668926350390859,
+        "bt": 0.023022218950978907
+      },
+      "top5_abs_diff": {
+        "bb": 0.006407596976438391,
+        "bt": 0.05023115778341772
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 175,
+      "lexical_js": {
+        "bb": 0.07908182693812045,
+        "bt": 0.19273492991464733
+      },
+      "rho": {
+        "bb": 0.6383674287770208,
+        "bt": 0.42848391422560833
+      },
+      "semantic_cluster_js": {
+        "bb": 0.07126511726234745,
+        "bt": 0.3780221053277206
+      },
+      "compression_abs_diff": {
+        "bb": 0.003988181045288034,
+        "bt": 0.029676025873248718
+      },
+      "top1_abs_diff": {
+        "bb": 0.004687511532711436,
+        "bt": 0.02332820412420065
+      },
+      "top5_abs_diff": {
+        "bb": 0.00572152157102521,
+        "bt": 0.050169425288743734
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 176,
+      "lexical_js": {
+        "bb": 0.08392218884177266,
+        "bt": 0.1944348166403654
+      },
+      "rho": {
+        "bb": 0.6193077108415992,
+        "bt": 0.4158377365063532
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06737700562795917,
+        "bt": 0.37514778182691794
+      },
+      "compression_abs_diff": {
+        "bb": 0.006326445948169072,
+        "bt": 0.030162504429181516
+      },
+      "top1_abs_diff": {
+        "bb": 0.004902355493317099,
+        "bt": 0.023623403541852706
+      },
+      "top5_abs_diff": {
+        "bb": 0.006099360154781786,
+        "bt": 0.049710478087289935
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 177,
+      "lexical_js": {
+        "bb": 0.08172857969261833,
+        "bt": 0.19324211017664406
+      },
+      "rho": {
+        "bb": 0.6226062440992165,
+        "bt": 0.4208328116209756
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06725771721439683,
+        "bt": 0.37352944890455414
+      },
+      "compression_abs_diff": {
+        "bb": 0.006743177985705926,
+        "bt": 0.030232312390453125
+      },
+      "top1_abs_diff": {
+        "bb": 0.004548275018254927,
+        "bt": 0.023450556946800916
+      },
+      "top5_abs_diff": {
+        "bb": 0.006794277284496355,
+        "bt": 0.05022793643175996
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 178,
+      "lexical_js": {
+        "bb": 0.08274735522853437,
+        "bt": 0.1937094251607684
+      },
+      "rho": {
+        "bb": 0.6202847569414909,
+        "bt": 0.41764658348066125
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0653716682935476,
+        "bt": 0.374963469047346
+      },
+      "compression_abs_diff": {
+        "bb": 0.004399780997916269,
+        "bt": 0.03247758963513125
+      },
+      "top1_abs_diff": {
+        "bb": 0.004615772755742541,
+        "bt": 0.02339305832836376
+      },
+      "top5_abs_diff": {
+        "bb": 0.005932346683709409,
+        "bt": 0.05082253502246748
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 179,
+      "lexical_js": {
+        "bb": 0.07687980148401007,
+        "bt": 0.1903989133603611
+      },
+      "rho": {
+        "bb": 0.6202857718118818,
+        "bt": 0.4249472250948272
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06809181391610601,
+        "bt": 0.37518565702710277
+      },
+      "compression_abs_diff": {
+        "bb": 0.005034795585657009,
+        "bt": 0.032321861900330685
+      },
+      "top1_abs_diff": {
+        "bb": 0.004155095690386788,
+        "bt": 0.023033939039555956
+      },
+      "top5_abs_diff": {
+        "bb": 0.007350809937908047,
+        "bt": 0.05011942021539853
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 180,
+      "lexical_js": {
+        "bb": 0.08105327540297498,
+        "bt": 0.19286167969298018
+      },
+      "rho": {
+        "bb": 0.6233077471849309,
+        "bt": 0.41591017288656307
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06634563157278969,
+        "bt": 0.37596046216802154
+      },
+      "compression_abs_diff": {
+        "bb": 0.006160132808428396,
+        "bt": 0.03126281739197937
+      },
+      "top1_abs_diff": {
+        "bb": 0.004391505546107732,
+        "bt": 0.023504225778296153
+      },
+      "top5_abs_diff": {
+        "bb": 0.006166671067879677,
+        "bt": 0.05048376634611101
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 181,
+      "lexical_js": {
+        "bb": 0.07653334455901338,
+        "bt": 0.19025660896177207
+      },
+      "rho": {
+        "bb": 0.6224297956058851,
+        "bt": 0.4197658128522362
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06706054987542992,
+        "bt": 0.3747382403645372
+      },
+      "compression_abs_diff": {
+        "bb": 0.00436421362962339,
+        "bt": 0.02984576322767994
+      },
+      "top1_abs_diff": {
+        "bb": 0.005095153100067504,
+        "bt": 0.023601172263078937
+      },
+      "top5_abs_diff": {
+        "bb": 0.007644336450796041,
+        "bt": 0.049865725406649
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 182,
+      "lexical_js": {
+        "bb": 0.07663474455937028,
+        "bt": 0.19092487829604457
+      },
+      "rho": {
+        "bb": 0.6391940572141783,
+        "bt": 0.4288280800346676
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06302058354230733,
+        "bt": 0.3791781078490965
+      },
+      "compression_abs_diff": {
+        "bb": 0.007900126294555138,
+        "bt": 0.03267576047891951
+      },
+      "top1_abs_diff": {
+        "bb": 0.00476358144353138,
+        "bt": 0.023940379554331547
+      },
+      "top5_abs_diff": {
+        "bb": 0.0068678872111026055,
+        "bt": 0.05073395135514816
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 183,
+      "lexical_js": {
+        "bb": 0.08004031640052953,
+        "bt": 0.19218936200674655
+      },
+      "rho": {
+        "bb": 0.6303189532394854,
+        "bt": 0.4234281830223583
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06657116134375549,
+        "bt": 0.3766053238411362
+      },
+      "compression_abs_diff": {
+        "bb": 0.0040121271158364705,
+        "bt": 0.03258473502092984
+      },
+      "top1_abs_diff": {
+        "bb": 0.004585990453229546,
+        "bt": 0.02395573935453538
+      },
+      "top5_abs_diff": {
+        "bb": 0.006365053273135688,
+        "bt": 0.051089106817153625
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 184,
+      "lexical_js": {
+        "bb": 0.07958225240239786,
+        "bt": 0.19070764395192089
+      },
+      "rho": {
+        "bb": 0.6266407779591469,
+        "bt": 0.4231050123024422
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06545404582107933,
+        "bt": 0.3752087636397004
+      },
+      "compression_abs_diff": {
+        "bb": 0.0027453955307094047,
+        "bt": 0.03210715849828808
+      },
+      "top1_abs_diff": {
+        "bb": 0.005515850774089505,
+        "bt": 0.024019972991562926
+      },
+      "top5_abs_diff": {
+        "bb": 0.007452761187505328,
+        "bt": 0.05135979609267602
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 185,
+      "lexical_js": {
+        "bb": 0.07726089050073708,
+        "bt": 0.19033984770333975
+      },
+      "rho": {
+        "bb": 0.6234193769643388,
+        "bt": 0.4225761450731609
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0660789474492136,
+        "bt": 0.37960050317623306
+      },
+      "compression_abs_diff": {
+        "bb": 0.005687754548611322,
+        "bt": 0.034816171875775646
+      },
+      "top1_abs_diff": {
+        "bb": 0.004485825030099669,
+        "bt": 0.02329146839810059
+      },
+      "top5_abs_diff": {
+        "bb": 0.005819021632781281,
+        "bt": 0.051649091452508795
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 186,
+      "lexical_js": {
+        "bb": 0.0798741683914793,
+        "bt": 0.19213414558679198
+      },
+      "rho": {
+        "bb": 0.6309161590159543,
+        "bt": 0.41907094291603997
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06561134537226464,
+        "bt": 0.37669136572350953
+      },
+      "compression_abs_diff": {
+        "bb": 0.006854949412327743,
+        "bt": 0.032071261495265235
+      },
+      "top1_abs_diff": {
+        "bb": 0.005297715905025953,
+        "bt": 0.023598835961144243
+      },
+      "top5_abs_diff": {
+        "bb": 0.0068315262157836645,
+        "bt": 0.05063335039816593
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 187,
+      "lexical_js": {
+        "bb": 0.07462693504951888,
+        "bt": 0.1912789261518573
+      },
+      "rho": {
+        "bb": 0.6350799211962698,
+        "bt": 0.4268547613409282
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0698921934248998,
+        "bt": 0.3775592454511197
+      },
+      "compression_abs_diff": {
+        "bb": 0.005853673353492858,
+        "bt": 0.03244221195149107
+      },
+      "top1_abs_diff": {
+        "bb": 0.004731084333485605,
+        "bt": 0.02305494549365152
+      },
+      "top5_abs_diff": {
+        "bb": 0.006483681783341831,
+        "bt": 0.04923706194689883
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 188,
+      "lexical_js": {
+        "bb": 0.0762330565685875,
+        "bt": 0.19183975092556485
+      },
+      "rho": {
+        "bb": 0.6223338173902088,
+        "bt": 0.4230205720804656
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0689572177745114,
+        "bt": 0.3756700189985141
+      },
+      "compression_abs_diff": {
+        "bb": 0.005764432907680918,
+        "bt": 0.03090991123282759
+      },
+      "top1_abs_diff": {
+        "bb": 0.005434852086698755,
+        "bt": 0.02265999977523998
+      },
+      "top5_abs_diff": {
+        "bb": 0.00685856234649642,
+        "bt": 0.05003849567738541
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 189,
+      "lexical_js": {
+        "bb": 0.07826591443804282,
+        "bt": 0.1912994398552208
+      },
+      "rho": {
+        "bb": 0.6308520548301058,
+        "bt": 0.42103701849006675
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06748739637662844,
+        "bt": 0.374664924536567
+      },
+      "compression_abs_diff": {
+        "bb": 0.006080545766665561,
+        "bt": 0.032209336336933715
+      },
+      "top1_abs_diff": {
+        "bb": 0.004004793055321812,
+        "bt": 0.023262870706698635
+      },
+      "top5_abs_diff": {
+        "bb": 0.005229555318859414,
+        "bt": 0.05024260092779718
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 190,
+      "lexical_js": {
+        "bb": 0.07938526378163378,
+        "bt": 0.19211196100571368
+      },
+      "rho": {
+        "bb": 0.6276404997199081,
+        "bt": 0.42105946071833494
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06825501039249675,
+        "bt": 0.3767975555101744
+      },
+      "compression_abs_diff": {
+        "bb": 0.004547352227108914,
+        "bt": 0.03227535428559473
+      },
+      "top1_abs_diff": {
+        "bb": 0.004645536632648987,
+        "bt": 0.023466026759235852
+      },
+      "top5_abs_diff": {
+        "bb": 0.006452634209263665,
+        "bt": 0.05046288171036039
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 191,
+      "lexical_js": {
+        "bb": 0.07480561619775235,
+        "bt": 0.19244027620688028
+      },
+      "rho": {
+        "bb": 0.6230244292065813,
+        "bt": 0.4137545869314463
+      },
+      "semantic_cluster_js": {
+        "bb": 0.07069680098546721,
+        "bt": 0.38373275752216696
+      },
+      "compression_abs_diff": {
+        "bb": 0.005471636145027703,
+        "bt": 0.03211315316552754
+      },
+      "top1_abs_diff": {
+        "bb": 0.004933302648272253,
+        "bt": 0.023620036876384542
+      },
+      "top5_abs_diff": {
+        "bb": 0.007045873998870131,
+        "bt": 0.05027416135873398
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 192,
+      "lexical_js": {
+        "bb": 0.079843874910206,
+        "bt": 0.19159822915389527
+      },
+      "rho": {
+        "bb": 0.6267799623855009,
+        "bt": 0.4237078919808683
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06297322031088866,
+        "bt": 0.37435242509268596
+      },
+      "compression_abs_diff": {
+        "bb": 0.005136217757203834,
+        "bt": 0.03154402609903988
+      },
+      "top1_abs_diff": {
+        "bb": 0.004464626783124309,
+        "bt": 0.02300856436178304
+      },
+      "top5_abs_diff": {
+        "bb": 0.006169636979807729,
+        "bt": 0.05035392181909968
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 193,
+      "lexical_js": {
+        "bb": 0.07877955550625758,
+        "bt": 0.19154334962349104
+      },
+      "rho": {
+        "bb": 0.6368161311787055,
+        "bt": 0.4239203986635129
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06605280796645423,
+        "bt": 0.3761523448810887
+      },
+      "compression_abs_diff": {
+        "bb": 0.007559890609766839,
+        "bt": 0.031212256147802892
+      },
+      "top1_abs_diff": {
+        "bb": 0.004806826827041351,
+        "bt": 0.02396746722347444
+      },
+      "top5_abs_diff": {
+        "bb": 0.006589002412005564,
+        "bt": 0.05183135396186599
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 194,
+      "lexical_js": {
+        "bb": 0.07584453198585214,
+        "bt": 0.19196799900963835
+      },
+      "rho": {
+        "bb": 0.6387807721956957,
+        "bt": 0.42003205437786617
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06520382945236233,
+        "bt": 0.37657961716393423
+      },
+      "compression_abs_diff": {
+        "bb": 0.005376742651722105,
+        "bt": 0.03259216359018901
+      },
+      "top1_abs_diff": {
+        "bb": 0.00513086623169739,
+        "bt": 0.024067356058530734
+      },
+      "top5_abs_diff": {
+        "bb": 0.007421971723440325,
+        "bt": 0.05199674360870397
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 195,
+      "lexical_js": {
+        "bb": 0.08027147632390542,
+        "bt": 0.19184833282463884
+      },
+      "rho": {
+        "bb": 0.6317571585459929,
+        "bt": 0.42337587911714997
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0651371939761772,
+        "bt": 0.3757033715228402
+      },
+      "compression_abs_diff": {
+        "bb": 0.004366144655952588,
+        "bt": 0.030959557429792048
+      },
+      "top1_abs_diff": {
+        "bb": 0.004521764006089938,
+        "bt": 0.023373468659281776
+      },
+      "top5_abs_diff": {
+        "bb": 0.0060806882575384445,
+        "bt": 0.0508404544087346
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 196,
+      "lexical_js": {
+        "bb": 0.08477444102823489,
+        "bt": 0.1950364692097406
+      },
+      "rho": {
+        "bb": 0.6229977831419495,
+        "bt": 0.4227303724802442
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06625915859780333,
+        "bt": 0.37728026721666663
+      },
+      "compression_abs_diff": {
+        "bb": 0.004764497177092406,
+        "bt": 0.02994772154243044
+      },
+      "top1_abs_diff": {
+        "bb": 0.004693325077806126,
+        "bt": 0.02388752487630878
+      },
+      "top5_abs_diff": {
+        "bb": 0.006869822068049635,
+        "bt": 0.049667817225474135
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 197,
+      "lexical_js": {
+        "bb": 0.08260091398545791,
+        "bt": 0.19254705415149065
+      },
+      "rho": {
+        "bb": 0.6198848650794352,
+        "bt": 0.4155759488970259
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06809345938047821,
+        "bt": 0.3769138520008277
+      },
+      "compression_abs_diff": {
+        "bb": 0.00523603996271206,
+        "bt": 0.030639103092677627
+      },
+      "top1_abs_diff": {
+        "bb": 0.005357034573309586,
+        "bt": 0.023497810060210202
+      },
+      "top5_abs_diff": {
+        "bb": 0.007544830657164366,
+        "bt": 0.04992469433558028
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 198,
+      "lexical_js": {
+        "bb": 0.08033871466261923,
+        "bt": 0.1933771366630951
+      },
+      "rho": {
+        "bb": 0.6122810536505762,
+        "bt": 0.41268157139476136
+      },
+      "semantic_cluster_js": {
+        "bb": 0.0668153392864586,
+        "bt": 0.3778784569978832
+      },
+      "compression_abs_diff": {
+        "bb": 0.006987053054287953,
+        "bt": 0.03099166438088662
+      },
+      "top1_abs_diff": {
+        "bb": 0.004842849724146081,
+        "bt": 0.023162310370815693
+      },
+      "top5_abs_diff": {
+        "bb": 0.007461847624321924,
+        "bt": 0.050448987473345704
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    },
+    {
+      "replicate": 199,
+      "lexical_js": {
+        "bb": 0.0831696903764239,
+        "bt": 0.19378401870154463
+      },
+      "rho": {
+        "bb": 0.6215066150922676,
+        "bt": 0.41898371443145216
+      },
+      "semantic_cluster_js": {
+        "bb": 0.06753422454245946,
+        "bt": 0.3756912610802707
+      },
+      "compression_abs_diff": {
+        "bb": 0.005513909032466637,
+        "bt": 0.0335384029571841
+      },
+      "top1_abs_diff": {
+        "bb": 0.004382294353610731,
+        "bt": 0.024256214030639284
+      },
+      "top5_abs_diff": {
+        "bb": 0.005845470027646242,
+        "bt": 0.05233611780128103
+      },
+      "pair_counts": {
+        "bb": 15,
+        "bt": 48
+      },
+      "ordering_held": {
+        "lexical_js": true,
+        "rho": true,
+        "semantic_cluster_js": true,
+        "compression_abs_diff": true,
+        "top1_abs_diff": true,
+        "top5_abs_diff": true
+      }
+    }
+  ],
+  "semantic_bootstrap_mode": "fixed",
+  "checkpoint_path": "not_bundled; recompute with scripts/run_bootstrap_hardening.py to resume from a local checkpoint"
+}

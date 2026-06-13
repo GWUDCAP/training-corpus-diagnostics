@@ -1,0 +1,45 @@
+{
+  "schema": "lens_effects.public_scorecard_submission_request.v1",
+  "corpus": {
+    "label": "my_new_corpus",
+    "display": "My New Corpus",
+    "role": "candidate",
+    "stage_role": "unlabeled",
+    "subrole": "describe_the_preparation_regime_if_known",
+    "source": "dataset identifier, DOI, URL, or local/private description",
+    "source_config": null,
+    "source_split": "train",
+    "source_field": "text",
+    "source_type": "hf | jsonl | text_glob | other",
+    "extraction_mode": "plain_text"
+  },
+  "canonical_settings": {
+    "metric_suite_version": "lens_effects.release.v0.1.0",
+    "chunks_per_corpus": 2048,
+    "max_chunk_chars": 768,
+    "min_retained_chars": 192,
+    "max_chunks_per_source_document": 2,
+    "embedding_model": "Alibaba-NLP/gte-base-en-v1.5",
+    "embedding_dimension": 768
+  },
+  "expected_submission_outputs": [
+    "scorecard_submission.json",
+    "scorecard_submission.md",
+    "corpus_manifest.json",
+    "corpus_matrix.json",
+    "standalone_submitted_corpora.json",
+    "pairs_involving_submitted_corpora.json",
+    "artifacts/<label>/chunks.json",
+    "artifacts/<label>/embeddings.npy",
+    "scorecard_entry.json",
+    "scorecard_entry.md"
+  ],
+  "status_tiers": {
+    "submitted": "PR opened or generated entry supplied; not yet validated.",
+    "artifact_validated": "Schema, artifact hash, canonical settings, and declared provenance pass checks.",
+    "agent_reviewed": "Maintainer or reviewing agent checked provenance and interpretation language.",
+    "reproduced": "Maintainer or trusted runner reran the public metric suite and reproduced the submitted summaries within release tolerance."
+  },
+  "score_interpretation": "Scorecard values are diagnostic positions under the metric suite, not quality rankings or claims of downstream model behavior.",
+  "maintainer_notes": ""
+}

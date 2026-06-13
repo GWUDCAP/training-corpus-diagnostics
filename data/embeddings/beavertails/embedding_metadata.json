@@ -1,0 +1,19 @@
+{
+  "schema": "lens_effects.embedding_metadata.v1",
+  "label": "beavertails",
+  "model_name": "Alibaba-NLP/gte-base-en-v1.5",
+  "trust_remote_code": true,
+  "batch_size": 16,
+  "max_length": 512,
+  "device": "cuda",
+  "shape": [
+    2048,
+    768
+  ],
+  "chunks_path": "data/chunks/beavertails/chunks.json",
+  "chunks_sha256": "fc103b5f25a40158ab01fde219230a8204a22671e79fe94ec01391c44b93ad55",
+  "embeddings_sha256": "3e79013e69775294eee65c47a2a84b5689e12c92c893ea83268384e9fd15f574",
+  "torch": "2.9.1+cu128",
+  "transformers_model_class": "NewModel",
+  "created_unix": 1778014500.0543413
+}

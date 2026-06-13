@@ -1,0 +1,32 @@
+{
+  "schema": "lens_effects.directional_lexical_sensitivity.v1",
+  "note": "The primary broad-targeted textual summary uses broad corpora as the reference vocabulary. This table reports the reverse direction and the two-direction average as a sensitivity check.",
+  "broad_broad_two_direction": {
+    "lexical_js": 0.08339160481072147,
+    "rho": 0.6155708584898139,
+    "semantic_cluster_js": 0.06299492461654993,
+    "compression_abs_diff": 0.0077132501322697035,
+    "top1_abs_diff": 0.004830261892551935,
+    "top5_abs_diff": 0.006463686728955048
+  },
+  "broad_targeted_broad_reference": {
+    "lexical_js": 0.18943464152634185,
+    "rho": 0.4037680721885555
+  },
+  "broad_targeted_targeted_reference": {
+    "lexical_js": 0.1971178702039246,
+    "rho": 0.4098429468950186
+  },
+  "broad_targeted_two_direction_average": {
+    "lexical_js": 0.19327625586513322,
+    "rho": 0.40680550954178707
+  },
+  "ordering_checks": {
+    "primary_lexical_js_bt_gt_bb": true,
+    "reverse_lexical_js_bt_gt_bb": true,
+    "symmetric_lexical_js_bt_gt_bb": true,
+    "primary_rho_bb_gt_bt": true,
+    "reverse_rho_bb_gt_bt": true,
+    "symmetric_rho_bb_gt_bt": true
+  }
+}
