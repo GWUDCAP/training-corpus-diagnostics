@@ -9,6 +9,7 @@ from pathlib import Path
 
 ## ===== 3RD-PARTY ===== ##
 import matplotlib.pyplot as plt
+from matplotlib.patches import FancyArrowPatch, FancyBboxPatch
 import numpy as np
 
 # ===== GLOBALS ===== #
@@ -23,17 +24,20 @@ if not MATRIX.exists():
 ROLE_COLOR = {"broad": "#4C78A8", "targeted": "#F58518"}
 ROLE_LABEL = {"broad": "Pretraining", "targeted": "Post-training"}
 FIG2_OFFSETS = {
-    "FineWeb": (6, -9),
-    "C4": (6, 8),
-    "Dolma": (-38, -10),
-    "RefinedWeb": (8, 10),
-    "SlimPajama": (-20, 13),
-    "Pile uncopyrighted": (6, -4),
-    "Dolly 15k": (6, -12),
-    "HH-RLHF rejected": (-62, 5),
-    "HH-RLHF chosen": (6, 10),
-    "OASST1 assistant": (7, -2),
-    "UltraFeedback chosen": (7, 8),
+    "FineWeb": (10, -5),
+    "C4": (-40, 18),
+    "Dolma": (-66, 3),
+    "RefinedWeb": (10, 15),
+    "SlimPajama": (-74, -25),
+    "Pile uncopyrighted": (8, 9),
+    "Dolly 15k": (-56, -12),
+    "HH-RLHF rejected": (-70, 12),
+    "HH-RLHF chosen": (8, 14),
+    "OASST1 assistant": (8, -12),
+    "UltraFeedback chosen": (8, 26),
+    "BeaverTails": (8, 6),
+    "Magicoder OSS Instruct": (6, 5),
+    "Nemotron-SFT-Math": (6, 6),
 }
 ORDER = [
     "fineweb_sample_10BT",
@@ -80,6 +84,30 @@ def savefig(name: str) -> None:
     svg.write_text("\n".join(line.rstrip() for line in svg.read_text(encoding="utf-8").splitlines()) + "\n", encoding="utf-8")
     plt.close()
 
+def fig0() -> None:
+    fig, ax = plt.subplots(figsize=(12.8, 5.2))
+    ax.set_xlim(0, 12)
+    ax.set_ylim(0, 5)
+    ax.axis("off")
+
+    def box(x: float, y: float, w: float, h: float, title: str, body: str, color: str) -> None:
+        patch = FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.04,rounding_size=0.08", linewidth=1.1, edgecolor=color, facecolor=color, alpha=0.13)
+        ax.add_patch(patch)
+        ax.text(x + 0.18, y + h - 0.42, title, fontsize=12.5, fontweight="bold", color=color, va="top")
+        ax.text(x + 0.18, y + h - 0.9, body, fontsize=9.6, color="#222222", va="top", linespacing=1.28)
+
+    box(0.35, 2.8, 3.0, 1.55, "Pretraining corpora", "broad source-derived mixtures\ncompact within-panel geometry\nlower concentration", ROLE_COLOR["broad"])
+    box(0.35, 0.75, 3.0, 1.55, "Post-training corpora", "trainer-selected responses\nstructured departures\ncapability and safety poles", ROLE_COLOR["targeted"])
+    box(4.35, 1.35, 3.15, 2.55, "Measurement suite", "lexical mass allocation\nsalience-rank preservation\nembedding-neighborhood shift\nspectral concentration\nredundancy and mixture paths", "#6F4E7C")
+    box(8.55, 1.35, 3.1, 2.55, "Diagnostic output", "stage-linked separation\ninternal post-training structure\npositioning for new corpora\npublic scorecard submissions", "#2F6F5E")
+
+    for y in [3.55, 1.5]:
+        ax.add_patch(FancyArrowPatch((3.45, y), (4.25, 2.6), arrowstyle="-|>", mutation_scale=14, linewidth=1.2, color="#555555"))
+    ax.add_patch(FancyArrowPatch((7.65, 2.6), (8.45, 2.6), arrowstyle="-|>", mutation_scale=14, linewidth=1.2, color="#555555"))
+    ax.text(0.35, 4.72, "Lens effects as an upstream corpus diagnostic", fontsize=16.5, fontweight="bold", color="#111111")
+    ax.text(0.35, 4.38, "Motivated corpus preparation leaves measurable, graded structure before optimization begins.", fontsize=10.8, color="#333333")
+    savefig("fig0_visual_summary.png")
+
 def fig1() -> None:
     summary = load_json(MATRIX / "recomputed" / "family_summary.json")["metrics"]
     bb = summary["broad_broad"]
@@ -114,7 +142,7 @@ def fig2() -> None:
         y = row["semantic_spectrum"]["top5_share"]
         role = row["role"]
         ax.scatter(x, y, s=78, color=ROLE_COLOR[role], edgecolor="white", linewidth=0.8)
-        ax.annotate(short(row["display"]), (x, y), xytext=FIG2_OFFSETS.get(row["display"], (5, 4)), textcoords="offset points", fontsize=7.5)
+        ax.annotate(short(row["display"]), (x, y), xytext=FIG2_OFFSETS.get(row["display"], (5, 4)), textcoords="offset points", fontsize=7.5, bbox={"boxstyle": "round,pad=0.1", "fc": "white", "ec": "none", "alpha": 0.72})
     handles = [
         plt.Line2D([0], [0], marker="o", linestyle="", color=ROLE_COLOR["broad"], label=ROLE_LABEL["broad"]),
         plt.Line2D([0], [0], marker="o", linestyle="", color=ROLE_COLOR["targeted"], label=ROLE_LABEL["targeted"]),
@@ -123,6 +151,7 @@ def fig2() -> None:
     ax.set_xlabel("LZMA compression ratio")
     ax.set_ylabel("Spectral top5 share")
     ax.set_title("Standalone corpus structure")
+    ax.margins(x=0.14, y=0.10)
     ax.grid(alpha=0.25)
     savefig("fig2_standalone_spectrum.png")
 
@@ -273,7 +302,7 @@ def main() -> None:
     args = ap.parse_args()
     MATRIX = args.matrix_dir
     OUT = args.out_dir
-    for fn in [fig1, fig2, fig3, fig4, fig5, fig6, fig7]:
+    for fn in [fig0, fig1, fig2, fig3, fig4, fig5, fig6, fig7]:
         try:
             fn()
         except FileNotFoundError as exc:

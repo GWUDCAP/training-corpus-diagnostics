@@ -1,5 +1,9 @@
 # Lens Effects: Structured Geometry in Training Corpora
 
+![Visual summary. Lens effects as an upstream corpus diagnostic](../figures/fig0_visual_summary.png)
+
+**Visual summary.** The retained suite measures whether stage-linked corpus preparation is already visible as a structured shift in the text distributions shown to a learner before optimization begins.
+
 ## Abstract
 
 Large language models are commonly trained in stages, with broad pretraining followed by more directed post-training. These stages are usually evaluated through downstream behavior: instruction following, helpfulness, safety behavior, specialization, robustness, output diversity, forgetting, or alignment tax (Ouyang et al., 2022; Bai et al., 2022; Kirk et al., 2024; Bianchi et al., 2024; Luo et al., 2023; Lin et al., 2024). We ask a simpler upstream question: whether the stage-linked preparation regimes associated with those corpora already differ in measurable structure before any model is trained on them.

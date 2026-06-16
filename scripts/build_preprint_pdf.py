@@ -43,6 +43,8 @@ H2 = font(38, bold=True)
 H3 = font(32, bold=True)
 MONO = font(23, mono=True)
 CAPTION = font(25)
+TABLE = font(20)
+TABLE_BOLD = font(20, bold=True)
 
 def clean_inline(text: str) -> str:
     text = re.sub(r"\*\*(.*?)\*\*", r"\1", text)
@@ -69,6 +71,71 @@ def draw_wrapped(draw: ImageDraw.ImageDraw, text: str, x: int, y: int, width: in
         draw.text((x, y), line, font=face, fill=fill)
         y += face.size + LINE_PAD
     return y
+
+def parse_table(block: list[str]) -> list[list[str]]:
+    rows = []
+    for line in block:
+        cells = [clean_inline(cell.strip()) for cell in line.strip().strip("|").split("|")]
+        if cells and all(re.fullmatch(r":?-{3,}:?", cell.replace(" ", "")) for cell in cells):
+            continue
+        rows.append(cells)
+    return rows
+
+def wrap_cell(text: str, width: int, face: ImageFont.ImageFont) -> list[str]:
+    probe = Image.new("RGB", (10, 10), "white")
+    draw = ImageDraw.Draw(probe)
+    avg_char = max(6, int(draw.textlength("abcdefghijklmnopqrstuvwxyz", font=face) / 26))
+    chars = max(8, width // avg_char)
+    return textwrap.wrap(text, width=chars, break_long_words=False, replace_whitespace=False) or [""]
+
+def render_table(block: list[str], max_width: int) -> Image.Image:
+    rows = parse_table(block)
+    if not rows:
+        return Image.new("RGB", (max_width, 1), "white")
+    cols = max(len(row) for row in rows)
+    for row in rows:
+        row.extend([""] * (cols - len(row)))
+
+    content_weights = []
+    for col in range(cols):
+        values = [row[col] for row in rows]
+        longest = max(len(v) for v in values)
+        content_weights.append(max(10, min(48, longest)))
+    total = sum(content_weights)
+    widths = [max(120, int((max_width - 2) * weight / total)) for weight in content_weights]
+    overflow = sum(widths) - max_width + 2
+    if overflow > 0:
+        widest = max(range(cols), key=lambda i: widths[i])
+        widths[widest] -= overflow
+
+    x_positions = [1]
+    for width in widths[:-1]:
+        x_positions.append(x_positions[-1] + width)
+
+    wrapped_rows = []
+    heights = []
+    for r, row in enumerate(rows):
+        face = TABLE_BOLD if r == 0 else TABLE
+        wrapped = [wrap_cell(row[c], max(36, widths[c] - 22), face) for c in range(cols)]
+        wrapped_rows.append(wrapped)
+        heights.append(max(44, 18 + max(len(lines) for lines in wrapped) * (face.size + 5)))
+
+    img = Image.new("RGB", (max_width, sum(heights) + 2), "white")
+    draw = ImageDraw.Draw(img)
+    y = 1
+    for r, wrapped in enumerate(wrapped_rows):
+        face = TABLE_BOLD if r == 0 else TABLE
+        fill = "#EEF3F8" if r == 0 else ("#FAFAFA" if r % 2 == 0 else "white")
+        row_h = heights[r]
+        for c, lines in enumerate(wrapped):
+            x = x_positions[c]
+            draw.rectangle((x, y, x + widths[c], y + row_h), fill=fill, outline="#C8CED6", width=1)
+            yy = y + 9
+            for text in lines:
+                draw.text((x + 10, yy), text, font=face, fill="#111111")
+                yy += face.size + 5
+        y += row_h
+    return img
 
 def render_markdown(markdown: str, root: Path, out: Path) -> None:
     pages = []
@@ -118,21 +185,39 @@ def render_markdown(markdown: str, root: Path, out: Path) -> None:
             y = draw_wrapped(draw, clean_inline(line[3:]), MARGIN_X, y, TEXT_W, H2)
             y += 12
         elif line.startswith("### "):
-            ensure(70)
+            heading = clean_inline(line[4:])
+            needed = 70
+            if heading.startswith("Table"):
+                j = i + 1
+                while j < len(lines) and not lines[j].startswith("|"):
+                    if lines[j].strip():
+                        break
+                    j += 1
+                if j < len(lines) and lines[j].startswith("|"):
+                    block = []
+                    while j < len(lines) and lines[j].startswith("|"):
+                        block.append(lines[j])
+                        j += 1
+                    needed += min(render_table(block, TEXT_W).height + 40, PAGE_H - 2 * MARGIN_Y)
+            ensure(needed)
             y += 8
-            y = draw_wrapped(draw, clean_inline(line[4:]), MARGIN_X, y, TEXT_W, H3)
+            y = draw_wrapped(draw, heading, MARGIN_X, y, TEXT_W, H3)
             y += 8
         elif line.startswith("|"):
             block = []
             while i < len(lines) and lines[i].startswith("|"):
                 block.append(lines[i])
                 i += 1
-            for row in block:
-                ensure(44)
-                y = draw_wrapped(draw, row, MARGIN_X, y, TEXT_W, MONO, fill="#222222")
-            y += 10
+            table = render_table(block, TEXT_W)
+            max_h = PAGE_H - 2 * MARGIN_Y
+            if table.height > max_h:
+                scale = max_h / table.height
+                table = table.resize((int(table.width * scale), int(table.height * scale)), Image.Resampling.LANCZOS)
+            ensure(table.height + 40)
+            page.paste(table, (MARGIN_X + (TEXT_W - table.width) // 2, y))
+            y += table.height + 28
             continue
-        elif line.startswith("**Figure"):
+        elif line.startswith("**Figure") or line.startswith("**Visual summary"):
             ensure(80)
             y = draw_wrapped(draw, clean_inline(line), MARGIN_X, y, TEXT_W, CAPTION, fill="#333333")
             y += 16
