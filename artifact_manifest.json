@@ -1,6 +1,6 @@
 {
   "schema": "lens_effects.release_manifest.v3",
-  "release_status": "public_release_v0.1.0",
+  "release_status": "public_release_v0.1.1",
   "created_for": "public reproducibility package",
   "entry_points": {
     "readme": "README.md",
