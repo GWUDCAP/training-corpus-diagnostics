@@ -33,7 +33,9 @@ This verifier checks committed paper-facing values. It does not download models,
 - `results/final_matrix/`: paper-facing metrics, sweeps, mixtures, and continuous embedding sensitivity.
 - `stability/`: bootstrap, leave-one-out, same-corpus split, and semantic-k summaries.
 - `figures/`: rendered manuscript figures in PNG, PDF, and SVG.
-- `paper/lens_effects_preprint.pdf`: generated PDF preview of the manuscript once built.
+- `paper/lens_effects_preprint.pdf`: formatted LaTeX preprint PDF.
+- `paper/latex/`: LaTeX manuscript source and local build output.
+- `paper/arxiv/`: self-contained arXiv source bundle.
 - `configs/`: public source recipes and local-source templates.
 - `scripts/`: artifact builder, matrix runner, mixture runner, verifier, figure generator, scorecard packager, and scorecard validator.
 - `scorecard/`: public registry and submission process for additional corpora.
@@ -207,7 +209,7 @@ Regenerate figures:
 python scripts/make_figures.py
 ```
 
-Build a self-contained PDF preview:
+Build the formatted LaTeX preprint PDF:
 
 ```bash
 python scripts/build_preprint_pdf.py

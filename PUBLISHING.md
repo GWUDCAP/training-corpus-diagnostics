@@ -11,7 +11,7 @@ This repository is the canonical public artifact for **Lens Effects: Structured 
    python scripts/validate_scorecard_submission.py --registry scorecard/registry
    ```
 
-2. Regenerate figures and the review PDF if needed:
+2. Regenerate figures and the formatted preprint PDF if needed:
 
    ```bash
    python scripts/make_figures.py
@@ -20,7 +20,7 @@ This repository is the canonical public artifact for **Lens Effects: Structured 
 
 3. Create a GitHub release from the final tag.
 4. Archive that release on Zenodo and record the DOI in `CITATION.cff`, `README.md`, and the manuscript.
-5. Submit the PDF/source package to arXiv after the DOI and repository links are stable.
+5. Submit the PDF/source package from `paper/arxiv/` to arXiv after the DOI and repository links are stable.
 
 Current Zenodo release DOI: `10.5281/zenodo.20720131`.
 

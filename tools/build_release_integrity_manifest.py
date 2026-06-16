@@ -10,6 +10,10 @@ from pathlib import Path
 EXCLUDE = {
     "release_integrity_manifest.json",
 }
+EXCLUDE_DIRS = {
+    ".git",
+    "__pycache__",
+}
 
 
 def sha256_file(path: Path) -> str:
@@ -27,7 +31,7 @@ def main() -> None:
         if not path.is_file():
             continue
         rel = path.relative_to(root).as_posix()
-        if path.name in EXCLUDE or "__pycache__" in path.parts or path.suffix == ".pyc":
+        if path.name in EXCLUDE or any(part in EXCLUDE_DIRS for part in path.parts) or path.suffix == ".pyc":
             continue
         rows.append({"path": rel, "bytes": path.stat().st_size, "sha256": sha256_file(path)})
     out = {

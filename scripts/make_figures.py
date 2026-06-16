@@ -72,9 +72,10 @@ def load_json(path: Path):
 
 def short(name: str) -> str: return SHORT.get(name, name)
 
-def savefig(name: str) -> None:
+def savefig(name: str, tight: bool = True) -> None:
     OUT.mkdir(parents=True, exist_ok=True)
-    plt.tight_layout()
+    if tight:
+        plt.tight_layout()
     stem = Path(name).stem
     plt.savefig(OUT / f"{stem}.png", dpi=220, bbox_inches="tight")
     plt.savefig(OUT / f"{stem}.pdf", bbox_inches="tight")
@@ -86,24 +87,61 @@ def savefig(name: str) -> None:
 def fig0() -> None:
     summary = load_json(MATRIX / "recomputed" / "family_summary.json")["metrics"]
     standalone = load_json(MATRIX / "recomputed" / "standalone_summary.json")
-    fig, axes = plt.subplots(1, 2, figsize=(13.2, 5.6), gridspec_kw={"width_ratios": [1.05, 1.0]})
-    fig.suptitle("Retained corpus geometry at a glance", fontsize=15.5, fontweight="bold", x=0.08, ha="left")
+    boot = load_json(ROOT / "stability" / "bootstrap_canonical_summary.json")
+    loo = load_json(ROOT / "stability" / "leave_one_out_summary.json")
+    text_grid = load_json(MATRIX / "sweeps" / "textual_grid_summary.json")
+    semantic_sweep = load_json(MATRIX / "sweeps" / "semantic_summary.json")
+    k_sweep = load_json(ROOT / "stability" / "semantic_k_stability.json")
+    fig = plt.figure(figsize=(8.4, 7.9))
+    gs = fig.add_gridspec(2, 2, height_ratios=[0.95, 1.05], hspace=0.42, wspace=0.52)
+    axes = [fig.add_subplot(gs[0, :]), fig.add_subplot(gs[1, 0]), fig.add_subplot(gs[1, 1])]
+    fig.suptitle("The stage split is visible before training", fontsize=14.5, fontweight="bold", x=0.02, ha="left")
 
     ax = axes[0]
+    bb = summary["broad_broad"]
+    bt = summary["broad_targeted"]
+    ratio_rows = [
+        ("Top5 diff", bt["top5_abs_diff"] / bb["top5_abs_diff"]),
+        ("Compression diff", bt["compression_abs_diff"] / bb["compression_abs_diff"]),
+        ("Cluster JS", bt["semantic_cluster_js"] / bb["semantic_cluster_js"]),
+        ("Top1 diff", bt["top1_abs_diff"] / bb["top1_abs_diff"]),
+        ("Lexical JS", bt["lexical_js"] / bb["lexical_js"]),
+        ("Rank loss\n(1 - rho)", (1 - bt["rho"]) / (1 - bb["rho"])),
+    ]
+    y = np.arange(len(ratio_rows))
+    vals = [r[1] for r in ratio_rows]
+    ax.barh(y, vals, color=ROLE_COLOR["targeted"], alpha=0.88)
+    ax.axvline(1.0, color="#333333", linewidth=1.0)
+    for i, v in enumerate(vals):
+        ax.text(v + 0.14, i, f"{v:.1f}x", va="center", fontsize=8.4, color="#333333")
+    ax.set_yticks(y)
+    ax.set_yticklabels([r[0] for r in ratio_rows])
+    ax.invert_yaxis()
+    ax.set_xlim(0, max(vals) + 1.0)
+    ax.set_xlabel("Pretraining/post-training :\nwithin-pretraining")
+    ax.set_title("Cross-stage separation multipliers", fontsize=11.2)
+    ax.grid(axis="x", alpha=0.22)
+    ax.spines[["top", "right"]].set_visible(False)
+
+    ax = axes[1]
+    fig0_offsets = dict(FIG2_OFFSETS)
+    fig0_offsets.update({"Pile uncopyrighted": (8, 4), "Dolly 15k": (-76, -14)})
     for row in sorted(standalone.values(), key=lambda r: (r["role"] != "broad", r["semantic_spectrum"]["top5_share"])):
         x = row["compression_ratio_lzma"]
         y = row["semantic_spectrum"]["top5_share"]
         role = row["role"]
         label = short(row["display"])
-        alpha = 1.0 if label in {"FineWeb", "RefinedWeb", "Pile", "Dolly 15k", "Beaver", "Magicoder", "Nemotron"} else 0.72
-        ax.scatter(x, y, s=82, color=ROLE_COLOR[role], edgecolor="white", linewidth=0.9, alpha=alpha, zorder=3)
-        if label in {"FineWeb", "RefinedWeb", "Pile", "Dolly 15k", "Beaver", "Magicoder", "Nemotron"}:
-            ax.annotate(label, (x, y), xytext=FIG2_OFFSETS.get(row["display"], (6, 5)), textcoords="offset points", fontsize=7.4, bbox={"boxstyle": "round,pad=0.1", "fc": "white", "ec": "none", "alpha": 0.78})
+        key = label in {"Pile", "Dolly 15k", "Beaver", "Magicoder", "Nemotron"}
+        ax.scatter(x, y, s=86 if key else 68, color=ROLE_COLOR[role], edgecolor="white", linewidth=0.9, alpha=1.0 if key else 0.66, zorder=3)
+        if key:
+            ax.annotate(label, (x, y), xytext=fig0_offsets.get(row["display"], (6, 5)), textcoords="offset points", fontsize=7.4, bbox={"boxstyle": "round,pad=0.1", "fc": "white", "ec": "none", "alpha": 0.78})
+    ax.text(0.332, 0.066, "compact\npretraining\nregion", ha="center", va="bottom", fontsize=7.4, color="#333333")
     ax.set_xlabel("LZMA compression ratio")
     ax.set_ylabel("Spectral top5 share")
-    ax.set_title("Standalone corpus positions")
+    ax.set_title("Standalone positions", fontsize=11.2)
     ax.grid(alpha=0.22)
     ax.margins(x=0.14, y=0.13)
+    ax.set_xlim(0.215, 0.365)
     ax.legend(
         handles=[
             plt.Line2D([0], [0], marker="o", linestyle="", color=ROLE_COLOR["broad"], label="Pretraining"),
@@ -114,31 +152,36 @@ def fig0() -> None:
         fontsize=8.5,
     )
 
-    ax = axes[1]
-    bb = summary["broad_broad"]
-    bt = summary["broad_targeted"]
-    rows = [
-        ("Lexical JS", bb["lexical_js"], bt["lexical_js"]),
-        ("Rank loss\n(1 - rho)", 1 - bb["rho"], 1 - bt["rho"]),
-        ("Cluster JS", bb["semantic_cluster_js"], bt["semantic_cluster_js"]),
-        ("Compression\ndiff", bb["compression_abs_diff"], bt["compression_abs_diff"]),
-        ("Top5\ndiff", bb["top5_abs_diff"], bt["top5_abs_diff"]),
+    ax = axes[2]
+    loo_success = sum(all(row["ordering_held"].values()) for row in loo["rows"])
+    text_success = sum(row["ordering_lexical_js"] and row["ordering_rho"] for row in text_grid["rows"])
+    semantic_success = sum(all(row["ordering_held"].values()) for row in semantic_sweep["rows"].values())
+    k_success = sum(row["ordering_held"] for row in k_sweep["rows"])
+    stability_rows = [
+        ("Bootstrap\nresamples", min(boot["ordering_counts"].values()), boot["replicates"]),
+        ("Leave-one-out\nomissions", loo_success, len(loo["rows"])),
+        ("Textual grid\nsettings", text_success, len(text_grid["rows"])),
+        ("Encoder/chunk\nsettings", semantic_success, len(semantic_sweep["rows"])),
+        ("Cluster-count\nsettings", k_success, len(k_sweep["rows"])),
     ]
-    y = np.arange(len(rows))
-    ax.barh(y + 0.16, [r[1] for r in rows], height=0.28, color=ROLE_COLOR["broad"], label="Within pretraining")
-    ax.barh(y - 0.16, [r[2] for r in rows], height=0.28, color=ROLE_COLOR["targeted"], label="Pretraining/post-training")
-    for i, row in enumerate(rows):
-        ax.text(row[1] + 0.012, i + 0.16, f"{row[1]:.3f}", va="center", fontsize=7.2, color="#333333")
-        ax.text(row[2] + 0.012, i - 0.16, f"{row[2]:.3f}", va="center", fontsize=7.2, color="#333333")
+    y = np.arange(len(stability_rows))
+    totals = [r[2] for r in stability_rows]
+    rates = [r[1] / r[2] for r in stability_rows]
+    ax.barh(y, [1.0] * len(stability_rows), color="#E5E5E5", height=0.42)
+    ax.barh(y, rates, color="#54A24B", height=0.42)
+    for i, (_, s, t) in enumerate(stability_rows):
+        ax.text(1.03, i, f"{s}/{t}", va="center", fontsize=8.4, color="#333333")
     ax.set_yticks(y)
-    ax.set_yticklabels([r[0] for r in rows])
+    ax.set_yticklabels([r[0] for r in stability_rows])
     ax.invert_yaxis()
-    ax.set_xlabel("Separation value")
-    ax.set_title("Primary split across retained summaries")
-    ax.set_xlim(0, 0.66)
+    ax.set_xlim(0, 1.2)
+    ax.set_xticks([0, 0.5, 1.0])
+    ax.set_xticklabels(["0%", "50%", "100%"])
+    ax.set_xlabel("Share preserving ordering")
+    ax.set_title("Ordering preserved", fontsize=11.2)
     ax.grid(axis="x", alpha=0.22)
-    ax.legend(frameon=False, fontsize=8.5, loc="lower right")
-    savefig("fig0_visual_summary.png")
+    ax.spines[["top", "right"]].set_visible(False)
+    savefig("fig0_visual_summary.png", tight=False)
 
 def fig1() -> None:
     summary = load_json(MATRIX / "recomputed" / "family_summary.json")["metrics"]
