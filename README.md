@@ -4,6 +4,8 @@ Training Corpus Diagnostics is a small public toolkit and reproducibility packag
 
 The release contains the retained 14-corpus panel, cached embeddings, paper-facing result JSON, stability artifacts, figures, and scripts for verifying, recomputing, substituting, and submitting corpus diagnostics.
 
+Zenodo DOI for release `v0.1.1`: `10.5281/zenodo.20720131`. Concept DOI for all versions: `10.5281/zenodo.20720130`.
+
 Publication notes for the first public preprint, arXiv positioning, endorsement packet, and DOI handoff live in `PUBLISHING.md`.
 
 ## Quick Verify

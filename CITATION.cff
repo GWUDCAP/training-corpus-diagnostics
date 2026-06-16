@@ -7,3 +7,11 @@ authors:
 date-released: 2026-06-16
 version: "0.1.1"
 repository-code: "https://github.com/GWUDCAP/training-corpus-diagnostics"
+doi: "10.5281/zenodo.20720131"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.20720131"
+    description: "Zenodo DOI for release v0.1.1"
+  - type: doi
+    value: "10.5281/zenodo.20720130"
+    description: "Zenodo concept DOI for all versions"

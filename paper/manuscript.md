@@ -268,6 +268,10 @@ At minimum, this makes it harder to treat pretraining and post-training as clean
 
 This manuscript and release were prepared with substantial assistance from AI coding and writing tools. Kyle Lemaire is responsible for the paper's claims, analysis choices, artifact release, and final text. AI tools are not listed as authors.
 
+## Data and Code Availability
+
+The public release is archived at Zenodo under DOI `10.5281/zenodo.20720131`; the all-versions concept DOI is `10.5281/zenodo.20720130`. The source repository is available at `https://github.com/GWUDCAP/training-corpus-diagnostics`.
+
 ## References
 
 Bai, Y., Jones, A., Ndousse, K., Askell, A., Chen, A., DasSarma, N., Drain, D., Fort, S., Ganguli, D., Henighan, T., et al. (2022). Training a helpful and harmless assistant with reinforcement learning from human feedback. arXiv:2204.05862. https://arxiv.org/abs/2204.05862
