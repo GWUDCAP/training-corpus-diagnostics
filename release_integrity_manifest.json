@@ -1,8 +1,8 @@
 {
   "schema": "lens_effects.release_integrity_manifest.v1",
-  "generated_at_utc": "2026-06-16T18:57:53+00:00",
-  "file_count": 186,
-  "total_bytes": 134231286,
+  "generated_at_utc": "2026-06-16T20:27:50+00:00",
+  "file_count": 185,
+  "total_bytes": 134229319,
   "files": [
     {
       "path": ".github/pull_request_template.md",
@@ -47,7 +47,7 @@
     {
       "path": "artifact_manifest.json",
       "bytes": 3136,
-      "sha256": "1091ed68f8e50ba8477e81dd8a5449cc05704cae9c1185d426baaa295a5adbd7"
+      "sha256": "3ee66789daf4502bf21c51d0654a2d96a2476b3d717bf4d2657294cf7fe67d84"
     },
     {
       "path": "configs/example_local_sources.json",
@@ -811,8 +811,8 @@
     },
     {
       "path": "scripts/run_bootstrap_hardening.py",
-      "bytes": 44092,
-      "sha256": "9505024503464a1f69412e0c16b190e2e20f3358752385560231e78e87a80479"
+      "bytes": 44118,
+      "sha256": "6e0706e7c55127d3e93f3fdd40585b9bc9bab3592ea3e9e73f44ebfb654309b9"
     },
     {
       "path": "scripts/run_continuous_embedding_sensitivity.py",
@@ -828,11 +828,6 @@
       "path": "scripts/run_mixture_panel.py",
       "bytes": 6888,
       "sha256": "73067a1fae2d7a96f5eee2d605e51c35d92d2e659b00ad4ed0d7db953d10cace"
-    },
-    {
-      "path": "scripts/run_randomized_matrix_draw.sh",
-      "bytes": 1993,
-      "sha256": "e0adbe177555b7fb656512f751bcb3903e42b37f6ccc28a37bb481151ee2a981"
     },
     {
       "path": "scripts/run_randomized_release_battery.sh",
@@ -925,7 +920,7 @@
       "sha256": "63fbcc31f5d0b061a4679bf07cd95fb5c37ba62dddc1b6360052a5e3451e598f"
     },
     {
-      "path": "tools/corpus_operator_deformation.py",
+      "path": "tools/metric_primitives.py",
       "bytes": 2976,
       "sha256": "a3b087193a61afa16dcb7871b7b72e7b7f62ab2a940dc112ac88ea343e811774"
     },

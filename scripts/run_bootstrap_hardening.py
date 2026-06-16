@@ -22,7 +22,7 @@ from transformers import AutoTokenizer
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
-from tools import corpus_operator_deformation as cod
+from tools import metric_primitives as metrics
 
 # ===== GLOBALS ===== #
 
@@ -188,7 +188,7 @@ def build_textual_cache(cache: dict[str, dict[str, Any]]) -> dict[str, dict[tupl
         for tokenizer_mode in ["regex", "gpt2"]:
             token_rows: list[list[str]] = []
             for chunk in cache[label]["chunks"]:
-                token_rows.append(cod.stable_tokenize(chunk) if tokenizer_mode == "regex" else gpt2.tokenize(chunk))
+                token_rows.append(metrics.stable_tokenize(chunk) if tokenizer_mode == "regex" else gpt2.tokenize(chunk))
             for order in [1, 2, 3]:
                 rows: list[dict[str, int]] = []
                 for toks in token_rows:
@@ -233,7 +233,7 @@ def lexical_pair_from_count_cache(
             continue
         base_vec = np.asarray([base_counts.get(tok, 0) for tok in vocab], dtype=np.float64)
         target_vec = np.asarray([target_counts.get(tok, 0) for tok in vocab], dtype=np.float64)
-        js_vals.append(float(cod.js_divergence(base_vec, target_vec)))
+        js_vals.append(float(metrics.js_divergence(base_vec, target_vec)))
         rho_vals.append(float(spearmanr(base_vec, target_vec).statistic))
     return {"lexical_js": float(np.mean(js_vals)), "rho": float(np.mean(rho_vals))}
 
@@ -252,7 +252,7 @@ def lexical_pair_from_aggregated_counts(
             continue
         base_vec = np.asarray([base_counts.get(tok, 0) for tok in vocab], dtype=np.float64)
         target_vec = np.asarray([target_counts.get(tok, 0) for tok in vocab], dtype=np.float64)
-        js_vals.append(float(cod.js_divergence(base_vec, target_vec)))
+        js_vals.append(float(metrics.js_divergence(base_vec, target_vec)))
         rho_vals.append(float(spearmanr(base_vec, target_vec).statistic))
     return {"lexical_js": float(np.mean(js_vals)), "rho": float(np.mean(rho_vals))}
 
@@ -270,14 +270,14 @@ def subset_cache(cache: dict[str, dict[str, Any]], indices_by_label: dict[str, n
     return out
 
 def lexical_pair(a_chunks: list[str], b_chunks: list[str], *, top_k: int) -> dict[str, float]:
-    row = cod.lexical_metrics(a_chunks, b_chunks, top_k=top_k)
+    row = metrics.lexical_metrics(a_chunks, b_chunks, top_k=top_k)
     return {"lexical_js": float(row["js_divergence_top_vocab"]), "rho": float(row["spearman_rank_rho"])}
 
 def compression_value(chunks: list[str]) -> float:
-    return float(cod.compression_ratio("\n\n".join(chunks)))
+    return float(metrics.compression_ratio("\n\n".join(chunks)))
 
 def spectrum_values(embeddings: np.ndarray) -> dict[str, float]:
-    spec = cod.covariance_spectrum(embeddings)
+    spec = metrics.covariance_spectrum(embeddings)
     return {"top1": float(spec["top1_share"]), "top5": float(spec["top5_share"])}
 
 def fit_pair_label_reference(a: np.ndarray, b: np.ndarray, *, k: int, seed: int) -> tuple[np.ndarray, np.ndarray]:
@@ -288,11 +288,11 @@ def fit_pair_label_reference(a: np.ndarray, b: np.ndarray, *, k: int, seed: int)
     return labels[: a.shape[0]], labels[a.shape[0]:]
 
 def label_dist(labels: np.ndarray, *, k: int) -> np.ndarray:
-    return cod.normalize_dist(np.bincount(labels, minlength=k).astype(np.float64))
+    return metrics.normalize_dist(np.bincount(labels, minlength=k).astype(np.float64))
 
 def semantic_js_from_labels(a_labels: np.ndarray, b_labels: np.ndarray) -> float:
     k = int(max(a_labels.max(initial=0), b_labels.max(initial=0)) + 1)
-    return float(cod.js_divergence(label_dist(a_labels, k=k), label_dist(b_labels, k=k)))
+    return float(metrics.js_divergence(label_dist(a_labels, k=k), label_dist(b_labels, k=k)))
 
 def pair_groups(labels: list[str]) -> dict[str, list[tuple[str, str]]]:
     broad = [x for x in labels if x in BROAD]
