@@ -9,7 +9,6 @@ from pathlib import Path
 
 ## ===== 3RD-PARTY ===== ##
 import matplotlib.pyplot as plt
-from matplotlib.patches import FancyArrowPatch, FancyBboxPatch
 import numpy as np
 
 # ===== GLOBALS ===== #
@@ -85,27 +84,60 @@ def savefig(name: str) -> None:
     plt.close()
 
 def fig0() -> None:
-    fig, ax = plt.subplots(figsize=(12.8, 5.2))
-    ax.set_xlim(0, 12)
-    ax.set_ylim(0, 5)
-    ax.axis("off")
+    summary = load_json(MATRIX / "recomputed" / "family_summary.json")["metrics"]
+    standalone = load_json(MATRIX / "recomputed" / "standalone_summary.json")
+    fig, axes = plt.subplots(1, 2, figsize=(13.2, 5.6), gridspec_kw={"width_ratios": [1.05, 1.0]})
+    fig.suptitle("Retained corpus geometry at a glance", fontsize=15.5, fontweight="bold", x=0.08, ha="left")
 
-    def box(x: float, y: float, w: float, h: float, title: str, body: str, color: str) -> None:
-        patch = FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.04,rounding_size=0.08", linewidth=1.1, edgecolor=color, facecolor=color, alpha=0.13)
-        ax.add_patch(patch)
-        ax.text(x + 0.18, y + h - 0.42, title, fontsize=12.5, fontweight="bold", color=color, va="top")
-        ax.text(x + 0.18, y + h - 0.9, body, fontsize=9.6, color="#222222", va="top", linespacing=1.28)
+    ax = axes[0]
+    for row in sorted(standalone.values(), key=lambda r: (r["role"] != "broad", r["semantic_spectrum"]["top5_share"])):
+        x = row["compression_ratio_lzma"]
+        y = row["semantic_spectrum"]["top5_share"]
+        role = row["role"]
+        label = short(row["display"])
+        alpha = 1.0 if label in {"FineWeb", "RefinedWeb", "Pile", "Dolly 15k", "Beaver", "Magicoder", "Nemotron"} else 0.72
+        ax.scatter(x, y, s=82, color=ROLE_COLOR[role], edgecolor="white", linewidth=0.9, alpha=alpha, zorder=3)
+        if label in {"FineWeb", "RefinedWeb", "Pile", "Dolly 15k", "Beaver", "Magicoder", "Nemotron"}:
+            ax.annotate(label, (x, y), xytext=FIG2_OFFSETS.get(row["display"], (6, 5)), textcoords="offset points", fontsize=7.4, bbox={"boxstyle": "round,pad=0.1", "fc": "white", "ec": "none", "alpha": 0.78})
+    ax.set_xlabel("LZMA compression ratio")
+    ax.set_ylabel("Spectral top5 share")
+    ax.set_title("Standalone corpus positions")
+    ax.grid(alpha=0.22)
+    ax.margins(x=0.14, y=0.13)
+    ax.legend(
+        handles=[
+            plt.Line2D([0], [0], marker="o", linestyle="", color=ROLE_COLOR["broad"], label="Pretraining"),
+            plt.Line2D([0], [0], marker="o", linestyle="", color=ROLE_COLOR["targeted"], label="Post-training"),
+        ],
+        frameon=False,
+        loc="upper right",
+        fontsize=8.5,
+    )
 
-    box(0.35, 2.8, 3.0, 1.55, "Pretraining corpora", "broad source-derived mixtures\ncompact within-panel geometry\nlower concentration", ROLE_COLOR["broad"])
-    box(0.35, 0.75, 3.0, 1.55, "Post-training corpora", "trainer-selected responses\nstructured departures\ncapability and safety poles", ROLE_COLOR["targeted"])
-    box(4.35, 1.35, 3.15, 2.55, "Measurement suite", "lexical mass allocation\nsalience-rank preservation\nembedding-neighborhood shift\nspectral concentration\nredundancy and mixture paths", "#6F4E7C")
-    box(8.55, 1.35, 3.1, 2.55, "Diagnostic output", "stage-linked separation\ninternal post-training structure\npositioning for new corpora\npublic scorecard submissions", "#2F6F5E")
-
-    for y in [3.55, 1.5]:
-        ax.add_patch(FancyArrowPatch((3.45, y), (4.25, 2.6), arrowstyle="-|>", mutation_scale=14, linewidth=1.2, color="#555555"))
-    ax.add_patch(FancyArrowPatch((7.65, 2.6), (8.45, 2.6), arrowstyle="-|>", mutation_scale=14, linewidth=1.2, color="#555555"))
-    ax.text(0.35, 4.72, "Lens effects as an upstream corpus diagnostic", fontsize=16.5, fontweight="bold", color="#111111")
-    ax.text(0.35, 4.38, "Motivated corpus preparation leaves measurable, graded structure before optimization begins.", fontsize=10.8, color="#333333")
+    ax = axes[1]
+    bb = summary["broad_broad"]
+    bt = summary["broad_targeted"]
+    rows = [
+        ("Lexical JS", bb["lexical_js"], bt["lexical_js"]),
+        ("Rank loss\n(1 - rho)", 1 - bb["rho"], 1 - bt["rho"]),
+        ("Cluster JS", bb["semantic_cluster_js"], bt["semantic_cluster_js"]),
+        ("Compression\ndiff", bb["compression_abs_diff"], bt["compression_abs_diff"]),
+        ("Top5\ndiff", bb["top5_abs_diff"], bt["top5_abs_diff"]),
+    ]
+    y = np.arange(len(rows))
+    ax.barh(y + 0.16, [r[1] for r in rows], height=0.28, color=ROLE_COLOR["broad"], label="Within pretraining")
+    ax.barh(y - 0.16, [r[2] for r in rows], height=0.28, color=ROLE_COLOR["targeted"], label="Pretraining/post-training")
+    for i, row in enumerate(rows):
+        ax.text(row[1] + 0.012, i + 0.16, f"{row[1]:.3f}", va="center", fontsize=7.2, color="#333333")
+        ax.text(row[2] + 0.012, i - 0.16, f"{row[2]:.3f}", va="center", fontsize=7.2, color="#333333")
+    ax.set_yticks(y)
+    ax.set_yticklabels([r[0] for r in rows])
+    ax.invert_yaxis()
+    ax.set_xlabel("Separation value")
+    ax.set_title("Primary split across retained summaries")
+    ax.set_xlim(0, 0.66)
+    ax.grid(axis="x", alpha=0.22)
+    ax.legend(frameon=False, fontsize=8.5, loc="lower right")
     savefig("fig0_visual_summary.png")
 
 def fig1() -> None:

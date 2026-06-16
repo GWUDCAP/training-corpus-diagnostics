@@ -2,7 +2,7 @@
 
 ![Visual summary. Lens effects as an upstream corpus diagnostic](../figures/fig0_visual_summary.png)
 
-**Visual summary.** The retained suite measures whether stage-linked corpus preparation is already visible as a structured shift in the text distributions shown to a learner before optimization begins.
+**Visual summary.** The retained panel shows the same stage-linked structure in standalone corpus positions and in family-level separation summaries: pretraining corpora form a compact region, while post-training corpora appear as graded departures from it.
 
 ## Abstract
 
