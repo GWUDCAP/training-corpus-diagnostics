@@ -274,7 +274,7 @@ This manuscript and release were prepared with substantial assistance from AI co
 
 ## Data and Code Availability
 
-The public release is archived at Zenodo under DOI `10.5281/zenodo.20720131`; the all-versions concept DOI is `10.5281/zenodo.20720130`. The source repository is available at `https://github.com/GWUDCAP/training-corpus-diagnostics`.
+The public release is archived at Zenodo under DOI `10.5281/zenodo.20722420`; the all-versions concept DOI is `10.5281/zenodo.20720130`. The source repository is available at `https://github.com/GWUDCAP/training-corpus-diagnostics`.
 
 ## References
 

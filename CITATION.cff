@@ -5,13 +5,13 @@ authors:
   - family-names: "Lemaire"
     given-names: "Kyle"
 date-released: 2026-06-16
-version: "0.1.1"
+version: "0.1.2"
 repository-code: "https://github.com/GWUDCAP/training-corpus-diagnostics"
-doi: "10.5281/zenodo.20720131"
+doi: "10.5281/zenodo.20722420"
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.20720131"
-    description: "Zenodo DOI for release v0.1.1"
+    value: "10.5281/zenodo.20722420"
+    description: "Zenodo DOI for release v0.1.2"
   - type: doi
     value: "10.5281/zenodo.20720130"
     description: "Zenodo concept DOI for all versions"

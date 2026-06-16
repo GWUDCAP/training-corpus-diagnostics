@@ -1,8 +1,8 @@
 {
   "schema": "lens_effects.release_integrity_manifest.v1",
-  "generated_at_utc": "2026-06-16T18:43:20+00:00",
+  "generated_at_utc": "2026-06-16T18:57:53+00:00",
   "file_count": 186,
-  "total_bytes": 134231288,
+  "total_bytes": 134231286,
   "files": [
     {
       "path": ".github/pull_request_template.md",
@@ -22,7 +22,7 @@
     {
       "path": "CITATION.cff",
       "bytes": 633,
-      "sha256": "1ee95cb1ff37fb71e1356c7cce31e5b9ffaa6a187f6b3eb80443806e6ca0e700"
+      "sha256": "f86fad1e94255ad9f6d7c7d4d77ac002987cf996c5a31da612a12f5b94ec123b"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -37,12 +37,12 @@
     {
       "path": "PUBLISHING.md",
       "bytes": 2369,
-      "sha256": "c5b1cdfded17e40977fcf5f212dde98c3289dafda8c45d955da7a89c698678ff"
+      "sha256": "57b9141bda5bc9797a01401b400823fdfbd86bfa164ff7cb8eac70c600bba93f"
     },
     {
       "path": "README.md",
       "bytes": 7596,
-      "sha256": "2a9adf4b825eb55bd26442a4aec074d76013c21c1fc5d9e57aedf22abf3e9b3f"
+      "sha256": "caf8b36c59de420181ca63ad8d5b36d572a8097fbde91edede8a79934b1716d7"
     },
     {
       "path": "artifact_manifest.json",
@@ -627,27 +627,27 @@
     {
       "path": "paper/arxiv/main.tex",
       "bytes": 58405,
-      "sha256": "8405022f5f41e0750030d63ffd619ad040b62d260b36f448c2db6cae349db67e"
+      "sha256": "a7c3d1a7721c1e7b6261ad421d054a5ab0d0a915f3f8e099d04a66fe44f2781b"
     },
     {
       "path": "paper/latex/manuscript.pdf",
-      "bytes": 229540,
-      "sha256": "02a61a2f74c760c36f9d2db66be5b53cc97e4b06a1a913d97459ecf88669359d"
+      "bytes": 229539,
+      "sha256": "011fb4882906734fa04bf9c58df3102c48a78d1b5031a93fdfdb5ed9ee65142f"
     },
     {
       "path": "paper/latex/manuscript.tex",
       "bytes": 58421,
-      "sha256": "a619a2fc33b2caa6d99704676c934a4606e35114a33cb7a4b5ec1bf5a6362bab"
+      "sha256": "fe941fb59ff4472bbac6bc4089f97adecf581beeafa9afa5c9a28f5d368d570c"
     },
     {
       "path": "paper/lens_effects_preprint.pdf",
-      "bytes": 229540,
-      "sha256": "02a61a2f74c760c36f9d2db66be5b53cc97e4b06a1a913d97459ecf88669359d"
+      "bytes": 229539,
+      "sha256": "011fb4882906734fa04bf9c58df3102c48a78d1b5031a93fdfdb5ed9ee65142f"
     },
     {
       "path": "paper/manuscript.md",
       "bytes": 55384,
-      "sha256": "c3311afee820a55aae98bb42e1243697268a5c60d456ae5580c35c1c1d6a3be9"
+      "sha256": "9301fa04a8b78435072d144e3fb7f29755d98ec1dbd94c9a8b0a6b30f7950f5d"
     },
     {
       "path": "results/README.md",

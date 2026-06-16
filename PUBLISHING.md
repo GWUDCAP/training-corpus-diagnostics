@@ -22,7 +22,7 @@ This repository is the canonical public artifact for **Lens Effects: Structured 
 4. Archive that release on Zenodo and record the DOI in `CITATION.cff`, `README.md`, and the manuscript.
 5. Submit the PDF/source package from `paper/arxiv/` to arXiv after the DOI and repository links are stable.
 
-Current Zenodo release DOI: `10.5281/zenodo.20720131`.
+Current Zenodo release DOI: `10.5281/zenodo.20722420`.
 
 Current Zenodo concept DOI: `10.5281/zenodo.20720130`.
 
@@ -41,7 +41,7 @@ For an arXiv endorsement request, include:
 - title and abstract;
 - requested category;
 - GitHub release URL;
-- Zenodo DOI: `10.5281/zenodo.20720131`;
+- Zenodo DOI: `10.5281/zenodo.20722420`;
 - one-sentence claim: the paper measures stage-linked corpus geometry before training;
 - one-sentence boundary: it does not claim downstream causal effects;
 - verification command and expected output;
