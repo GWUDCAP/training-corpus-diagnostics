@@ -4,6 +4,8 @@ Training Corpus Diagnostics is a small public toolkit and reproducibility packag
 
 The release contains the retained 14-corpus panel, cached embeddings, paper-facing result JSON, stability artifacts, figures, and scripts for verifying, recomputing, substituting, and submitting corpus diagnostics.
 
+Publication notes for the first public preprint, arXiv positioning, endorsement packet, and DOI handoff live in `PUBLISHING.md`.
+
 ## Quick Verify
 
 From the repo root:
@@ -29,6 +31,7 @@ This verifier checks committed paper-facing values. It does not download models,
 - `results/final_matrix/`: paper-facing metrics, sweeps, mixtures, and continuous embedding sensitivity.
 - `stability/`: bootstrap, leave-one-out, same-corpus split, and semantic-k summaries.
 - `figures/`: rendered manuscript figures in PNG, PDF, and SVG.
+- `paper/lens_effects_preprint.pdf`: generated PDF preview of the manuscript once built.
 - `configs/`: public source recipes and local-source templates.
 - `scripts/`: artifact builder, matrix runner, mixture runner, verifier, figure generator, scorecard packager, and scorecard validator.
 - `scorecard/`: public registry and submission process for additional corpora.
@@ -202,9 +205,14 @@ Regenerate figures:
 python scripts/make_figures.py
 ```
 
+Build a self-contained PDF preview:
+
+```bash
+python scripts/build_preprint_pdf.py
+```
+
 ## Scope
 
 The release preserves the paper's matched-sample corpus panel and measurement design. The scripts support artifact verification, panel substitution, corpus diagnostics, and scorecard submissions. They do not make downstream causal claims.
 
 Important metric convention: compression, spectral top1, and spectral top5 family comparisons use standalone-derived absolute pairwise differences. Do not use signed directional family means for those quantities.
-

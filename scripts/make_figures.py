@@ -35,6 +35,22 @@ FIG2_OFFSETS = {
     "OASST1 assistant": (7, -2),
     "UltraFeedback chosen": (7, 8),
 }
+ORDER = [
+    "fineweb_sample_10BT",
+    "falcon_refinedweb",
+    "c4_en",
+    "dolma_v1_7",
+    "slimpajama_627b_reupload",
+    "pile_uncopyrighted",
+    "dolly_15k",
+    "oasst1_assistant_en",
+    "ultrafeedback_binarized_chosen",
+    "beavertails_response",
+    "hh_rlhf_chosen",
+    "hh_rlhf_rejected",
+    "magicoder_oss_instruct",
+    "nemotron_math",
+]
 SHORT = {
     "HH-RLHF chosen": "HH chosen",
     "HH-RLHF rejected": "HH rejected",
@@ -43,6 +59,7 @@ SHORT = {
     "Nemotron-SFT-Math": "Nemotron",
     "Magicoder OSS Instruct": "Magicoder",
     "Pile uncopyrighted": "Pile",
+    "BeaverTails": "Beaver",
 }
 
 # ===== FUNCTIONS ===== #
@@ -58,7 +75,9 @@ def savefig(name: str) -> None:
     stem = Path(name).stem
     plt.savefig(OUT / f"{stem}.png", dpi=220, bbox_inches="tight")
     plt.savefig(OUT / f"{stem}.pdf", bbox_inches="tight")
-    plt.savefig(OUT / f"{stem}.svg", bbox_inches="tight")
+    svg = OUT / f"{stem}.svg"
+    plt.savefig(svg, bbox_inches="tight")
+    svg.write_text("\n".join(line.rstrip() for line in svg.read_text(encoding="utf-8").splitlines()) + "\n", encoding="utf-8")
     plt.close()
 
 def fig1() -> None:
@@ -212,6 +231,40 @@ def fig6() -> None:
     ax.legend(frameon=False)
     savefig("fig3_bootstrap_stability.png")
 
+def fig7() -> None:
+    data = load_json(MATRIX / "recomputed" / "corpus_matrix.json")
+    displays = {key: row["display"] for key, row in data["standalone"].items()}
+    roles = {key: row["role"] for key, row in data["standalone"].items()}
+    keys = [key for key in ORDER if key in displays]
+    if len(keys) != len(data["standalone"]):
+        keys = sorted(data["standalone"], key=lambda key: (roles[key] != "broad", displays[key]))
+    labels = [short(displays[key]) for key in keys]
+    idx = {key: i for i, key in enumerate(keys)}
+    n = len(keys)
+    semantic = np.zeros((n, n), dtype=float)
+    lexical = np.zeros((n, n), dtype=float)
+    for row in data["pairs"]:
+        i = idx[row["a"]]
+        j = idx[row["b"]]
+        semantic[i, j] = semantic[j, i] = row["semantic_cluster_js"]
+        lexical[i, j] = lexical[j, i] = row["lexical_js"]
+    fig, axes = plt.subplots(1, 2, figsize=(13.8, 6.6), sharex=False, sharey=False)
+    for ax, matrix, title, vmax in [
+        (axes[0], lexical, "Lexical JS", max(0.001, np.nanmax(lexical))),
+        (axes[1], semantic, "Cluster JS", max(0.001, np.nanmax(semantic))),
+    ]:
+        im = ax.imshow(matrix, cmap="viridis", vmin=0, vmax=vmax)
+        ax.set_xticks(np.arange(n))
+        ax.set_yticks(np.arange(n))
+        ax.set_xticklabels(labels, rotation=45, ha="right", fontsize=7.2)
+        ax.set_yticklabels(labels, fontsize=7.2)
+        ax.set_title(title)
+        ax.axhline(5.5, color="white", linewidth=1.2)
+        ax.axvline(5.5, color="white", linewidth=1.2)
+        fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
+    fig.suptitle("Full-panel pairwise geometry", y=0.99)
+    savefig("fig7_pairwise_heatmap.png")
+
 def main() -> None:
     global OUT, MATRIX
     ap = argparse.ArgumentParser(description="Regenerate paper figures from matrix/stability JSON artifacts.")
@@ -220,7 +273,7 @@ def main() -> None:
     args = ap.parse_args()
     MATRIX = args.matrix_dir
     OUT = args.out_dir
-    for fn in [fig1, fig2, fig3, fig4, fig5, fig6]:
+    for fn in [fig1, fig2, fig3, fig4, fig5, fig6, fig7]:
         try:
             fn()
         except FileNotFoundError as exc:

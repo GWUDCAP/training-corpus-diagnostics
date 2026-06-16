@@ -202,6 +202,10 @@ The textual grid gives a parallel check for lexical summaries. Across 54 setting
 
 **Figure 6. Robustness summaries.** The pretraining/post-training ordering remains visible across retrieval-style encoder families, chunk lengths, and cluster counts.
 
+![Figure 7. Full-panel pairwise geometry](../figures/fig7_pairwise_heatmap.png)
+
+**Figure 7. Full-panel pairwise geometry.** Lexical JS and semantic cluster JS over all retained corpus pairs. The top-left block shows the compact pretraining region, while pretraining/post-training and many post-training/post-training comparisons occupy larger separations.
+
 ## 9. Discussion
 
 The main empirical contribution of this paper is to show that pretraining and post-training corpora have distinct and robust statistical footprints before training begins. The question for discussion is what follows from that result. The measurements do not by themselves establish systematic relation to downstream model effects, but they show that stage-linked corpus preparation is already visible as a structured data intervention and as a meaningful shift in the distributions and geometry a model will be exposed to.
@@ -259,6 +263,10 @@ Pretraining corpora and more directed post-training corpora show measurably diff
 The results do not complete the downstream bridge. They do not show that corpus geometry alone explains forgetting, alignment tax, specialization, diversity loss, safety drift, or capability redistribution. They do show that the data objects used at different stages already differ along measurable axes before optimization: mass allocation, rank compatibility, semantic concentration, redundancy, and mixture behavior.
 
 At minimum, this makes it harder to treat pretraining and post-training as cleanly modular stages acting on neutral material. Post-training is not merely additional data; it is a distributional intervention on the empirical constraint landscape inherited from pretraining. The measurement suite released with this paper provides pre-exposure diagnostics for that intervention: after calibration on the retained panel, practitioners can ask before training how sharply a candidate corpus concentrates, reorders, or departs from broader source-derived regimes.
+
+## Author Responsibility and Tool Use
+
+This manuscript and release were prepared with substantial assistance from AI coding and writing tools. Kyle Lemaire is responsible for the paper's claims, analysis choices, artifact release, and final text. AI tools are not listed as authors.
 
 ## References
 
